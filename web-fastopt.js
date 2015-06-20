@@ -1796,14 +1796,14 @@ $c_Lcoursier_core_Resolver$.prototype.withExclusions__sc_Seq__sci_Set__sc_Seq = 
   var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(exclusions$1) {
     return (function(dep$2$1) {
       var dep$1 = $as_Lcoursier_core_Dependency(dep$2$1);
-      var x$100 = $m_Lcoursier_core_Resolver$().exclusionsAdd__sci_Set__sci_Set__sci_Set(dep$1.exclusions$1, exclusions$1);
-      var x$101 = dep$1.module$1;
-      var x$102 = dep$1.version$1;
-      var x$103 = dep$1.scope$1;
-      var x$104 = dep$1.type$1;
-      var x$105 = dep$1.classifier$1;
-      var x$106 = dep$1.optional$1;
-      return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$101, x$102, x$103, x$104, x$105, x$100, x$106)
+      var x$99 = $m_Lcoursier_core_Resolver$().exclusionsAdd__sci_Set__sci_Set__sci_Set(dep$1.exclusions$1, exclusions$1);
+      var x$100 = dep$1.module$1;
+      var x$101 = dep$1.version$1;
+      var x$102 = dep$1.scope$1;
+      var x$103 = dep$1.type$1;
+      var x$104 = dep$1.classifier$1;
+      var x$105 = dep$1.optional$1;
+      return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$100, x$101, x$102, x$103, x$104, x$99, x$105)
     })
   })(exclusions));
   var this$3 = $m_sc_Seq$();
@@ -1966,14 +1966,14 @@ $c_Lcoursier_core_Resolver$.prototype.withDefaultScope__Lcoursier_core_Dependenc
     var jsx$1 = thiz
   };
   if ((jsx$1 === "")) {
-    var x$93 = $m_Lcoursier_core_Scope$Compile$();
-    var x$94 = dep.module$1;
-    var x$95 = dep.version$1;
-    var x$96 = dep.type$1;
-    var x$97 = dep.classifier$1;
-    var x$98 = dep.exclusions$1;
-    var x$99 = dep.optional$1;
-    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$94, x$95, x$93, x$96, x$97, x$98, x$99)
+    var x$92 = $m_Lcoursier_core_Scope$Compile$();
+    var x$93 = dep.module$1;
+    var x$94 = dep.version$1;
+    var x$95 = dep.type$1;
+    var x$96 = dep.classifier$1;
+    var x$97 = dep.exclusions$1;
+    var x$98 = dep.optional$1;
+    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$93, x$94, x$92, x$95, x$96, x$97, x$98)
   } else {
     return dep
   }
@@ -2004,9 +2004,9 @@ $c_Lcoursier_core_Resolver$.prototype.resolve__sci_Set__F1__s_Option__s_Option__
   var dependencies0 = $as_sci_Set($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(dependencies, f, bf));
   var startResolution = new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(dependencies0, dependencies0, $m_sci_Set$EmptySet$(), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), filter, profileActivation);
   var this$5 = this.coursier$core$Resolver$$helper$3__Lcoursier_core_Resolver$Resolution__s_Option__F1__Lscalaz_concurrent_package$Task(startResolution, maxIterations, fetch);
-  var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$57$2) {
-    var x$57 = $as_T2(x$57$2);
-    return $as_Lcoursier_core_Resolver$Resolution(x$57.$$und1__O())
+  var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$56$2) {
+    var x$56 = $as_T2(x$56$2);
+    return $as_Lcoursier_core_Resolver$Resolution(x$56.$$und1__O())
   }));
   return new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$5, f$1)
 });
@@ -2050,8 +2050,8 @@ $c_Lcoursier_core_Resolver$.prototype.coursier$core$Resolver$$helper$3__Lcoursie
     var jsx$1 = true
   } else if ((!remainingIter.isEmpty__Z())) {
     var arg1 = remainingIter.get__O();
-    var x$54 = $uI(arg1);
-    var jsx$1 = (x$54 <= 0)
+    var x$53 = $uI(arg1);
+    var jsx$1 = (x$53 <= 0)
   } else {
     var jsx$1 = false
   };
@@ -3245,8 +3245,8 @@ $c_Lcoursier_web_App$.prototype.init___ = (function() {
   this.initialState$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq($m_sci_Nil$(), $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_repository_package$().mavenCentral$1]))), new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(false, false), $m_s_None$(), (-1), false, false, $m_sci_Nil$());
   var c = new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Coursier").initialState__F0__Ljapgolly_scalajs_react_ReactComponentB$PS(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
     return $m_Lcoursier_web_App$().initialState$1
-  }))).backend__F1__Ljapgolly_scalajs_react_ReactComponentB$PSB(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$25$2) {
-    return new $c_Lcoursier_web_Backend().init___Ljapgolly_scalajs_react_BackendScope(x$25$2)
+  }))).backend__F1__Ljapgolly_scalajs_react_ReactComponentB$PSB(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$26$2) {
+    return new $c_Lcoursier_web_Backend().init___Ljapgolly_scalajs_react_BackendScope(x$26$2)
   }))).render__F3__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$26().init___());
   var this$9 = c.domType__Ljapgolly_scalajs_react_ReactComponentB();
   var ev = $m_s_Predef$().scala$Predef$$singleton$und$eq$colon$eq$f;
@@ -3359,16 +3359,16 @@ $c_Lcoursier_web_Backend.prototype.clearLog__Ljapgolly_scalajs_react_SyntheticEv
   var qual$6 = this.coursier$web$Backend$$$$f;
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$6);
-  var x$15 = $as_Lcoursier_web_State(arg1);
-  var x$84 = $m_sci_Nil$();
-  var x$85 = x$15.modules$1;
-  var x$86 = x$15.repositories$1;
-  var x$87 = x$15.options$1;
-  var x$88 = x$15.resolutionOpt$1;
-  var x$89 = x$15.editModuleIdx$1;
-  var x$90 = x$15.resolving$1;
-  var x$91 = x$15.reverseTree$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$85, x$86, x$87, x$88, x$89, x$90, x$91, x$84);
+  var x$16 = $as_Lcoursier_web_State(arg1);
+  var x$85 = $m_sci_Nil$();
+  var x$86 = x$16.modules$1;
+  var x$87 = x$16.repositories$1;
+  var x$88 = x$16.options$1;
+  var x$89 = x$16.resolutionOpt$1;
+  var x$90 = x$16.editModuleIdx$1;
+  var x$91 = x$16.resolving$1;
+  var x$92 = x$16.reverseTree$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$86, x$87, x$88, x$89, x$90, x$91, x$92, x$85);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$6, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.addModule__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
@@ -3389,14 +3389,14 @@ $c_Lcoursier_web_Backend.prototype.addModule__Ljapgolly_scalajs_react_SyntheticE
   var this$13 = $m_s_Console$();
   var this$14 = this$13.outVar$2;
   $as_Ljava_io_PrintStream(this$14.tl$1.get__O()).println__O__V(x);
-  var x$119 = (((-1) + modules.length__I()) | 0);
-  var x$120 = state.repositories$1;
-  var x$121 = state.options$1;
-  var x$122 = state.resolutionOpt$1;
-  var x$123 = state.resolving$1;
-  var x$124 = state.reverseTree$1;
-  var x$125 = state.log$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(modules, x$120, x$121, x$122, x$119, x$123, x$124, x$125);
+  var x$120 = (((-1) + modules.length__I()) | 0);
+  var x$121 = state.repositories$1;
+  var x$122 = state.options$1;
+  var x$123 = state.resolutionOpt$1;
+  var x$124 = state.resolving$1;
+  var x$125 = state.reverseTree$1;
+  var x$126 = state.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(modules, x$121, x$122, x$123, x$120, x$124, x$125, x$126);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$11, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.reverseDeps$1__p1__Lcoursier_core_Resolver$Resolution__sr_ObjectRef__sr_VolatileByteRef__sci_Map = (function(resolution$1, reverseDeps$lzy$1, bitmap$0$1) {
@@ -3553,58 +3553,36 @@ $c_Lcoursier_web_Backend.prototype.handleResolve__Ljapgolly_scalajs_react_Synthe
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$1);
   var x$10 = $as_Lcoursier_web_State(arg1);
-  var x$28 = $m_sci_Nil$();
-  var x$29 = x$10.modules$1;
-  var x$30 = x$10.repositories$1;
-  var x$31 = x$10.options$1;
-  var x$32 = x$10.resolutionOpt$1;
-  var x$33 = x$10.editModuleIdx$1;
-  var x$34 = x$10.reverseTree$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$29, x$30, x$31, x$32, x$33, true, x$34, x$28);
+  var x$29 = $m_sci_Nil$();
+  var x$30 = x$10.modules$1;
+  var x$31 = x$10.repositories$1;
+  var x$32 = x$10.options$1;
+  var x$33 = x$10.resolutionOpt$1;
+  var x$34 = x$10.editModuleIdx$1;
+  var x$35 = x$10.reverseTree$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$30, x$31, x$32, x$33, x$34, true, x$35, x$29);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$1, s, (void 0));
   var logger = new $c_Lcoursier_web_Backend$$anon$1().init___Lcoursier_web_Backend(this);
   $m_Ljapgolly_scalajs_react_package$();
   var $$this = this.coursier$web$Backend$$$$f;
   var s$1 = $as_Lcoursier_web_State($$this["state"]["v"]);
-  var x$69 = s$1.modules$1.toSet__sci_Set();
-  var jsx$3 = $m_Lcoursier_package$();
-  var jsx$2 = s$1.repositories$1;
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(logger$1) {
-    return (function(x$14$2) {
-      var x$14 = $as_Lcoursier_core_Remote(x$14$2);
-      var x$67 = new $c_s_Some().init___O(logger$1);
-      var x$68 = x$14.base$1;
-      return new $c_Lcoursier_core_Remote().init___T__s_Option(x$68, x$67)
+  $m_s_concurrent_Future$();
+  var body = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer, logger$1, s$1$1) {
+    return (function() {
+      return arg$outer.coursier$web$Backend$$task$1__Lcoursier_core_Logger__Lcoursier_web_State__Lscalaz_concurrent_package$Task(logger$1, s$1$1)
     })
-  })(logger));
-  var this$15 = $m_sc_Seq$();
-  var x$70 = jsx$3.fetchFrom__sc_Seq__F1($as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$15.ReusableCBFInstance$2)));
-  var x$71 = new $c_s_Some().init___O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$1$1) {
-    return (function(dep$2) {
-      var dep = $as_Lcoursier_core_Dependency(dep$2);
-      if ((s$1$1.options$1.followOptional$1 || (!dep.optional$1))) {
-        if (s$1$1.options$1.keepTest$1) {
-          return true
-        } else {
-          var x$1 = dep.scope$1;
-          var x$2 = $m_Lcoursier_core_Scope$Test$();
-          return (!((x$1 === null) ? (x$2 === null) : x$1.equals__O__Z(x$2)))
-        }
-      } else {
-        return false
-      }
-    })
-  })(s$1)));
-  $m_Lcoursier_package$();
-  var x$72 = new $c_s_Some().init___O(200);
-  $m_Lcoursier_package$();
-  var x$73 = $m_s_None$();
-  $m_Lcoursier_package$();
-  var task = $m_Lcoursier_core_Resolver$().resolve__sci_Set__F1__s_Option__s_Option__s_Option__Lscalaz_concurrent_package$Task(x$69, x$70, x$72, x$71, x$73);
-  var this$19 = task.runF__s_concurrent_ExecutionContext__s_concurrent_Future($m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1);
-  var f = new $c_Lcoursier_web_Backend$$anonfun$resolve$1().init___Lcoursier_web_Backend(this);
+  })(this, logger, s$1));
   var executor = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
-  $s_s_concurrent_Future$class__foreach__s_concurrent_Future__F1__s_concurrent_ExecutionContext__V(this$19, f, executor)
+  var this$16 = $m_s_concurrent_impl_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(body, executor);
+  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$15$2) {
+    var x$15 = $as_Lscalaz_concurrent_package$Task(x$15$2);
+    return x$15.runF__s_concurrent_ExecutionContext__s_concurrent_Future($m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1)
+  }));
+  var executor$1 = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
+  var this$17 = $s_s_concurrent_Future$class__flatMap__s_concurrent_Future__F1__s_concurrent_ExecutionContext__s_concurrent_Future(this$16, f, executor$1);
+  var f$1 = new $c_Lcoursier_web_Backend$$anonfun$resolve$3().init___Lcoursier_web_Backend(this);
+  var executor$2 = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
+  $s_s_concurrent_Future$class__foreach__s_concurrent_Future__F1__s_concurrent_ExecutionContext__V(this$17, f$1, executor$2)
 });
 $c_Lcoursier_web_Backend.prototype.enablePopover__Ljapgolly_scalajs_react_SyntheticEvent__sjs_js_Dynamic = (function(e) {
   return $g["$"]("[data-toggle='popover']")["popover"]()
@@ -3615,16 +3593,53 @@ $c_Lcoursier_web_Backend.prototype.editModule__I__Ljapgolly_scalajs_react_Synthe
   var qual$8 = this.coursier$web$Backend$$$$f;
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$8);
-  var x$16 = $as_Lcoursier_web_State(arg1);
-  var x$105 = x$16.modules$1;
-  var x$106 = x$16.repositories$1;
-  var x$107 = x$16.options$1;
-  var x$108 = x$16.resolutionOpt$1;
-  var x$109 = x$16.resolving$1;
-  var x$110 = x$16.reverseTree$1;
-  var x$111 = x$16.log$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$105, x$106, x$107, x$108, idx, x$109, x$110, x$111);
+  var x$17 = $as_Lcoursier_web_State(arg1);
+  var x$106 = x$17.modules$1;
+  var x$107 = x$17.repositories$1;
+  var x$108 = x$17.options$1;
+  var x$109 = x$17.resolutionOpt$1;
+  var x$110 = x$17.resolving$1;
+  var x$111 = x$17.reverseTree$1;
+  var x$112 = x$17.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$106, x$107, x$108, x$109, idx, x$110, x$111, x$112);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$8, s, (void 0))
+});
+$c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$task$1__Lcoursier_core_Logger__Lcoursier_web_State__Lscalaz_concurrent_package$Task = (function(logger$1, s$1) {
+  var x$70 = s$1.modules$1.toSet__sci_Set();
+  var jsx$3 = $m_Lcoursier_package$();
+  var jsx$2 = s$1.repositories$1;
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(logger$1$1) {
+    return (function(x$14$2) {
+      var x$14 = $as_Lcoursier_core_Remote(x$14$2);
+      var x$68 = new $c_s_Some().init___O(logger$1$1);
+      var x$69 = x$14.base$1;
+      return new $c_Lcoursier_core_Remote().init___T__s_Option(x$69, x$68)
+    })
+  })(logger$1));
+  var this$1 = $m_sc_Seq$();
+  var x$71 = jsx$3.fetchFrom__sc_Seq__F1($as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2)));
+  var x$72 = new $c_s_Some().init___O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$1$1) {
+    return (function(dep$2) {
+      var dep = $as_Lcoursier_core_Dependency(dep$2);
+      if ((s$1$1.options$1.followOptional$1 || (!dep.optional$1))) {
+        if (s$1$1.options$1.keepTest$1) {
+          return true
+        } else {
+          var x = dep.scope$1;
+          var x$2 = $m_Lcoursier_core_Scope$Test$();
+          return (!((x === null) ? (x$2 === null) : x.equals__O__Z(x$2)))
+        }
+      } else {
+        return false
+      }
+    })
+  })(s$1)));
+  $m_Lcoursier_package$();
+  var x$73 = new $c_s_Some().init___O(200);
+  $m_Lcoursier_package$();
+  var x$74 = $m_s_None$();
+  $m_Lcoursier_package$();
+  return $m_Lcoursier_core_Resolver$().resolve__sci_Set__F1__s_Option__s_Option__s_Option__Lscalaz_concurrent_package$Task(x$70, x$71, x$73, x$72, x$74)
 });
 $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$depsOf$1__Lcoursier_core_Dependency__Lcoursier_core_Resolver$Resolution__sc_Seq = (function(dep, resolution$1) {
   var xo = resolution$1.projectsCache$1.get__O__s_Option(new $c_T2().init___O__O(dep.module$1, dep.version$1));
@@ -3688,10 +3703,10 @@ $c_Lcoursier_web_Backend.prototype.removeModule__I__Ljapgolly_scalajs_react_Synt
   e["preventDefault"]();
   $m_Ljapgolly_scalajs_react_package$();
   var qual$9 = this.coursier$web$Backend$$$$f;
-  var x$114 = new $c_Lcoursier_web_Backend$$anonfun$12().init___Lcoursier_web_Backend__I(this, idx);
+  var x$115 = new $c_Lcoursier_web_Backend$$anonfun$12().init___Lcoursier_web_Backend__I(this, idx);
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var v1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$9);
-  var s = x$114.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1));
+  var s = x$115.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1));
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$9, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.options$lzycompute__p1__Lcoursier_web_Backend$options$ = (function() {
@@ -3849,15 +3864,15 @@ $c_Lcoursier_web_Backend.prototype.toggleReverseTree__Ljapgolly_scalajs_react_Sy
     var res = $as_Lcoursier_core_Resolver$Resolution(arg1);
     this.updateTree__Lcoursier_core_Resolver$Resolution__T__Z__sjs_js_Dynamic(res, "#deptree", (!s.reverseTree$1))
   };
-  var x$94 = (!s.reverseTree$1);
-  var x$95 = s.modules$1;
-  var x$96 = s.repositories$1;
-  var x$97 = s.options$1;
-  var x$98 = s.resolutionOpt$1;
-  var x$99 = s.editModuleIdx$1;
-  var x$100 = s.resolving$1;
-  var x$101 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$95, x$96, x$97, x$98, x$99, x$100, x$94, x$101);
+  var x$95 = (!s.reverseTree$1);
+  var x$96 = s.modules$1;
+  var x$97 = s.repositories$1;
+  var x$98 = s.options$1;
+  var x$99 = s.resolutionOpt$1;
+  var x$100 = s.editModuleIdx$1;
+  var x$101 = s.resolving$1;
+  var x$102 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$96, x$97, x$98, x$99, x$100, x$101, x$95, x$102);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$7, s$1, (void 0))
 });
 var $is_Lcoursier_web_Backend = (function(obj) {
@@ -3897,19 +3912,19 @@ $c_Lcoursier_web_Backend$options$.prototype.toggleTest__Ljapgolly_scalajs_react_
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$13);
   var s = $as_Lcoursier_web_State(arg1);
-  var x$138 = (!s.options$1.keepTest$1);
+  var x$139 = (!s.options$1.keepTest$1);
   var this$6 = s.options$1;
-  var x$139 = this$6.followOptional$1;
+  var x$140 = this$6.followOptional$1;
   s.options$1;
-  var x$140 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(x$139, x$138);
-  var x$141 = s.modules$1;
-  var x$142 = s.repositories$1;
-  var x$143 = s.resolutionOpt$1;
-  var x$144 = s.editModuleIdx$1;
-  var x$145 = s.resolving$1;
-  var x$146 = s.reverseTree$1;
-  var x$147 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$141, x$142, x$140, x$143, x$144, x$145, x$146, x$147);
+  var x$141 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(x$140, x$139);
+  var x$142 = s.modules$1;
+  var x$143 = s.repositories$1;
+  var x$144 = s.resolutionOpt$1;
+  var x$145 = s.editModuleIdx$1;
+  var x$146 = s.resolving$1;
+  var x$147 = s.reverseTree$1;
+  var x$148 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$142, x$143, x$141, x$144, x$145, x$146, x$147, x$148);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$13, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$options$.prototype.toggleOptional__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
@@ -3922,15 +3937,15 @@ $c_Lcoursier_web_Backend$options$.prototype.toggleOptional__Ljapgolly_scalajs_re
   var followOptional = (!s.options$1.followOptional$1);
   var this$6 = s.options$1;
   var keepTest = this$6.keepTest$1;
-  var x$128 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(followOptional, keepTest);
-  var x$129 = s.modules$1;
-  var x$130 = s.repositories$1;
-  var x$131 = s.resolutionOpt$1;
-  var x$132 = s.editModuleIdx$1;
-  var x$133 = s.resolving$1;
-  var x$134 = s.reverseTree$1;
-  var x$135 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$129, x$130, x$128, x$131, x$132, x$133, x$134, x$135);
+  var x$129 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(followOptional, keepTest);
+  var x$130 = s.modules$1;
+  var x$131 = s.repositories$1;
+  var x$132 = s.resolutionOpt$1;
+  var x$133 = s.editModuleIdx$1;
+  var x$134 = s.resolving$1;
+  var x$135 = s.reverseTree$1;
+  var x$136 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$130, x$131, x$129, x$132, x$133, x$134, x$135, x$136);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$12, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$options$.prototype.init___Lcoursier_web_Backend = (function($$outer) {
@@ -8294,6 +8309,37 @@ $c_s_concurrent_impl_AbstractPromise.prototype.updateState__O__O__Z = (function(
   } else {
     return false
   }
+});
+/** @constructor */
+var $c_s_concurrent_impl_Future$ = (function() {
+  $c_O.call(this)
+});
+$c_s_concurrent_impl_Future$.prototype = new $h_O();
+$c_s_concurrent_impl_Future$.prototype.constructor = $c_s_concurrent_impl_Future$;
+/** @constructor */
+var $h_s_concurrent_impl_Future$ = (function() {
+  /*<skip>*/
+});
+$h_s_concurrent_impl_Future$.prototype = $c_s_concurrent_impl_Future$.prototype;
+$c_s_concurrent_impl_Future$.prototype.apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future = (function(body, executor) {
+  var runnable = new $c_s_concurrent_impl_Future$PromiseCompletingRunnable().init___F0(body);
+  executor.execute__jl_Runnable__V(runnable);
+  var this$1 = runnable.promise$1;
+  return this$1
+});
+var $d_s_concurrent_impl_Future$ = new $TypeData().initClass({
+  s_concurrent_impl_Future$: 0
+}, false, "scala.concurrent.impl.Future$", {
+  s_concurrent_impl_Future$: 1,
+  O: 1
+});
+$c_s_concurrent_impl_Future$.prototype.$classData = $d_s_concurrent_impl_Future$;
+var $n_s_concurrent_impl_Future$ = (void 0);
+var $m_s_concurrent_impl_Future$ = (function() {
+  if ((!$n_s_concurrent_impl_Future$)) {
+    $n_s_concurrent_impl_Future$ = new $c_s_concurrent_impl_Future$().init___()
+  };
+  return $n_s_concurrent_impl_Future$
 });
 /** @constructor */
 var $c_s_concurrent_impl_Promise$ = (function() {
@@ -13950,15 +13996,15 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.fetched__T__V = (function(url) {
   var x$11 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetched ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$37 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$11, this$9.ReusableCBFInstance$2));
-  var x$38 = s.modules$1;
-  var x$39 = s.repositories$1;
-  var x$40 = s.options$1;
-  var x$41 = s.resolutionOpt$1;
-  var x$42 = s.editModuleIdx$1;
-  var x$43 = s.resolving$1;
-  var x$44 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$38, x$39, x$40, x$41, x$42, x$43, x$44, x$37);
+  var x$38 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$11, this$9.ReusableCBFInstance$2));
+  var x$39 = s.modules$1;
+  var x$40 = s.repositories$1;
+  var x$41 = s.options$1;
+  var x$42 = s.resolutionOpt$1;
+  var x$43 = s.editModuleIdx$1;
+  var x$44 = s.resolving$1;
+  var x$45 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$39, x$40, x$41, x$42, x$43, x$44, x$45, x$38);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$2, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.fetching__T__V = (function(url) {
@@ -13974,15 +14020,15 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.fetching__T__V = (function(url) {
   var x$12 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetching ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$47 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$12, this$9.ReusableCBFInstance$2));
-  var x$48 = s.modules$1;
-  var x$49 = s.repositories$1;
-  var x$50 = s.options$1;
-  var x$51 = s.resolutionOpt$1;
-  var x$52 = s.editModuleIdx$1;
-  var x$53 = s.resolving$1;
-  var x$54 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$48, x$49, x$50, x$51, x$52, x$53, x$54, x$47);
+  var x$48 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$12, this$9.ReusableCBFInstance$2));
+  var x$49 = s.modules$1;
+  var x$50 = s.repositories$1;
+  var x$51 = s.options$1;
+  var x$52 = s.resolutionOpt$1;
+  var x$53 = s.editModuleIdx$1;
+  var x$54 = s.resolving$1;
+  var x$55 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$49, x$50, x$51, x$52, x$53, x$54, x$55, x$48);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$3, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.other__T__T__V = (function(url, msg) {
@@ -13998,15 +14044,15 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.other__T__T__V = (function(url, msg) 
   var x$13 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ": ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url, msg]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$57 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$13, this$9.ReusableCBFInstance$2));
-  var x$58 = s.modules$1;
-  var x$59 = s.repositories$1;
-  var x$60 = s.options$1;
-  var x$61 = s.resolutionOpt$1;
-  var x$62 = s.editModuleIdx$1;
-  var x$63 = s.resolving$1;
-  var x$64 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$58, x$59, x$60, x$61, x$62, x$63, x$64, x$57);
+  var x$58 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$13, this$9.ReusableCBFInstance$2));
+  var x$59 = s.modules$1;
+  var x$60 = s.repositories$1;
+  var x$61 = s.options$1;
+  var x$62 = s.resolutionOpt$1;
+  var x$63 = s.editModuleIdx$1;
+  var x$64 = s.resolving$1;
+  var x$65 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$59, x$60, x$61, x$62, x$63, x$64, x$65, x$58);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$4, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.init___Lcoursier_web_Backend = (function($$outer) {
@@ -15866,6 +15912,54 @@ var $m_s_concurrent_BlockContext$DefaultBlockContext$ = (function() {
   return $n_s_concurrent_BlockContext$DefaultBlockContext$
 });
 /** @constructor */
+var $c_s_concurrent_impl_Future$PromiseCompletingRunnable = (function() {
+  $c_O.call(this);
+  this.body$1 = null;
+  this.promise$1 = null
+});
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype = new $h_O();
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype.constructor = $c_s_concurrent_impl_Future$PromiseCompletingRunnable;
+/** @constructor */
+var $h_s_concurrent_impl_Future$PromiseCompletingRunnable = (function() {
+  /*<skip>*/
+});
+$h_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype = $c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype;
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype.init___F0 = (function(body) {
+  this.body$1 = body;
+  this.promise$1 = new $c_s_concurrent_impl_Promise$DefaultPromise().init___();
+  return this
+});
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype.run__V = (function() {
+  var this$1 = this.promise$1;
+  var result = this.liftedTree1$1__p1__s_util_Try();
+  $s_s_concurrent_Promise$class__complete__s_concurrent_Promise__s_util_Try__s_concurrent_Promise(this$1, result)
+});
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype.liftedTree1$1__p1__s_util_Try = (function() {
+  try {
+    return new $c_s_util_Success().init___O(this.body$1.apply__O())
+  } catch (e) {
+    var e$2 = $m_sjsr_package$().wrapJavaScriptException__O__jl_Throwable(e);
+    if ((e$2 !== null)) {
+      var o11 = $m_s_util_control_NonFatal$().unapply__jl_Throwable__s_Option(e$2);
+      if ((!o11.isEmpty__Z())) {
+        var e$3 = $as_jl_Throwable(o11.get__O());
+        return new $c_s_util_Failure().init___jl_Throwable(e$3)
+      };
+      throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(e$2)
+    } else {
+      throw e
+    }
+  }
+});
+var $d_s_concurrent_impl_Future$PromiseCompletingRunnable = new $TypeData().initClass({
+  s_concurrent_impl_Future$PromiseCompletingRunnable: 0
+}, false, "scala.concurrent.impl.Future$PromiseCompletingRunnable", {
+  s_concurrent_impl_Future$PromiseCompletingRunnable: 1,
+  O: 1,
+  jl_Runnable: 1
+});
+$c_s_concurrent_impl_Future$PromiseCompletingRunnable.prototype.$classData = $d_s_concurrent_impl_Future$PromiseCompletingRunnable;
+/** @constructor */
 var $c_s_math_ScalaNumber = (function() {
   $c_jl_Number.call(this)
 });
@@ -16129,15 +16223,6 @@ var $h_sc_TraversableLike$WithFilter = (function() {
   /*<skip>*/
 });
 $h_sc_TraversableLike$WithFilter.prototype = $c_sc_TraversableLike$WithFilter.prototype;
-$c_sc_TraversableLike$WithFilter.prototype.flatMap__F1__scg_CanBuildFrom__O = (function(f, bf) {
-  var b = bf.apply__O__scm_Builder(this.$$outer$f.repr__O());
-  this.$$outer$f.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2, f$1, b$1) {
-    return (function(x$2) {
-      return ($uZ(this$2.p$1.apply__O__O(x$2)) ? b$1.$$plus$plus$eq__sc_TraversableOnce__scg_Growable($as_sc_GenTraversableOnce(f$1.apply__O__O(x$2)).seq__sc_TraversableOnce()) : (void 0))
-    })
-  })(this, f, b)));
-  return b.result__O()
-});
 $c_sc_TraversableLike$WithFilter.prototype.foreach__F1__V = (function(f) {
   this.$$outer$f.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2, f$1) {
     return (function(x$2) {
@@ -20457,16 +20542,6 @@ var $h_sci_Stream$StreamWithFilter = (function() {
   /*<skip>*/
 });
 $h_sci_Stream$StreamWithFilter.prototype = $c_sci_Stream$StreamWithFilter.prototype;
-$c_sci_Stream$StreamWithFilter.prototype.flatMap__F1__scg_CanBuildFrom__O = (function(f, bf) {
-  var this$1 = $as_sci_Stream(this.$$outer$f);
-  if ($is_sci_Stream$StreamBuilder(bf.apply__O__scm_Builder(this$1))) {
-    $as_sci_Stream(this.$$outer$f);
-    var x = this.tailFlatMap$1__p2__sci_Stream__F1__sci_Stream($as_sci_Stream(this.$$outer$f), f);
-    return x
-  } else {
-    return $c_sc_TraversableLike$WithFilter.prototype.flatMap__F1__scg_CanBuildFrom__O.call(this, f, bf)
-  }
-});
 $c_sci_Stream$StreamWithFilter.prototype.foreach__F1__V = (function(f) {
   var this$1 = $as_sci_Stream(this.$$outer$f);
   var _$this = this$1;
@@ -20481,24 +20556,6 @@ $c_sci_Stream$StreamWithFilter.prototype.foreach__F1__V = (function(f) {
         continue _foreach
       };
       break x
-    }
-  }
-});
-$c_sci_Stream$StreamWithFilter.prototype.tailFlatMap$1__p2__sci_Stream__F1__sci_Stream = (function(coll, f$4) {
-  var head = null;
-  var tail = new $c_sr_ObjectRef().init___O(coll);
-  while (true) {
-    if ($as_sci_Stream(tail.elem$1).isEmpty__Z()) {
-      return $m_sci_Stream$Empty$()
-    };
-    head = $as_sci_Stream(tail.elem$1).head__O();
-    tail.elem$1 = $as_sci_Stream($as_sci_Stream(tail.elem$1).tail__O());
-    if ($uZ(this.p$2.apply__O__O(head))) {
-      return $as_sc_GenTraversableOnce(f$4.apply__O__O(head)).toStream__sci_Stream().append__F0__sci_Stream(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$2, f$4$1, tail$1) {
-        return (function() {
-          return this$2.tailFlatMap$1__p2__sci_Stream__F1__sci_Stream($as_sci_Stream(tail$1.elem$1), f$4$1)
-        })
-      })(this, f$4, tail)))
     }
   }
 });
@@ -24976,13 +25033,13 @@ $c_Lcoursier_core_Resolver$$anonfun$28.prototype.apply__sci_List__Lscalaz_$bslas
       var f$1 = (function(version$2) {
         return (function(dep$2) {
           var dep = $as_Lcoursier_core_Dependency(dep$2);
-          var x$66 = dep.module$1;
-          var x$67 = dep.scope$1;
-          var x$68 = dep.type$1;
-          var x$69 = dep.classifier$1;
-          var x$70 = dep.exclusions$1;
-          var x$71 = dep.optional$1;
-          return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$66, version$2, x$67, x$68, x$69, x$70, x$71)
+          var x$65 = dep.module$1;
+          var x$66 = dep.scope$1;
+          var x$67 = dep.type$1;
+          var x$68 = dep.classifier$1;
+          var x$69 = dep.exclusions$1;
+          var x$70 = dep.optional$1;
+          return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$65, version$2, x$66, x$67, x$68, x$69, x$70)
         })
       })(version);
       var this$2 = $m_sci_List$();
@@ -25057,17 +25114,17 @@ $c_Lcoursier_core_Resolver$$anonfun$coursier$core$Resolver$$helper$3$2.prototype
   this.remainingIter$1$2 = remainingIter$1;
   return this
 });
-$c_Lcoursier_core_Resolver$$anonfun$coursier$core$Resolver$$helper$3$2.prototype.apply__Lcoursier_core_Resolver$Resolution__Lscalaz_concurrent_package$Task = (function(x$55) {
+$c_Lcoursier_core_Resolver$$anonfun$coursier$core$Resolver$$helper$3$2.prototype.apply__Lcoursier_core_Resolver$Resolution__Lscalaz_concurrent_package$Task = (function(x$54) {
   var jsx$2 = $m_Lcoursier_core_Resolver$();
   var this$1 = this.remainingIter$1$2;
   if (this$1.isEmpty__Z()) {
     var jsx$1 = $m_s_None$()
   } else {
     var arg1 = this$1.get__O();
-    var x$56 = $uI(arg1);
-    var jsx$1 = new $c_s_Some().init___O((((-1) + x$56) | 0))
+    var x$55 = $uI(arg1);
+    var jsx$1 = new $c_s_Some().init___O((((-1) + x$55) | 0))
   };
-  return jsx$2.coursier$core$Resolver$$helper$3__Lcoursier_core_Resolver$Resolution__s_Option__F1__Lscalaz_concurrent_package$Task(x$55, jsx$1, this.fetch$1$2)
+  return jsx$2.coursier$core$Resolver$$helper$3__Lcoursier_core_Resolver$Resolution__s_Option__F1__Lscalaz_concurrent_package$Task(x$54, jsx$1, this.fetch$1$2)
 });
 var $d_Lcoursier_core_Resolver$$anonfun$coursier$core$Resolver$$helper$3$2 = new $TypeData().initClass({
   Lcoursier_core_Resolver$$anonfun$coursier$core$Resolver$$helper$3$2: 0
@@ -25172,14 +25229,14 @@ $c_Lcoursier_core_Resolver$$anonfun$depsWithDependencyManagement$1.prototype.app
     };
     if ((jsx$1 === "")) {
       var qual$1 = $as_Lcoursier_core_Dependency(elem$1);
-      var x$72 = mgmtDep.version$1;
-      var x$73 = qual$1.module$1;
-      var x$74 = qual$1.scope$1;
-      var x$75 = qual$1.type$1;
-      var x$76 = qual$1.classifier$1;
-      var x$77 = qual$1.exclusions$1;
-      var x$78 = qual$1.optional$1;
-      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$73, x$72, x$74, x$75, x$76, x$77, x$78)
+      var x$71 = mgmtDep.version$1;
+      var x$72 = qual$1.module$1;
+      var x$73 = qual$1.scope$1;
+      var x$74 = qual$1.type$1;
+      var x$75 = qual$1.classifier$1;
+      var x$76 = qual$1.exclusions$1;
+      var x$77 = qual$1.optional$1;
+      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$72, x$71, x$73, x$74, x$75, x$76, x$77)
     };
     var thiz$1 = $as_Lcoursier_core_Dependency(elem$1).scope$1.name__T();
     if ((thiz$1 === null)) {
@@ -25190,25 +25247,25 @@ $c_Lcoursier_core_Resolver$$anonfun$depsWithDependencyManagement$1.prototype.app
     };
     if ((jsx$2 === "")) {
       var qual$2 = $as_Lcoursier_core_Dependency(elem$1);
-      var x$79 = mgmtDep.scope$1;
-      var x$80 = qual$2.module$1;
-      var x$81 = qual$2.version$1;
-      var x$82 = qual$2.type$1;
-      var x$83 = qual$2.classifier$1;
-      var x$84 = qual$2.exclusions$1;
-      var x$85 = qual$2.optional$1;
-      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$80, x$81, x$79, x$82, x$83, x$84, x$85)
+      var x$78 = mgmtDep.scope$1;
+      var x$79 = qual$2.module$1;
+      var x$80 = qual$2.version$1;
+      var x$81 = qual$2.type$1;
+      var x$82 = qual$2.classifier$1;
+      var x$83 = qual$2.exclusions$1;
+      var x$84 = qual$2.optional$1;
+      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$79, x$80, x$78, x$81, x$82, x$83, x$84)
     };
     if ($as_Lcoursier_core_Dependency(elem$1).exclusions$1.isEmpty__Z()) {
       var qual$3 = $as_Lcoursier_core_Dependency(elem$1);
-      var x$86 = mgmtDep.exclusions$1;
-      var x$87 = qual$3.module$1;
-      var x$88 = qual$3.version$1;
-      var x$89 = qual$3.scope$1;
-      var x$90 = qual$3.type$1;
-      var x$91 = qual$3.classifier$1;
-      var x$92 = qual$3.optional$1;
-      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$87, x$88, x$89, x$90, x$91, x$86, x$92)
+      var x$85 = mgmtDep.exclusions$1;
+      var x$86 = qual$3.module$1;
+      var x$87 = qual$3.version$1;
+      var x$88 = qual$3.scope$1;
+      var x$89 = qual$3.type$1;
+      var x$90 = qual$3.classifier$1;
+      var x$91 = qual$3.optional$1;
+      elem$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$86, x$87, x$88, x$89, x$90, x$85, x$91)
     }
   };
   return $as_Lcoursier_core_Dependency(elem$1)
@@ -25252,13 +25309,13 @@ $c_Lcoursier_core_Resolver$$anonfun$finalDependencies$1.prototype.apply__Lcoursi
   } else {
     var arg1 = this$1.get__O();
     var scope = $as_Lcoursier_core_Scope(arg1);
-    var x$108 = (trDep.optional$1 || this.from$1$f.optional$1);
-    var x$109 = trDep.module$1;
-    var x$110 = trDep.version$1;
-    var x$111 = trDep.type$1;
-    var x$112 = trDep.classifier$1;
-    var x$113 = trDep.exclusions$1;
-    var xo = new $c_s_Some().init___O(new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$109, x$110, scope, x$111, x$112, x$113, x$108))
+    var x$107 = (trDep.optional$1 || this.from$1$f.optional$1);
+    var x$108 = trDep.module$1;
+    var x$109 = trDep.version$1;
+    var x$110 = trDep.type$1;
+    var x$111 = trDep.classifier$1;
+    var x$112 = trDep.exclusions$1;
+    var xo = new $c_s_Some().init___O(new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$108, x$109, scope, x$110, x$111, x$112, x$107))
   };
   return xo.toList__sci_List()
 });
@@ -25338,10 +25395,10 @@ $c_Lcoursier_core_Resolver$$anonfun$withProperties$1.prototype.apply__Lcoursier_
   dep.module$1;
   var organization = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.module$1.organization$1, this.properties$2$f);
   var name = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.module$1.name$1, this.properties$2$f);
-  var x$58 = new $c_Lcoursier_core_Module().init___T__T(organization, name);
-  var x$59 = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.version$1, this.properties$2$f);
-  var x$60 = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.type$1, this.properties$2$f);
-  var x$61 = $m_Lcoursier_core_Parse$().scope__T__Lcoursier_core_Scope($m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.scope$1.name__T(), this.properties$2$f));
+  var x$57 = new $c_Lcoursier_core_Module().init___T__T(organization, name);
+  var x$58 = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.version$1, this.properties$2$f);
+  var x$59 = $m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.type$1, this.properties$2$f);
+  var x$60 = $m_Lcoursier_core_Parse$().scope__T__Lcoursier_core_Scope($m_Lcoursier_core_Resolver$().coursier$core$Resolver$$substituteProps$1__T__sci_Map__T(dep.scope$1.name__T(), this.properties$2$f));
   var this$3 = dep.exclusions$1;
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
     return (function(x0$5$2) {
@@ -25357,10 +25414,10 @@ $c_Lcoursier_core_Resolver$$anonfun$withProperties$1.prototype.apply__Lcoursier_
   })(this));
   var this$2 = $m_sci_Set$();
   var bf = new $c_scg_GenSetFactory$$anon$1().init___scg_GenSetFactory(this$2);
-  var x$62 = $as_sci_Set($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(this$3, f, bf));
-  var x$63 = dep.classifier$1;
-  var x$64 = dep.optional$1;
-  return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$58, x$59, x$61, x$60, x$63, x$62, x$64)
+  var x$61 = $as_sci_Set($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(this$3, f, bf));
+  var x$62 = dep.classifier$1;
+  var x$63 = dep.optional$1;
+  return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$57, x$58, x$60, x$59, x$62, x$61, x$63)
 });
 var $d_Lcoursier_core_Resolver$$anonfun$withProperties$1 = new $TypeData().initClass({
   Lcoursier_core_Resolver$$anonfun$withProperties$1: 0
@@ -25382,7 +25439,8 @@ var $c_Lcoursier_core_Resolver$Resolution = (function() {
   this.projectsCache$1 = null;
   this.errors$1 = null;
   this.filter$1 = null;
-  this.profileActivation$1 = null
+  this.profileActivation$1 = null;
+  this.finalDependenciesCache$1 = null
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype = new $h_O();
 $c_Lcoursier_core_Resolver$Resolution.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution;
@@ -25422,15 +25480,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.helper$2__p1__sci_Set__sci_Set__
       if ((x1 !== null)) {
         var checking = $as_sci_Set(x1.$$und1__O());
         var remaining = $as_sci_Set(x1.$$und2__O());
-        var x$38_$_$$und1$f = checking;
-        var x$38_$_$$und2$f = remaining
+        var x$37_$_$$und1$f = checking;
+        var x$37_$_$$und2$f = remaining
       } else {
-        var x$38_$_$$und1$f;
-        var x$38_$_$$und2$f;
+        var x$37_$_$$und1$f;
+        var x$37_$_$$und2$f;
         throw new $c_s_MatchError().init___O(x1)
       };
-      var checking$2 = $as_sci_Set(x$38_$_$$und1$f);
-      var remaining$2 = $as_sci_Set(x$38_$_$$und2$f);
+      var checking$2 = $as_sci_Set(x$37_$_$$und1$f);
+      var remaining$2 = $as_sci_Set(x$37_$_$$und2$f);
       var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer$2) {
         return (function(mod$2) {
           var mod = $as_T2(mod$2);
@@ -25462,15 +25520,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.helper$2__p1__sci_Set__sci_Set__
       if ((x1$2 !== null)) {
         var errored = $as_sci_Set(x1$2.$$und1__O());
         var remaining$3 = $as_sci_Set(x1$2.$$und2__O());
-        var x$39_$_$$und1$f = errored;
-        var x$39_$_$$und2$f = remaining$3
+        var x$38_$_$$und1$f = errored;
+        var x$38_$_$$und2$f = remaining$3
       } else {
-        var x$39_$_$$und1$f;
-        var x$39_$_$$und2$f;
+        var x$38_$_$$und1$f;
+        var x$38_$_$$und2$f;
         throw new $c_s_MatchError().init___O(x1$2)
       };
-      var errored$2 = $as_sci_Set(x$39_$_$$und1$f);
-      var remaining$4 = $as_sci_Set(x$39_$_$$und2$f);
+      var errored$2 = $as_sci_Set(x$38_$_$$und1$f);
+      var remaining$4 = $as_sci_Set(x$38_$_$$und2$f);
       var temp$done$2 = $as_sci_Set(done.$$plus$plus__sc_GenTraversableOnce__sc_Set(errored$2));
       toCheck = remaining$4;
       done = temp$done$2;
@@ -25497,9 +25555,9 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.next__F1__Lscalaz_concurrent_pac
     var this$2 = $m_sci_List$();
     var cbf = this$2.ReusableCBFInstance$2;
     var this$3 = this.fetch__sc_Seq__F1__Lscalaz_concurrent_package$Task($as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(missing, cbf)), fetchModule);
-    var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$34$2) {
-      var x$34 = $as_Lcoursier_core_Resolver$Resolution(x$34$2);
-      return x$34.nextIfNoMissing__Lcoursier_core_Resolver$Resolution()
+    var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$33$2) {
+      var x$33 = $as_Lcoursier_core_Resolver$Resolution(x$33$2);
+      return x$33.nextIfNoMissing__Lcoursier_core_Resolver$Resolution()
     }));
     return new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$3, f)
   }
@@ -25518,14 +25576,14 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.newDependencies__sci_Set = (func
   var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer$1, remainingDeps0$1$1) {
     return (function(dep$2$1) {
       var dep$1 = $as_Lcoursier_core_Dependency(dep$2$1);
-      var x$114 = $as_sci_Set(remainingDeps0$1$1.apply__O__O(arg$outer$1.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(dep$1)));
-      var x$115 = dep$1.module$1;
-      var x$116 = dep$1.version$1;
-      var x$117 = dep$1.scope$1;
-      var x$118 = dep$1.type$1;
-      var x$119 = dep$1.classifier$1;
-      var x$120 = dep$1.optional$1;
-      return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$115, x$116, x$117, x$118, x$119, x$114, x$120)
+      var x$113 = $as_sci_Set(remainingDeps0$1$1.apply__O__O(arg$outer$1.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(dep$1)));
+      var x$114 = dep$1.module$1;
+      var x$115 = dep$1.version$1;
+      var x$116 = dep$1.scope$1;
+      var x$117 = dep$1.type$1;
+      var x$118 = dep$1.classifier$1;
+      var x$119 = dep$1.optional$1;
+      return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$114, x$115, x$116, x$117, x$118, x$113, x$119)
     })
   })(this, remainingDeps0));
   var this$1 = $m_sc_Seq$();
@@ -25602,15 +25660,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
     var this$3 = $m_s_None$()
   } else {
     var arg1$1 = this$2.get__O();
-    var x$40 = $as_T2(arg1$1);
-    var this$3 = new $c_s_Some().init___O($as_Lcoursier_core_Project($as_T2(this.projectsCache$1.apply__O__O(x$40)).$$und2__O()).properties$1)
+    var x$39 = $as_T2(arg1$1);
+    var this$3 = new $c_s_Some().init___O($as_Lcoursier_core_Project($as_T2(this.projectsCache$1.apply__O__O(x$39)).$$und2__O()).properties$1)
   };
   if (this$3.isEmpty__Z()) {
     var approxProperties = project.properties$1
   } else {
     var arg1$2 = this$3.get__O();
-    var x$41 = $as_sci_Map(arg1$2);
-    var approxProperties = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(project.properties$1, x$41)
+    var x$40 = $as_sci_Map(arg1$2);
+    var approxProperties = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(project.properties$1, x$40)
   };
   var jsx$2 = $m_Lcoursier_core_Resolver$();
   var this$4 = this.profileActivation$1;
@@ -25621,17 +25679,17 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
     return $m_Lcoursier_core_Resolver$().defaultProfileActivation__T__Lcoursier_core_Activation__sci_Map__Z(id, activation, props)
   })) : this$4.get__O())));
   var jsx$5 = $m_Lcoursier_core_Resolver$();
-  var x$43 = project.dependencies$1;
-  var jsx$4 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$42$2) {
-    var x$42 = $as_Lcoursier_core_Profile(x$42$2);
-    return x$42.dependencies$1
+  var x$42 = project.dependencies$1;
+  var jsx$4 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$41$2) {
+    var x$41 = $as_Lcoursier_core_Profile(x$41$2);
+    return x$41.dependencies$1
   }));
   var this$5 = $m_sc_Seq$();
   var jsx$3 = $as_sc_SeqLike(profiles0.map__F1__scg_CanBuildFrom__O(jsx$4, this$5.ReusableCBFInstance$2));
   var this$6 = $m_sc_Seq$();
-  var dependencies0 = jsx$5.addDependencies__sc_Seq__sc_Seq($as_sc_Seq(jsx$3.$$plus$colon__O__scg_CanBuildFrom__O(x$43, this$6.ReusableCBFInstance$2)));
-  var x$44 = project.properties$1;
-  var properties0 = $as_sci_Map(profiles0.$$div$colon__O__F2__O(x$44, new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(acc$2, p$2) {
+  var dependencies0 = jsx$5.addDependencies__sc_Seq__sc_Seq($as_sc_Seq(jsx$3.$$plus$colon__O__scg_CanBuildFrom__O(x$42, this$6.ReusableCBFInstance$2)));
+  var x$43 = project.properties$1;
+  var properties0 = $as_sci_Map(profiles0.$$div$colon__O__F2__O(x$43, new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(acc$2, p$2) {
     var acc = $as_sci_Map(acc$2);
     var p = $as_Lcoursier_core_Profile(p$2);
     return $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(acc, p.properties$1)
@@ -25656,30 +25714,30 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
   var this$10 = $m_sc_Seq$();
   var deps = $as_sc_Seq(jsx$8.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$7, this$10.ReusableCBFInstance$2));
   var jsx$10 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-    return (function(x$45$2) {
-      var x$45 = $as_T2(x$45$2);
-      return $as_Lcoursier_core_Project($as_T2(arg$outer.projectsCache$1.apply__O__O(x$45)).$$und2__O())
+    return (function(x$44$2) {
+      var x$44 = $as_T2(x$44$2);
+      return $as_Lcoursier_core_Project($as_T2(arg$outer.projectsCache$1.apply__O__O(x$44)).$$und2__O())
     })
   })(this));
   var this$11 = $m_sc_Seq$();
   var projs = $as_sc_Seq(deps.map__F1__scg_CanBuildFrom__O(jsx$10, this$11.ReusableCBFInstance$2));
-  var x$48 = project.dependencyManagement$1;
-  var jsx$15 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$46$2) {
-    var x$46 = $as_Lcoursier_core_Profile(x$46$2);
-    return x$46.dependencyManagement$1
+  var x$47 = project.dependencyManagement$1;
+  var jsx$15 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$45$2) {
+    var x$45 = $as_Lcoursier_core_Profile(x$45$2);
+    return x$45.dependencyManagement$1
   }));
   var this$12 = $m_sc_Seq$();
   var jsx$14 = $as_sc_TraversableLike(profiles0.map__F1__scg_CanBuildFrom__O(jsx$15, this$12.ReusableCBFInstance$2));
-  var jsx$13 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$47$2) {
-    var x$47 = $as_Lcoursier_core_Project(x$47$2);
-    return x$47.dependencyManagement$1
+  var jsx$13 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$46$2) {
+    var x$46 = $as_Lcoursier_core_Project(x$46$2);
+    return x$46.dependencyManagement$1
   }));
   var this$13 = $m_sc_Seq$();
   var jsx$12 = $as_sc_GenTraversableOnce(projs.map__F1__scg_CanBuildFrom__O(jsx$13, this$13.ReusableCBFInstance$2));
   var this$14 = $m_sc_Seq$();
   var jsx$11 = $as_sc_SeqLike(jsx$14.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$12, this$14.ReusableCBFInstance$2));
   var this$15 = $m_sc_Seq$();
-  var depMgmt = $as_sci_Map($as_sc_TraversableOnce(jsx$11.$$plus$colon__O__scg_CanBuildFrom__O(x$48, this$15.ReusableCBFInstance$2)).foldLeft__O__F2__O($m_sci_Map$EmptyMap$(), new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(m$2, deps$2) {
+  var depMgmt = $as_sci_Map($as_sc_TraversableOnce(jsx$11.$$plus$colon__O__scg_CanBuildFrom__O(x$47, this$15.ReusableCBFInstance$2)).foldLeft__O__F2__O($m_sci_Map$EmptyMap$(), new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(m$2, deps$2) {
     var m = $as_sci_Map(m$2);
     var deps$1 = $as_sc_Seq(deps$2);
     return $m_Lcoursier_core_Resolver$().dependencyManagementAddSeq__sci_Map__sc_Seq__sci_Map(m, deps$1)
@@ -25713,9 +25771,9 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
   };
   var this$21 = xo$1.toList__sci_List();
   var f = (function(arg$outer$1) {
-    return (function(x$49$2) {
-      var x$49 = $as_T2(x$49$2);
-      return $as_Lcoursier_core_Project($as_T2(arg$outer$1.projectsCache$1.apply__O__O(x$49)).$$und2__O()).dependencies$1
+    return (function(x$48$2) {
+      var x$48 = $as_T2(x$48$2);
+      return $as_Lcoursier_core_Project($as_T2(arg$outer$1.projectsCache$1.apply__O__O(x$48)).$$und2__O()).dependencies$1
     })
   })(this);
   var this$20 = $m_sc_Seq$();
@@ -25761,9 +25819,9 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
   };
   var jsx$16 = $as_sc_GenTraversableOnce(jsx$18);
   var this$26 = $m_sc_Seq$();
-  var x$128 = $as_sc_Seq(jsx$19.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$16, this$26.ReusableCBFInstance$2));
+  var x$127 = $as_sc_Seq(jsx$19.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$16, this$26.ReusableCBFInstance$2));
   var this$27 = new $c_sc_MapLike$DefaultValuesIterable().init___sc_MapLike(depMgmt);
-  var x$129 = this$27.$$outer$f.valuesIterator__sc_Iterator().toStream__sci_Stream();
+  var x$128 = this$27.$$outer$f.valuesIterator__sc_Iterator().toStream__sci_Stream();
   var this$28 = project.parent$1;
   if (this$28.isEmpty__Z()) {
     var jsx$20 = true
@@ -25781,21 +25839,21 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.withDependencyManagement__Lcours
     var this$30 = $m_s_None$()
   } else {
     var arg1$8 = this$29.get__O();
-    var x$50 = $as_T2(arg1$8);
-    var this$30 = new $c_s_Some().init___O($as_Lcoursier_core_Project($as_T2(this.projectsCache$1.apply__O__O(x$50)).$$und2__O()).properties$1)
+    var x$49 = $as_T2(arg1$8);
+    var this$30 = new $c_s_Some().init___O($as_Lcoursier_core_Project($as_T2(this.projectsCache$1.apply__O__O(x$49)).$$und2__O()).properties$1)
   };
   if (this$30.isEmpty__Z()) {
-    var x$130 = properties0
+    var x$129 = properties0
   } else {
     var arg1$9 = this$30.get__O();
-    var x$51 = $as_sci_Map(arg1$9);
-    var x$130 = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(properties0, x$51)
+    var x$50 = $as_sci_Map(arg1$9);
+    var x$129 = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(properties0, x$50)
   };
-  var x$131 = project.module$1;
-  var x$132 = project.version$1;
-  var x$133 = project.parent$1;
-  var x$134 = project.profiles$1;
-  return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq(x$131, x$132, x$128, x$133, x$129, x$130, x$134)
+  var x$130 = project.module$1;
+  var x$131 = project.version$1;
+  var x$132 = project.parent$1;
+  var x$133 = project.profiles$1;
+  return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq(x$130, x$131, x$127, x$132, x$128, x$129, x$133)
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.productElement__I__O = (function(x$1) {
   switch (x$1) {
@@ -25844,14 +25902,14 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.nextNoMissingUnsafe__p1__Lcoursi
     var newConflicts$2;
     throw new $c_s_MatchError().init___O(x1)
   };
-  var x$121 = $as_sci_Set(this.newDependencies__sci_Set().$$plus$plus__sc_GenTraversableOnce__sc_Set(newConflicts$2));
-  var x$122 = newConflicts$2.toSet__sci_Set();
-  var x$123 = this.rootDependencies$1;
-  var x$124 = this.projectsCache$1;
-  var x$125 = this.errors$1;
-  var x$126 = this.filter$1;
-  var x$127 = this.profileActivation$1;
-  return new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$123, x$121, x$122, x$124, x$125, x$126, x$127)
+  var x$120 = $as_sci_Set(this.newDependencies__sci_Set().$$plus$plus__sc_GenTraversableOnce__sc_Set(newConflicts$2));
+  var x$121 = newConflicts$2.toSet__sci_Set();
+  var x$122 = this.rootDependencies$1;
+  var x$123 = this.projectsCache$1;
+  var x$124 = this.errors$1;
+  var x$125 = this.filter$1;
+  var x$126 = this.profileActivation$1;
+  return new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$122, x$120, x$121, x$123, x$124, x$125, x$126)
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.nextDependenciesAndConflicts__T2 = (function() {
   return $m_Lcoursier_core_Resolver$().merge__sc_TraversableOnce__T2(this.dependencies$1.$$plus$plus__sc_GenTraversableOnce__sc_Set(this.transitiveDependencies__sci_List()))
@@ -25859,10 +25917,63 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.nextDependenciesAndConflicts__T2
 $c_Lcoursier_core_Resolver$Resolution.prototype.transitiveDependencies__sci_List = (function() {
   var this$1 = this.dependencies$1;
   var xs = this.conflicts$1;
-  var jsx$2 = $as_sc_TraversableOnce($s_scg_Subtractable$class__$$minus$minus__scg_Subtractable__sc_GenTraversableOnce__scg_Subtractable(this$1, xs)).toList__sci_List();
-  var jsx$1 = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1().init___Lcoursier_core_Resolver$Resolution(this);
+  var this$3 = $as_sc_TraversableOnce($s_scg_Subtractable$class__$$minus$minus__scg_Subtractable__sc_GenTraversableOnce__scg_Subtractable(this$1, xs)).toList__sci_List();
   var this$2 = $m_sci_List$();
-  return $as_sci_List(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2))
+  var bf = this$2.ReusableCBFInstance$2;
+  if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
+    if ((this$3 === $m_sci_Nil$())) {
+      var jsx$1 = $m_sci_Nil$()
+    } else {
+      var rest = this$3;
+      var found = new $c_sr_BooleanRef().init___Z(false);
+      var h = new $c_sr_ObjectRef().init___O(null);
+      var t = new $c_sr_ObjectRef().init___O(null);
+      while ((rest !== $m_sci_Nil$())) {
+        var v1 = rest.head__O();
+        var dep = $as_Lcoursier_core_Dependency(v1);
+        var jsx$3 = this.coursier$core$Resolver$Resolution$$finalDependencies0__Lcoursier_core_Dependency__sc_Seq(dep);
+        var jsx$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(trDep$2) {
+          var trDep = $as_Lcoursier_core_Dependency(trDep$2);
+          return trDep
+        }));
+        var this$7 = $m_sc_Seq$();
+        $as_sc_GenTraversableOnce($as_sc_Seq(jsx$3.map__F1__scg_CanBuildFrom__O(jsx$2, this$7.ReusableCBFInstance$2))).seq__sc_TraversableOnce().foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2$1, found$1, h$1, t$1) {
+          return (function(b$2) {
+            if ((!found$1.elem$1)) {
+              h$1.elem$1 = new $c_sci_$colon$colon().init___O__sci_List(b$2, $m_sci_Nil$());
+              t$1.elem$1 = $as_sci_$colon$colon(h$1.elem$1);
+              found$1.elem$1 = true
+            } else {
+              var nx = new $c_sci_$colon$colon().init___O__sci_List(b$2, $m_sci_Nil$());
+              $as_sci_$colon$colon(t$1.elem$1).tl$5 = nx;
+              t$1.elem$1 = nx
+            }
+          })
+        })(this$3, found, h, t)));
+        rest = $as_sci_List(rest.tail__O())
+      };
+      var jsx$1 = ((!found.elem$1) ? $m_sci_Nil$() : $as_sci_$colon$colon(h.elem$1))
+    }
+  } else {
+    $m_sci_List$();
+    var b = new $c_scm_ListBuffer().init___();
+    var these = this$3;
+    while ((!these.isEmpty__Z())) {
+      var arg1 = these.head__O();
+      var dep$1 = $as_Lcoursier_core_Dependency(arg1);
+      var jsx$5 = this.coursier$core$Resolver$Resolution$$finalDependencies0__Lcoursier_core_Dependency__sc_Seq(dep$1);
+      var jsx$4 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(trDep$2$1) {
+        var trDep$1 = $as_Lcoursier_core_Dependency(trDep$2$1);
+        return trDep$1
+      }));
+      var this$9 = $m_sc_Seq$();
+      var xs$1 = $as_sc_GenTraversableOnce($as_sc_Seq(jsx$5.map__F1__scg_CanBuildFrom__O(jsx$4, this$9.ReusableCBFInstance$2))).seq__sc_TraversableOnce();
+      b.$$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(xs$1);
+      these = $as_sci_List(these.tail__O())
+    };
+    var jsx$1 = b.toList__sci_List()
+  };
+  return $as_sci_List(jsx$1)
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.remainingDependenciesAndExclusions__sci_Map = (function() {
   var this$4 = this.rootDependencies$1;
@@ -25899,15 +26010,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.remainingDependenciesAndExclusio
           var this$14 = $m_s_None$()
         } else {
           var v1$1 = this$11.get__O();
-          var x$32 = $as_sci_Vector(v1$1);
+          var x$31 = $as_sci_Vector(v1$1);
           $m_sci_Vector$();
           var bf$2 = $m_sc_IndexedSeq$().ReusableCBF$6;
-          var b = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(x$32, bf$2);
-          var this$13 = x$32.iterator__sci_VectorIterator();
+          var b = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(x$31, bf$2);
+          var this$13 = x$31.iterator__sci_VectorIterator();
           while (this$13.$$undhasNext$2) {
             var arg1 = this$13.next__O();
-            var x$33 = $as_T2(arg1);
-            b.$$plus$eq__O__scm_Builder($as_sci_Set(x$33.$$und2__O()))
+            var x$32 = $as_T2(arg1);
+            b.$$plus$eq__O__scm_Builder($as_sci_Set(x$32.$$und2__O()))
           };
           var this$14 = new $c_s_Some().init___O($as_sci_Vector(b.result__O()))
         };
@@ -25938,15 +26049,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.remainingDependenciesAndExclusio
             var this$23 = $m_s_None$()
           } else {
             var v1$3 = this$20.get__O();
-            var x$32$1 = $as_sci_Vector(v1$3);
+            var x$31$1 = $as_sci_Vector(v1$3);
             $m_sci_Vector$();
             var bf$3 = $m_sc_IndexedSeq$().ReusableCBF$6;
-            var b$1 = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(x$32$1, bf$3);
-            var this$22 = x$32$1.iterator__sci_VectorIterator();
+            var b$1 = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(x$31$1, bf$3);
+            var this$22 = x$31$1.iterator__sci_VectorIterator();
             while (this$22.$$undhasNext$2) {
               var arg1$1 = this$22.next__O();
-              var x$33$1 = $as_T2(arg1$1);
-              b$1.$$plus$eq__O__scm_Builder($as_sci_Set(x$33$1.$$und2__O()))
+              var x$32$1 = $as_T2(arg1$1);
+              b$1.$$plus$eq__O__scm_Builder($as_sci_Set(x$32$1.$$und2__O()))
             };
             var this$23 = new $c_s_Some().init___O($as_sci_Vector(b$1.result__O()))
           };
@@ -25984,14 +26095,14 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.remainingDependenciesAndExclusio
           var this$31 = $m_s_None$()
         } else {
           var v1$4 = this$29.get__O();
-          var x$32$2 = $as_sci_Vector(v1$4);
-          var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$33$2) {
-            var x$33$3 = $as_T2(x$33$2);
-            return $as_sci_Set(x$33$3.$$und2__O())
+          var x$31$2 = $as_sci_Vector(v1$4);
+          var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$32$2) {
+            var x$32$3 = $as_T2(x$32$2);
+            return $as_sci_Set(x$32$3.$$und2__O())
           }));
           $m_sci_Vector$();
           var bf$4 = $m_sc_IndexedSeq$().ReusableCBF$6;
-          var this$31 = new $c_s_Some().init___O($as_sci_Vector($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(x$32$2, f$1, bf$4)))
+          var this$31 = new $c_s_Some().init___O($as_sci_Vector($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(x$31$2, f$1, bf$4)))
         };
         var jsx$10 = $as_sc_TraversableLike((this$31.isEmpty__Z() ? $m_sci_Nil$() : this$31.get__O()));
         var xo$2 = rootDependenciesExclusions.get__O__s_Option(x0$18$2);
@@ -26049,15 +26160,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.dependencyManagementRequirements
     var this$3 = $m_s_None$()
   } else {
     var arg1$1 = this$2.get__O();
-    var x$35 = $as_T2(arg1$1);
-    var this$3 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$35.$$und2__O()).properties$1)
+    var x$34 = $as_T2(arg1$1);
+    var this$3 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$34.$$und2__O()).properties$1)
   };
   if (this$3.isEmpty__Z()) {
     var approxProperties = project.properties$1
   } else {
     var arg1$2 = this$3.get__O();
-    var x$36 = $as_sci_Map(arg1$2);
-    var approxProperties = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(project.properties$1, x$36)
+    var x$35 = $as_sci_Map(arg1$2);
+    var approxProperties = $m_Lcoursier_core_Resolver$().mergeProperties__sci_Map__sci_Map__sci_Map(project.properties$1, x$35)
   };
   var jsx$3 = $m_Lcoursier_core_Resolver$();
   var this$4 = this.profileActivation$1;
@@ -26067,9 +26178,9 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.dependencyManagementRequirements
     var props = $as_sci_Map(props$2);
     return $m_Lcoursier_core_Resolver$().defaultProfileActivation__T__Lcoursier_core_Activation__sci_Map__Z(id, activation, props)
   })) : this$4.get__O())));
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$37$2) {
-    var x$37 = $as_Lcoursier_core_Profile(x$37$2);
-    return x$37.dependencies$1
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$36$2) {
+    var x$36 = $as_Lcoursier_core_Profile(x$36$2);
+    return x$36.dependencies$1
   }));
   var this$5 = $m_sc_Seq$();
   var profileDependencies = $as_sc_Seq(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$5.ReusableCBFInstance$2));
@@ -26084,6 +26195,52 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.dependencyManagementRequirements
   var this$9 = $m_sc_Seq$();
   var modules = $as_sc_Seq(jsx$5.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$4, this$9.ReusableCBFInstance$2));
   return modules.toSet__sci_Set()
+});
+$c_Lcoursier_core_Resolver$Resolution.prototype.coursier$core$Resolver$Resolution$$finalDependencies0__Lcoursier_core_Dependency__sc_Seq = (function(dep) {
+  if ((this.finalDependenciesCache$1 === null)) {
+    throw new $c_jl_NullPointerException().init___()
+  };
+  var this$1 = this.finalDependenciesCache$1;
+  var x1 = this$1.get__O__s_Option(dep);
+  if ($is_s_Some(x1)) {
+    var x2 = $as_s_Some(x1);
+    var v = x2.x$2;
+    var jsx$1 = v
+  } else {
+    var x = $m_s_None$();
+    if ((x === x1)) {
+      var x1$1 = this.projectsCache$1.get__O__s_Option(new $c_T2().init___O__O(dep.module$1, dep.version$1));
+      matchEnd7: {
+        var d;
+        if ($is_s_Some(x1$1)) {
+          var x2$1 = $as_s_Some(x1$1);
+          var p3 = $as_T2(x2$1.x$2);
+          if ((p3 !== null)) {
+            var proj = $as_Lcoursier_core_Project(p3.$$und2__O());
+            var jsx$2 = $m_Lcoursier_core_Resolver$().finalDependencies__Lcoursier_core_Dependency__Lcoursier_core_Project__sc_Seq(dep, proj);
+            var this$2 = this.filter$1;
+            var d = $as_sc_Seq(jsx$2.filter__F1__O($as_F1((this$2.isEmpty__Z() ? new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$2) {
+              var dep$1 = $as_Lcoursier_core_Dependency(dep$2);
+              return $m_Lcoursier_core_Resolver$().defaultFilter__Lcoursier_core_Dependency__Z(dep$1)
+            })) : this$2.get__O()))));
+            break matchEnd7
+          }
+        };
+        var x$1 = $m_s_None$();
+        if ((x$1 === x1$1)) {
+          var d = $m_sci_Nil$();
+          break matchEnd7
+        };
+        throw new $c_s_MatchError().init___O(x1$1)
+      };
+      this$1.put__O__O__s_Option(dep, d);
+      var jsx$1 = d
+    } else {
+      var jsx$1;
+      throw new $c_s_MatchError().init___O(x1)
+    }
+  };
+  return $as_sc_Seq(jsx$1)
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.fetch__sc_Seq__F1__Lscalaz_concurrent_package$Task = (function(modules, fetchModule) {
   var jsx$1 = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$80().init___Lcoursier_core_Resolver$Resolution__F1(this, fetchModule);
@@ -26128,9 +26285,9 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.reverseDependenciesAndExclusions
   })(this));
   var this$3 = $m_sc_Seq$();
   var knownDeps = $as_sc_TraversableOnce(jsx$3.map__F1__scg_CanBuildFrom__O(jsx$2, this$3.ReusableCBFInstance$2)).toSet__sci_Set();
-  var this$4 = trDepsSeq.groupBy__F1__sci_Map(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$27$2) {
-    var x$27 = $as_T2(x$27$2);
-    return $as_T3(x$27.$$und1__O())
+  var this$4 = trDepsSeq.groupBy__F1__sci_Map(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$26$2) {
+    var x$26 = $as_T2(x$26$2);
+    return $as_T3(x$26.$$und1__O())
   })));
   var f = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2().init___Lcoursier_core_Resolver$Resolution(this);
   var this$5 = new $c_sci_MapLike$$anon$2().init___sci_MapLike__F1(this$4, f);
@@ -26149,6 +26306,7 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.init___sci_Set__sci_Set__sci_Set
   this.errors$1 = errors;
   this.filter$1 = filter;
   this.profileActivation$1 = profileActivation;
+  this.finalDependenciesCache$1 = new $c_scm_HashMap().init___();
   return this
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.helper$1__p1__sci_Map__sci_Map__sci_Map = (function(reverseDeps, rootDependenciesExclusions$1) {
@@ -26164,15 +26322,15 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.helper$1__p1__sci_Map__sci_Map__
     if ((x1 !== null)) {
       var toRemove = $as_sci_Map(x1.$$und1__O());
       var remaining = $as_sci_Map(x1.$$und2__O());
-      var x$30_$_$$und1$f = toRemove;
-      var x$30_$_$$und2$f = remaining
+      var x$29_$_$$und1$f = toRemove;
+      var x$29_$_$$und2$f = remaining
     } else {
-      var x$30_$_$$und1$f;
-      var x$30_$_$$und2$f;
+      var x$29_$_$$und1$f;
+      var x$29_$_$$und2$f;
       throw new $c_s_MatchError().init___O(x1)
     };
-    var toRemove$2 = $as_sci_Map(x$30_$_$$und1$f);
-    var remaining$2 = $as_sci_Map(x$30_$_$$und2$f);
+    var toRemove$2 = $as_sci_Map(x$29_$_$$und1$f);
+    var remaining$2 = $as_sci_Map(x$29_$_$$und2$f);
     if (toRemove$2.isEmpty__Z()) {
       return reverseDeps
     } else {
@@ -26194,19 +26352,13 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.isFixPoint$1__p1__Z = (function(
   var x1 = this.nextDependenciesAndConflicts__T2();
   if ((x1 !== null)) {
     var nextConflicts = $as_sc_Seq(x1.$$und1__O());
-    var nextDependencies = $as_sc_Seq(x1.$$und2__O());
-    var x$24_$_$$und1$f = nextConflicts;
-    var x$24_$_$$und2$f = nextDependencies
+    var nextConflicts$2 = nextConflicts
   } else {
-    var x$24_$_$$und1$f;
-    var x$24_$_$$und2$f;
+    var nextConflicts$2;
     throw new $c_s_MatchError().init___O(x1)
   };
-  var nextConflicts$2 = $as_sc_Seq(x$24_$_$$und1$f);
-  var nextDependencies$2 = $as_sc_Seq(x$24_$_$$und2$f);
   var x = this.dependencies$1;
-  var this$1 = $m_sc_Seq$();
-  var x$2 = $as_sc_TraversableOnce(nextDependencies$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(nextConflicts$2, this$1.ReusableCBFInstance$2)).toSet__sci_Set();
+  var x$2 = this.newDependencies__sci_Set().$$plus$plus__sc_GenTraversableOnce__sc_Set(nextConflicts$2);
   if (((x === null) ? (x$2 === null) : $s_sc_GenSetLike$class__equals__sc_GenSetLike__O__Z(x, x$2))) {
     var x$3 = this.conflicts$1;
     var x$4 = nextConflicts$2.toSet__sci_Set();
@@ -26224,17 +26376,17 @@ $c_Lcoursier_core_Resolver$Resolution.prototype.productIterator__sc_Iterator = (
 });
 $c_Lcoursier_core_Resolver$Resolution.prototype.missingFromCache__sci_Set = (function() {
   var this$2 = this.dependencies$1;
-  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$2) {
-    var dep = $as_Lcoursier_core_Dependency(dep$2);
-    return new $c_T2().init___O__O(dep.module$1, dep.version$1)
+  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$23$2) {
+    var x$23 = $as_Lcoursier_core_Dependency(x$23$2);
+    return new $c_T2().init___O__O(x$23.module$1, x$23.version$1)
   }));
   var this$1 = $m_sci_Set$();
   var bf = new $c_scg_GenSetFactory$$anon$1().init___scg_GenSetFactory(this$1);
   var modules = $as_sci_Set($s_sc_TraversableLike$class__map__sc_TraversableLike__F1__scg_CanBuildFrom__O(this$2, f, bf));
   var jsx$2 = $as_sc_TraversableLike(this.nextDependenciesAndConflicts__T2().$$und2__O());
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$2$1) {
-    var dep$1 = $as_Lcoursier_core_Dependency(dep$2$1);
-    return new $c_T2().init___O__O(dep$1.module$1, dep$1.version$1)
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$24$2) {
+    var x$24 = $as_Lcoursier_core_Dependency(x$24$2);
+    return new $c_T2().init___O__O(x$24.module$1, x$24.version$1)
   }));
   var this$3 = $m_sc_Seq$();
   var nextModules = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$3.ReusableCBFInstance$2));
@@ -26281,7 +26433,7 @@ var $h_Lcoursier_core_Resolver$Resolution$$anonfun$48 = (function() {
 });
 $h_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype;
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lcoursier_core_Dependency__sci_List($as_Lcoursier_core_Dependency(v1))
+  return this.apply__Lcoursier_core_Dependency__sc_Seq($as_Lcoursier_core_Dependency(v1))
 });
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.init___Lcoursier_core_Resolver$Resolution = (function($$outer) {
   if (($$outer === null)) {
@@ -26291,16 +26443,18 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.init___Lcoursier_cor
   };
   return this
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.apply__Lcoursier_core_Dependency__sci_List = (function(dep) {
-  var this$1 = this.$$outer$2.projectsCache$1.get__O__s_Option(new $c_T2().init___O__O(dep.module$1, dep.version$1)).toList__sci_List();
-  var p = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(check$ifrefutable$2$2) {
-    var check$ifrefutable$2 = $as_T2(check$ifrefutable$2$2);
-    return (check$ifrefutable$2 !== null)
-  }));
-  var jsx$2 = new $c_sc_TraversableLike$WithFilter().init___sc_TraversableLike__F1(this$1, p);
-  var jsx$1 = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20().init___Lcoursier_core_Resolver$Resolution$$anonfun$48__Lcoursier_core_Dependency(this, dep);
-  var this$2 = $m_sci_List$();
-  return $as_sci_List(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2))
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.apply__Lcoursier_core_Dependency__sc_Seq = (function(dep) {
+  var jsx$2 = this.$$outer$2.coursier$core$Resolver$Resolution$$finalDependencies0__Lcoursier_core_Dependency__sc_Seq(dep);
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, dep$3) {
+    return (function(trDep$2) {
+      var trDep = $as_Lcoursier_core_Dependency(trDep$2);
+      var $$this = arg$outer.$$outer$2.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(trDep);
+      var y = new $c_T2().init___O__O(arg$outer.$$outer$2.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(dep$3), trDep.exclusions$1);
+      return new $c_T2().init___O__O($$this, y)
+    })
+  })(this, dep));
+  var this$3 = $m_sc_Seq$();
+  return $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$3.ReusableCBFInstance$2))
 });
 var $d_Lcoursier_core_Resolver$Resolution$$anonfun$48 = new $TypeData().initClass({
   Lcoursier_core_Resolver$Resolution$$anonfun$48: 0
@@ -26313,65 +26467,6 @@ var $d_Lcoursier_core_Resolver$Resolution$$anonfun$48 = new $TypeData().initClas
   Ljava_io_Serializable: 1
 });
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$48.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$48;
-/** @constructor */
-var $c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20 = (function() {
-  $c_sr_AbstractFunction1.call(this);
-  this.$$outer$2 = null;
-  this.dep$3$f = null
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20;
-/** @constructor */
-var $h_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20 = (function() {
-  /*<skip>*/
-});
-$h_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype.apply__O__O = (function(v1) {
-  return this.apply__T2__sc_Seq($as_T2(v1))
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype.apply__T2__sc_Seq = (function(x$26) {
-  if ((x$26 !== null)) {
-    var proj = $as_Lcoursier_core_Project(x$26.$$und2__O());
-    var jsx$3 = $m_Lcoursier_core_Resolver$().finalDependencies__Lcoursier_core_Dependency__Lcoursier_core_Project__sc_Seq(this.dep$3$f, proj);
-    var this$1 = this.$$outer$2.$$outer$2.filter$1;
-    var jsx$2 = $as_sc_TraversableLike(jsx$3.filter__F1__O($as_F1((this$1.isEmpty__Z() ? new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$2) {
-      var dep = $as_Lcoursier_core_Dependency(dep$2);
-      return $m_Lcoursier_core_Resolver$().defaultFilter__Lcoursier_core_Dependency__Z(dep)
-    })) : this$1.get__O()))));
-    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-      return (function(trDep$2) {
-        var trDep = $as_Lcoursier_core_Dependency(trDep$2);
-        var $$this = arg$outer.$$outer$2.$$outer$2.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(trDep);
-        var y = new $c_T2().init___O__O(arg$outer.$$outer$2.$$outer$2.coursier$core$Resolver$Resolution$$key__Lcoursier_core_Dependency__T3(arg$outer.dep$3$f), trDep.exclusions$1);
-        return new $c_T2().init___O__O($$this, y)
-      })
-    })(this));
-    var this$4 = $m_sc_Seq$();
-    return $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$4.ReusableCBFInstance$2))
-  } else {
-    throw new $c_s_MatchError().init___O(x$26)
-  }
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$48__Lcoursier_core_Dependency = (function($$outer, dep$3) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.dep$3$f = dep$3;
-  return this
-});
-var $d_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20 = new $TypeData().initClass({
-  Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20: 0
-}, false, "coursier.core.Resolver$Resolution$$anonfun$48$$anonfun$apply$20", {
-  Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$48$$anonfun$apply$20;
 /** @constructor */
 var $c_Lcoursier_core_Resolver$Resolution$$anonfun$80 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -26394,9 +26489,9 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$80.prototype.apply__O__O = (funct
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$80.prototype.apply__T2__Lscalaz_concurrent_package$Task = (function(dep) {
   var this$3 = $as_Lscalaz_concurrent_package$Task($as_Lscalaz_EitherT(this.fetchModule$1$2.apply__O__O(dep)).run$1);
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$4) {
-    return (function(x$52$2) {
-      var x$52 = $as_Lscalaz_$bslash$div(x$52$2);
-      return new $c_T2().init___O__O(dep$4, x$52)
+    return (function(x$51$2) {
+      var x$51 = $as_Lscalaz_$bslash$div(x$51$2);
+      return new $c_T2().init___O__O(dep$4, x$51)
     })
   })(dep));
   return new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$3, f)
@@ -26447,20 +26542,20 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1.prototype.apply__sc_Seq__
   var newProjects = $as_sc_Seq(lookupResults.collect__s_PartialFunction__scg_CanBuildFrom__O(jsx$3, this$2.ReusableCBFInstance$2));
   $m_Lscalaz_concurrent_package$Task$();
   var this$3 = this.$$outer$2;
-  var x$136 = this$3.rootDependencies$1;
+  var x$135 = this$3.rootDependencies$1;
   var this$4 = this.$$outer$2;
-  var x$137 = this$4.dependencies$1;
+  var x$136 = this$4.dependencies$1;
   var this$5 = this.$$outer$2;
-  var x$138 = this$5.conflicts$1;
+  var x$137 = this$5.conflicts$1;
   var this$6 = this.$$outer$2;
-  var x$139 = this$6.projectsCache$1;
+  var x$138 = this$6.projectsCache$1;
   var this$7 = this.$$outer$2;
-  var x$140 = this$7.filter$1;
+  var x$139 = this$7.filter$1;
   var this$8 = this.$$outer$2;
-  var x$141 = this$8.profileActivation$1;
+  var x$140 = this$8.profileActivation$1;
   this.$$outer$2;
-  var a = new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$136, x$137, x$138, x$139, errors0, x$140, x$141);
-  return $as_Lscalaz_concurrent_package$Task(newProjects.foldLeft__O__F2__O(new $c_Lscalaz_concurrent_package$Task$$anon$4().init___O(a), new $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33().init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1(this)))
+  var a = new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$135, x$136, x$137, x$138, errors0, x$139, x$140);
+  return $as_Lscalaz_concurrent_package$Task(newProjects.foldLeft__O__F2__O(new $c_Lscalaz_concurrent_package$Task$$anon$4().init___O(a), new $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27().init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1(this)))
 });
 var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1 = new $TypeData().initClass({
   Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1: 0
@@ -26474,18 +26569,18 @@ var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1 = new $TypeData().ini
 });
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1;
 /** @constructor */
-var $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33 = (function() {
+var $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27 = (function() {
   $c_sr_AbstractFunction2.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype = new $h_sr_AbstractFunction2();
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype = new $h_sr_AbstractFunction2();
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27;
 /** @constructor */
-var $h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33 = (function() {
+var $h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype.apply__Lscalaz_concurrent_package$Task__T2__Lscalaz_concurrent_package$Task = (function(x0$19, x1$4) {
+$h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype.apply__Lscalaz_concurrent_package$Task__T2__Lscalaz_concurrent_package$Task = (function(x0$19, x1$4) {
   var x1 = new $c_T2().init___O__O(x0$19, x1$4);
   var accTask = $as_Lscalaz_concurrent_package$Task(x1.$$und1$f);
   var p2 = $as_T2(x1.$$und2$f);
@@ -26494,16 +26589,16 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototy
     if ((p3 !== null)) {
       var repo = $as_Lcoursier_core_Repository(p3.$$und1__O());
       var proj = $as_Lcoursier_core_Project(p3.$$und2__O());
-      var f = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34().init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33__Lcoursier_core_Repository__Lcoursier_core_Project(this, repo, proj);
+      var f = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28().init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27__Lcoursier_core_Repository__Lcoursier_core_Project(this, repo, proj);
       return new $c_Lscalaz_concurrent_package$Task$$anon$3().init___Lscalaz_concurrent_package$Task__F1(accTask, f)
     }
   };
   throw new $c_s_MatchError().init___O(x1)
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype.apply__O__O__O = (function(v1, v2) {
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype.apply__O__O__O = (function(v1, v2) {
   return this.apply__Lscalaz_concurrent_package$Task__T2__Lscalaz_concurrent_package$Task($as_Lscalaz_concurrent_package$Task(v1), $as_T2(v2))
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1 = (function($$outer) {
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1 = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -26511,35 +26606,35 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototy
   };
   return this
 });
-var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33 = new $TypeData().initClass({
-  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33: 0
-}, false, "coursier.core.Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33", {
-  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33: 1,
+var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27 = new $TypeData().initClass({
+  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27: 0
+}, false, "coursier.core.Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27", {
+  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27: 1,
   sr_AbstractFunction2: 1,
   O: 1,
   F2: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27;
 /** @constructor */
-var $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34 = (function() {
+var $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.repo$2$f = null;
   this.proj$1$f = null
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28;
 /** @constructor */
-var $h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34 = (function() {
+var $h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Resolver$Resolution__Lscalaz_concurrent_package$Task($as_Lcoursier_core_Resolver$Resolution(v1))
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33__Lcoursier_core_Repository__Lcoursier_core_Project = (function($$outer, repo$2, proj$1) {
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27__Lcoursier_core_Repository__Lcoursier_core_Project = (function($$outer, repo$2, proj$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -26549,7 +26644,7 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfu
   this.proj$1$f = proj$1;
   return this
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype.apply__Lcoursier_core_Resolver$Resolution__Lscalaz_concurrent_package$Task = (function(current) {
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype.apply__Lcoursier_core_Resolver$Resolution__Lscalaz_concurrent_package$Task = (function(current) {
   var this$1 = current.dependencyManagementMissing__Lcoursier_core_Project__sci_Set(this.proj$1$f);
   var this$2 = $m_sci_List$();
   var cbf = this$2.ReusableCBFInstance$2;
@@ -26563,40 +26658,40 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfu
   })(this));
   var this$6 = new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$3, f);
   var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer$1) {
-    return (function(x$53$2) {
-      var x$53 = $as_T2(x$53$2);
-      if ((x$53 !== null)) {
-        var updated$1 = $as_Lcoursier_core_Resolver$Resolution(x$53.$$und1__O());
-        var proj0$1 = $as_Lcoursier_core_Project(x$53.$$und2__O());
+    return (function(x$52$2) {
+      var x$52 = $as_T2(x$52$2);
+      if ((x$52 !== null)) {
+        var updated$1 = $as_Lcoursier_core_Resolver$Resolution(x$52.$$und1__O());
+        var proj0$1 = $as_Lcoursier_core_Project(x$52.$$und2__O());
         var jsx$1 = updated$1.projectsCache$1;
         var $$this = new $c_T2().init___O__O(proj0$1.module$1, proj0$1.version$1);
         var y = new $c_T2().init___O__O(arg$outer$1.repo$2$f, proj0$1);
-        var x$142 = jsx$1.$$plus__T2__sci_Map(new $c_T2().init___O__O($$this, y));
-        var x$143 = updated$1.rootDependencies$1;
-        var x$144 = updated$1.dependencies$1;
-        var x$145 = updated$1.conflicts$1;
-        var x$146 = updated$1.errors$1;
-        var x$147 = updated$1.filter$1;
-        var x$148 = updated$1.profileActivation$1;
-        return new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$143, x$144, x$145, x$142, x$146, x$147, x$148)
+        var x$141 = jsx$1.$$plus__T2__sci_Map(new $c_T2().init___O__O($$this, y));
+        var x$142 = updated$1.rootDependencies$1;
+        var x$143 = updated$1.dependencies$1;
+        var x$144 = updated$1.conflicts$1;
+        var x$145 = updated$1.errors$1;
+        var x$146 = updated$1.filter$1;
+        var x$147 = updated$1.profileActivation$1;
+        return new $c_Lcoursier_core_Resolver$Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$142, x$143, x$144, x$141, x$145, x$146, x$147)
       } else {
-        throw new $c_s_MatchError().init___O(x$53)
+        throw new $c_s_MatchError().init___O(x$52)
       }
     })
   })(this));
   return new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$6, f$1)
 });
-var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34 = new $TypeData().initClass({
-  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34: 0
-}, false, "coursier.core.Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34", {
-  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34: 1,
+var $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28 = new $TypeData().initClass({
+  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28: 0
+}, false, "coursier.core.Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28", {
+  Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$33$$anonfun$apply$34;
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$fetch$1$$anonfun$apply$27$$anonfun$apply$28;
 /** @constructor */
 var $c_Lcoursier_core_Resolver$Resolution$$anonfun$helper$1$1 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -26618,10 +26713,10 @@ $c_Lcoursier_core_Resolver$Resolution$$anonfun$helper$1$1.prototype.init___Lcour
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$helper$1$1.prototype.apply__O__O = (function(v1) {
   return this.apply__sci_Vector__sci_Vector($as_sci_Vector(v1))
 });
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$helper$1$1.prototype.apply__sci_Vector__sci_Vector = (function(x$31) {
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$helper$1$1.prototype.apply__sci_Vector__sci_Vector = (function(x$30) {
   $m_sci_Vector$();
   var b = new $c_sci_VectorBuilder().init___();
-  var this$2 = x$31.iterator__sci_VectorIterator();
+  var this$2 = x$30.iterator__sci_VectorIterator();
   while (this$2.$$undhasNext$2) {
     var arg1 = this$2.next__O();
     var x = $as_T2(arg1);
@@ -26653,13 +26748,13 @@ var $h_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusi
   /*<skip>*/
 });
 $h_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype.apply__sc_Seq__sci_Vector = (function(x$28) {
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$29$2) {
-    var x$29 = $as_T2(x$29$2);
-    return $as_T2(x$29.$$und2__O())
+$c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype.apply__sc_Seq__sci_Vector = (function(x$27) {
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$28$2) {
+    var x$28 = $as_T2(x$28$2);
+    return $as_T2(x$28.$$und2__O())
   }));
   var this$1 = $m_sc_Seq$();
-  return $as_sc_TraversableOnce(x$28.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2)).toVector__sci_Vector()
+  return $as_sc_TraversableOnce(x$27.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2)).toVector__sci_Vector()
 });
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype.apply__O__O = (function(v1) {
   return this.apply__sc_Seq__sci_Vector($as_sc_Seq(v1))
@@ -26678,107 +26773,6 @@ var $d_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusi
   Ljava_io_Serializable: 1
 });
 $c_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$reverseDependenciesAndExclusions$2;
-/** @constructor */
-var $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1 = (function() {
-  $c_sr_AbstractFunction1.call(this);
-  this.$$outer$2 = null
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1;
-/** @constructor */
-var $h_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1 = (function() {
-  /*<skip>*/
-});
-$h_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lcoursier_core_Dependency__sc_Seq($as_Lcoursier_core_Dependency(v1))
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype.init___Lcoursier_core_Resolver$Resolution = (function($$outer) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  return this
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype.apply__Lcoursier_core_Dependency__sc_Seq = (function(dep) {
-  var xo = this.$$outer$2.projectsCache$1.get__O__s_Option(new $c_T2().init___O__O(dep.module$1, dep.version$1));
-  var this$3 = xo.toList__sci_List();
-  var p = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(check$ifrefutable$1$2) {
-    var check$ifrefutable$1 = $as_T2(check$ifrefutable$1$2);
-    return (check$ifrefutable$1 !== null)
-  }));
-  var jsx$2 = new $c_sc_TraversableLike$WithFilter().init___sc_TraversableLike__F1(this$3, p);
-  var jsx$1 = new $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15().init___Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1__Lcoursier_core_Dependency(this, dep);
-  var this$4 = $m_sc_Seq$();
-  return $as_sc_Seq(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$4.ReusableCBFInstance$2))
-});
-var $d_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1 = new $TypeData().initClass({
-  Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1: 0
-}, false, "coursier.core.Resolver$Resolution$$anonfun$transitiveDependencies$1", {
-  Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1;
-/** @constructor */
-var $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15 = (function() {
-  $c_sr_AbstractFunction1.call(this);
-  this.$$outer$2 = null;
-  this.dep$2$2 = null
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype.constructor = $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15;
-/** @constructor */
-var $h_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15 = (function() {
-  /*<skip>*/
-});
-$h_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype = $c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype;
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype.apply__O__O = (function(v1) {
-  return this.apply__T2__sc_Seq($as_T2(v1))
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype.init___Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1__Lcoursier_core_Dependency = (function($$outer, dep$2) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.dep$2$2 = dep$2;
-  return this
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype.apply__T2__sc_Seq = (function(x$23) {
-  if ((x$23 !== null)) {
-    var proj = $as_Lcoursier_core_Project(x$23.$$und2__O());
-    var jsx$3 = $m_Lcoursier_core_Resolver$().finalDependencies__Lcoursier_core_Dependency__Lcoursier_core_Project__sc_Seq(this.dep$2$2, proj);
-    var this$1 = this.$$outer$2.$$outer$2.filter$1;
-    var jsx$2 = $as_sc_TraversableLike(jsx$3.filter__F1__O($as_F1((this$1.isEmpty__Z() ? new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(dep$2) {
-      var dep = $as_Lcoursier_core_Dependency(dep$2);
-      return $m_Lcoursier_core_Resolver$().defaultFilter__Lcoursier_core_Dependency__Z(dep)
-    })) : this$1.get__O()))));
-    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(trDep$2) {
-      var trDep = $as_Lcoursier_core_Dependency(trDep$2);
-      return trDep
-    }));
-    var this$2 = $m_sc_Seq$();
-    return $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2))
-  } else {
-    throw new $c_s_MatchError().init___O(x$23)
-  }
-});
-var $d_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15 = new $TypeData().initClass({
-  Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15: 0
-}, false, "coursier.core.Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15", {
-  Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15.prototype.$classData = $d_Lcoursier_core_Resolver$Resolution$$anonfun$transitiveDependencies$1$$anonfun$apply$15;
 /** @constructor */
 var $c_Lcoursier_core_VersionInterval = (function() {
   $c_O.call(this);
@@ -28663,15 +28657,15 @@ $c_Lcoursier_web_App$$anonfun$17.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   if ((T !== null)) {
     var res = $as_Lcoursier_core_Resolver$Resolution(T.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(T.$$und2__O());
-    var x$19_$_$$und1$f = res;
-    var x$19_$_$$und2$f = backend
+    var x$20_$_$$und1$f = res;
+    var x$20_$_$$und2$f = backend
   } else {
-    var x$19_$_$$und1$f;
-    var x$19_$_$$und2$f;
+    var x$20_$_$$und1$f;
+    var x$20_$_$$und2$f;
     throw new $c_s_MatchError().init___O(T)
   };
-  var res$2 = $as_Lcoursier_core_Resolver$Resolution(x$19_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$19_$_$$und2$f);
+  var res$2 = $as_Lcoursier_core_Resolver$Resolution(x$20_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$20_$_$$und2$f);
   var this$1 = res$2.dependencies$1;
   var this$2 = $m_sci_List$();
   var cbf = this$2.ReusableCBFInstance$2;
@@ -28760,10 +28754,10 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__O__O = (function(v1) {
 });
 $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
   matchEnd4: {
-    var x$20_$_$$und1$1;
-    var x$20_$_$$und2$1;
-    var x$20_$_$$und3$1;
-    var x$20_$_$$und4$1;
+    var x$21_$_$$und1$1;
+    var x$21_$_$$und2$1;
+    var x$21_$_$$und3$1;
+    var x$21_$_$$und4$1;
     if ((P !== null)) {
       var p2 = $as_T2(P.$$und1$1);
       var moduleIdx = $uI(P.$$und2$1);
@@ -28771,19 +28765,19 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
       if ((p2 !== null)) {
         var module = $as_Lcoursier_core_Module(p2.$$und1__O());
         var version = $as_T(p2.$$und2__O());
-        var x$20_$_$$und1$1 = module;
-        var x$20_$_$$und2$1 = version;
-        var x$20_$_$$und3$1 = moduleIdx;
-        var x$20_$_$$und4$1 = backend;
+        var x$21_$_$$und1$1 = module;
+        var x$21_$_$$und2$1 = version;
+        var x$21_$_$$und3$1 = moduleIdx;
+        var x$21_$_$$und4$1 = backend;
         break matchEnd4
       }
     };
     throw new $c_s_MatchError().init___O(P)
   };
-  var module$2 = $as_Lcoursier_core_Module(x$20_$_$$und1$1);
-  var version$2 = $as_T(x$20_$_$$und2$1);
-  var moduleIdx$2 = $uI(x$20_$_$$und3$1);
-  var backend$2 = $as_Lcoursier_web_Backend(x$20_$_$$und4$1);
+  var module$2 = $as_Lcoursier_core_Module(x$21_$_$$und1$1);
+  var version$2 = $as_T(x$21_$_$$und2$1);
+  var moduleIdx$2 = $uI(x$21_$_$$und3$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$21_$_$$und4$1);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$60 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
@@ -28942,9 +28936,9 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
     var dep$1 = $as_Lcoursier_core_Dependency(dep$2$1);
     var value$1 = $as_T(value$2$1);
     var this$107 = dep$1.module$1;
-    var x$159 = this$107.organization$1;
+    var x$160 = this$107.organization$1;
     dep$1.module$1;
-    var module$3 = new $c_Lcoursier_core_Module().init___T__T(x$159, value$1);
+    var module$3 = new $c_Lcoursier_core_Module().init___T__T(x$160, value$1);
     var version$3 = dep$1.version$1;
     var scope$1 = dep$1.scope$1;
     var type$1 = dep$1.type$1;
@@ -28998,13 +28992,13 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   var eta$0$3 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(dep$2$2, value$2$2) {
     var dep$3 = $as_Lcoursier_core_Dependency(dep$2$2);
     var value$3 = $as_T(value$2$2);
-    var x$161 = dep$3.module$1;
-    var x$162 = dep$3.scope$1;
-    var x$163 = dep$3.type$1;
-    var x$164 = dep$3.classifier$1;
-    var x$165 = dep$3.exclusions$1;
-    var x$166 = dep$3.optional$1;
-    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$161, value$3, x$162, x$163, x$164, x$165, x$166)
+    var x$162 = dep$3.module$1;
+    var x$163 = dep$3.scope$1;
+    var x$164 = dep$3.type$1;
+    var x$165 = dep$3.classifier$1;
+    var x$166 = dep$3.exclusions$1;
+    var x$167 = dep$3.optional$1;
+    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__T__T__sci_Set__Z(x$162, value$3, x$163, x$164, x$165, x$166, x$167)
   }));
   var eventHandler$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(moduleIdx$2$3, backend$2$3, eta$0$3$1) {
     return (function(e$2$2) {
@@ -29135,15 +29129,15 @@ $c_Lcoursier_web_App$$anonfun$22.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   if ((P !== null)) {
     var options = $as_Lcoursier_web_ResolutionOptions(P.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(P.$$und2__O());
-    var x$23_$_$$und1$f = options;
-    var x$23_$_$$und2$f = backend
+    var x$24_$_$$und1$f = options;
+    var x$24_$_$$und2$f = backend
   } else {
-    var x$23_$_$$und1$f;
-    var x$23_$_$$und2$f;
+    var x$24_$_$$und1$f;
+    var x$24_$_$$und2$f;
     throw new $c_s_MatchError().init___O(P)
   };
-  var options$2 = $as_Lcoursier_web_ResolutionOptions(x$23_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$23_$_$$und2$f);
+  var options$2 = $as_Lcoursier_web_ResolutionOptions(x$24_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$24_$_$$und2$f);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$18 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   var jsx$17 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
@@ -29259,15 +29253,15 @@ $c_Lcoursier_web_App$$anonfun$23.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   if ((T !== null)) {
     var resOpt = $as_s_Option(T.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(T.$$und2__O());
-    var x$24_$_$$und1$f = resOpt;
-    var x$24_$_$$und2$f = backend
+    var x$25_$_$$und1$f = resOpt;
+    var x$25_$_$$und2$f = backend
   } else {
-    var x$24_$_$$und1$f;
-    var x$24_$_$$und2$f;
+    var x$25_$_$$und1$f;
+    var x$25_$_$$und2$f;
     throw new $c_s_MatchError().init___O(T)
   };
-  var resOpt$2 = $as_s_Option(x$24_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$24_$_$$und2$f);
+  var resOpt$2 = $as_s_Option(x$25_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$25_$_$$und2$f);
   if ($is_s_Some(resOpt$2)) {
     var x2 = $as_s_Some(resOpt$2);
     var res = $as_Lcoursier_core_Resolver$Resolution(x2.x$2);
@@ -29329,7 +29323,7 @@ $h_Lcoursier_web_App$$anonfun$26.prototype = $c_Lcoursier_web_App$$anonfun$26.pr
 $c_Lcoursier_web_App$$anonfun$26.prototype.apply__O__O__O__O = (function(v1, v2, v3) {
   return this.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement($asUnit(v1), $as_Lcoursier_web_State(v2), $as_Lcoursier_web_Backend(v3))
 });
-$c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement = (function(x$26, S, B) {
+$c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement = (function(x$27, S, B) {
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$155 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   var jsx$154 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
@@ -29917,18 +29911,18 @@ $c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.apply__T3__Ljapgolly
     var deps = $as_sc_Seq(P.$$und1$1);
     var editModuleIdx = $uI(P.$$und2$1);
     var backend = $as_Lcoursier_web_Backend(P.$$und3$1);
-    var x$21_$_$$und1$1 = deps;
-    var x$21_$_$$und2$1 = editModuleIdx;
-    var x$21_$_$$und3$1 = backend
+    var x$22_$_$$und1$1 = deps;
+    var x$22_$_$$und2$1 = editModuleIdx;
+    var x$22_$_$$und3$1 = backend
   } else {
-    var x$21_$_$$und1$1;
-    var x$21_$_$$und2$1;
-    var x$21_$_$$und3$1;
+    var x$22_$_$$und1$1;
+    var x$22_$_$$und2$1;
+    var x$22_$_$$und3$1;
     throw new $c_s_MatchError().init___O(P)
   };
-  var deps$2 = $as_sc_Seq(x$21_$_$$und1$1);
-  var editModuleIdx$2 = $uI(x$21_$_$$und2$1);
-  var backend$2 = $as_Lcoursier_web_Backend(x$21_$_$$und3$1);
+  var deps$2 = $as_sc_Seq(x$22_$_$$und1$1);
+  var editModuleIdx$2 = $uI(x$22_$_$$und2$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$22_$_$$und3$1);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).p$1;
@@ -29993,8 +29987,8 @@ $c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.apply__T3__Ljapgolly
     var jsx$1 = new $c_T2().init___O__O(new $c_Lcoursier_core_Module().init___T__T("", ""), "")
   } else {
     var arg1$1 = this$46.get__O();
-    var x$22 = $as_Lcoursier_core_Dependency(arg1$1);
-    var jsx$1 = new $c_T2().init___O__O(x$22.module$1, x$22.version$1)
+    var x$23 = $as_Lcoursier_core_Dependency(arg1$1);
+    var jsx$1 = new $c_T2().init___O__O(x$23.module$1, x$23.version$1)
   };
   var props = new $c_T3().init___O__O__O(jsx$1, editModuleIdx$2, backend$2);
   var array = [];
@@ -30115,14 +30109,14 @@ $c_Lcoursier_web_Backend$$anonfun$12.prototype.apply__Lcoursier_web_State__Lcour
   var jsx$3 = s.modules$1;
   var this$1 = $m_sc_Seq$();
   var jsx$2 = $as_sc_TraversableLike($as_sc_TraversableLike(jsx$3.zipWithIndex__scg_CanBuildFrom__O(this$1.ReusableCBFInstance$2)).filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-    return (function(x$17$2) {
-      var x$17 = $as_T2(x$17$2);
-      return ($uI(x$17.$$und2__O()) !== arg$outer.idx$2$f)
+    return (function(x$18$2) {
+      var x$18 = $as_T2(x$18$2);
+      return ($uI(x$18.$$und2__O()) !== arg$outer.idx$2$f)
     })
   })(this))));
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$18$2) {
-    var x$18 = $as_T2(x$18$2);
-    return $as_Lcoursier_core_Dependency(x$18.$$und1__O())
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$19$2) {
+    var x$19 = $as_T2(x$19$2);
+    return $as_Lcoursier_core_Dependency(x$19.$$und1__O())
   }));
   var this$2 = $m_sc_Seq$();
   var modules = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2));
@@ -30151,21 +30145,21 @@ var $d_Lcoursier_web_Backend$$anonfun$12 = new $TypeData().initClass({
 });
 $c_Lcoursier_web_Backend$$anonfun$12.prototype.$classData = $d_Lcoursier_web_Backend$$anonfun$12;
 /** @constructor */
-var $c_Lcoursier_web_Backend$$anonfun$resolve$1 = (function() {
+var $c_Lcoursier_web_Backend$$anonfun$resolve$3 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.constructor = $c_Lcoursier_web_Backend$$anonfun$resolve$1;
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.constructor = $c_Lcoursier_web_Backend$$anonfun$resolve$3;
 /** @constructor */
-var $h_Lcoursier_web_Backend$$anonfun$resolve$1 = (function() {
+var $h_Lcoursier_web_Backend$$anonfun$resolve$3 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_Backend$$anonfun$resolve$1.prototype = $c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype;
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_web_Backend$$anonfun$resolve$3.prototype = $c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype;
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Resolver$Resolution__sjs_js_Dynamic($as_Lcoursier_core_Resolver$Resolution(v1))
 });
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.apply__Lcoursier_core_Resolver$Resolution__sjs_js_Dynamic = (function(res) {
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.apply__Lcoursier_core_Resolver$Resolution__sjs_js_Dynamic = (function(res) {
   $m_Ljapgolly_scalajs_react_package$();
   var qual$5 = this.$$outer$2.coursier$web$Backend$$$$f;
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
@@ -30173,18 +30167,18 @@ $c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.apply__Lcoursier_core_Reso
   var s = $as_Lcoursier_web_State(arg1);
   this.$$outer$2.updateDepGraph__Lcoursier_core_Resolver$Resolution__V(res);
   this.$$outer$2.updateTree__Lcoursier_core_Resolver$Resolution__T__Z__sjs_js_Dynamic(res, "#deptree", s.reverseTree$1);
-  var x$74 = new $c_s_Some().init___O(res);
-  var x$76 = s.modules$1;
-  var x$77 = s.repositories$1;
-  var x$78 = s.options$1;
-  var x$79 = s.editModuleIdx$1;
-  var x$80 = s.reverseTree$1;
-  var x$81 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$76, x$77, x$78, x$74, x$79, false, x$80, x$81);
+  var x$75 = new $c_s_Some().init___O(res);
+  var x$77 = s.modules$1;
+  var x$78 = s.repositories$1;
+  var x$79 = s.options$1;
+  var x$80 = s.editModuleIdx$1;
+  var x$81 = s.reverseTree$1;
+  var x$82 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$77, x$78, x$79, x$75, x$80, false, x$81, x$82);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$5, s$1, (void 0));
   return $g["$"]("#resResTab a:last")["tab"]("show")
 });
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.init___Lcoursier_web_Backend = (function($$outer) {
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.init___Lcoursier_web_Backend = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -30192,17 +30186,17 @@ $c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.init___Lcoursier_web_Backe
   };
   return this
 });
-var $d_Lcoursier_web_Backend$$anonfun$resolve$1 = new $TypeData().initClass({
-  Lcoursier_web_Backend$$anonfun$resolve$1: 0
-}, false, "coursier.web.Backend$$anonfun$resolve$1", {
-  Lcoursier_web_Backend$$anonfun$resolve$1: 1,
+var $d_Lcoursier_web_Backend$$anonfun$resolve$3 = new $TypeData().initClass({
+  Lcoursier_web_Backend$$anonfun$resolve$3: 0
+}, false, "coursier.web.Backend$$anonfun$resolve$3", {
+  Lcoursier_web_Backend$$anonfun$resolve$3: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_Backend$$anonfun$resolve$1.prototype.$classData = $d_Lcoursier_web_Backend$$anonfun$resolve$1;
+$c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.$classData = $d_Lcoursier_web_Backend$$anonfun$resolve$3;
 /** @constructor */
 var $c_Lcoursier_web_Backend$$anonfun$reverseDeps$lzycompute$1$1 = (function() {
   $c_sr_AbstractFunction1.call(this);
