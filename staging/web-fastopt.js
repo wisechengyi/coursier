@@ -980,6 +980,18 @@ var $isArrayOf_Lcoursier_core_Artifact$Source = (function(obj, depth) {
 var $asArrayOf_Lcoursier_core_Artifact$Source = (function(obj, depth) {
   return (($isArrayOf_Lcoursier_core_Artifact$Source(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcoursier.core.Artifact$Source;", depth))
 });
+var $is_Lcoursier_core_Fetch$Logger = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcoursier_core_Fetch$Logger)))
+});
+var $as_Lcoursier_core_Fetch$Logger = (function(obj) {
+  return (($is_Lcoursier_core_Fetch$Logger(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "coursier.core.Fetch$Logger"))
+});
+var $isArrayOf_Lcoursier_core_Fetch$Logger = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcoursier_core_Fetch$Logger)))
+});
+var $asArrayOf_Lcoursier_core_Fetch$Logger = (function(obj, depth) {
+  return (($isArrayOf_Lcoursier_core_Fetch$Logger(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcoursier.core.Fetch$Logger;", depth))
+});
 var $is_Lcoursier_core_Repository = (function(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcoursier_core_Repository)))
 });
@@ -1803,9 +1815,9 @@ var $h_Lcoursier_core_Repository$ = (function() {
 $h_Lcoursier_core_Repository$.prototype = $c_Lcoursier_core_Repository$.prototype;
 $c_Lcoursier_core_Repository$.prototype.init___ = (function() {
   $n_Lcoursier_core_Repository$ = this;
-  this.mavenCentral$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://repo1.maven.org/maven2/", $m_s_None$()), false);
-  this.sonatypeReleases$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://oss.sonatype.org/content/repositories/releases/", $m_s_None$()), false);
-  this.sonatypeSnapshots$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://oss.sonatype.org/content/repositories/snapshots/", $m_s_None$()), false);
+  this.mavenCentral$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://repo1.maven.org/maven2/", ($m_Lcoursier_core_Fetch$(), $m_s_None$())), false);
+  this.sonatypeReleases$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://oss.sonatype.org/content/repositories/releases/", ($m_Lcoursier_core_Fetch$(), $m_s_None$())), false);
+  this.sonatypeSnapshots$1 = new $c_Lcoursier_core_MavenRepository().init___Lcoursier_core_Fetch__Z(new $c_Lcoursier_core_Fetch().init___T__s_Option("https://oss.sonatype.org/content/repositories/snapshots/", ($m_Lcoursier_core_Fetch$(), $m_s_None$())), false);
   return this
 });
 $c_Lcoursier_core_Repository$.prototype.find__sc_Seq__Lcoursier_core_Module__T__Lscalaz_EitherT = (function(repositories, module, version) {
@@ -14152,6 +14164,78 @@ var $h_Lcoursier_web_Backend$$anon$1 = (function() {
   /*<skip>*/
 });
 $h_Lcoursier_web_Backend$$anon$1.prototype = $c_Lcoursier_web_Backend$$anon$1.prototype;
+$c_Lcoursier_web_Backend$$anon$1.prototype.fetched__T__V = (function(url) {
+  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetched ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
+  var this$2 = $m_s_Console$();
+  var this$3 = this$2.outVar$2;
+  $as_Ljava_io_PrintStream(this$3.tl$1.get__O()).println__O__V(x);
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$2 = this.$$outer$1.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$2);
+  var s = $as_Lcoursier_web_State(arg1);
+  var x$9 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetched ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
+  var jsx$1 = s.log$1;
+  var this$9 = $m_sc_Seq$();
+  var x$38 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$9, this$9.ReusableCBFInstance$2));
+  var x$39 = s.modules$1;
+  var x$40 = s.repositories$1;
+  var x$41 = s.options$1;
+  var x$42 = s.resolutionOpt$1;
+  var x$43 = s.editModuleIdx$1;
+  var x$44 = s.resolving$1;
+  var x$45 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$39, x$40, x$41, x$42, x$43, x$44, x$45, x$38);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$2, s$1, (void 0))
+});
+$c_Lcoursier_web_Backend$$anon$1.prototype.fetching__T__V = (function(url) {
+  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetching ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
+  var this$2 = $m_s_Console$();
+  var this$3 = this$2.outVar$2;
+  $as_Ljava_io_PrintStream(this$3.tl$1.get__O()).println__O__V(x);
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$3 = this.$$outer$1.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$3);
+  var s = $as_Lcoursier_web_State(arg1);
+  var x$10 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Fetching ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
+  var jsx$1 = s.log$1;
+  var this$9 = $m_sc_Seq$();
+  var x$48 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$10, this$9.ReusableCBFInstance$2));
+  var x$49 = s.modules$1;
+  var x$50 = s.repositories$1;
+  var x$51 = s.options$1;
+  var x$52 = s.resolutionOpt$1;
+  var x$53 = s.editModuleIdx$1;
+  var x$54 = s.resolving$1;
+  var x$55 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$49, x$50, x$51, x$52, x$53, x$54, x$55, x$48);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$3, s$1, (void 0))
+});
+$c_Lcoursier_web_Backend$$anon$1.prototype.other__T__T__V = (function(url, msg) {
+  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ": ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url, msg]));
+  var this$2 = $m_s_Console$();
+  var this$3 = this$2.outVar$2;
+  $as_Ljava_io_PrintStream(this$3.tl$1.get__O()).println__O__V(x);
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$4 = this.$$outer$1.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$4);
+  var s = $as_Lcoursier_web_State(arg1);
+  var x$11 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ": ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url, msg]));
+  var jsx$1 = s.log$1;
+  var this$9 = $m_sc_Seq$();
+  var x$58 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$11, this$9.ReusableCBFInstance$2));
+  var x$59 = s.modules$1;
+  var x$60 = s.repositories$1;
+  var x$61 = s.options$1;
+  var x$62 = s.resolutionOpt$1;
+  var x$63 = s.editModuleIdx$1;
+  var x$64 = s.resolving$1;
+  var x$65 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$59, x$60, x$61, x$62, x$63, x$64, x$65, x$58);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$4, s$1, (void 0))
+});
 $c_Lcoursier_web_Backend$$anon$1.prototype.init___Lcoursier_web_Backend = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
@@ -16914,6 +16998,7 @@ var $m_Lcoursier_core_Artifact$ = (function() {
 var $c_Lcoursier_core_Fetch$ = (function() {
   $c_O.call(this);
   this.jsonpAvailable$1 = false;
+  this.timeout$1 = 0;
   this.xhr$1 = null;
   this.bitmap$0$1 = 0
 });
@@ -16924,6 +17009,11 @@ var $h_Lcoursier_core_Fetch$ = (function() {
   /*<skip>*/
 });
 $h_Lcoursier_core_Fetch$.prototype = $c_Lcoursier_core_Fetch$.prototype;
+$c_Lcoursier_core_Fetch$.prototype.init___ = (function() {
+  $n_Lcoursier_core_Fetch$ = this;
+  this.timeout$1 = (this.jsonpAvailable__Z() ? 10000 : 4000);
+  return this
+});
 $c_Lcoursier_core_Fetch$.prototype.xhr$lzycompute__p1__sjs_js_Dynamic = (function() {
   if (((2 & this.bitmap$0$1) === 0)) {
     this.xhr$1 = $g["require"]("xhr2");
@@ -17023,7 +17113,7 @@ $c_Lcoursier_core_Fetch$.prototype.proxiedJsonp__T__s_concurrent_ExecutionContex
   return p
 });
 $c_Lcoursier_core_Fetch$.prototype.fetchTimeout__T__s_concurrent_Promise__sjs_js_timers_SetTimeoutHandle = (function(target, p) {
-  return $m_sjs_js_timers_package$().setTimeout__D__F0__sjs_js_timers_SetTimeoutHandle(5000.0, new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(target$1, p$1) {
+  return $m_sjs_js_timers_package$().setTimeout__D__F0__sjs_js_timers_SetTimeoutHandle(this.timeout$1, new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(target$1, p$1) {
     return (function() {
       if ((!p$1.isCompleted__Z())) {
         var cause = new $c_jl_Exception().init___T(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Timeout when fetching ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([target$1])));
@@ -24275,6 +24365,17 @@ var $m_sjs_concurrent_RunNowExecutionContext$ = (function() {
   return $n_sjs_concurrent_RunNowExecutionContext$
 });
 /** @constructor */
+var $c_sr_AbstractFunction0$mcV$sp = (function() {
+  $c_sr_AbstractFunction0.call(this)
+});
+$c_sr_AbstractFunction0$mcV$sp.prototype = new $h_sr_AbstractFunction0();
+$c_sr_AbstractFunction0$mcV$sp.prototype.constructor = $c_sr_AbstractFunction0$mcV$sp;
+/** @constructor */
+var $h_sr_AbstractFunction0$mcV$sp = (function() {
+  /*<skip>*/
+});
+$h_sr_AbstractFunction0$mcV$sp.prototype = $c_sr_AbstractFunction0$mcV$sp.prototype;
+/** @constructor */
 var $c_Lcoursier_core_Activation = (function() {
   $c_O.call(this);
   this.properties$1 = null
@@ -24728,8 +24829,9 @@ $c_Lcoursier_core_Fetch.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lcoursier_core_Fetch.prototype.apply__Lcoursier_core_Artifact__Lcoursier_core_Repository$CachePolicy__Lscalaz_EitherT = (function(artifact, cachePolicy) {
+  var url0 = (("" + this.root$1) + artifact.url$1);
   $m_Lscalaz_concurrent_package$Task$();
-  var f = new $c_Lcoursier_core_Fetch$$anonfun$apply$2().init___Lcoursier_core_Fetch__Lcoursier_core_Artifact(this, artifact);
+  var f = new $c_Lcoursier_core_Fetch$$anonfun$apply$3().init___Lcoursier_core_Fetch__T(this, url0);
   return new $c_Lscalaz_EitherT().init___O(new $c_Lscalaz_concurrent_package$Task$$anon$5().init___F1(f))
 });
 $c_Lcoursier_core_Fetch.prototype.hashCode__I = (function() {
@@ -24768,51 +24870,100 @@ var $d_Lcoursier_core_Fetch = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Fetch.prototype.$classData = $d_Lcoursier_core_Fetch;
 /** @constructor */
-var $c_Lcoursier_core_Fetch$$anonfun$apply$2 = (function() {
+var $c_Lcoursier_core_Fetch$$anonfun$apply$3 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.artifact$1$2 = null
+  this.url0$2$f = null
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$2;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$3;
 /** @constructor */
-var $h_Lcoursier_core_Fetch$$anonfun$apply$2 = (function() {
+var $h_Lcoursier_core_Fetch$$anonfun$apply$3 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Fetch$$anonfun$apply$2.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype;
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype.apply__O__O = (function(v1) {
-  return this.apply__s_concurrent_ExecutionContext__s_concurrent_Future($as_s_concurrent_ExecutionContext(v1))
-});
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype.init___Lcoursier_core_Fetch__Lcoursier_core_Artifact = (function($$outer, artifact$1) {
+$h_Lcoursier_core_Fetch$$anonfun$apply$3.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype.init___Lcoursier_core_Fetch__T = (function($$outer, url0$2) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.artifact$1$2 = artifact$1;
+  this.url0$2$f = url0$2;
   return this
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype.apply__s_concurrent_ExecutionContext__s_concurrent_Future = (function(ec) {
-  var this$1 = $m_Lcoursier_core_Fetch$().get__T__s_concurrent_ExecutionContext__s_concurrent_Future((("" + this.$$outer$2.root$1) + this.artifact$1$2.url$1), ec);
-  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$2$2) {
-    var x$2 = $as_T(x$2$2);
-    return new $c_Lscalaz_$bslash$div$minus().init___O(x$2)
-  }));
-  var this$2 = $s_s_concurrent_Future$class__map__s_concurrent_Future__F1__s_concurrent_ExecutionContext__s_concurrent_Future(this$1, f, ec);
-  var pf = new $c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1().init___Lcoursier_core_Fetch$$anonfun$apply$2(this);
-  return $s_s_concurrent_Future$class__recover__s_concurrent_Future__s_PartialFunction__s_concurrent_ExecutionContext__s_concurrent_Future(this$2, pf, ec)
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype.apply__O__O = (function(v1) {
+  return this.apply__s_concurrent_ExecutionContext__s_concurrent_Future($as_s_concurrent_ExecutionContext(v1))
 });
-var $d_Lcoursier_core_Fetch$$anonfun$apply$2 = new $TypeData().initClass({
-  Lcoursier_core_Fetch$$anonfun$apply$2: 0
-}, false, "coursier.core.Fetch$$anonfun$apply$2", {
-  Lcoursier_core_Fetch$$anonfun$apply$2: 1,
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype.apply__s_concurrent_ExecutionContext__s_concurrent_Future = (function(ec) {
+  $m_s_concurrent_Future$();
+  var body = new $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1().init___Lcoursier_core_Fetch$$anonfun$apply$3(this);
+  var this$2 = $m_s_concurrent_impl_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(body, ec);
+  var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer, ec$1) {
+    return (function(x$3$2) {
+      $asUnit(x$3$2);
+      return $m_Lcoursier_core_Fetch$().get__T__s_concurrent_ExecutionContext__s_concurrent_Future(arg$outer.url0$2$f, ec$1)
+    })
+  })(this, ec));
+  var this$3 = $s_s_concurrent_Future$class__flatMap__s_concurrent_Future__F1__s_concurrent_ExecutionContext__s_concurrent_Future(this$2, f, ec);
+  var f$1 = new $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5().init___Lcoursier_core_Fetch$$anonfun$apply$3(this);
+  var this$4 = $s_s_concurrent_Future$class__map__s_concurrent_Future__F1__s_concurrent_ExecutionContext__s_concurrent_Future(this$3, f$1, ec);
+  var pf = new $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2().init___Lcoursier_core_Fetch$$anonfun$apply$3(this);
+  return $s_s_concurrent_Future$class__recover__s_concurrent_Future__s_PartialFunction__s_concurrent_ExecutionContext__s_concurrent_Future(this$4, pf, ec)
+});
+var $d_Lcoursier_core_Fetch$$anonfun$apply$3 = new $TypeData().initClass({
+  Lcoursier_core_Fetch$$anonfun$apply$3: 0
+}, false, "coursier.core.Fetch$$anonfun$apply$3", {
+  Lcoursier_core_Fetch$$anonfun$apply$3: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$2;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$3;
+/** @constructor */
+var $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5 = (function() {
+  $c_sr_AbstractFunction1.call(this);
+  this.$$outer$2 = null
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5;
+/** @constructor */
+var $h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__Lscalaz_$bslash$div$minus($as_T(v1))
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype.apply__T__Lscalaz_$bslash$div$minus = (function(s) {
+  var this$1 = this.$$outer$2.$$outer$2.logger$1;
+  if ((!this$1.isEmpty__Z())) {
+    var arg1 = this$1.get__O();
+    var x$4 = $as_Lcoursier_core_Fetch$Logger(arg1);
+    x$4.fetched__T__V(this.$$outer$2.url0$2$f)
+  };
+  return new $c_Lscalaz_$bslash$div$minus().init___O(s)
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype.init___Lcoursier_core_Fetch$$anonfun$apply$3 = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  return this
+});
+var $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5 = new $TypeData().initClass({
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5: 0
+}, false, "coursier.core.Fetch$$anonfun$apply$3$$anonfun$apply$5", {
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$5;
 /** @constructor */
 var $c_Lcoursier_core_MavenRepository$$anonfun$find$4 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -37144,40 +37295,52 @@ var $d_Lcoursier_core_Exclusions$$anonfun$2 = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Exclusions$$anonfun$2.prototype.$classData = $d_Lcoursier_core_Exclusions$$anonfun$2;
 /** @constructor */
-var $c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1 = (function() {
-  $c_sr_AbstractPartialFunction.call(this)
+var $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2 = (function() {
+  $c_sr_AbstractPartialFunction.call(this);
+  this.$$outer$2 = null
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype = new $h_sr_AbstractPartialFunction();
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2;
 /** @constructor */
-var $h_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1 = (function() {
+var $h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype;
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.isDefinedAt__jl_Throwable__Z = (function(x1) {
+$h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.isDefinedAt__jl_Throwable__Z = (function(x1) {
   return $is_jl_Exception(x1)
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.applyOrElse__jl_Throwable__F1__O = (function(x1, default$2) {
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.applyOrElse__jl_Throwable__F1__O = (function(x1, default$2) {
   if ($is_jl_Exception(x1)) {
     var x2 = $as_jl_Exception(x1);
+    var this$1 = this.$$outer$2.$$outer$2.logger$1;
+    if ((!this$1.isEmpty__Z())) {
+      var arg1 = this$1.get__O();
+      var x$5 = $as_Lcoursier_core_Fetch$Logger(arg1);
+      x$5.other__T__T__V(this.$$outer$2.url0$2$f, x2.getMessage__T())
+    };
     return new $c_Lscalaz_$minus$bslash$div().init___O(x2.getMessage__T())
   } else {
     return default$2.apply__O__O(x1)
   }
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.isDefinedAt__O__Z = (function(x) {
-  return this.isDefinedAt__jl_Throwable__Z($as_jl_Throwable(x))
-});
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
-  return this.applyOrElse__jl_Throwable__F1__O($as_jl_Throwable(x), default$2)
-});
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.init___Lcoursier_core_Fetch$$anonfun$apply$2 = (function($$outer) {
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.init___Lcoursier_core_Fetch$$anonfun$apply$3 = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
   return this
 });
-var $d_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1 = new $TypeData().initClass({
-  Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1: 0
-}, false, "coursier.core.Fetch$$anonfun$apply$2$$anonfun$apply$1", {
-  Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1: 1,
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__jl_Throwable__Z($as_jl_Throwable(x))
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+  return this.applyOrElse__jl_Throwable__F1__O($as_jl_Throwable(x), default$2)
+});
+var $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2 = new $TypeData().initClass({
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2: 0
+}, false, "coursier.core.Fetch$$anonfun$apply$3$$anonfun$apply$2", {
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
@@ -37185,7 +37348,7 @@ var $d_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1 = new $TypeData().
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$2$$anonfun$apply$1;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$2;
 /** @constructor */
 var $c_Lcoursier_core_MavenRepository = (function() {
   $c_O.call(this);
@@ -42209,6 +42372,50 @@ var $d_sjsr_UndefinedBehaviorError = new $TypeData().initClass({
   s_util_control_NoStackTrace: 1
 });
 $c_sjsr_UndefinedBehaviorError.prototype.$classData = $d_sjsr_UndefinedBehaviorError;
+/** @constructor */
+var $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1 = (function() {
+  $c_sr_AbstractFunction0$mcV$sp.call(this);
+  this.$$outer$3 = null
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype = new $h_sr_AbstractFunction0$mcV$sp();
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype.constructor = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1;
+/** @constructor */
+var $h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype = $c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype;
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype.init___Lcoursier_core_Fetch$$anonfun$apply$3 = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$3 = $$outer
+  };
+  return this
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype.apply$mcV$sp__V = (function() {
+  var this$1 = this.$$outer$3.$$outer$2.logger$1;
+  if ((!this$1.isEmpty__Z())) {
+    var arg1 = this$1.get__O();
+    var x$2 = $as_Lcoursier_core_Fetch$Logger(arg1);
+    x$2.fetching__T__V(this.$$outer$3.url0$2$f)
+  }
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype.apply__O = (function() {
+  this.apply$mcV$sp__V()
+});
+var $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1 = new $TypeData().initClass({
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1: 0
+}, false, "coursier.core.Fetch$$anonfun$apply$3$$anonfun$apply$1", {
+  Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1: 1,
+  sr_AbstractFunction0$mcV$sp: 1,
+  sr_AbstractFunction0: 1,
+  O: 1,
+  F0: 1,
+  s_Function0$mcV$sp: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1.prototype.$classData = $d_Lcoursier_core_Fetch$$anonfun$apply$3$$anonfun$apply$1;
 /** @constructor */
 var $c_Lcoursier_core_Version = (function() {
   $c_O.call(this);
