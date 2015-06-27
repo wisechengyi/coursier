@@ -17312,19 +17312,19 @@ $c_Lcoursier_core_Resolution$.prototype.mergeProperties__sci_Map__sci_Map__sci_M
 });
 $c_Lcoursier_core_Resolution$.prototype.resolveScope__Lcoursier_core_Scope__Lcoursier_core_Scope__s_Option = (function(base, transitive) {
   var x = $m_Lcoursier_core_Scope$Compile$();
-  if ((x === base)) {
-    return new $c_s_Some().init___O(transitive)
+  if ((x === transitive)) {
+    return new $c_s_Some().init___O(base)
   };
-  var x$3 = $m_Lcoursier_core_Scope$Runtime$();
+  var x$3 = $m_Lcoursier_core_Scope$Compile$();
   if ((x$3 === base)) {
-    var x$5 = $m_Lcoursier_core_Scope$Compile$();
+    var x$5 = $m_Lcoursier_core_Scope$Runtime$();
     if ((x$5 === transitive)) {
       return new $c_s_Some().init___O($m_Lcoursier_core_Scope$Runtime$())
     }
   };
   var x$7 = $m_Lcoursier_core_Scope$Runtime$();
-  if ((x$7 === base)) {
-    return new $c_s_Some().init___O(transitive)
+  if ((x$7 === transitive)) {
+    return new $c_s_Some().init___O(base)
   };
   return $m_s_None$()
 });
