@@ -3184,6 +3184,7 @@ var $c_Lcoursier_web_App$ = (function() {
   this.resultDependencies$1 = null;
   this.moduleEditModal$1 = null;
   this.modules$1 = null;
+  this.repoEditModal$1 = null;
   this.repositories$1 = null;
   this.options$1 = null;
   this.resolution$1 = null;
@@ -3200,25 +3201,26 @@ var $h_Lcoursier_web_App$ = (function() {
 $h_Lcoursier_web_App$.prototype = $c_Lcoursier_web_App$.prototype;
 $c_Lcoursier_web_App$.prototype.init___ = (function() {
   $n_Lcoursier_web_App$ = this;
-  this.resultDependencies$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Result").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$16().init___())).build__O());
-  this.moduleEditModal$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("EditModule").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$19().init___())).build__O());
-  this.modules$1 = this.dependenciesTable__T__Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps("Dependencies");
-  this.repositories$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Repositories").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$20().init___())).build__O());
-  this.options$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("ResolutionOptions").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$22().init___())).build__O());
-  this.resolution$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Resolution").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$23().init___())).build__O());
-  this.initialState$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq($m_sci_Nil$(), $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_core_Repository$().mavenCentral$1]))), new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(false, false), $m_s_None$(), (-1), false, false, $m_sci_Nil$());
+  this.resultDependencies$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Result").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$23().init___())).build__O());
+  this.moduleEditModal$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("EditModule").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$26().init___())).build__O());
+  this.modules$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Dependencies").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$27().init___())).build__O());
+  this.repoEditModal$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("EditRepo").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$28().init___())).build__O());
+  this.repositories$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Repositories").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$29().init___())).build__O());
+  this.options$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("ResolutionOptions").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$30().init___())).build__O());
+  this.resolution$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Resolution").render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$31().init___())).build__O());
+  var jsx$2 = $m_sci_Nil$();
+  var jsx$1 = $m_sc_Seq$();
+  var y = $m_Lcoursier_core_Repository$().mavenCentral$1;
+  this.initialState$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(jsx$2, $as_sc_Seq(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("central", y)]))), new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(false, false), $m_s_None$(), (-1), (-1), false, false, $m_sci_Nil$());
   var c = new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Coursier").initialState__F0__Ljapgolly_scalajs_react_ReactComponentB$PS(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
     return $m_Lcoursier_web_App$().initialState$1
-  }))).backend__F1__Ljapgolly_scalajs_react_ReactComponentB$PSB(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$26$2) {
-    return new $c_Lcoursier_web_Backend().init___Ljapgolly_scalajs_react_BackendScope(x$26$2)
-  }))).render__F3__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$26().init___());
-  var this$9 = c.domType__Ljapgolly_scalajs_react_ReactComponentB();
+  }))).backend__F1__Ljapgolly_scalajs_react_ReactComponentB$PSB(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$31$2) {
+    return new $c_Lcoursier_web_Backend().init___Ljapgolly_scalajs_react_BackendScope(x$31$2)
+  }))).render__F3__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$34().init___());
+  var this$13 = c.domType__Ljapgolly_scalajs_react_ReactComponentB();
   var ev = $m_s_Predef$().scala$Predef$$singleton$und$eq$colon$eq$f;
-  this.app$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ConstProps(this$9.propsUnit__s_Predef$$eq$colon$eq__Ljapgolly_scalajs_react_ReactComponentB$Builder(ev).build__O());
+  this.app$1 = $as_Ljapgolly_scalajs_react_package$ReactComponentC$ConstProps(this$13.propsUnit__s_Predef$$eq$colon$eq__Ljapgolly_scalajs_react_ReactComponentB$Builder(ev).build__O());
   return this
-});
-$c_Lcoursier_web_App$.prototype.dependenciesTable__T__Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps = (function(name) {
-  return $as_Ljapgolly_scalajs_react_package$ReactComponentC$ReqProps($m_Ljapgolly_scalajs_react_ReactComponentB$().defaultDomTypeAndProps__Ljapgolly_scalajs_react_ReactComponentB$PSBN__Ljapgolly_scalajs_react_ReactComponentB$Builder(new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T(name).render__F1__Ljapgolly_scalajs_react_ReactComponentB$PSBN(new $c_Lcoursier_web_App$$anonfun$dependenciesTable$1().init___())).build__O())
 });
 var $d_Lcoursier_web_App$ = new $TypeData().initClass({
   Lcoursier_web_App$: 0
@@ -3343,6 +3345,37 @@ $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$tree$1__Lcoursier_core_
   var this$9 = $m_sc_Seq$();
   return jsx$7.apply__sc_Seq__sjs_js_Dictionary($as_sc_Seq(jsx$5.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$2, this$9.ReusableCBFInstance$2)))
 });
+$c_Lcoursier_web_Backend.prototype.moveRepo__I__Z__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(idx, up, e) {
+  e["preventDefault"]();
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$14 = this.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$14);
+  var s = $as_Lcoursier_web_State(arg1);
+  var idx0 = (up ? (((-1) + idx) | 0) : ((1 + idx) | 0));
+  var n = s.repositories$1.length__I();
+  if (((((idx >= 0) && (idx0 >= 0)) && (idx < n)) && (idx0 < n))) {
+    var a$1 = $as_T2(s.repositories$1.apply__I__O(idx));
+    var b = $as_T2(s.repositories$1.apply__I__O(idx0));
+    var jsx$2 = s.repositories$1;
+    var this$6 = $m_sc_Seq$();
+    var jsx$1 = $as_sc_SeqLike(jsx$2.updated__I__O__scg_CanBuildFrom__O(idx, b, this$6.ReusableCBFInstance$2));
+    var this$7 = $m_sc_Seq$();
+    var x$168 = $as_sc_Seq(jsx$1.updated__I__O__scg_CanBuildFrom__O(idx0, a$1, this$7.ReusableCBFInstance$2));
+    var x$169 = s.modules$1;
+    var x$170 = s.options$1;
+    var x$171 = s.resolutionOpt$1;
+    var x$172 = s.editModuleIdx$1;
+    var x$173 = s.editRepoIdx$1;
+    var x$174 = s.resolving$1;
+    var x$175 = s.reverseTree$1;
+    var x$176 = s.log$1;
+    var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$169, x$168, x$170, x$171, x$172, x$173, x$174, x$175, x$176)
+  } else {
+    var s$1 = s
+  };
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$14, s$1, (void 0))
+});
 $c_Lcoursier_web_Backend.prototype.updateModule__I__F2__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(moduleIdx, update, e) {
   if ((moduleIdx >= 0)) {
     $m_Ljapgolly_scalajs_react_package$();
@@ -3359,10 +3392,11 @@ $c_Lcoursier_web_Backend.prototype.updateModule__I__F2__Ljapgolly_scalajs_react_
     var options = state.options$1;
     var resolutionOpt = state.resolutionOpt$1;
     var editModuleIdx = state.editModuleIdx$1;
+    var editRepoIdx = state.editRepoIdx$1;
     var resolving = state.resolving$1;
     var reverseTree = state.reverseTree$1;
     var log = state.log$1;
-    var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(modules, repositories, options, resolutionOpt, editModuleIdx, resolving, reverseTree, log);
+    var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(modules, repositories, options, resolutionOpt, editModuleIdx, editRepoIdx, resolving, reverseTree, log);
     C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$10, s, (void 0))
   }
 });
@@ -3398,7 +3432,7 @@ $c_Lcoursier_web_Backend.prototype.updateDepGraph__Lcoursier_core_Resolution__V 
       var x$3 = $as_T2(x$3$2);
       if ((x$3 !== null)) {
         var dep = $as_Lcoursier_core_Dependency(x$3.$$und1__O());
-        var from = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ":", ":", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.organization$1, dep.module$1.name$1, dep.scope$1.name__T()]));
+        var from = arg$outer.coursier$web$Backend$$repr$1__Lcoursier_core_Dependency__T(dep);
         arg$outer.coursier$web$Backend$$addNode$1__T__sjs_js_Object__sr_ObjectRef__V(from, graph$1, nodes$1);
         var x$2 = (void 0);
         return new $c_T3().init___O__O__O(x$3, from, x$2)
@@ -3419,18 +3453,18 @@ $c_Lcoursier_web_Backend.prototype.updateDepGraph__Lcoursier_core_Resolution__V 
   var layouter = new $g["Graph"]["Layout"]["Spring"](graph);
   layouter["layout"]();
   var width = $uD((0, $g["jQuery"])("#dependencies")["width"]());
-  var x = ($uD((0, $g["jQuery"])("#dependencies")["height"]()) | 0);
-  var height = ((x > 400) ? x : 400);
+  var $$this = ($uD((0, $g["jQuery"])("#dependencies")["height"]()) | 0);
+  var height = (($$this > 400) ? $$this : 400);
   var x$1 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["width: ", ", height: ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([width, height]));
-  var this$16 = $m_s_Console$();
-  var this$17 = this$16.outVar$2;
-  $as_Ljava_io_PrintStream(this$17.tl$1.get__O()).println__O__V(x$1);
+  var this$18 = $m_s_Console$();
+  var this$19 = this$18.outVar$2;
+  $as_Ljava_io_PrintStream(this$19.tl$1.get__O()).println__O__V(x$1);
   (0, $g["jQuery"])("#depgraphcanvas")["html"]("");
   var renderer = new $g["Graph"]["Renderer"]["Raphael"]("depgraphcanvas", graph, width, height);
   renderer["draw"]();
-  var this$23 = $m_s_Console$();
-  var this$24 = this$23.outVar$2;
-  $as_Ljava_io_PrintStream(this$24.tl$1.get__O()).println__O__V("Rendered canvas")
+  var this$25 = $m_s_Console$();
+  var this$26 = this$25.outVar$2;
+  $as_Ljava_io_PrintStream(this$26.tl$1.get__O()).println__O__V("Rendered canvas")
 });
 $c_Lcoursier_web_Backend.prototype.reverseDeps$1__p1__Lcoursier_core_Resolution__sci_Set__sr_ObjectRef__sr_VolatileByteRef__sci_Map = (function(resolution$1, minDependencies$1, reverseDeps$lzy$1, bitmap$0$1) {
   return (((1 & bitmap$0$1.elem$1) === 0) ? this.reverseDeps$lzycompute$1__p1__Lcoursier_core_Resolution__sci_Set__sr_ObjectRef__sr_VolatileByteRef__sci_Map(resolution$1, minDependencies$1, reverseDeps$lzy$1, bitmap$0$1) : $as_sci_Map(reverseDeps$lzy$1.elem$1))
@@ -3441,16 +3475,89 @@ $c_Lcoursier_web_Backend.prototype.clearLog__Ljapgolly_scalajs_react_SyntheticEv
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$6);
   var x$13 = $as_Lcoursier_web_State(arg1);
-  var x$88 = $m_sci_Nil$();
-  var x$89 = x$13.modules$1;
-  var x$90 = x$13.repositories$1;
-  var x$91 = x$13.options$1;
-  var x$92 = x$13.resolutionOpt$1;
-  var x$93 = x$13.editModuleIdx$1;
-  var x$94 = x$13.resolving$1;
-  var x$95 = x$13.reverseTree$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$89, x$90, x$91, x$92, x$93, x$94, x$95, x$88);
+  var x$98 = $m_sci_Nil$();
+  var x$99 = x$13.modules$1;
+  var x$100 = x$13.repositories$1;
+  var x$101 = x$13.options$1;
+  var x$102 = x$13.resolutionOpt$1;
+  var x$103 = x$13.editModuleIdx$1;
+  var x$104 = x$13.editRepoIdx$1;
+  var x$105 = x$13.resolving$1;
+  var x$106 = x$13.reverseTree$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$99, x$100, x$101, x$102, x$103, x$104, x$105, x$106, x$98);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$6, s, (void 0))
+});
+$c_Lcoursier_web_Backend.prototype.editRepo__I__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(idx, e) {
+  e["preventDefault"]();
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$12 = this.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$12);
+  var x$17 = $as_Lcoursier_web_State(arg1);
+  var x$147 = x$17.modules$1;
+  var x$148 = x$17.repositories$1;
+  var x$149 = x$17.options$1;
+  var x$150 = x$17.resolutionOpt$1;
+  var x$151 = x$17.editModuleIdx$1;
+  var x$152 = x$17.resolving$1;
+  var x$153 = x$17.reverseTree$1;
+  var x$154 = x$17.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$147, x$148, x$149, x$150, x$151, idx, x$152, x$153, x$154);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$12, s, (void 0))
+});
+$c_Lcoursier_web_Backend.prototype.updateRepo__I__F2__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(repoIdx, update, e) {
+  if ((repoIdx >= 0)) {
+    $m_Ljapgolly_scalajs_react_package$();
+    var qual$15 = this.coursier$web$Backend$$$$f;
+    var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+    var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$15);
+    var state = $as_Lcoursier_web_State(arg1);
+    var repo = $as_T2(state.repositories$1.apply__I__O(repoIdx));
+    var jsx$2 = state.repositories$1;
+    var jsx$1 = update.apply__O__O__O(repo, $as_T(e["target"]["value"]));
+    var this$6 = $m_sc_Seq$();
+    var x$179 = $as_sc_Seq(jsx$2.updated__I__O__scg_CanBuildFrom__O(repoIdx, jsx$1, this$6.ReusableCBFInstance$2));
+    var x$180 = state.modules$1;
+    var x$181 = state.options$1;
+    var x$182 = state.resolutionOpt$1;
+    var x$183 = state.editModuleIdx$1;
+    var x$184 = state.editRepoIdx$1;
+    var x$185 = state.resolving$1;
+    var x$186 = state.reverseTree$1;
+    var x$187 = state.log$1;
+    var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$180, x$179, x$181, x$182, x$183, x$184, x$185, x$186, x$187);
+    C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$15, s, (void 0))
+  }
+});
+$c_Lcoursier_web_Backend.prototype.addModule__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
+  e["preventDefault"]();
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$11 = this.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$11);
+  var state = $as_Lcoursier_web_State(arg1);
+  var jsx$2 = state.modules$1;
+  var module = new $c_Lcoursier_core_Module().init___T__T("", "");
+  var scope = new $c_Lcoursier_core_Scope$Other().init___T("");
+  var attributes = new $c_Lcoursier_core_Attributes().init___T__T("jar", "");
+  var exclusions = $m_sci_Set$EmptySet$();
+  var jsx$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__Lcoursier_core_Attributes__sci_Set__Z(module, "", scope, attributes, exclusions, false);
+  var this$13 = $m_sc_Seq$();
+  var modules = $as_sc_Seq(jsx$2.$$colon$plus__O__scg_CanBuildFrom__O(jsx$1, this$13.ReusableCBFInstance$2));
+  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Modules:\\n", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([modules.mkString__T__T("\n")]));
+  var this$15 = $m_s_Console$();
+  var this$16 = this$15.outVar$2;
+  $as_Ljava_io_PrintStream(this$16.tl$1.get__O()).println__O__V(x);
+  var x$136 = (((-1) + modules.length__I()) | 0);
+  var x$137 = state.repositories$1;
+  var x$138 = state.options$1;
+  var x$139 = state.resolutionOpt$1;
+  var x$140 = state.editRepoIdx$1;
+  var x$141 = state.resolving$1;
+  var x$142 = state.reverseTree$1;
+  var x$143 = state.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(modules, x$137, x$138, x$139, x$136, x$140, x$141, x$142, x$143);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$11, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$depsOf$1__Lcoursier_core_Dependency__Lcoursier_core_Resolution__sc_Seq = (function(dep, resolution$1) {
   var xo = resolution$1.projectCache$1.get__O__s_Option(new $c_T2().init___O__O(dep.module$1, dep.version$1));
@@ -3524,35 +3631,6 @@ $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$depsOf$1__Lcoursier_cor
   };
   return $as_sc_Seq(jsx$1)
 });
-$c_Lcoursier_web_Backend.prototype.addModule__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
-  e["preventDefault"]();
-  $m_Ljapgolly_scalajs_react_package$();
-  var qual$11 = this.coursier$web$Backend$$$$f;
-  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
-  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$11);
-  var state = $as_Lcoursier_web_State(arg1);
-  var jsx$2 = state.modules$1;
-  var module = new $c_Lcoursier_core_Module().init___T__T("", "");
-  var scope = new $c_Lcoursier_core_Scope$Other().init___T("");
-  var attributes = new $c_Lcoursier_core_Attributes().init___T__T("jar", "");
-  var exclusions = $m_sci_Set$EmptySet$();
-  var jsx$1 = new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__Lcoursier_core_Attributes__sci_Set__Z(module, "", scope, attributes, exclusions, false);
-  var this$13 = $m_sc_Seq$();
-  var modules = $as_sc_Seq(jsx$2.$$colon$plus__O__scg_CanBuildFrom__O(jsx$1, this$13.ReusableCBFInstance$2));
-  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Modules:\\n", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([modules.mkString__T__T("\n")]));
-  var this$15 = $m_s_Console$();
-  var this$16 = this$15.outVar$2;
-  $as_Ljava_io_PrintStream(this$16.tl$1.get__O()).println__O__V(x);
-  var x$123 = (((-1) + modules.length__I()) | 0);
-  var x$124 = state.repositories$1;
-  var x$125 = state.options$1;
-  var x$126 = state.resolutionOpt$1;
-  var x$127 = state.resolving$1;
-  var x$128 = state.reverseTree$1;
-  var x$129 = state.log$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(modules, x$124, x$125, x$126, x$123, x$127, x$128, x$129);
-  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$11, s, (void 0))
-});
 $c_Lcoursier_web_Backend.prototype.handleResolve__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
   var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Resolving"])).s__sc_Seq__T($m_sci_Nil$());
   var this$2 = $m_s_Console$();
@@ -3566,14 +3644,15 @@ $c_Lcoursier_web_Backend.prototype.handleResolve__Ljapgolly_scalajs_react_Synthe
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$1);
   var x$8 = $as_Lcoursier_web_State(arg1);
-  var x$29 = $m_sci_Nil$();
-  var x$30 = x$8.modules$1;
-  var x$31 = x$8.repositories$1;
-  var x$32 = x$8.options$1;
-  var x$33 = x$8.resolutionOpt$1;
-  var x$34 = x$8.editModuleIdx$1;
-  var x$35 = x$8.reverseTree$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$30, x$31, x$32, x$33, x$34, true, x$35, x$29);
+  var x$34 = $m_sci_Nil$();
+  var x$35 = x$8.modules$1;
+  var x$36 = x$8.repositories$1;
+  var x$37 = x$8.options$1;
+  var x$38 = x$8.resolutionOpt$1;
+  var x$39 = x$8.editModuleIdx$1;
+  var x$40 = x$8.editRepoIdx$1;
+  var x$41 = x$8.reverseTree$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$35, x$36, x$37, x$38, x$39, x$40, true, x$41, x$34);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$1, s, (void 0));
   var logger = new $c_Lcoursier_web_Backend$$anon$1().init___Lcoursier_web_Backend(this);
   $m_Ljapgolly_scalajs_react_package$();
@@ -3597,6 +3676,9 @@ $c_Lcoursier_web_Backend.prototype.handleResolve__Ljapgolly_scalajs_react_Synthe
   var executor$2 = $m_sjs_concurrent_JSExecutionContext$Implicits$().queue$1;
   $s_s_concurrent_Future$class__foreach__s_concurrent_Future__F1__s_concurrent_ExecutionContext__V(this$17, f$1, executor$2)
 });
+$c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$repr$1__Lcoursier_core_Dependency__T = (function(dep) {
+  return $as_sc_TraversableOnce($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.organization$1, dep.module$1.name$1, dep.scope$1.name__T()]))).mkString__T__T(":")
+});
 $c_Lcoursier_web_Backend.prototype.enablePopover__Ljapgolly_scalajs_react_SyntheticEvent__sjs_js_Dynamic = (function(e) {
   return $g["$"]("[data-toggle='popover']")["popover"]()
 });
@@ -3607,15 +3689,43 @@ $c_Lcoursier_web_Backend.prototype.editModule__I__Ljapgolly_scalajs_react_Synthe
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$8);
   var x$14 = $as_Lcoursier_web_State(arg1);
-  var x$109 = x$14.modules$1;
-  var x$110 = x$14.repositories$1;
-  var x$111 = x$14.options$1;
-  var x$112 = x$14.resolutionOpt$1;
-  var x$113 = x$14.resolving$1;
-  var x$114 = x$14.reverseTree$1;
-  var x$115 = x$14.log$1;
-  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$109, x$110, x$111, x$112, idx, x$113, x$114, x$115);
+  var x$121 = x$14.modules$1;
+  var x$122 = x$14.repositories$1;
+  var x$123 = x$14.options$1;
+  var x$124 = x$14.resolutionOpt$1;
+  var x$125 = x$14.editRepoIdx$1;
+  var x$126 = x$14.resolving$1;
+  var x$127 = x$14.reverseTree$1;
+  var x$128 = x$14.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$121, x$122, x$123, x$124, idx, x$125, x$126, x$127, x$128);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$8, s, (void 0))
+});
+$c_Lcoursier_web_Backend.prototype.addRepo__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
+  e["preventDefault"]();
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$16 = this.coursier$web$Backend$$$$f;
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$16);
+  var state = $as_Lcoursier_web_State(arg1);
+  var jsx$2 = state.repositories$1;
+  var y = new $c_Lcoursier_core_MavenRepository().init___T__Z__s_Option("", ($m_Lcoursier_core_MavenRepository$(), false), ($m_Lcoursier_core_MavenRepository$(), $m_s_None$()));
+  var jsx$1 = new $c_T2().init___O__O("", y);
+  var this$9 = $m_sc_Seq$();
+  var repositories = $as_sc_Seq(jsx$2.$$colon$plus__O__scg_CanBuildFrom__O(jsx$1, this$9.ReusableCBFInstance$2));
+  var x = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Repositories:\\n", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([repositories.mkString__T__T("\n")]));
+  var this$11 = $m_s_Console$();
+  var this$12 = this$11.outVar$2;
+  $as_Ljava_io_PrintStream(this$12.tl$1.get__O()).println__O__V(x);
+  var x$191 = (((-1) + repositories.length__I()) | 0);
+  var x$192 = state.modules$1;
+  var x$193 = state.options$1;
+  var x$194 = state.resolutionOpt$1;
+  var x$195 = state.editModuleIdx$1;
+  var x$196 = state.resolving$1;
+  var x$197 = state.reverseTree$1;
+  var x$198 = state.log$1;
+  var s = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$192, repositories, x$193, x$194, x$195, x$191, x$196, x$197, x$198);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$16, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.reverseDeps$lzycompute$1__p1__Lcoursier_core_Resolution__sci_Set__sr_ObjectRef__sr_VolatileByteRef__sci_Map = (function(resolution$1, minDependencies$1, reverseDeps$lzy$1, bitmap$0$1) {
   if (((1 & bitmap$0$1.elem$1) === 0)) {
@@ -3631,15 +3741,15 @@ $c_Lcoursier_web_Backend.prototype.removeModule__I__Ljapgolly_scalajs_react_Synt
   e["preventDefault"]();
   $m_Ljapgolly_scalajs_react_package$();
   var qual$9 = this.coursier$web$Backend$$$$f;
-  var x$118 = new $c_Lcoursier_web_Backend$$anonfun$11().init___Lcoursier_web_Backend__I(this, idx);
+  var x$131 = new $c_Lcoursier_web_Backend$$anonfun$11().init___Lcoursier_web_Backend__I(this, idx);
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
   var v1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$9);
-  var s = x$118.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1));
+  var s = x$131.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1));
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$9, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$task$1__Lcoursier_core_MavenRepository$Logger__Lcoursier_web_State__Lscalaz_concurrent_package$Task = (function(logger$1, s$1) {
-  var x$68 = s$1.modules$1.toSet__sci_Set();
-  var x$69 = new $c_s_Some().init___O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$1$1) {
+  var x$77 = s$1.modules$1.toSet__sci_Set();
+  var x$78 = new $c_s_Some().init___O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$1$1) {
     return (function(dep$2) {
       var dep = $as_Lcoursier_core_Dependency(dep$2);
       if ((s$1$1.options$1.followOptional$1 || (!dep.optional$1))) {
@@ -3656,36 +3766,39 @@ $c_Lcoursier_web_Backend.prototype.coursier$web$Backend$$task$1__Lcoursier_core_
     })
   })(s$1)));
   $m_Lcoursier_package$Resolution$();
-  var x$70 = $m_sci_Set$EmptySet$();
+  var x$79 = $m_sci_Set$EmptySet$();
   $m_Lcoursier_package$Resolution$();
-  var x$71 = $m_sci_Set$EmptySet$();
+  var x$80 = $m_sci_Set$EmptySet$();
   $m_Lcoursier_package$Resolution$();
-  var x$72 = $m_sci_Map$EmptyMap$();
+  var x$81 = $m_sci_Map$EmptyMap$();
   $m_Lcoursier_package$Resolution$();
-  var x$73 = $m_sci_Map$EmptyMap$();
+  var x$82 = $m_sci_Map$EmptyMap$();
   $m_Lcoursier_package$Resolution$();
-  var x$74 = $m_s_None$();
+  var x$83 = $m_s_None$();
   $m_Lcoursier_package$Resolution$();
-  var res = new $c_Lcoursier_core_Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$68, x$70, x$71, x$72, x$73, x$69, x$74);
+  var res = new $c_Lcoursier_core_Resolution().init___sci_Set__sci_Set__sci_Set__sci_Map__sci_Map__s_Option__s_Option(x$77, x$79, x$80, x$81, x$82, x$78, x$83);
   var cachePolicy = $m_Lcoursier_core_CachePolicy$Default$();
   $m_Lcoursier_package$();
-  var this$15 = $m_Lcoursier_package$().ResolutionProcess$1.apply__Lcoursier_core_Resolution__Lcoursier_core_ResolutionProcess(res);
+  var this$18 = $m_Lcoursier_package$().ResolutionProcess$1.apply__Lcoursier_core_Resolution__Lcoursier_core_ResolutionProcess(res);
   $m_Lcoursier_package$();
   var jsx$2 = s$1.repositories$1;
   var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(logger$1$1) {
-    return (function(r$2) {
-      var r = $as_Lcoursier_core_MavenRepository(r$2);
-      var x$75 = new $c_s_Some().init___O(logger$1$1);
-      var x$76 = r.root$2;
-      var x$77 = r.ivyLike$2;
-      return new $c_Lcoursier_core_MavenRepository().init___T__Z__s_Option(x$76, x$77, x$75)
+    return (function(item$2) {
+      var item = $as_T2(item$2);
+      var x$84 = new $c_s_Some().init___O(logger$1$1);
+      var this$13 = $as_Lcoursier_core_MavenRepository(item.$$und2__O());
+      var x$85 = this$13.root$2;
+      var this$14 = $as_Lcoursier_core_MavenRepository(item.$$und2__O());
+      var x$86 = this$14.ivyLike$2;
+      $as_Lcoursier_core_MavenRepository(item.$$und2__O());
+      return new $c_Lcoursier_core_MavenRepository().init___T__Z__s_Option(x$85, x$86, x$84)
     })
   })(logger$1));
-  var this$13 = $m_sc_Seq$();
-  var repositories = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$13.ReusableCBFInstance$2));
+  var this$16 = $m_sc_Seq$();
+  var repositories = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$16.ReusableCBFInstance$2));
   var fetch = new $c_Lcoursier_package$$anonfun$fetch$1().init___sc_Seq__Lcoursier_core_CachePolicy(repositories, cachePolicy);
   var F = $m_Lscalaz_concurrent_package$Task$().taskMonad$1;
-  return $as_Lscalaz_concurrent_package$Task($s_Lcoursier_core_ResolutionProcess$class__run__Lcoursier_core_ResolutionProcess__F1__I__Lscalaz_Monad__O(this$15, fetch, 100, F))
+  return $as_Lscalaz_concurrent_package$Task($s_Lcoursier_core_ResolutionProcess$class__run__Lcoursier_core_ResolutionProcess__F1__I__Lscalaz_Monad__O(this$18, fetch, 100, F))
 });
 $c_Lcoursier_web_Backend.prototype.updateTree__Lcoursier_core_Resolution__T__Z__sjs_js_Dynamic = (function(resolution, target, reverse) {
   var reverseDeps$lzy = new $c_sr_ObjectRef().init___O(null);
@@ -3830,8 +3943,15 @@ $c_Lcoursier_web_Backend.prototype.options$lzycompute__p1__Lcoursier_web_Backend
   };
   return this.options$module$1
 });
-$c_Lcoursier_web_Backend.prototype.options__Lcoursier_web_Backend$options$ = (function() {
-  return ((this.options$module$1 === null) ? this.options$lzycompute__p1__Lcoursier_web_Backend$options$() : this.options$module$1)
+$c_Lcoursier_web_Backend.prototype.removeRepo__I__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(idx, e) {
+  e["preventDefault"]();
+  $m_Ljapgolly_scalajs_react_package$();
+  var qual$13 = this.coursier$web$Backend$$$$f;
+  var x$166 = new $c_Lcoursier_web_Backend$$anonfun$15().init___Lcoursier_web_Backend__I(this, idx);
+  var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
+  var v1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$13);
+  var s = x$166.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1));
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$13, s, (void 0))
 });
 $c_Lcoursier_web_Backend.prototype.toggleReverseTree__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
   $m_Ljapgolly_scalajs_react_package$();
@@ -3845,16 +3965,20 @@ $c_Lcoursier_web_Backend.prototype.toggleReverseTree__Ljapgolly_scalajs_react_Sy
     var res = $as_Lcoursier_core_Resolution(arg1);
     this.updateTree__Lcoursier_core_Resolution__T__Z__sjs_js_Dynamic(res, "#deptree", (!s.reverseTree$1))
   };
-  var x$98 = (!s.reverseTree$1);
-  var x$99 = s.modules$1;
-  var x$100 = s.repositories$1;
-  var x$101 = s.options$1;
-  var x$102 = s.resolutionOpt$1;
-  var x$103 = s.editModuleIdx$1;
-  var x$104 = s.resolving$1;
-  var x$105 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$99, x$100, x$101, x$102, x$103, x$104, x$98, x$105);
+  var x$109 = (!s.reverseTree$1);
+  var x$110 = s.modules$1;
+  var x$111 = s.repositories$1;
+  var x$112 = s.options$1;
+  var x$113 = s.resolutionOpt$1;
+  var x$114 = s.editModuleIdx$1;
+  var x$115 = s.editRepoIdx$1;
+  var x$116 = s.resolving$1;
+  var x$117 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$110, x$111, x$112, x$113, x$114, x$115, x$116, x$109, x$117);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$7, s$1, (void 0))
+});
+$c_Lcoursier_web_Backend.prototype.options__Lcoursier_web_Backend$options$ = (function() {
+  return ((this.options$module$1 === null) ? this.options$lzycompute__p1__Lcoursier_web_Backend$options$() : this.options$module$1)
 });
 var $is_Lcoursier_web_Backend = (function(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcoursier_web_Backend)))
@@ -3889,45 +4013,47 @@ var $h_Lcoursier_web_Backend$options$ = (function() {
 $h_Lcoursier_web_Backend$options$.prototype = $c_Lcoursier_web_Backend$options$.prototype;
 $c_Lcoursier_web_Backend$options$.prototype.toggleTest__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
   $m_Ljapgolly_scalajs_react_package$();
-  var qual$13 = this.$$outer$1.coursier$web$Backend$$$$f;
+  var qual$18 = this.$$outer$1.coursier$web$Backend$$$$f;
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
-  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$13);
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$18);
   var s = $as_Lcoursier_web_State(arg1);
-  var x$142 = (!s.options$1.keepTest$1);
+  var x$212 = (!s.options$1.keepTest$1);
   var this$6 = s.options$1;
-  var x$143 = this$6.followOptional$1;
+  var x$213 = this$6.followOptional$1;
   s.options$1;
-  var x$144 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(x$143, x$142);
-  var x$145 = s.modules$1;
-  var x$146 = s.repositories$1;
-  var x$147 = s.resolutionOpt$1;
-  var x$148 = s.editModuleIdx$1;
-  var x$149 = s.resolving$1;
-  var x$150 = s.reverseTree$1;
-  var x$151 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$145, x$146, x$144, x$147, x$148, x$149, x$150, x$151);
-  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$13, s$1, (void 0))
+  var x$214 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(x$213, x$212);
+  var x$215 = s.modules$1;
+  var x$216 = s.repositories$1;
+  var x$217 = s.resolutionOpt$1;
+  var x$218 = s.editModuleIdx$1;
+  var x$219 = s.editRepoIdx$1;
+  var x$220 = s.resolving$1;
+  var x$221 = s.reverseTree$1;
+  var x$222 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$215, x$216, x$214, x$217, x$218, x$219, x$220, x$221, x$222);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$18, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$options$.prototype.toggleOptional__Ljapgolly_scalajs_react_SyntheticEvent__V = (function(e) {
   $m_Ljapgolly_scalajs_react_package$();
-  var qual$12 = this.$$outer$1.coursier$web$Backend$$$$f;
+  var qual$17 = this.$$outer$1.coursier$web$Backend$$$$f;
   var C = $m_Ljapgolly_scalajs_react_package$CompStateAccess$SS$();
-  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$12);
+  var arg1 = C.state__Ljapgolly_scalajs_react_ComponentScope$undSS__O(qual$17);
   var s = $as_Lcoursier_web_State(arg1);
   s.options$1;
   var followOptional = (!s.options$1.followOptional$1);
   var this$6 = s.options$1;
   var keepTest = this$6.keepTest$1;
-  var x$132 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(followOptional, keepTest);
-  var x$133 = s.modules$1;
-  var x$134 = s.repositories$1;
-  var x$135 = s.resolutionOpt$1;
-  var x$136 = s.editModuleIdx$1;
-  var x$137 = s.resolving$1;
-  var x$138 = s.reverseTree$1;
-  var x$139 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$133, x$134, x$132, x$135, x$136, x$137, x$138, x$139);
-  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$12, s$1, (void 0))
+  var x$201 = new $c_Lcoursier_web_ResolutionOptions().init___Z__Z(followOptional, keepTest);
+  var x$202 = s.modules$1;
+  var x$203 = s.repositories$1;
+  var x$204 = s.resolutionOpt$1;
+  var x$205 = s.editModuleIdx$1;
+  var x$206 = s.editRepoIdx$1;
+  var x$207 = s.resolving$1;
+  var x$208 = s.reverseTree$1;
+  var x$209 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$202, x$203, x$201, x$204, x$205, x$206, x$207, x$208, x$209);
+  C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$17, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$options$.prototype.init___Lcoursier_web_Backend = (function($$outer) {
   if (($$outer === null)) {
@@ -14372,15 +14498,16 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.fetched__T__V = (function(url) {
   var x$9 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["<- ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$38 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$9, this$9.ReusableCBFInstance$2));
-  var x$39 = s.modules$1;
-  var x$40 = s.repositories$1;
-  var x$41 = s.options$1;
-  var x$42 = s.resolutionOpt$1;
-  var x$43 = s.editModuleIdx$1;
-  var x$44 = s.resolving$1;
-  var x$45 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$39, x$40, x$41, x$42, x$43, x$44, x$45, x$38);
+  var x$44 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$9, this$9.ReusableCBFInstance$2));
+  var x$45 = s.modules$1;
+  var x$46 = s.repositories$1;
+  var x$47 = s.options$1;
+  var x$48 = s.resolutionOpt$1;
+  var x$49 = s.editModuleIdx$1;
+  var x$50 = s.editRepoIdx$1;
+  var x$51 = s.resolving$1;
+  var x$52 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$45, x$46, x$47, x$48, x$49, x$50, x$51, x$52, x$44);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$2, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.fetching__T__V = (function(url) {
@@ -14396,15 +14523,16 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.fetching__T__V = (function(url) {
   var x$10 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["-> ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$48 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$10, this$9.ReusableCBFInstance$2));
-  var x$49 = s.modules$1;
-  var x$50 = s.repositories$1;
-  var x$51 = s.options$1;
-  var x$52 = s.resolutionOpt$1;
-  var x$53 = s.editModuleIdx$1;
-  var x$54 = s.resolving$1;
-  var x$55 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$49, x$50, x$51, x$52, x$53, x$54, x$55, x$48);
+  var x$55 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$10, this$9.ReusableCBFInstance$2));
+  var x$56 = s.modules$1;
+  var x$57 = s.repositories$1;
+  var x$58 = s.options$1;
+  var x$59 = s.resolutionOpt$1;
+  var x$60 = s.editModuleIdx$1;
+  var x$61 = s.editRepoIdx$1;
+  var x$62 = s.resolving$1;
+  var x$63 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$56, x$57, x$58, x$59, x$60, x$61, x$62, x$63, x$55);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$3, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.other__T__T__V = (function(url, msg) {
@@ -14420,15 +14548,16 @@ $c_Lcoursier_web_Backend$$anon$1.prototype.other__T__T__V = (function(url, msg) 
   var x$11 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ": ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([url, msg]));
   var jsx$1 = s.log$1;
   var this$9 = $m_sc_Seq$();
-  var x$58 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$11, this$9.ReusableCBFInstance$2));
-  var x$59 = s.modules$1;
-  var x$60 = s.repositories$1;
-  var x$61 = s.options$1;
-  var x$62 = s.resolutionOpt$1;
-  var x$63 = s.editModuleIdx$1;
-  var x$64 = s.resolving$1;
-  var x$65 = s.reverseTree$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$59, x$60, x$61, x$62, x$63, x$64, x$65, x$58);
+  var x$66 = $as_sc_Seq(jsx$1.$$plus$colon__O__scg_CanBuildFrom__O(x$11, this$9.ReusableCBFInstance$2));
+  var x$67 = s.modules$1;
+  var x$68 = s.repositories$1;
+  var x$69 = s.options$1;
+  var x$70 = s.resolutionOpt$1;
+  var x$71 = s.editModuleIdx$1;
+  var x$72 = s.editRepoIdx$1;
+  var x$73 = s.resolving$1;
+  var x$74 = s.reverseTree$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$67, x$68, x$69, x$70, x$71, x$72, x$73, x$74, x$66);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$4, s$1, (void 0))
 });
 $c_Lcoursier_web_Backend$$anon$1.prototype.init___Lcoursier_web_Backend = (function($$outer) {
@@ -30366,27 +30495,27 @@ var $d_Lcoursier_package$$anonfun$fetch$1$$anonfun$apply$1 = new $TypeData().ini
 });
 $c_Lcoursier_package$$anonfun$fetch$1$$anonfun$apply$1.prototype.$classData = $d_Lcoursier_package$$anonfun$fetch$1$$anonfun$apply$1;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$16 = (function() {
+var $c_Lcoursier_web_App$$anonfun$23 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$16.prototype.constructor = $c_Lcoursier_web_App$$anonfun$16;
+$c_Lcoursier_web_App$$anonfun$23.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$23.prototype.constructor = $c_Lcoursier_web_App$$anonfun$23;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$16 = (function() {
+var $h_Lcoursier_web_App$$anonfun$23 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$16.prototype = $c_Lcoursier_web_App$$anonfun$16.prototype;
-$c_Lcoursier_web_App$$anonfun$16.prototype.infoLabel$1__p2__T__Ljapgolly_scalajs_react_vdom_ReactTag = (function(label) {
+$h_Lcoursier_web_App$$anonfun$23.prototype = $c_Lcoursier_web_App$$anonfun$23.prototype;
+$c_Lcoursier_web_App$$anonfun$23.prototype.infoLabel$1__p2__T__Ljapgolly_scalajs_react_vdom_ReactTag = (function(label) {
   var jsx$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
   ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
   return jsx$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("label label-info", av), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), label)))]))
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype.apply__O__O = (function(v1) {
+$c_Lcoursier_web_App$$anonfun$23.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Ljapgolly_scalajs_react_ReactElement($as_T2(v1))
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype.coursier$web$App$$anonfun$$depItem$1__Lcoursier_core_Dependency__s_Option__Lcoursier_core_Resolution__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(dep, finalVersionOpt, res$1, backend$1) {
+$c_Lcoursier_web_App$$anonfun$23.prototype.coursier$web$App$$anonfun$$depItem$1__Lcoursier_core_Dependency__s_Option__Lcoursier_core_Resolution__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(dep, finalVersionOpt, res$1, backend$1) {
   var jsx$29 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1;
   ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
   var t = (res$1.errorCache$1.contains__O__Z(new $c_T2().init___O__O(dep.module$1, dep.version$1)) ? "danger" : "");
@@ -30447,8 +30576,8 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.coursier$web$App$$anonfun$$depItem$1_
   };
   var this$17 = new $c_s_Some().init___O(dep.exclusions$1);
   var arg1$1 = this$17.x$2;
-  var x$18 = $as_sci_Set(arg1$1);
-  if ($s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(x$18)) {
+  var x$21 = $as_sci_Set(arg1$1);
+  if ($s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(x$21)) {
     var this$18 = this$17
   } else {
     var this$18 = $m_s_None$()
@@ -30590,7 +30719,7 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.coursier$web$App$$anonfun$$depItem$1_
   }));
   return jsx$29.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$28, jsx$26, jsx$24, jsx$22, jsx$12, jsx$11.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs$5, evidence$5$3)]))]))
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype.popOver$1__p2__T__T__T__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(type, label, desc, backend$1) {
+$c_Lcoursier_web_App$$anonfun$23.prototype.popOver$1__p2__T__T__T__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(type, label, desc, backend$1) {
   var jsx$8 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
   var this$4 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
@@ -30646,19 +30775,19 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.popOver$1__p2__T__T__T__Lcoursier_web
   var ev$6 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
   return jsx$8.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$1, ev$6), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), label)))]))
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(T) {
+$c_Lcoursier_web_App$$anonfun$23.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(T) {
   if ((T !== null)) {
     var res = $as_Lcoursier_core_Resolution(T.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(T.$$und2__O());
-    var x$17_$_$$und1$f = res;
-    var x$17_$_$$und2$f = backend
+    var x$20_$_$$und1$f = res;
+    var x$20_$_$$und2$f = backend
   } else {
-    var x$17_$_$$und1$f;
-    var x$17_$_$$und2$f;
+    var x$20_$_$$und1$f;
+    var x$20_$_$$und2$f;
     throw new $c_s_MatchError().init___O(T)
   };
-  var res$2 = $as_Lcoursier_core_Resolution(x$17_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$17_$_$$und2$f);
+  var res$2 = $as_Lcoursier_core_Resolution(x$20_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$20_$_$$und2$f);
   var this$1 = $m_Lcoursier_core_Orders$().minDependencies__sci_Set__sci_Set(res$2.dependencies$1);
   var this$2 = $m_sci_List$();
   var cbf = this$2.ReusableCBFInstance$2;
@@ -30693,15 +30822,15 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.apply__T2__Ljapgolly_scalajs_react_Re
         var this$29 = $m_s_None$()
       } else {
         var arg1 = this$28.get__O();
-        var x$19 = $as_T2(arg1);
-        var this$29 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$19.$$und2__O()).version$1)
+        var x$22 = $as_T2(arg1);
+        var this$29 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$22.$$und2__O()).version$1)
       };
       if (this$29.isEmpty__Z()) {
         var jsx$2 = true
       } else {
         var arg1$1 = this$29.get__O();
-        var x$20 = $as_T(arg1$1);
-        var jsx$2 = (x$20 !== dep$1.version$1)
+        var x$23 = $as_T(arg1$1);
+        var jsx$2 = (x$23 !== dep$1.version$1)
       };
       var h = new $c_sci_$colon$colon().init___O__sci_List(this.coursier$web$App$$anonfun$$depItem$1__Lcoursier_core_Dependency__s_Option__Lcoursier_core_Resolution__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(dep$1, (jsx$2 ? this$29 : $m_s_None$()), res$2, backend$2), $m_sci_Nil$());
       var t = h;
@@ -30714,15 +30843,15 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.apply__T2__Ljapgolly_scalajs_react_Re
           var this$31 = $m_s_None$()
         } else {
           var arg1$2 = this$30.get__O();
-          var x$19$1 = $as_T2(arg1$2);
-          var this$31 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$19$1.$$und2__O()).version$1)
+          var x$22$1 = $as_T2(arg1$2);
+          var this$31 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$22$1.$$und2__O()).version$1)
         };
         if (this$31.isEmpty__Z()) {
           var jsx$3 = true
         } else {
           var arg1$3 = this$31.get__O();
-          var x$20$1 = $as_T(arg1$3);
-          var jsx$3 = (x$20$1 !== dep$3.version$1)
+          var x$23$1 = $as_T(arg1$3);
+          var jsx$3 = (x$23$1 !== dep$3.version$1)
         };
         var nx = new $c_sci_$colon$colon().init___O__sci_List(this.coursier$web$App$$anonfun$$depItem$1__Lcoursier_core_Dependency__s_Option__Lcoursier_core_Resolution__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(dep$3, (jsx$3 ? this$31 : $m_s_None$()), res$2, backend$2), $m_sci_Nil$());
         t.tl$5 = nx;
@@ -30742,15 +30871,15 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.apply__T2__Ljapgolly_scalajs_react_Re
         var this$33 = $m_s_None$()
       } else {
         var arg1$5 = this$32.get__O();
-        var x$19$2 = $as_T2(arg1$5);
-        var this$33 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$19$2.$$und2__O()).version$1)
+        var x$22$2 = $as_T2(arg1$5);
+        var this$33 = new $c_s_Some().init___O($as_Lcoursier_core_Project(x$22$2.$$und2__O()).version$1)
       };
       if (this$33.isEmpty__Z()) {
         var jsx$4 = true
       } else {
         var arg1$6 = this$33.get__O();
-        var x$20$2 = $as_T(arg1$6);
-        var jsx$4 = (x$20$2 !== dep$4.version$1)
+        var x$23$2 = $as_T(arg1$6);
+        var jsx$4 = (x$23$2 !== dep$4.version$1)
       };
       b.$$plus$eq__O__scm_Builder(this.coursier$web$App$$anonfun$$depItem$1__Lcoursier_core_Dependency__s_Option__Lcoursier_core_Resolution__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(dep$4, (jsx$4 ? this$33 : $m_s_None$()), res$2, backend$2));
       these = $as_sci_List(these.tail__O())
@@ -30762,37 +30891,37 @@ $c_Lcoursier_web_App$$anonfun$16.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   var t$1 = jsx$8.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, jsx$6, jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs, evidence$5)]))]));
   return t$1.render__Ljapgolly_scalajs_react_ReactElement()
 });
-var $d_Lcoursier_web_App$$anonfun$16 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$16: 0
-}, false, "coursier.web.App$$anonfun$16", {
-  Lcoursier_web_App$$anonfun$16: 1,
+var $d_Lcoursier_web_App$$anonfun$23 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$23: 0
+}, false, "coursier.web.App$$anonfun$23", {
+  Lcoursier_web_App$$anonfun$23: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$16.prototype.$classData = $d_Lcoursier_web_App$$anonfun$16;
+$c_Lcoursier_web_App$$anonfun$23.prototype.$classData = $d_Lcoursier_web_App$$anonfun$23;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$19 = (function() {
+var $c_Lcoursier_web_App$$anonfun$26 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$19.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$19.prototype.constructor = $c_Lcoursier_web_App$$anonfun$19;
+$c_Lcoursier_web_App$$anonfun$26.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$26.prototype.constructor = $c_Lcoursier_web_App$$anonfun$26;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$19 = (function() {
+var $h_Lcoursier_web_App$$anonfun$26 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$19.prototype = $c_Lcoursier_web_App$$anonfun$19.prototype;
-$c_Lcoursier_web_App$$anonfun$19.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_web_App$$anonfun$26.prototype = $c_Lcoursier_web_App$$anonfun$26.prototype;
+$c_Lcoursier_web_App$$anonfun$26.prototype.apply__O__O = (function(v1) {
   return this.apply__T3__Ljapgolly_scalajs_react_ReactElement($as_T3(v1))
 });
-$c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
+$c_Lcoursier_web_App$$anonfun$26.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
   matchEnd4: {
-    var x$21_$_$$und1$1;
-    var x$21_$_$$und2$1;
-    var x$21_$_$$und3$1;
-    var x$21_$_$$und4$1;
+    var x$24_$_$$und1$1;
+    var x$24_$_$$und2$1;
+    var x$24_$_$$und3$1;
+    var x$24_$_$$und4$1;
     if ((P !== null)) {
       var p2 = $as_T2(P.$$und1$1);
       var moduleIdx = $uI(P.$$und2$1);
@@ -30800,19 +30929,19 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
       if ((p2 !== null)) {
         var module = $as_Lcoursier_core_Module(p2.$$und1__O());
         var version = $as_T(p2.$$und2__O());
-        var x$21_$_$$und1$1 = module;
-        var x$21_$_$$und2$1 = version;
-        var x$21_$_$$und3$1 = moduleIdx;
-        var x$21_$_$$und4$1 = backend;
+        var x$24_$_$$und1$1 = module;
+        var x$24_$_$$und2$1 = version;
+        var x$24_$_$$und3$1 = moduleIdx;
+        var x$24_$_$$und4$1 = backend;
         break matchEnd4
       }
     };
     throw new $c_s_MatchError().init___O(P)
   };
-  var module$2 = $as_Lcoursier_core_Module(x$21_$_$$und1$1);
-  var version$2 = $as_T(x$21_$_$$und2$1);
-  var moduleIdx$2 = $uI(x$21_$_$$und3$1);
-  var backend$2 = $as_Lcoursier_web_Backend(x$21_$_$$und4$1);
+  var module$2 = $as_Lcoursier_core_Module(x$24_$_$$und1$1);
+  var version$2 = $as_T(x$24_$_$$und2$1);
+  var moduleIdx$2 = $uI(x$24_$_$$und3$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$24_$_$$und4$1);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$60 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
@@ -30970,9 +31099,9 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
     var dep$1 = $as_Lcoursier_core_Dependency(dep$2$1);
     var value$1 = $as_T(value$2$1);
     var this$107 = dep$1.module$1;
-    var x$163 = this$107.organization$1;
+    var x$234 = this$107.organization$1;
     dep$1.module$1;
-    var module$3 = new $c_Lcoursier_core_Module().init___T__T(x$163, value$1);
+    var module$3 = new $c_Lcoursier_core_Module().init___T__T(x$234, value$1);
     var version$3 = dep$1.version$1;
     var scope$1 = dep$1.scope$1;
     var attributes$1 = dep$1.attributes$1;
@@ -31025,12 +31154,12 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   var eta$0$3 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(dep$2$2, value$2$2) {
     var dep$3 = $as_Lcoursier_core_Dependency(dep$2$2);
     var value$3 = $as_T(value$2$2);
-    var x$165 = dep$3.module$1;
-    var x$166 = dep$3.scope$1;
-    var x$167 = dep$3.attributes$1;
-    var x$168 = dep$3.exclusions$1;
-    var x$169 = dep$3.optional$1;
-    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__Lcoursier_core_Attributes__sci_Set__Z(x$165, value$3, x$166, x$167, x$168, x$169)
+    var x$236 = dep$3.module$1;
+    var x$237 = dep$3.scope$1;
+    var x$238 = dep$3.attributes$1;
+    var x$239 = dep$3.exclusions$1;
+    var x$240 = dep$3.optional$1;
+    return new $c_Lcoursier_core_Dependency().init___Lcoursier_core_Module__T__Lcoursier_core_Scope__Lcoursier_core_Attributes__sci_Set__Z(x$236, value$3, x$237, x$238, x$239, x$240)
   }));
   var eventHandler$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(moduleIdx$2$3, backend$2$3, eta$0$3$1) {
     return (function(e$2$2) {
@@ -31068,108 +31197,740 @@ $c_Lcoursier_web_App$$anonfun$19.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   var t = jsx$60.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$59, jsx$58, jsx$57, jsx$56, jsx$55.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$54, jsx$53.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$52, jsx$39, jsx$38.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$37, jsx$36.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$26, jsx$16, jsx$6, jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$151, "modal", ev$24), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Done")))]))]))]))]))]))]))]));
   return t.render__Ljapgolly_scalajs_react_ReactElement()
 });
-var $d_Lcoursier_web_App$$anonfun$19 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$19: 0
-}, false, "coursier.web.App$$anonfun$19", {
-  Lcoursier_web_App$$anonfun$19: 1,
+var $d_Lcoursier_web_App$$anonfun$26 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$26: 0
+}, false, "coursier.web.App$$anonfun$26", {
+  Lcoursier_web_App$$anonfun$26: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$19.prototype.$classData = $d_Lcoursier_web_App$$anonfun$19;
+$c_Lcoursier_web_App$$anonfun$26.prototype.$classData = $d_Lcoursier_web_App$$anonfun$26;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$20 = (function() {
+var $c_Lcoursier_web_App$$anonfun$27 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$20.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$20.prototype.constructor = $c_Lcoursier_web_App$$anonfun$20;
+$c_Lcoursier_web_App$$anonfun$27.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$27.prototype.constructor = $c_Lcoursier_web_App$$anonfun$27;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$20 = (function() {
+var $h_Lcoursier_web_App$$anonfun$27 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$20.prototype = $c_Lcoursier_web_App$$anonfun$20.prototype;
-$c_Lcoursier_web_App$$anonfun$20.prototype.apply__O__O = (function(v1) {
-  return this.apply__sc_Seq__Ljapgolly_scalajs_react_ReactElement($as_sc_Seq(v1))
+$h_Lcoursier_web_App$$anonfun$27.prototype = $c_Lcoursier_web_App$$anonfun$27.prototype;
+$c_Lcoursier_web_App$$anonfun$27.prototype.apply__O__O = (function(v1) {
+  return this.apply__T3__Ljapgolly_scalajs_react_ReactElement($as_T3(v1))
 });
-$c_Lcoursier_web_App$$anonfun$20.prototype.apply__sc_Seq__Ljapgolly_scalajs_react_ReactElement = (function(repos) {
-  var sortedRepos = $as_sc_Seq(repos.sortBy__F1__s_math_Ordering__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(repo$2) {
-    var repo = $as_Lcoursier_core_MavenRepository(repo$2);
-    return repo.root$2
-  })), $m_s_math_Ordering$String$()));
+$c_Lcoursier_web_App$$anonfun$27.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
+  if ((P !== null)) {
+    var deps = $as_sc_Seq(P.$$und1$1);
+    var editModuleIdx = $uI(P.$$und2$1);
+    var backend = $as_Lcoursier_web_Backend(P.$$und3$1);
+    var x$25_$_$$und1$1 = deps;
+    var x$25_$_$$und2$1 = editModuleIdx;
+    var x$25_$_$$und3$1 = backend
+  } else {
+    var x$25_$_$$und1$1;
+    var x$25_$_$$und2$1;
+    var x$25_$_$$und3$1;
+    throw new $c_s_MatchError().init___O(P)
+  };
+  var deps$2 = $as_sc_Seq(x$25_$_$$und1$1);
+  var editModuleIdx$2 = $uI(x$25_$_$$und2$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$25_$_$$und3$1);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).table$1;
+  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).p$1;
+  var jsx$18 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
+  var this$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$17 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$6, "button", ev);
   ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("table", av);
-  var jsx$3 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).thead$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Base URL")))]))]))]));
-  var jsx$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tbody$1;
+  var jsx$16 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("btn btn-default customButton", av);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-    return (function(repo$2$1) {
-      var repo$1 = $as_Lcoursier_core_MavenRepository(repo$2$1);
-      return arg$outer.coursier$web$App$$anonfun$$repoItem$1__Lcoursier_core_MavenRepository__Ljapgolly_scalajs_react_vdom_ReactTag(repo$1)
+  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3) {
+    return (function(e$2) {
+      backend$3.addModule__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2)
     })
-  })(this));
-  var this$11 = $m_sc_Seq$();
-  var xs = $as_sc_Seq(sortedRepos.map__F1__scg_CanBuildFrom__O(jsx$1, this$11.ReusableCBFInstance$2));
+  })(backend$2));
+  var v = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(eventHandler);
+  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$15 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v, ev$1);
+  var this$14 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$14 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$14, "modal", ev$2);
+  var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$13 = jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$16, jsx$15, jsx$14, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$16, "#moduleEdit", ev$3), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Add")))]))]));
+  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).table$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("table", av$1);
+  var jsx$10 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).thead$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Organization")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Name")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Version")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))]))]))]));
+  var jsx$9 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tbody$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var this$41 = $m_sc_Seq$();
+  var jsx$8 = $as_sc_TraversableLike(deps$2.zipWithIndex__scg_CanBuildFrom__O(this$41.ReusableCBFInstance$2));
+  var this$42 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer, backend$3$1) {
+    return (function(dep$2, idx$2) {
+      var dep = $as_Lcoursier_core_Dependency(dep$2);
+      var idx = $uI(idx$2);
+      return arg$outer.coursier$web$App$$anonfun$$depItem$2__Lcoursier_core_Dependency__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(dep, idx, backend$3$1)
+    })
+  })(this, backend$2));
+  var jsx$7 = $s_s_Function2$class__tupled__F2__F1(this$42);
+  var this$43 = $m_sc_Seq$();
+  var xs = $as_sc_Seq(jsx$8.map__F1__scg_CanBuildFrom__O(jsx$7, this$43.ReusableCBFInstance$2));
   var evidence$5 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  var t = jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$2.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs, evidence$5)]))]));
+  var jsx$6 = jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs, evidence$5)]))]));
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var this$50 = $m_Lcoursier_web_App$().moduleEditModal$1;
+  var this$45 = new $c_s_PartialFunction$Lifted().init___s_PartialFunction(deps$2);
+  var this$46 = this$45.apply__O__s_Option(editModuleIdx$2);
+  if (this$46.isEmpty__Z()) {
+    var $$this$1 = new $c_Lcoursier_core_Module().init___T__T("", "");
+    var jsx$1 = new $c_T2().init___O__O($$this$1, "")
+  } else {
+    var arg1$1 = this$46.get__O();
+    var x$26 = $as_Lcoursier_core_Dependency(arg1$1);
+    var jsx$1 = new $c_T2().init___O__O(x$26.module$1, x$26.version$1)
+  };
+  var props = new $c_T3().init___O__O__O(jsx$1, editModuleIdx$2, backend$2);
+  var array = [];
+  var jsx$5 = this$50.jsCtor$2;
+  var jsx$4 = this$50.mkProps__O__Ljapgolly_scalajs_react_package$WrapObj(props);
+  matchEnd5: {
+    var jsx$3;
+    var jsx$3 = array;
+    break matchEnd5
+  };
+  var jsx$2 = [jsx$4]["concat"](jsx$3);
+  var v$1 = jsx$5["apply"]((void 0), jsx$2);
+  var t = jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$13, jsx$6, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(v$1)]));
   return t.render__Ljapgolly_scalajs_react_ReactElement()
 });
-$c_Lcoursier_web_App$$anonfun$20.prototype.coursier$web$App$$anonfun$$repoItem$1__Lcoursier_core_MavenRepository__Ljapgolly_scalajs_react_vdom_ReactTag = (function(repo) {
-  var jsx$4 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1;
-  var jsx$3 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  var jsx$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
-  var this$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).href$1;
-  var v = repo.root$2;
+$c_Lcoursier_web_App$$anonfun$27.prototype.coursier$web$App$$anonfun$$depItem$2__Lcoursier_core_Dependency__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(dep, idx, backend$3) {
+  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1;
+  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var v = dep.module$1.organization$1;
+  var jsx$18 = jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v))]));
+  var jsx$17 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var v$1 = dep.module$1.name$1;
+  var jsx$16 = jsx$17.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$1))]));
+  var jsx$15 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var v$2 = dep.version$1;
+  var jsx$14 = jsx$15.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$2))]));
+  var jsx$13 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$14 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$6, v, ev);
+  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$14, "modal", ev);
+  var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var v$1 = repo.root$2;
-  return jsx$4.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$1))]))]))]))
+  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$10 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$16, "#moduleEdit", ev$1);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$9 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3$1, idx$6) {
+    return (function(e$2) {
+      backend$3$1.editModule__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$6, e$2)
+    })
+  })(backend$3, idx));
+  var v$3 = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(eventHandler);
+  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$8 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v$3, ev$2);
+  var this$23 = $m_Lcoursier_web_App$icon$();
+  var jsx$7 = jsx$13.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, this$23.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("pencil")]))]));
+  var jsx$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$27 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$27, "modal", ev$3);
+  var this$29 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$4 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$3 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$29, "#moduleRemove", ev$4);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av$1);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3$2, idx$6$1) {
+    return (function(e$2$1) {
+      backend$3$2.removeModule__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$6$1, e$2$1)
+    })
+  })(backend$3, idx));
+  var v$4 = (function(f$1) {
+    return (function(arg1$1) {
+      return f$1.apply__O__O(arg1$1)
+    })
+  })(eventHandler$1);
+  var ev$5 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$4, ev$5);
+  var this$36 = $m_Lcoursier_web_App$icon$();
+  return jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18, jsx$16, jsx$14, jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$2, jsx$1, this$36.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("remove")]))]))]))
 });
-var $d_Lcoursier_web_App$$anonfun$20 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$20: 0
-}, false, "coursier.web.App$$anonfun$20", {
-  Lcoursier_web_App$$anonfun$20: 1,
+var $d_Lcoursier_web_App$$anonfun$27 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$27: 0
+}, false, "coursier.web.App$$anonfun$27", {
+  Lcoursier_web_App$$anonfun$27: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$20.prototype.$classData = $d_Lcoursier_web_App$$anonfun$20;
+$c_Lcoursier_web_App$$anonfun$27.prototype.$classData = $d_Lcoursier_web_App$$anonfun$27;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$22 = (function() {
+var $c_Lcoursier_web_App$$anonfun$28 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$22.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$22.prototype.constructor = $c_Lcoursier_web_App$$anonfun$22;
+$c_Lcoursier_web_App$$anonfun$28.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$28.prototype.constructor = $c_Lcoursier_web_App$$anonfun$28;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$22 = (function() {
+var $h_Lcoursier_web_App$$anonfun$28 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$22.prototype = $c_Lcoursier_web_App$$anonfun$22.prototype;
-$c_Lcoursier_web_App$$anonfun$22.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_web_App$$anonfun$28.prototype = $c_Lcoursier_web_App$$anonfun$28.prototype;
+$c_Lcoursier_web_App$$anonfun$28.prototype.apply__O__O = (function(v1) {
+  return this.apply__T3__Ljapgolly_scalajs_react_ReactElement($as_T3(v1))
+});
+$c_Lcoursier_web_App$$anonfun$28.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
+  matchEnd4: {
+    var x$27_$_$$und1$1;
+    var x$27_$_$$und2$1;
+    var x$27_$_$$und3$1;
+    var x$27_$_$$und4$1;
+    if ((P !== null)) {
+      var p2 = $as_T2(P.$$und1$1);
+      var repoIdx = $uI(P.$$und2$1);
+      var backend = $as_Lcoursier_web_Backend(P.$$und3$1);
+      if ((p2 !== null)) {
+        var name = $as_T(p2.$$und1__O());
+        var repo = $as_Lcoursier_core_MavenRepository(p2.$$und2__O());
+        var x$27_$_$$und1$1 = name;
+        var x$27_$_$$und2$1 = repo;
+        var x$27_$_$$und3$1 = repoIdx;
+        var x$27_$_$$und4$1 = backend;
+        break matchEnd4
+      }
+    };
+    throw new $c_s_MatchError().init___O(P)
+  };
+  var name$2 = $as_T(x$27_$_$$und1$1);
+  var repo$2 = $as_Lcoursier_core_MavenRepository(x$27_$_$$und2$1);
+  var repoIdx$2 = $uI(x$27_$_$$und3$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$27_$_$$und4$1);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var jsx$51 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$50 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal fade", av);
+  var this$7 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).id$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$49 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$7, "repoEdit", ev);
+  var this$10 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).role$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$48 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$10, "dialog", ev$1);
+  var this$13 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).aria__Ljapgolly_scalajs_react_vdom_HtmlAttrs$aria$().labelledby$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$47 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$13, "repoEditTitle", ev$2);
+  var jsx$46 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$45 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-dialog", av$1);
+  var jsx$44 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$43 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-content", av$2);
+  var jsx$42 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$41 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-header", av$3);
+  var jsx$40 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
+  var this$29 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$39 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$29, "button", ev$3);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$4 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$38 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("close", av$4);
+  var this$34 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-dismiss");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$4 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$37 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$34, "modal", ev$4);
+  var this$37 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).aria__Ljapgolly_scalajs_react_vdom_HtmlAttrs$aria$().label$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$5 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$36 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$37, "Close", ev$5);
+  var jsx$35 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
+  var this$41 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).aria__Ljapgolly_scalajs_react_vdom_HtmlAttrs$aria$().hidden$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$6 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$34 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$41, "true", ev$6);
+  var this$42 = $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
+  var jsx$33 = jsx$40.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$39, jsx$38, jsx$37, jsx$36, jsx$35.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$34, $s_Ljapgolly_scalajs_react_vdom_Extra$Attrs$class__dangerouslySetInnerHtml__Ljapgolly_scalajs_react_vdom_Extra$Attrs__T__Ljapgolly_scalajs_react_vdom_TagMod(this$42, "&times;")]))]));
+  var jsx$32 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).h4$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$5 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$31 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-title", av$5);
+  var this$49 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).id$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$7 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$30 = jsx$42.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$41, jsx$33, jsx$32.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$31, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$49, "repoEditTitle", ev$7), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Repository")))]))]));
+  var jsx$29 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$6 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$28 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-body", av$6);
+  var jsx$27 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).form$1;
+  var jsx$26 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$7 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$25 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("form-group", av$7);
+  var jsx$24 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).label$1;
+  var this$64 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).for$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$8 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$23 = jsx$24.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$64, "inputName", ev$8), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Name")))]));
+  var jsx$22 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).input$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$8 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$21 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("form-control", av$8);
+  var this$73 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).id$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$9 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$20 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$73, "inputName", ev$9);
+  var this$76 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).placeholder$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$10 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$19 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$76, "Name", ev$10);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onChange$1;
+  var eta$0$4 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(item$2, value$2) {
+    var item = $as_T2(item$2);
+    var value = $as_T(value$2);
+    return new $c_T2().init___O__O(value, item.$$und2__O())
+  }));
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(repoIdx$2$1, backend$4, eta$0$4$1) {
+    return (function(e$2) {
+      backend$4.updateRepo__I__F2__Ljapgolly_scalajs_react_SyntheticEvent__V(repoIdx$2$1, eta$0$4$1, e$2)
+    })
+  })(repoIdx$2, backend$2, eta$0$4));
+  var v = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(eventHandler);
+  var ev$11 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$18 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v, ev$11);
+  var this$82 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).value$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$12 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$17 = jsx$26.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$25, jsx$23, jsx$22.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$21, jsx$20, jsx$19, jsx$18, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$82, name$2, ev$12)]))]));
+  var jsx$16 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$9 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$15 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("form-group", av$9);
+  var jsx$14 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).label$1;
+  var this$90 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).for$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$13 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$13 = jsx$14.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$90, "inputVersion", ev$13), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Root")))]));
+  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).input$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$10 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("form-control", av$10);
+  var this$99 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).id$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$14 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$10 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$99, "inputVersion", ev$14);
+  var this$102 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).placeholder$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$15 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$9 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$102, "Root", ev$15);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onChange$1;
+  var eta$0$5 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(item$2$1, value$2$1) {
+    var item$1 = $as_T2(item$2$1);
+    var value$1 = $as_T(value$2$1);
+    var jsx$7 = item$1.$$und1__O();
+    $as_Lcoursier_core_MavenRepository(item$1.$$und2__O());
+    var this$105 = $as_Lcoursier_core_MavenRepository(item$1.$$und2__O());
+    var ivyLike = this$105.ivyLike$2;
+    var this$106 = $as_Lcoursier_core_MavenRepository(item$1.$$und2__O());
+    var logger = this$106.logger$2;
+    return new $c_T2().init___O__O(jsx$7, new $c_Lcoursier_core_MavenRepository().init___T__Z__s_Option(value$1, ivyLike, logger))
+  }));
+  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(repoIdx$2$2, backend$4$1, eta$0$5$1) {
+    return (function(e$2$1) {
+      backend$4$1.updateRepo__I__F2__Ljapgolly_scalajs_react_SyntheticEvent__V(repoIdx$2$2, eta$0$5$1, e$2$1)
+    })
+  })(repoIdx$2, backend$2, eta$0$5));
+  var v$1 = (function(f$1) {
+    return (function(arg1$1) {
+      return f$1.apply__O__O(arg1$1)
+    })
+  })(eventHandler$1);
+  var ev$16 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$8 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$1, ev$16);
+  var this$111 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).value$1;
+  var v$2 = repo$2.root$2;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$17 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$6 = jsx$16.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$15, jsx$13, jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$111, v$2, ev$17)]))]));
+  var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$11 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-footer", av$11);
+  var jsx$3 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
+  var this$119 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$18 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$119, "submit", ev$18);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$12 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("btn btn-primary", av$12);
+  var this$124 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-dismiss");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$19 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var t = jsx$51.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$50, jsx$49, jsx$48, jsx$47, jsx$46.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$45, jsx$44.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$43, jsx$30, jsx$29.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$28, jsx$27.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$6, jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$124, "modal", ev$19), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Done")))]))]))]))]))]))]))]));
+  return t.render__Ljapgolly_scalajs_react_ReactElement()
+});
+var $d_Lcoursier_web_App$$anonfun$28 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$28: 0
+}, false, "coursier.web.App$$anonfun$28", {
+  Lcoursier_web_App$$anonfun$28: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_web_App$$anonfun$28.prototype.$classData = $d_Lcoursier_web_App$$anonfun$28;
+/** @constructor */
+var $c_Lcoursier_web_App$$anonfun$29 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_web_App$$anonfun$29.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$29.prototype.constructor = $c_Lcoursier_web_App$$anonfun$29;
+/** @constructor */
+var $h_Lcoursier_web_App$$anonfun$29 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_web_App$$anonfun$29.prototype = $c_Lcoursier_web_App$$anonfun$29.prototype;
+$c_Lcoursier_web_App$$anonfun$29.prototype.apply__O__O = (function(v1) {
+  return this.apply__T3__Ljapgolly_scalajs_react_ReactElement($as_T3(v1))
+});
+$c_Lcoursier_web_App$$anonfun$29.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
+  if ((P !== null)) {
+    var repos = $as_sc_Seq(P.$$und1$1);
+    var editRepoIdx = $uI(P.$$und2$1);
+    var backend = $as_Lcoursier_web_Backend(P.$$und3$1);
+    var x$28_$_$$und1$1 = repos;
+    var x$28_$_$$und2$1 = editRepoIdx;
+    var x$28_$_$$und3$1 = backend
+  } else {
+    var x$28_$_$$und1$1;
+    var x$28_$_$$und2$1;
+    var x$28_$_$$und3$1;
+    throw new $c_s_MatchError().init___O(P)
+  };
+  var repos$2 = $as_sc_Seq(x$28_$_$$und1$1);
+  var editRepoIdx$2 = $uI(x$28_$_$$und2$1);
+  var backend$2 = $as_Lcoursier_web_Backend(x$28_$_$$und3$1);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
+  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).p$1;
+  var jsx$18 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
+  var this$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$17 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$6, "button", ev);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$16 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("btn btn-default customButton", av);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$5) {
+    return (function(e$2) {
+      backend$5.addRepo__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2)
+    })
+  })(backend$2));
+  var v = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(eventHandler);
+  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$15 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v, ev$1);
+  var this$14 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$14 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$14, "modal", ev$2);
+  var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$13 = jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$16, jsx$15, jsx$14, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$16, "#repoEdit", ev$3), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Add")))]))]));
+  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).table$1;
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("table", av$1);
+  var jsx$10 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).thead$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Name")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Root")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))]))]))]));
+  var jsx$9 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tbody$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var this$44 = $m_sc_Seq$();
+  var jsx$8 = $as_sc_TraversableLike(repos$2.zipWithIndex__scg_CanBuildFrom__O(this$44.ReusableCBFInstance$2));
+  var this$45 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer, backend$5$1) {
+    return (function(item$2, idx$2) {
+      var item = $as_T2(item$2);
+      var idx = $uI(idx$2);
+      return arg$outer.coursier$web$App$$anonfun$$repoItem$1__T2__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(item, idx, backend$5$1)
+    })
+  })(this, backend$2));
+  var jsx$7 = $s_s_Function2$class__tupled__F2__F1(this$45);
+  var this$46 = $m_sc_Seq$();
+  var xs = $as_sc_Seq(jsx$8.map__F1__scg_CanBuildFrom__O(jsx$7, this$46.ReusableCBFInstance$2));
+  var evidence$5 = $m_s_Predef$().singleton$und$less$colon$less$2;
+  var jsx$6 = jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs, evidence$5)]))]));
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var this$53 = $m_Lcoursier_web_App$().repoEditModal$1;
+  var this$48 = new $c_s_PartialFunction$Lifted().init___s_PartialFunction(repos$2);
+  var this$49 = this$48.apply__O__s_Option(editRepoIdx$2);
+  if (this$49.isEmpty__Z()) {
+    var y = new $c_Lcoursier_core_MavenRepository().init___T__Z__s_Option("", ($m_Lcoursier_core_MavenRepository$(), false), ($m_Lcoursier_core_MavenRepository$(), $m_s_None$()));
+    var jsx$1 = new $c_T2().init___O__O("", y)
+  } else {
+    var jsx$1 = this$49.get__O()
+  };
+  var props = new $c_T3().init___O__O__O(jsx$1, editRepoIdx$2, backend$2);
+  var array = [];
+  var jsx$5 = this$53.jsCtor$2;
+  var jsx$4 = this$53.mkProps__O__Ljapgolly_scalajs_react_package$WrapObj(props);
+  matchEnd5: {
+    var jsx$3;
+    var jsx$3 = array;
+    break matchEnd5
+  };
+  var jsx$2 = [jsx$4]["concat"](jsx$3);
+  var v$1 = jsx$5["apply"]((void 0), jsx$2);
+  var t = jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$13, jsx$6, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(v$1)]));
+  return t.render__Ljapgolly_scalajs_react_ReactElement()
+});
+$c_Lcoursier_web_App$$anonfun$29.prototype.coursier$web$App$$anonfun$$repoItem$1__T2__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(item, idx, backend$5) {
+  var jsx$32 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1;
+  var jsx$31 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var v = item.$$und1__O();
+  var v$1 = $as_T(v);
+  $m_Ljapgolly_scalajs_react_package$();
+  var jsx$30 = jsx$31.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(v$1)]));
+  var jsx$29 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var v$2 = $as_Lcoursier_core_MavenRepository(item.$$und2__O()).root$2;
+  var jsx$28 = jsx$29.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$2))]));
+  var jsx$27 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$26 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$11 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$25 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$11, "modal", ev);
+  var this$13 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$24 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$13, "#repoEdit", ev$1);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$23 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$5$1, idx$7) {
+    return (function(e$2) {
+      backend$5$1.editRepo__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$7, e$2)
+    })
+  })(backend$5, idx));
+  var v$3 = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(eventHandler);
+  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$22 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v$3, ev$2);
+  var this$20 = $m_Lcoursier_web_App$icon$();
+  var jsx$21 = jsx$27.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$26.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$25, jsx$24, jsx$23, jsx$22, this$20.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("pencil")]))]));
+  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$24 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$18 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$24, "modal", ev$3);
+  var this$26 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$4 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$17 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$26, "#repoRemove", ev$4);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$16 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av$1);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$5$2, idx$7$1) {
+    return (function(e$2$1) {
+      backend$5$2.removeRepo__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$7$1, e$2$1)
+    })
+  })(backend$5, idx));
+  var v$4 = (function(f$1) {
+    return (function(arg1$1) {
+      return f$1.apply__O__O(arg1$1)
+    })
+  })(eventHandler$1);
+  var ev$5 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$15 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$4, ev$5);
+  var this$33 = $m_Lcoursier_web_App$icon$();
+  var jsx$14 = jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18, jsx$17, jsx$16, jsx$15, this$33.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("remove")]))]));
+  var jsx$13 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$37 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$6 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$37, "modal", ev$6);
+  var this$39 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$7 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$10 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$39, "#repoUp", ev$7);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$9 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av$2);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$5$3, idx$7$2) {
+    return (function(e$2$2) {
+      backend$5$3.moveRepo__I__Z__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$7$2, true, e$2$2)
+    })
+  })(backend$5, idx));
+  var v$5 = (function(f$2) {
+    return (function(arg1$2) {
+      return f$2.apply__O__O(arg1$2)
+    })
+  })(eventHandler$2);
+  var ev$8 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$8 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$2, v$5, ev$8);
+  var this$46 = $m_Lcoursier_web_App$icon$();
+  var jsx$7 = jsx$13.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, this$46.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("arrow-up")]))]));
+  var jsx$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
+  var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+  var this$50 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$9 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$50, "modal", ev$9);
+  var this$52 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var ev$10 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$3 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$52, "#repoDown", ev$10);
+  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var av$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av$3);
+  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+  var $$this$3 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
+  var eventHandler$3 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$5$4, idx$7$3) {
+    return (function(e$2$3) {
+      backend$5$4.moveRepo__I__Z__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$7$3, false, e$2$3)
+    })
+  })(backend$5, idx));
+  var v$6 = (function(f$3) {
+    return (function(arg1$3) {
+      return f$3.apply__O__O(arg1$3)
+    })
+  })(eventHandler$3);
+  var ev$11 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
+  var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$3, v$6, ev$11);
+  var this$59 = $m_Lcoursier_web_App$icon$();
+  return jsx$32.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$30, jsx$28, jsx$21, jsx$14, jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$2, jsx$1, this$59.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("arrow-down")]))]))]))
+});
+var $d_Lcoursier_web_App$$anonfun$29 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$29: 0
+}, false, "coursier.web.App$$anonfun$29", {
+  Lcoursier_web_App$$anonfun$29: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_web_App$$anonfun$29.prototype.$classData = $d_Lcoursier_web_App$$anonfun$29;
+/** @constructor */
+var $c_Lcoursier_web_App$$anonfun$30 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_web_App$$anonfun$30.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$30.prototype.constructor = $c_Lcoursier_web_App$$anonfun$30;
+/** @constructor */
+var $h_Lcoursier_web_App$$anonfun$30 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_web_App$$anonfun$30.prototype = $c_Lcoursier_web_App$$anonfun$30.prototype;
+$c_Lcoursier_web_App$$anonfun$30.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Ljapgolly_scalajs_react_ReactElement($as_T2(v1))
 });
-$c_Lcoursier_web_App$$anonfun$22.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(P) {
+$c_Lcoursier_web_App$$anonfun$30.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(P) {
   if ((P !== null)) {
     var options = $as_Lcoursier_web_ResolutionOptions(P.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(P.$$und2__O());
-    var x$24_$_$$und1$f = options;
-    var x$24_$_$$und2$f = backend
+    var x$29_$_$$und1$f = options;
+    var x$29_$_$$und2$f = backend
   } else {
-    var x$24_$_$$und1$f;
-    var x$24_$_$$und2$f;
+    var x$29_$_$$und1$f;
+    var x$29_$_$$und2$f;
     throw new $c_s_MatchError().init___O(P)
   };
-  var options$2 = $as_Lcoursier_web_ResolutionOptions(x$24_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$24_$_$$und2$f);
+  var options$2 = $as_Lcoursier_web_ResolutionOptions(x$29_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$29_$_$$und2$f);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$18 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   var jsx$17 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
@@ -31185,9 +31946,9 @@ $c_Lcoursier_web_App$$anonfun$22.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   var jsx$13 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$10, "checkbox", ev);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onChange$1;
-  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$4) {
+  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$6) {
     return (function(e$2) {
-      backend$4.options__Lcoursier_web_Backend$options$().toggleOptional__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2)
+      backend$6.options__Lcoursier_web_Backend$options$().toggleOptional__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2)
     })
   })(backend$2));
   var v = (function(f) {
@@ -31226,9 +31987,9 @@ $c_Lcoursier_web_App$$anonfun$22.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$29, "checkbox", ev$3);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var $$this$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onChange$1;
-  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$4$1) {
+  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$6$1) {
     return (function(e$2$1) {
-      backend$4$1.options__Lcoursier_web_Backend$options$().toggleTest__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2$1)
+      backend$6$1.options__Lcoursier_web_Backend$options$().toggleTest__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2$1)
     })
   })(backend$2));
   var v$1 = (function(f$1) {
@@ -31256,44 +32017,44 @@ $c_Lcoursier_web_App$$anonfun$22.prototype.apply__T2__Ljapgolly_scalajs_react_Re
   var t = jsx$18.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$9, jsx$8.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$1, ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Keep test dependencies")))]))]))]))]));
   return t.render__Ljapgolly_scalajs_react_ReactElement()
 });
-var $d_Lcoursier_web_App$$anonfun$22 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$22: 0
-}, false, "coursier.web.App$$anonfun$22", {
-  Lcoursier_web_App$$anonfun$22: 1,
+var $d_Lcoursier_web_App$$anonfun$30 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$30: 0
+}, false, "coursier.web.App$$anonfun$30", {
+  Lcoursier_web_App$$anonfun$30: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$22.prototype.$classData = $d_Lcoursier_web_App$$anonfun$22;
+$c_Lcoursier_web_App$$anonfun$30.prototype.$classData = $d_Lcoursier_web_App$$anonfun$30;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$23 = (function() {
+var $c_Lcoursier_web_App$$anonfun$31 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$23.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$23.prototype.constructor = $c_Lcoursier_web_App$$anonfun$23;
+$c_Lcoursier_web_App$$anonfun$31.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$31.prototype.constructor = $c_Lcoursier_web_App$$anonfun$31;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$23 = (function() {
+var $h_Lcoursier_web_App$$anonfun$31 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$23.prototype = $c_Lcoursier_web_App$$anonfun$23.prototype;
-$c_Lcoursier_web_App$$anonfun$23.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_web_App$$anonfun$31.prototype = $c_Lcoursier_web_App$$anonfun$31.prototype;
+$c_Lcoursier_web_App$$anonfun$31.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Ljapgolly_scalajs_react_ReactElement($as_T2(v1))
 });
-$c_Lcoursier_web_App$$anonfun$23.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(T) {
+$c_Lcoursier_web_App$$anonfun$31.prototype.apply__T2__Ljapgolly_scalajs_react_ReactElement = (function(T) {
   if ((T !== null)) {
     var resOpt = $as_s_Option(T.$$und1__O());
     var backend = $as_Lcoursier_web_Backend(T.$$und2__O());
-    var x$25_$_$$und1$f = resOpt;
-    var x$25_$_$$und2$f = backend
+    var x$30_$_$$und1$f = resOpt;
+    var x$30_$_$$und2$f = backend
   } else {
-    var x$25_$_$$und1$f;
-    var x$25_$_$$und2$f;
+    var x$30_$_$$und1$f;
+    var x$30_$_$$und2$f;
     throw new $c_s_MatchError().init___O(T)
   };
-  var resOpt$2 = $as_s_Option(x$25_$_$$und1$f);
-  var backend$2 = $as_Lcoursier_web_Backend(x$25_$_$$und2$f);
+  var resOpt$2 = $as_s_Option(x$30_$_$$und1$f);
+  var backend$2 = $as_Lcoursier_web_Backend(x$30_$_$$und2$f);
   if ($is_s_Some(resOpt$2)) {
     var x2 = $as_s_Some(resOpt$2);
     var res = $as_Lcoursier_core_Resolution(x2.x$2);
@@ -31330,32 +32091,32 @@ $c_Lcoursier_web_App$$anonfun$23.prototype.apply__T2__Ljapgolly_scalajs_react_Re
     }
   }
 });
-var $d_Lcoursier_web_App$$anonfun$23 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$23: 0
-}, false, "coursier.web.App$$anonfun$23", {
-  Lcoursier_web_App$$anonfun$23: 1,
+var $d_Lcoursier_web_App$$anonfun$31 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$31: 0
+}, false, "coursier.web.App$$anonfun$31", {
+  Lcoursier_web_App$$anonfun$31: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$23.prototype.$classData = $d_Lcoursier_web_App$$anonfun$23;
+$c_Lcoursier_web_App$$anonfun$31.prototype.$classData = $d_Lcoursier_web_App$$anonfun$31;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$26 = (function() {
+var $c_Lcoursier_web_App$$anonfun$34 = (function() {
   $c_sr_AbstractFunction3.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$26.prototype = new $h_sr_AbstractFunction3();
-$c_Lcoursier_web_App$$anonfun$26.prototype.constructor = $c_Lcoursier_web_App$$anonfun$26;
+$c_Lcoursier_web_App$$anonfun$34.prototype = new $h_sr_AbstractFunction3();
+$c_Lcoursier_web_App$$anonfun$34.prototype.constructor = $c_Lcoursier_web_App$$anonfun$34;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$26 = (function() {
+var $h_Lcoursier_web_App$$anonfun$34 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$26.prototype = $c_Lcoursier_web_App$$anonfun$26.prototype;
-$c_Lcoursier_web_App$$anonfun$26.prototype.apply__O__O__O__O = (function(v1, v2, v3) {
+$h_Lcoursier_web_App$$anonfun$34.prototype = $c_Lcoursier_web_App$$anonfun$34.prototype;
+$c_Lcoursier_web_App$$anonfun$34.prototype.apply__O__O__O__O = (function(v1, v2, v3) {
   return this.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement($asUnit(v1), $as_Lcoursier_web_State(v2), $as_Lcoursier_web_Backend(v3))
 });
-$c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement = (function(x$27, S, B) {
+$c_Lcoursier_web_App$$anonfun$34.prototype.apply__sr_BoxedUnit__Lcoursier_web_State__Lcoursier_web_Backend__Ljapgolly_scalajs_react_ReactElement = (function(x$32, S, B) {
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$155 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   var jsx$154 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
@@ -31495,7 +32256,7 @@ $c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_St
   var jsx$111 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$96, "repositories", ev$20);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var this$97 = $m_Lcoursier_web_App$().repositories$1;
-  var props$1 = S.repositories$1;
+  var props$1 = new $c_T3().init___O__O__O(S.repositories$1, S.editRepoIdx$1, B);
   var array$1 = [];
   var jsx$110 = this$97.jsCtor$2;
   var jsx$109 = this$97.mkProps__O__Ljapgolly_scalajs_react_package$WrapObj(props$1);
@@ -31773,7 +32534,7 @@ $c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_St
   var jsx$28 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("log", av$13);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var jsx$27 = S.log$1;
-  var jsx$26 = new $c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59().init___Lcoursier_web_App$$anonfun$26(this);
+  var jsx$26 = new $c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75().init___Lcoursier_web_App$$anonfun$34(this);
   var this$279 = $m_sc_Seq$();
   var xs = $as_sc_Seq(jsx$27.map__F1__scg_CanBuildFrom__O(jsx$26, this$279.ReusableCBFInstance$2));
   var evidence$5 = $m_s_Predef$().singleton$und$less$colon$less$2;
@@ -31803,12 +32564,12 @@ $c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_St
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var $$this$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
   var this$300 = S.resolutionOpt$1;
-  var eta$0$4 = $as_Lcoursier_core_Resolution((this$300.isEmpty__Z() ? $m_Lcoursier_package$Resolution$().empty$1 : this$300.get__O()));
-  var eventHandler$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(eta$0$4$1, B$1$2) {
+  var eta$0$6 = $as_Lcoursier_core_Resolution((this$300.isEmpty__Z() ? $m_Lcoursier_package$Resolution$().empty$1 : this$300.get__O()));
+  var eventHandler$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(eta$0$6$1, B$1$2) {
     return (function(e$2$2) {
-      B$1$2.updateDepGraph__Lcoursier_core_Resolution__V(eta$0$4$1)
+      B$1$2.updateDepGraph__Lcoursier_core_Resolution__V(eta$0$6$1)
     })
-  })(eta$0$4, B));
+  })(eta$0$6, B));
   var v$8 = (function(f$2) {
     return (function(arg1$2) {
       return f$2.apply__O__O(arg1$2)
@@ -31882,246 +32643,48 @@ $c_Lcoursier_web_App$$anonfun$26.prototype.apply__sr_BoxedUnit__Lcoursier_web_St
   var t = jsx$155.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$97, jsx$88, jsx$87.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$86, jsx$85, jsx$51, jsx$50.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$49, jsx$40, jsx$25, jsx$15, jsx$14.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$13, jsx$12, jsx$11, jsx$2, jsx$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$340, "deptree", ev$70)]))]))]))]))]));
   return t.render__Ljapgolly_scalajs_react_ReactElement()
 });
-var $d_Lcoursier_web_App$$anonfun$26 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$26: 0
-}, false, "coursier.web.App$$anonfun$26", {
-  Lcoursier_web_App$$anonfun$26: 1,
+var $d_Lcoursier_web_App$$anonfun$34 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$34: 0
+}, false, "coursier.web.App$$anonfun$34", {
+  Lcoursier_web_App$$anonfun$34: 1,
   sr_AbstractFunction3: 1,
   O: 1,
   F3: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$26.prototype.$classData = $d_Lcoursier_web_App$$anonfun$26;
+$c_Lcoursier_web_App$$anonfun$34.prototype.$classData = $d_Lcoursier_web_App$$anonfun$34;
 /** @constructor */
-var $c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59 = (function() {
+var $c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype.constructor = $c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59;
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype.constructor = $c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75;
 /** @constructor */
-var $h_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59 = (function() {
+var $h_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype = $c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype;
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype.init___Lcoursier_web_App$$anonfun$26 = (function($$outer) {
-  return this
-});
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype = $c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype;
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype.apply__O__O = (function(v1) {
   return this.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag($as_T(v1))
 });
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag = (function(e) {
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype.init___Lcoursier_web_App$$anonfun$34 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag = (function(e) {
   return ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).li$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), e)))]))
 });
-var $d_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$26$$anonfun$apply$59: 0
-}, false, "coursier.web.App$$anonfun$26$$anonfun$apply$59", {
-  Lcoursier_web_App$$anonfun$26$$anonfun$apply$59: 1,
+var $d_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75 = new $TypeData().initClass({
+  Lcoursier_web_App$$anonfun$34$$anonfun$apply$75: 0
+}, false, "coursier.web.App$$anonfun$34$$anonfun$apply$75", {
+  Lcoursier_web_App$$anonfun$34$$anonfun$apply$75: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59.prototype.$classData = $d_Lcoursier_web_App$$anonfun$26$$anonfun$apply$59;
-/** @constructor */
-var $c_Lcoursier_web_App$$anonfun$dependenciesTable$1 = (function() {
-  $c_sr_AbstractFunction1.call(this)
-});
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.constructor = $c_Lcoursier_web_App$$anonfun$dependenciesTable$1;
-/** @constructor */
-var $h_Lcoursier_web_App$$anonfun$dependenciesTable$1 = (function() {
-  /*<skip>*/
-});
-$h_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype = $c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype;
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.apply__O__O = (function(v1) {
-  return this.apply__T3__Ljapgolly_scalajs_react_ReactElement($as_T3(v1))
-});
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.apply__T3__Ljapgolly_scalajs_react_ReactElement = (function(P) {
-  if ((P !== null)) {
-    var deps = $as_sc_Seq(P.$$und1$1);
-    var editModuleIdx = $uI(P.$$und2$1);
-    var backend = $as_Lcoursier_web_Backend(P.$$und3$1);
-    var x$22_$_$$und1$1 = deps;
-    var x$22_$_$$und2$1 = editModuleIdx;
-    var x$22_$_$$und3$1 = backend
-  } else {
-    var x$22_$_$$und1$1;
-    var x$22_$_$$und2$1;
-    var x$22_$_$$und3$1;
-    throw new $c_s_MatchError().init___O(P)
-  };
-  var deps$2 = $as_sc_Seq(x$22_$_$$und1$1);
-  var editModuleIdx$2 = $uI(x$22_$_$$und2$1);
-  var backend$2 = $as_Lcoursier_web_Backend(x$22_$_$$und3$1);
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
-  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).p$1;
-  var jsx$18 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
-  var this$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$17 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$6, "button", ev);
-  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$16 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("btn btn-default customButton", av);
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
-  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3) {
-    return (function(e$2) {
-      backend$3.addModule__Ljapgolly_scalajs_react_SyntheticEvent__V(e$2)
-    })
-  })(backend$2));
-  var v = (function(f) {
-    return (function(arg1) {
-      return f.apply__O__O(arg1)
-    })
-  })(eventHandler);
-  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
-  var jsx$15 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v, ev$1);
-  var this$14 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$14 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$14, "modal", ev$2);
-  var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$13 = jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$16, jsx$15, jsx$14, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$16, "#moduleEdit", ev$3), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Add")))]))]));
-  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).table$1;
-  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("table", av$1);
-  var jsx$10 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).thead$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Organization")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Name")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Version")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))])), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).th$1.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "")))]))]))]));
-  var jsx$9 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tbody$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var this$41 = $m_sc_Seq$();
-  var jsx$8 = $as_sc_TraversableLike(deps$2.zipWithIndex__scg_CanBuildFrom__O(this$41.ReusableCBFInstance$2));
-  var this$42 = new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(arg$outer, backend$3$1) {
-    return (function(dep$2, idx$2) {
-      var dep = $as_Lcoursier_core_Dependency(dep$2);
-      var idx = $uI(idx$2);
-      return arg$outer.coursier$web$App$$anonfun$$depItem$2__Lcoursier_core_Dependency__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag(dep, idx, backend$3$1)
-    })
-  })(this, backend$2));
-  var jsx$7 = $s_s_Function2$class__tupled__F2__F1(this$42);
-  var this$43 = $m_sc_Seq$();
-  var xs = $as_sc_Seq(jsx$8.map__F1__scg_CanBuildFrom__O(jsx$7, this$43.ReusableCBFInstance$2));
-  var evidence$5 = $m_s_Predef$().singleton$und$less$colon$less$2;
-  var jsx$6 = jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$SeqNode().init___sc_Seq__F1(xs, evidence$5)]))]));
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var this$48 = $m_Lcoursier_web_App$().moduleEditModal$1;
-  var this$45 = new $c_s_PartialFunction$Lifted().init___s_PartialFunction(deps$2);
-  var this$46 = this$45.apply__O__s_Option(editModuleIdx$2);
-  if (this$46.isEmpty__Z()) {
-    var jsx$1 = new $c_T2().init___O__O(new $c_Lcoursier_core_Module().init___T__T("", ""), "")
-  } else {
-    var arg1$1 = this$46.get__O();
-    var x$23 = $as_Lcoursier_core_Dependency(arg1$1);
-    var jsx$1 = new $c_T2().init___O__O(x$23.module$1, x$23.version$1)
-  };
-  var props = new $c_T3().init___O__O__O(jsx$1, editModuleIdx$2, backend$2);
-  var array = [];
-  var jsx$5 = this$48.jsCtor$2;
-  var jsx$4 = this$48.mkProps__O__Ljapgolly_scalajs_react_package$WrapObj(props);
-  matchEnd5: {
-    var jsx$3;
-    var jsx$3 = array;
-    break matchEnd5
-  };
-  var jsx$2 = [jsx$4]["concat"](jsx$3);
-  var v$1 = jsx$5["apply"]((void 0), jsx$2);
-  var t = jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$13, jsx$6, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(v$1)]));
-  return t.render__Ljapgolly_scalajs_react_ReactElement()
-});
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.coursier$web$App$$anonfun$$depItem$2__Lcoursier_core_Dependency__I__Lcoursier_web_Backend__Ljapgolly_scalajs_react_vdom_ReactTag = (function(dep, idx, backend$3) {
-  var jsx$20 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).tr$1;
-  var jsx$19 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var v = dep.module$1.organization$1;
-  var jsx$18 = jsx$19.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v))]));
-  var jsx$17 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var v$1 = dep.module$1.name$1;
-  var jsx$16 = jsx$17.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$1))]));
-  var jsx$15 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var v$2 = dep.version$1;
-  var jsx$14 = jsx$15.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), v$2))]));
-  var jsx$13 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  var jsx$12 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
-  var this$14 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$11 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$14, "modal", ev);
-  var this$16 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$10 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$16, "#moduleEdit", ev$1);
-  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var av = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$9 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av);
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var $$this = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
-  var eventHandler = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3$1, idx$3) {
-    return (function(e$2) {
-      backend$3$1.editModule__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$3, e$2)
-    })
-  })(backend$3, idx));
-  var v$3 = (function(f) {
-    return (function(arg1) {
-      return f.apply__O__O(arg1)
-    })
-  })(eventHandler);
-  var ev$2 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
-  var jsx$8 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this, v$3, ev$2);
-  var this$23 = $m_Lcoursier_web_App$icon$();
-  var jsx$7 = jsx$13.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, this$23.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("pencil")]))]));
-  var jsx$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).td$1;
-  var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
-  var this$27 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-toggle");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev$3 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$27, "modal", ev$3);
-  var this$29 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-target");
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var ev$4 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$3 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$29, "#moduleRemove", ev$4);
-  ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).class$1;
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("icon-action", av$1);
-  $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-  var $$this$1 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).onClick$1;
-  var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(backend$3$2, idx$3$1) {
-    return (function(e$2$1) {
-      backend$3$2.removeModule__I__Ljapgolly_scalajs_react_SyntheticEvent__V(idx$3$1, e$2$1)
-    })
-  })(backend$3, idx));
-  var v$4 = (function(f$1) {
-    return (function(arg1$1) {
-      return f$1.apply__O__O(arg1$1)
-    })
-  })(eventHandler$1);
-  var ev$5 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
-  var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$4, ev$5);
-  var this$36 = $m_Lcoursier_web_App$icon$();
-  return jsx$20.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$18, jsx$16, jsx$14, jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$2, jsx$1, this$36.apply__T__Ljapgolly_scalajs_react_vdom_ReactTag("remove")]))]))]))
-});
-var $d_Lcoursier_web_App$$anonfun$dependenciesTable$1 = new $TypeData().initClass({
-  Lcoursier_web_App$$anonfun$dependenciesTable$1: 0
-}, false, "coursier.web.App$$anonfun$dependenciesTable$1", {
-  Lcoursier_web_App$$anonfun$dependenciesTable$1: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lcoursier_web_App$$anonfun$dependenciesTable$1.prototype.$classData = $d_Lcoursier_web_App$$anonfun$dependenciesTable$1;
+$c_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75.prototype.$classData = $d_Lcoursier_web_App$$anonfun$34$$anonfun$apply$75;
 /** @constructor */
 var $c_Lcoursier_web_Backend$$anonfun$11 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -32156,10 +32719,11 @@ $c_Lcoursier_web_Backend$$anonfun$11.prototype.apply__Lcoursier_web_State__Lcour
   var options = s.options$1;
   var resolutionOpt = s.resolutionOpt$1;
   var editModuleIdx = s.editModuleIdx$1;
+  var editRepoIdx = s.editRepoIdx$1;
   var resolving = s.resolving$1;
   var reverseTree = s.reverseTree$1;
   var log = s.log$1;
-  return new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(modules, repositories, options, resolutionOpt, editModuleIdx, resolving, reverseTree, log)
+  return new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(modules, repositories, options, resolutionOpt, editModuleIdx, editRepoIdx, resolving, reverseTree, log)
 });
 $c_Lcoursier_web_Backend$$anonfun$11.prototype.init___Lcoursier_web_Backend__I = (function($$outer, idx$2) {
   this.idx$2$f = idx$2;
@@ -32176,6 +32740,61 @@ var $d_Lcoursier_web_Backend$$anonfun$11 = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lcoursier_web_Backend$$anonfun$11.prototype.$classData = $d_Lcoursier_web_Backend$$anonfun$11;
+/** @constructor */
+var $c_Lcoursier_web_Backend$$anonfun$15 = (function() {
+  $c_sr_AbstractFunction1.call(this);
+  this.idx$4$f = 0
+});
+$c_Lcoursier_web_Backend$$anonfun$15.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_web_Backend$$anonfun$15.prototype.constructor = $c_Lcoursier_web_Backend$$anonfun$15;
+/** @constructor */
+var $h_Lcoursier_web_Backend$$anonfun$15 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_web_Backend$$anonfun$15.prototype = $c_Lcoursier_web_Backend$$anonfun$15.prototype;
+$c_Lcoursier_web_Backend$$anonfun$15.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_web_State__Lcoursier_web_State($as_Lcoursier_web_State(v1))
+});
+$c_Lcoursier_web_Backend$$anonfun$15.prototype.apply__Lcoursier_web_State__Lcoursier_web_State = (function(s) {
+  var jsx$3 = s.repositories$1;
+  var this$1 = $m_sc_Seq$();
+  var jsx$2 = $as_sc_TraversableLike($as_sc_TraversableLike(jsx$3.zipWithIndex__scg_CanBuildFrom__O(this$1.ReusableCBFInstance$2)).filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
+    return (function(x$18$2) {
+      var x$18 = $as_T2(x$18$2);
+      return ($uI(x$18.$$und2__O()) !== arg$outer.idx$4$f)
+    })
+  })(this))));
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$19$2) {
+    var x$19 = $as_T2(x$19$2);
+    return $as_T2(x$19.$$und1__O())
+  }));
+  var this$2 = $m_sc_Seq$();
+  var x$157 = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2));
+  var x$158 = s.modules$1;
+  var x$159 = s.options$1;
+  var x$160 = s.resolutionOpt$1;
+  var x$161 = s.editModuleIdx$1;
+  var x$162 = s.editRepoIdx$1;
+  var x$163 = s.resolving$1;
+  var x$164 = s.reverseTree$1;
+  var x$165 = s.log$1;
+  return new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$158, x$157, x$159, x$160, x$161, x$162, x$163, x$164, x$165)
+});
+$c_Lcoursier_web_Backend$$anonfun$15.prototype.init___Lcoursier_web_Backend__I = (function($$outer, idx$4) {
+  this.idx$4$f = idx$4;
+  return this
+});
+var $d_Lcoursier_web_Backend$$anonfun$15 = new $TypeData().initClass({
+  Lcoursier_web_Backend$$anonfun$15: 0
+}, false, "coursier.web.Backend$$anonfun$15", {
+  Lcoursier_web_Backend$$anonfun$15: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_web_Backend$$anonfun$15.prototype.$classData = $d_Lcoursier_web_Backend$$anonfun$15;
 /** @constructor */
 var $c_Lcoursier_web_Backend$$anonfun$resolve$3 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -32199,14 +32818,15 @@ $c_Lcoursier_web_Backend$$anonfun$resolve$3.prototype.apply__Lcoursier_core_Reso
   var s = $as_Lcoursier_web_State(arg1);
   this.$$outer$2.updateDepGraph__Lcoursier_core_Resolution__V(res);
   this.$$outer$2.updateTree__Lcoursier_core_Resolution__T__Z__sjs_js_Dynamic(res, "#deptree", s.reverseTree$1);
-  var x$78 = new $c_s_Some().init___O(res);
-  var x$80 = s.modules$1;
-  var x$81 = s.repositories$1;
-  var x$82 = s.options$1;
-  var x$83 = s.editModuleIdx$1;
-  var x$84 = s.reverseTree$1;
-  var x$85 = s.log$1;
-  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq(x$80, x$81, x$82, x$78, x$83, false, x$84, x$85);
+  var x$87 = new $c_s_Some().init___O(res);
+  var x$89 = s.modules$1;
+  var x$90 = s.repositories$1;
+  var x$91 = s.options$1;
+  var x$92 = s.editModuleIdx$1;
+  var x$93 = s.editRepoIdx$1;
+  var x$94 = s.reverseTree$1;
+  var x$95 = s.log$1;
+  var s$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(x$89, x$90, x$91, x$87, x$92, x$93, false, x$94, x$95);
   C.setState__Ljapgolly_scalajs_react_ComponentScope$undSS__O__sjs_js_UndefOr__V(qual$5, s$1, (void 0));
   return $g["$"]("#resResTab a:last")["tab"]("show")
 });
@@ -32373,7 +32993,7 @@ $c_Lcoursier_web_Backend$$anonfun$updateDepGraph$3.prototype.apply__T3__V = (fun
         while (this$2.$$undhasNext$2) {
           var arg1 = this$2.next__O();
           var parDep = $as_Lcoursier_core_Dependency(arg1);
-          var to = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", ":", ":", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([parDep.module$1.organization$1, parDep.module$1.name$1, parDep.scope$1.name__T()]));
+          var to = this.$$outer$2.coursier$web$Backend$$repr$1__Lcoursier_core_Dependency__T(parDep);
           this.$$outer$2.coursier$web$Backend$$addNode$1__T__sjs_js_Object__sr_ObjectRef__V(to, this.graph$1$f, this.nodes$1$f);
           var x$4 = (void 0);
           b.$$plus$eq__O__scm_Builder(new $c_T3().init___O__O__O(parDep, to, x$4))
@@ -32498,6 +33118,7 @@ var $c_Lcoursier_web_State = (function() {
   this.options$1 = null;
   this.resolutionOpt$1 = null;
   this.editModuleIdx$1 = 0;
+  this.editRepoIdx$1 = 0;
   this.resolving$1 = false;
   this.reverseTree$1 = false;
   this.log$1 = null
@@ -32513,7 +33134,7 @@ $c_Lcoursier_web_State.prototype.productPrefix__T = (function() {
   return "State"
 });
 $c_Lcoursier_web_State.prototype.productArity__I = (function() {
-  return 8
+  return 9
 });
 $c_Lcoursier_web_State.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
@@ -32543,7 +33164,7 @@ $c_Lcoursier_web_State.prototype.equals__O__Z = (function(x$1) {
     } else {
       var jsx$1 = false
     };
-    if ((((jsx$1 && (this.editModuleIdx$1 === State$1.editModuleIdx$1)) && (this.resolving$1 === State$1.resolving$1)) && (this.reverseTree$1 === State$1.reverseTree$1))) {
+    if (((((jsx$1 && (this.editModuleIdx$1 === State$1.editModuleIdx$1)) && (this.editRepoIdx$1 === State$1.editRepoIdx$1)) && (this.resolving$1 === State$1.resolving$1)) && (this.reverseTree$1 === State$1.reverseTree$1))) {
       var x$9 = this.log$1;
       var x$10 = State$1.log$1;
       return ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
@@ -32577,14 +33198,18 @@ $c_Lcoursier_web_State.prototype.productElement__I__O = (function(x$1) {
       break
     }
     case 5: {
-      return this.resolving$1;
+      return this.editRepoIdx$1;
       break
     }
     case 6: {
-      return this.reverseTree$1;
+      return this.resolving$1;
       break
     }
     case 7: {
+      return this.reverseTree$1;
+      break
+    }
+    case 8: {
       return this.log$1;
       break
     }
@@ -32596,12 +33221,13 @@ $c_Lcoursier_web_State.prototype.productElement__I__O = (function(x$1) {
 $c_Lcoursier_web_State.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lcoursier_web_State.prototype.init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__Z__Z__sc_Seq = (function(modules, repositories, options, resolutionOpt, editModuleIdx, resolving, reverseTree, log) {
+$c_Lcoursier_web_State.prototype.init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq = (function(modules, repositories, options, resolutionOpt, editModuleIdx, editRepoIdx, resolving, reverseTree, log) {
   this.modules$1 = modules;
   this.repositories$1 = repositories;
   this.options$1 = options;
   this.resolutionOpt$1 = resolutionOpt;
   this.editModuleIdx$1 = editModuleIdx;
+  this.editRepoIdx$1 = editRepoIdx;
   this.resolving$1 = resolving;
   this.reverseTree$1 = reverseTree;
   this.log$1 = log;
@@ -32614,10 +33240,11 @@ $c_Lcoursier_web_State.prototype.hashCode__I = (function() {
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.options$1));
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.resolutionOpt$1));
   acc = $m_sr_Statics$().mix__I__I__I(acc, this.editModuleIdx$1);
+  acc = $m_sr_Statics$().mix__I__I__I(acc, this.editRepoIdx$1);
   acc = $m_sr_Statics$().mix__I__I__I(acc, (this.resolving$1 ? 1231 : 1237));
   acc = $m_sr_Statics$().mix__I__I__I(acc, (this.reverseTree$1 ? 1231 : 1237));
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.log$1));
-  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 8)
+  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 9)
 });
 $c_Lcoursier_web_State.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
@@ -48904,12 +49531,12 @@ $c_sci_StringOps.prototype.length__I = (function() {
   var $$this = this.repr$1;
   return $uI($$this["length"])
 });
+$c_sci_StringOps.prototype.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O = (function(that, bf) {
+  return $s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this, that, bf)
+});
 $c_sci_StringOps.prototype.mkString__T = (function() {
   var $$this = this.repr$1;
   return $$this
-});
-$c_sci_StringOps.prototype.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O = (function(that, bf) {
-  return $s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this, that, bf)
 });
 $c_sci_StringOps.prototype.scala$collection$IndexedSeqOptimized$$super$tail__O = (function() {
   return $s_sc_TraversableLike$class__tail__sc_TraversableLike__O(this)
@@ -48953,6 +49580,9 @@ $c_sci_StringOps.prototype.sortBy__F1__s_math_Ordering__O = (function(f, ord) {
 $c_sci_StringOps.prototype.toSeq__sc_Seq = (function() {
   var $$this = this.repr$1;
   return new $c_sci_WrappedString().init___T($$this)
+});
+$c_sci_StringOps.prototype.updated__I__O__scg_CanBuildFrom__O = (function(index, elem, bf) {
+  return $s_sc_SeqLike$class__updated__sc_SeqLike__I__O__scg_CanBuildFrom__O(this, index, elem, bf)
 });
 $c_sci_StringOps.prototype.repr__O = (function() {
   return this.repr$1
@@ -50028,6 +50658,9 @@ $c_sjs_js_ArrayOps.prototype.sortBy__F1__s_math_Ordering__O = (function(f, ord) 
 });
 $c_sjs_js_ArrayOps.prototype.toSeq__sc_Seq = (function() {
   return this.thisCollection__scm_IndexedSeq()
+});
+$c_sjs_js_ArrayOps.prototype.updated__I__O__scg_CanBuildFrom__O = (function(index, elem, bf) {
+  return $s_sc_SeqLike$class__updated__sc_SeqLike__I__O__scg_CanBuildFrom__O(this, index, elem, bf)
 });
 $c_sjs_js_ArrayOps.prototype.repr__O = (function() {
   return this.scala$scalajs$js$ArrayOps$$array$f
