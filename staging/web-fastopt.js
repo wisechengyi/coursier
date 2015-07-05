@@ -1931,9 +1931,9 @@ $c_Lcoursier_core_Repository$ArtifactExtensions$.prototype.withDefaultChecksums$
   var jsx$3 = $$this.checksumUrls$1;
   var jsx$2 = $m_sc_Seq$();
   var y = ($$this.url$1 + ".md5");
-  var jsx$1 = new $c_T2().init___O__O("md5", y);
+  var jsx$1 = new $c_T2().init___O__O("MD5", y);
   var y$1 = ($$this.url$1 + ".sha1");
-  var x$12 = jsx$3.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O("sha1", y$1)])));
+  var x$12 = jsx$3.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O("SHA-1", y$1)])));
   var x$13 = $$this.url$1;
   var x$14 = $$this.extra$1;
   var x$15 = $$this.attributes$1;
