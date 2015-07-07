@@ -1276,6 +1276,34 @@ var $h_Lcoursier_core_BaseMavenRepository$ = (function() {
   /*<skip>*/
 });
 $h_Lcoursier_core_BaseMavenRepository$.prototype = $c_Lcoursier_core_BaseMavenRepository$.prototype;
+$c_Lcoursier_core_BaseMavenRepository$.prototype.mavenVersioning__Lcoursier_core_SnapshotVersioning__T__T__s_Option = (function(snapshotVersioning, classifier, extension) {
+  var this$1 = snapshotVersioning.snapshotVersions$1.find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(classifier$1, extension$1) {
+    return (function(v$2) {
+      var v = $as_Lcoursier_core_SnapshotVersion(v$2);
+      return ((v.classifier$1 === classifier$1) && (v.extension$1 === extension$1))
+    })
+  })(classifier, extension)));
+  if (this$1.isEmpty__Z()) {
+    var this$2 = $m_s_None$()
+  } else {
+    var arg1 = this$1.get__O();
+    var x$6 = $as_Lcoursier_core_SnapshotVersion(arg1);
+    var this$2 = new $c_s_Some().init___O(x$6.value$1)
+  };
+  if (this$2.isEmpty__Z()) {
+    var jsx$1 = true
+  } else {
+    var arg1$1 = this$2.get__O();
+    var x$7 = $as_T(arg1$1);
+    var this$4 = new $c_sci_StringOps().init___T(x$7);
+    var jsx$1 = $s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(this$4)
+  };
+  if (jsx$1) {
+    return this$2
+  } else {
+    return $m_s_None$()
+  }
+});
 $c_Lcoursier_core_BaseMavenRepository$.prototype.ivyLikePath__T__T__T__T__T__T__sc_Seq = (function(org, name, version, subDir, baseSuffix, ext) {
   return $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([org, name, version, subDir, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([name, baseSuffix, ext]))])))
 });
@@ -1933,21 +1961,21 @@ $c_Lcoursier_core_Repository$ArtifactExtensions$.prototype.withDefaultChecksums$
   var y = ($$this.url$1 + ".md5");
   var jsx$1 = new $c_T2().init___O__O("MD5", y);
   var y$1 = ($$this.url$1 + ".sha1");
-  var x$12 = jsx$3.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O("SHA-1", y$1)])));
-  var x$13 = $$this.url$1;
-  var x$14 = $$this.extra$1;
-  var x$15 = $$this.attributes$1;
-  return new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(x$13, x$12, x$14, x$15)
+  var x$15 = jsx$3.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O("SHA-1", y$1)])));
+  var x$16 = $$this.url$1;
+  var x$17 = $$this.extra$1;
+  var x$18 = $$this.attributes$1;
+  return new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(x$16, x$15, x$17, x$18)
 });
 $c_Lcoursier_core_Repository$ArtifactExtensions$.prototype.withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact = (function($$this) {
   var jsx$2 = $$this.extra$1;
   var jsx$1 = $m_sc_Seq$();
   var y = this.withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(($m_Lcoursier_core_Repository$(), new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(($$this.url$1 + ".asc"), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("asc", ""))));
-  var x$16 = jsx$2.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("sig", y)])));
-  var x$17 = $$this.url$1;
-  var x$18 = $$this.checksumUrls$1;
-  var x$19 = $$this.attributes$1;
-  return new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(x$17, x$18, x$16, x$19)
+  var x$19 = jsx$2.$$plus$plus__sc_GenTraversableOnce__sci_Map(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("sig", y)])));
+  var x$20 = $$this.url$1;
+  var x$21 = $$this.checksumUrls$1;
+  var x$22 = $$this.attributes$1;
+  return new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(x$20, x$21, x$19, x$22)
 });
 var $d_Lcoursier_core_Repository$ArtifactExtensions$ = new $TypeData().initClass({
   Lcoursier_core_Repository$ArtifactExtensions$: 0
@@ -2536,6 +2564,10 @@ $c_Lcoursier_core_Xml$.prototype.project__Lcoursier_core_Xml$Node__Lscalaz_$bsla
   };
   return jsx$1.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2().init___Lcoursier_core_Xml$Node(pom))
 });
+$c_Lcoursier_core_Xml$.prototype.textOrEmpty$1__p1__T__T__Lcoursier_core_Xml$Node__T = (function(name, desc, node$6) {
+  var this$1 = this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node$6, name, desc).toOption__s_Option();
+  return $as_T((this$1.isEmpty__Z() ? "" : this$1.get__O()))
+});
 $c_Lcoursier_core_Xml$.prototype.coursier$core$Xml$$profileActivation__Lcoursier_core_Xml$Node__T2 = (function(node) {
   var this$1 = this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node, "activeByDefault", "").toOption__s_Option();
   if (this$1.isEmpty__Z()) {
@@ -2549,10 +2581,24 @@ $c_Lcoursier_core_Xml$.prototype.coursier$core$Xml$$profileActivation__Lcoursier
     var x$9 = $as_Lcoursier_core_Xml$Node(x$9$2);
     return (x$9.label__T() === "property")
   }))));
-  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$7().init___();
+  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$8().init___();
   var this$2 = $m_sc_Seq$();
   var properties = $as_sc_Seq(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$2.ReusableCBFInstance$2));
   return new $c_T2().init___O__O(byDefault, new $c_Lcoursier_core_Activation().init___sc_Seq(properties))
+});
+$c_Lcoursier_core_Xml$.prototype.snapshotVersion__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(node) {
+  var classifier = this.textOrEmpty$1__p1__T__T__Lcoursier_core_Xml$Node__T("classifier", "Classifier", node);
+  var ext = this.textOrEmpty$1__p1__T__T__Lcoursier_core_Xml$Node__T("extension", "Extensions", node);
+  var value = this.textOrEmpty$1__p1__T__T__Lcoursier_core_Xml$Node__T("value", "Value", node);
+  var this$1 = this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node, "updated", "Updated").toOption__s_Option();
+  if (this$1.isEmpty__Z()) {
+    var updatedOpt = $m_s_None$()
+  } else {
+    var arg1 = this$1.get__O();
+    var s = $as_T(arg1);
+    var updatedOpt = $m_Lcoursier_core_Xml$().parseDateTime__T__s_Option(s)
+  };
+  return new $c_Lscalaz_$bslash$div$minus().init___O(new $c_Lcoursier_core_SnapshotVersion().init___T__T__T__s_Option(classifier, ext, value, updatedOpt))
 });
 $c_Lcoursier_core_Xml$.prototype.coursier$core$Xml$$module__Lcoursier_core_Xml$Node__Z__Lscalaz_$bslash$div = (function(node, groupIdIsOptional) {
   var e = this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node, "groupId", "Organization");
@@ -2719,6 +2765,66 @@ $c_Lcoursier_core_Xml$.prototype.property__Lcoursier_core_Xml$Node__Lscalaz_$bsl
     return new $c_Lscalaz_$bslash$div$minus().init___O(new $c_T2().init___O__O($$this, y))
   } else {
     return new $c_Lscalaz_$minus$bslash$div().init___O(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["Can't parse property ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([elem])))
+  }
+});
+$c_Lcoursier_core_Xml$.prototype.parseDateTime__T__s_Option = (function(s) {
+  if (($uI(s["length"]) === 14)) {
+    var this$3 = new $c_sci_StringOps().init___T(s);
+    var i = 0;
+    while (true) {
+      var jsx$3 = i;
+      var $$this = this$3.repr$1;
+      if ((jsx$3 < $uI($$this["length"]))) {
+        var arg1 = this$3.apply__I__O(i);
+        if ((arg1 === null)) {
+          var x$53 = 0
+        } else {
+          var this$7 = $as_jl_Character(arg1);
+          var x$53 = this$7.value$1
+        };
+        var jsx$2 = $m_jl_Character$().isDigit__C__Z(x$53)
+      } else {
+        var jsx$2 = false
+      };
+      if (jsx$2) {
+        i = ((1 + i) | 0)
+      } else {
+        break
+      }
+    };
+    var jsx$4 = i;
+    var $$this$1 = this$3.repr$1;
+    var jsx$1 = (jsx$4 === $uI($$this$1["length"]))
+  } else {
+    var jsx$1 = false
+  };
+  if (jsx$1) {
+    var this$15 = new $c_sci_StringOps().init___T($as_T(s["substring"](0, 4)));
+    var this$17 = $m_jl_Integer$();
+    var s$1 = this$15.repr$1;
+    var jsx$9 = this$17.parseInt__T__I__I(s$1, 10);
+    var this$21 = new $c_sci_StringOps().init___T($as_T(s["substring"](4, 6)));
+    var this$23 = $m_jl_Integer$();
+    var s$2 = this$21.repr$1;
+    var jsx$8 = this$23.parseInt__T__I__I(s$2, 10);
+    var this$27 = new $c_sci_StringOps().init___T($as_T(s["substring"](6, 8)));
+    var this$29 = $m_jl_Integer$();
+    var s$3 = this$27.repr$1;
+    var jsx$7 = this$29.parseInt__T__I__I(s$3, 10);
+    var this$33 = new $c_sci_StringOps().init___T($as_T(s["substring"](8, 10)));
+    var this$35 = $m_jl_Integer$();
+    var s$4 = this$33.repr$1;
+    var jsx$6 = this$35.parseInt__T__I__I(s$4, 10);
+    var this$39 = new $c_sci_StringOps().init___T($as_T(s["substring"](10, 12)));
+    var this$41 = $m_jl_Integer$();
+    var s$5 = this$39.repr$1;
+    var jsx$5 = this$41.parseInt__T__I__I(s$5, 10);
+    var this$45 = new $c_sci_StringOps().init___T($as_T(s["substring"](12, 14)));
+    var this$47 = $m_jl_Integer$();
+    var s$6 = this$45.repr$1;
+    return new $c_s_Some().init___O(new $c_Lcoursier_core_Versions$DateTime().init___I__I__I__I__I__I(jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, this$47.parseInt__T__I__I(s$6, 10)))
+  } else {
+    return $m_s_None$()
   }
 });
 $c_Lcoursier_core_Xml$.prototype.coursier$core$Xml$$readVersion__Lcoursier_core_Xml$Node__T = (function(node) {
@@ -2922,6 +3028,9 @@ $c_Lcoursier_core_Xml$.prototype.coursier$core$Xml$$text__Lcoursier_core_Xml$Nod
 });
 $c_Lcoursier_core_Xml$.prototype.versions__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(node) {
   return this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node, "groupId", "Organization").flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$versions$1().init___Lcoursier_core_Xml$Node(node))
+});
+$c_Lcoursier_core_Xml$.prototype.snapshotVersioning__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(node) {
+  return this.coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(node, "groupId", "Organization").flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1().init___Lcoursier_core_Xml$Node(node))
 });
 var $d_Lcoursier_core_Xml$ = new $TypeData().initClass({
   Lcoursier_core_Xml$: 0
@@ -8036,6 +8145,53 @@ var $s_s_Product1$class__productElement__s_Product1__I__O = (function($$this, n)
     }
   }
 });
+var $s_s_Product10$class__productElement__s_Product10__I__O = (function($$this, n) {
+  switch (n) {
+    case 0: {
+      return $$this.$$und1$1;
+      break
+    }
+    case 1: {
+      return $$this.$$und2$1;
+      break
+    }
+    case 2: {
+      return $$this.$$und3$1;
+      break
+    }
+    case 3: {
+      return $$this.$$und4$1;
+      break
+    }
+    case 4: {
+      return $$this.$$und5$1;
+      break
+    }
+    case 5: {
+      return $$this.$$und6$1;
+      break
+    }
+    case 6: {
+      return $$this.$$und7$1;
+      break
+    }
+    case 7: {
+      return $$this.$$und8$1;
+      break
+    }
+    case 8: {
+      return $$this.$$und9$1;
+      break
+    }
+    case 9: {
+      return $$this.$$und10$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + n))
+    }
+  }
+});
 var $s_s_Product2$class__productElement__s_Product2__I__O = (function($$this, n) {
   switch (n) {
     case 0: {
@@ -8086,6 +8242,33 @@ var $s_s_Product4$class__productElement__s_Product4__I__O = (function($$this, n)
     }
     case 3: {
       return $$this.$$und4$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + n))
+    }
+  }
+});
+var $s_s_Product5$class__productElement__s_Product5__I__O = (function($$this, n) {
+  switch (n) {
+    case 0: {
+      return $$this.$$und1$1;
+      break
+    }
+    case 1: {
+      return $$this.$$und2$1;
+      break
+    }
+    case 2: {
+      return $$this.$$und3$1;
+      break
+    }
+    case 3: {
+      return $$this.$$und4$1;
+      break
+    }
+    case 4: {
+      return $$this.$$und5$1;
       break
     }
     default: {
@@ -14023,14 +14206,35 @@ var $h_Lcoursier_core_BaseMavenRepository = (function() {
   /*<skip>*/
 });
 $h_Lcoursier_core_BaseMavenRepository.prototype = $c_Lcoursier_core_BaseMavenRepository.prototype;
+$c_Lcoursier_core_BaseMavenRepository.prototype.snapshotVersioningArtifact__Lcoursier_core_Module__T__s_Option = (function(module, version) {
+  if (this.ivyLike$1) {
+    return $m_s_None$()
+  } else {
+    var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
+    var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
+    var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
+    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, version, "maven-metadata.xml"]));
+    var this$5 = $m_sc_Seq$();
+    var bf = this$5.ReusableCBFInstance$2;
+    var jsx$2 = $as_sc_TraversableLike($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
+    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
+      var s = $as_T(s$2);
+      return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
+    }));
+    var this$7 = $m_sc_Seq$();
+    var path = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2));
+    var artifact = $m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(($m_Lcoursier_core_Repository$(), new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(path.mkString__T__T("/"), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""))));
+    return new $c_s_Some().init___O(artifact)
+  }
+});
 $c_Lcoursier_core_BaseMavenRepository.prototype.find__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module, version, cachePolicy) {
   var this$1 = $m_Lcoursier_core_Parse$().versionInterval__T__s_Option(version);
   if (this$1.isEmpty__Z()) {
     var jsx$1 = true
   } else {
     var arg1 = this$1.get__O();
-    var x$6 = $as_Lcoursier_core_VersionInterval(arg1);
-    var jsx$1 = x$6.isValid__Z()
+    var x$9 = $as_Lcoursier_core_VersionInterval(arg1);
+    var jsx$1 = x$9.isValid__Z()
   };
   if (jsx$1) {
     var x1 = this$1
@@ -14040,9 +14244,9 @@ $c_Lcoursier_core_BaseMavenRepository.prototype.find__Lcoursier_core_Module__T__
   var x = $m_s_None$();
   if ((x === x1)) {
     return this.findNoInterval__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT(module, version, cachePolicy).map__F1__Lscalaz_Functor__Lscalaz_EitherT(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer) {
-      return (function(x$7$2) {
-        var x$7 = $as_Lcoursier_core_Project(x$7$2);
-        return new $c_T2().init___O__O(arg$outer.source$1, x$7)
+      return (function(x$10$2) {
+        var x$10 = $as_Lcoursier_core_Project(x$10$2);
+        return new $c_T2().init___O__O(arg$outer.source$1, x$10)
       })
     })(this)), $m_Lscalaz_concurrent_package$Task$().taskMonad$1)
   } else if ($is_s_Some(x1)) {
@@ -14054,9 +14258,9 @@ $c_Lcoursier_core_BaseMavenRepository.prototype.find__Lcoursier_core_Module__T__
   }
 });
 $c_Lcoursier_core_BaseMavenRepository.prototype.findNoInterval__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module, version, cachePolicy) {
-  var this$1 = $as_Lscalaz_concurrent_package$Task(this.fetch__Lcoursier_core_Artifact__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.projectArtifact__Lcoursier_core_Module__T__Lcoursier_core_Artifact(module, version), cachePolicy).run$1);
-  var f = new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1().init___Lcoursier_core_BaseMavenRepository(this);
-  return new $c_Lscalaz_EitherT().init___O(new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$1, f))
+  var this$1 = $as_Lscalaz_concurrent_package$Task(this.findVersioning__Lcoursier_core_Module__T__s_Option__Lcoursier_core_CachePolicy__Lscalaz_EitherT(module, version, $m_s_None$(), cachePolicy).run$1);
+  var f = new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1().init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy(this, module, version, cachePolicy);
+  return new $c_Lscalaz_EitherT().init___O(new $c_Lscalaz_concurrent_package$Task$$anon$3().init___Lscalaz_concurrent_package$Task__F1(this$1, f))
 });
 $c_Lcoursier_core_BaseMavenRepository.prototype.versionsArtifact__Lcoursier_core_Module__s_Option = (function(module) {
   if (this.ivyLike$1) {
@@ -14079,14 +14283,14 @@ $c_Lcoursier_core_BaseMavenRepository.prototype.versionsArtifact__Lcoursier_core
     return new $c_s_Some().init___O(artifact)
   }
 });
-$c_Lcoursier_core_BaseMavenRepository.prototype.projectArtifact__Lcoursier_core_Module__T__Lcoursier_core_Artifact = (function(module, version) {
+$c_Lcoursier_core_BaseMavenRepository.prototype.projectArtifact__Lcoursier_core_Module__T__s_Option__Lcoursier_core_Artifact = (function(module, version, versioningValue) {
   if (this.ivyLike$1) {
-    var jsx$3 = $m_Lcoursier_core_BaseMavenRepository$().ivyLikePath__T__T__T__T__T__T__sc_Seq(module.organization$1, module.name$1, version, "poms", "", "pom")
+    var jsx$3 = $m_Lcoursier_core_BaseMavenRepository$().ivyLikePath__T__T__T__T__T__T__sc_Seq(module.organization$1, module.name$1, $as_T((versioningValue.isEmpty__Z() ? version : versioningValue.get__O())), "poms", "", "pom")
   } else {
     var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
     var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
     var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
-    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, version, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, version]))]));
+    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, version, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, (versioningValue.isEmpty__Z() ? version : versioningValue.get__O())]))]));
     var this$5 = $m_sc_Seq$();
     var bf = this$5.ReusableCBFInstance$2;
     var jsx$3 = $s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf)
@@ -14099,6 +14303,25 @@ $c_Lcoursier_core_BaseMavenRepository.prototype.projectArtifact__Lcoursier_core_
   var this$7 = $m_sc_Seq$();
   var path = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2));
   return $m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(($m_Lcoursier_core_Repository$(), new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes(path.mkString__T__T("/"), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""))))
+});
+$c_Lcoursier_core_BaseMavenRepository.prototype.snapshotVersioning__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module, version, cachePolicy) {
+  var x1 = this.snapshotVersioningArtifact__Lcoursier_core_Module__T__s_Option(module, version);
+  var x = $m_s_None$();
+  if ((x === x1)) {
+    $m_Lscalaz_concurrent_package$Task$();
+    var a = new $c_Lscalaz_$minus$bslash$div().init___O("Not supported");
+    var jsx$1 = new $c_Lscalaz_concurrent_package$Task$$anon$4().init___O(a)
+  } else if ($is_s_Some(x1)) {
+    var x2 = $as_s_Some(x1);
+    var artifact = $as_Lcoursier_core_Artifact(x2.x$2);
+    var this$2 = $as_Lscalaz_concurrent_package$Task(this.fetch__Lcoursier_core_Artifact__Lcoursier_core_CachePolicy__Lscalaz_EitherT(artifact, cachePolicy).run$1);
+    var f = new $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1().init___Lcoursier_core_BaseMavenRepository(this);
+    var jsx$1 = new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$2, f)
+  } else {
+    var jsx$1;
+    throw new $c_s_MatchError().init___O(x1)
+  };
+  return new $c_Lscalaz_EitherT().init___O(jsx$1)
 });
 $c_Lcoursier_core_BaseMavenRepository.prototype.versions__Lcoursier_core_Module__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module, cachePolicy) {
   var x1 = this.versionsArtifact__Lcoursier_core_Module__s_Option(module);
@@ -14118,6 +14341,14 @@ $c_Lcoursier_core_BaseMavenRepository.prototype.versions__Lcoursier_core_Module_
     throw new $c_s_MatchError().init___O(x1)
   };
   return new $c_Lscalaz_EitherT().init___O(jsx$1)
+});
+$c_Lcoursier_core_BaseMavenRepository.prototype.findVersioning__Lcoursier_core_Module__T__s_Option__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module, version, versioningValue, cachePolicy) {
+  var this$1 = $as_Lscalaz_concurrent_package$Task(this.fetch__Lcoursier_core_Artifact__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.projectArtifact__Lcoursier_core_Module__T__s_Option__Lcoursier_core_Artifact(module, version, versioningValue), cachePolicy).run$1);
+  var f = new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1().init___Lcoursier_core_BaseMavenRepository(this);
+  return new $c_Lscalaz_EitherT().init___O(new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$1, f))
+});
+$c_Lcoursier_core_BaseMavenRepository.prototype.coursier$core$BaseMavenRepository$$withSnapshotVersioning$1__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT = (function(module$2, version$3, cachePolicy$2) {
+  return this.snapshotVersioning__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT(module$2, version$3, cachePolicy$2).flatMap__F1__Lscalaz_Monad__Lscalaz_EitherT(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1().init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy(this, module$2, version$3, cachePolicy$2), $m_Lscalaz_concurrent_package$Task$().taskMonad$1)
 });
 $c_Lcoursier_core_BaseMavenRepository.prototype.init___T__Z = (function(root, ivyLike) {
   this.ivyLike$1 = ivyLike;
@@ -17188,17 +17419,17 @@ $c_sr_AbstractFunction6.prototype.init___ = (function() {
   return this
 });
 /** @constructor */
-var $c_sr_AbstractFunction8 = (function() {
+var $c_sr_AbstractFunction9 = (function() {
   $c_O.call(this)
 });
-$c_sr_AbstractFunction8.prototype = new $h_O();
-$c_sr_AbstractFunction8.prototype.constructor = $c_sr_AbstractFunction8;
+$c_sr_AbstractFunction9.prototype = new $h_O();
+$c_sr_AbstractFunction9.prototype.constructor = $c_sr_AbstractFunction9;
 /** @constructor */
-var $h_sr_AbstractFunction8 = (function() {
+var $h_sr_AbstractFunction9 = (function() {
   /*<skip>*/
 });
-$h_sr_AbstractFunction8.prototype = $c_sr_AbstractFunction8.prototype;
-$c_sr_AbstractFunction8.prototype.init___ = (function() {
+$h_sr_AbstractFunction9.prototype = $c_sr_AbstractFunction9.prototype;
+$c_sr_AbstractFunction9.prototype.init___ = (function() {
   return this
 });
 /** @constructor */
@@ -24939,12 +25170,81 @@ var $d_Lcoursier_core_Attributes = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Attributes.prototype.$classData = $d_Lcoursier_core_Attributes;
 /** @constructor */
-var $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4 = (function() {
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.module$2$2 = null;
-  this.version$2$2 = null;
-  this.cachePolicy$2$2 = null;
+  this.version$3$2 = null;
+  this.cachePolicy$2$2 = null
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1;
+/** @constructor */
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_SnapshotVersioning__Lscalaz_EitherT($as_Lcoursier_core_SnapshotVersioning(v1))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype.init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy = (function($$outer, module$2, version$3, cachePolicy$2) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.module$2$2 = module$2;
+  this.version$3$2 = version$3;
+  this.cachePolicy$2$2 = cachePolicy$2;
+  return this
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype.apply__Lcoursier_core_SnapshotVersioning__Lscalaz_EitherT = (function(snapshotVersioning) {
+  var this$1 = $m_Lcoursier_core_BaseMavenRepository$().mavenVersioning__Lcoursier_core_SnapshotVersioning__T__T__s_Option(snapshotVersioning, "", "jar");
+  var versioningOption = (this$1.isEmpty__Z() ? $m_Lcoursier_core_BaseMavenRepository$().mavenVersioning__Lcoursier_core_SnapshotVersioning__T__T__s_Option(snapshotVersioning, "", "") : this$1);
+  var x = $m_s_None$();
+  if ((x === versioningOption)) {
+    $m_Lscalaz_concurrent_package$Task$();
+    var a = new $c_Lscalaz_$minus$bslash$div().init___O("No snapshot versioning value found");
+    return new $c_Lscalaz_EitherT().init___O(new $c_Lscalaz_concurrent_package$Task$$anon$4().init___O(a))
+  } else if ($is_s_Some(versioningOption)) {
+    var x2 = $as_s_Some(versioningOption);
+    return this.$$outer$2.findVersioning__Lcoursier_core_Module__T__s_Option__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.module$2$2, this.version$3$2, x2, this.cachePolicy$2$2).map__F1__Lscalaz_Functor__Lscalaz_EitherT(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(snapshotVersioning$1) {
+      return (function(x$8$2) {
+        var x$8 = $as_Lcoursier_core_Project(x$8$2);
+        var x$31 = new $c_s_Some().init___O(snapshotVersioning$1);
+        var x$32 = x$8.module$1;
+        var x$33 = x$8.version$1;
+        var x$34 = x$8.dependencies$1;
+        var x$35 = x$8.parent$1;
+        var x$36 = x$8.dependencyManagement$1;
+        var x$37 = x$8.properties$1;
+        var x$38 = x$8.profiles$1;
+        var x$39 = x$8.versions$1;
+        return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option__s_Option(x$32, x$33, x$34, x$35, x$36, x$37, x$38, x$39, x$31)
+      })
+    })(snapshotVersioning)), $m_Lscalaz_concurrent_package$Task$().taskMonad$1)
+  } else {
+    throw new $c_s_MatchError().init___O(versioningOption)
+  }
+});
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$coursier$core$BaseMavenRepository$$withSnapshotVersioning$1$1;
+/** @constructor */
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4 = (function() {
+  $c_sr_AbstractFunction1.call(this);
+  this.$$outer$2 = null;
+  this.module$3$2 = null;
+  this.version$4$2 = null;
+  this.cachePolicy$3$2 = null;
   this.itv$1$f = null
 });
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype = new $h_sr_AbstractFunction1();
@@ -24960,9 +25260,9 @@ $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.apply__Lcoursier
     var eitherVersion = new $c_Lscalaz_$bslash$div$minus().init___O(versions0.release$1)
   } else {
     var this$2 = versions0.available$1;
-    var f = (function(x$8$2) {
-      var x$8 = $as_T(x$8$2);
-      return new $c_Lcoursier_core_Version().init___T(x$8)
+    var f = (function(x$11$2) {
+      var x$11 = $as_T(x$11$2);
+      return new $c_Lcoursier_core_Version().init___T(x$11)
     });
     var this$1 = $m_sci_List$();
     var bf = this$1.ReusableCBFInstance$2;
@@ -25000,7 +25300,7 @@ $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.apply__Lcoursier
       })
     })(this))));
     if (inInterval.isEmpty__Z()) {
-      var eitherVersion = new $c_Lscalaz_$minus$bslash$div().init___O(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["No version found for ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.version$2$2])))
+      var eitherVersion = new $c_Lscalaz_$minus$bslash$div().init___O(new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["No version found for ", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([this.version$4$2])))
     } else {
       var this$3 = $m_s_math_Ordering$();
       var evidence$1 = $m_s_Predef$().singleton$und$less$colon$less$2;
@@ -25017,23 +25317,24 @@ $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.apply__Lcoursier
   } else if ($is_Lscalaz_$bslash$div$minus(eitherVersion)) {
     var x3 = $as_Lscalaz_$bslash$div$minus(eitherVersion);
     var version0 = $as_T(x3.b$2);
-    return this.$$outer$2.findNoInterval__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.module$2$2, version0, this.cachePolicy$2$2).map__F1__Lscalaz_Functor__Lscalaz_EitherT(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(versions0$1) {
-      return (function(x$9$2) {
-        var x$9 = $as_Lcoursier_core_Project(x$9$2);
-        var x$28 = new $c_s_Some().init___O(versions0$1);
-        var x$29 = x$9.module$1;
-        var x$30 = x$9.version$1;
-        var x$31 = x$9.dependencies$1;
-        var x$32 = x$9.parent$1;
-        var x$33 = x$9.dependencyManagement$1;
-        var x$34 = x$9.properties$1;
-        var x$35 = x$9.profiles$1;
-        return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option(x$29, x$30, x$31, x$32, x$33, x$34, x$35, x$28)
+    return this.$$outer$2.findNoInterval__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.module$3$2, version0, this.cachePolicy$3$2).map__F1__Lscalaz_Functor__Lscalaz_EitherT(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(versions0$1) {
+      return (function(x$12$2) {
+        var x$12 = $as_Lcoursier_core_Project(x$12$2);
+        var x$40 = new $c_s_Some().init___O(versions0$1);
+        var x$41 = x$12.module$1;
+        var x$42 = x$12.version$1;
+        var x$43 = x$12.dependencies$1;
+        var x$44 = x$12.parent$1;
+        var x$45 = x$12.dependencyManagement$1;
+        var x$46 = x$12.properties$1;
+        var x$47 = x$12.profiles$1;
+        var x$48 = x$12.snapshotVersioning$1;
+        return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option__s_Option(x$41, x$42, x$43, x$44, x$45, x$46, x$47, x$40, x$48)
       })
     })(versions0)), $m_Lscalaz_concurrent_package$Task$().taskMonad$1).map__F1__Lscalaz_Functor__Lscalaz_EitherT(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(arg$outer$1) {
-      return (function(x$10$2) {
-        var x$10 = $as_Lcoursier_core_Project(x$10$2);
-        return new $c_T2().init___O__O(arg$outer$1.$$outer$2.source$1, x$10)
+      return (function(x$13$2) {
+        var x$13 = $as_Lcoursier_core_Project(x$13$2);
+        return new $c_T2().init___O__O(arg$outer$1.$$outer$2.source$1, x$13)
       })
     })(this)), $m_Lscalaz_concurrent_package$Task$().taskMonad$1)
   } else {
@@ -25043,15 +25344,15 @@ $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.apply__Lcoursier
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Versions__Lscalaz_EitherT($as_Lcoursier_core_Versions(v1))
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lcoursier_core_VersionInterval = (function($$outer, module$2, version$2, cachePolicy$2, itv$1) {
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lcoursier_core_VersionInterval = (function($$outer, module$3, version$4, cachePolicy$3, itv$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.module$2$2 = module$2;
-  this.version$2$2 = version$2;
-  this.cachePolicy$2$2 = cachePolicy$2;
+  this.module$3$2 = module$3;
+  this.version$4$2 = version$4;
+  this.cachePolicy$3$2 = cachePolicy$3;
   this.itv$1$f = itv$1;
   return this
 });
@@ -25068,7 +25369,11 @@ var $d_Lcoursier_core_BaseMavenRepository$$anonfun$find$4 = new $TypeData().init
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$find$4.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$find$4;
 /** @constructor */
 var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1 = (function() {
-  $c_sr_AbstractFunction1.call(this)
+  $c_sr_AbstractFunction1.call(this);
+  this.$$outer$2 = null;
+  this.module$2$2 = null;
+  this.version$3$2 = null;
+  this.cachePolicy$2$2 = null
 });
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype = new $h_sr_AbstractFunction1();
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1;
@@ -25078,12 +25383,32 @@ var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1 = (function(
 });
 $h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype;
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div($as_Lscalaz_$bslash$div(v1))
+  return this.apply__Lscalaz_$bslash$div__Lscalaz_concurrent_package$Task($as_Lscalaz_$bslash$div(v1))
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div = (function(eitherStr) {
-  return eitherStr.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10().init___Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1(this))
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.apply__Lscalaz_$bslash$div__Lscalaz_concurrent_package$Task = (function(eitherProj) {
+  if (eitherProj.isLeft__Z()) {
+    var this$1 = $as_Lscalaz_concurrent_package$Task(this.$$outer$2.coursier$core$BaseMavenRepository$$withSnapshotVersioning$1__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy__Lscalaz_EitherT(this.module$2$2, this.version$3$2, this.cachePolicy$2$2).run$1);
+    var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(eitherProj$1) {
+      return (function(eitherProj0$2) {
+        var eitherProj0 = $as_Lscalaz_$bslash$div(eitherProj0$2);
+        return (eitherProj0.isLeft__Z() ? eitherProj$1 : eitherProj0)
+      })
+    })(eitherProj));
+    return new $c_Lscalaz_concurrent_package$Task$$anon$2().init___Lscalaz_concurrent_package$Task__F1(this$1, f)
+  } else {
+    $m_Lscalaz_concurrent_package$Task$();
+    return new $c_Lscalaz_concurrent_package$Task$$anon$4().init___O(eitherProj)
+  }
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.init___Lcoursier_core_BaseMavenRepository = (function($$outer) {
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.init___Lcoursier_core_BaseMavenRepository__Lcoursier_core_Module__T__Lcoursier_core_CachePolicy = (function($$outer, module$2, version$3, cachePolicy$2) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.module$2$2 = module$2;
+  this.version$3$2 = version$3;
+  this.cachePolicy$2$2 = cachePolicy$2;
   return this
 });
 var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1 = new $TypeData().initClass({
@@ -25098,56 +25423,87 @@ var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1 = new $TypeD
 });
 $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1;
 /** @constructor */
-var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10 = (function() {
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1;
 /** @constructor */
-var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10 = (function() {
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype;
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype.apply__O__O = (function(v1) {
-  return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div($as_Lscalaz_$bslash$div(v1))
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1 = (function($$outer) {
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div = (function(eitherStr) {
+  return eitherStr.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16().init___Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1(this))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype.init___Lcoursier_core_BaseMavenRepository = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype.apply__T__Lscalaz_$bslash$div = (function(str) {
-  var this$1 = $m_Lscalaz_$bslash$div$();
-  var e = $m_Lcoursier_core_compatibility_package$().xmlParse__T__s_util_Either(str);
-  return $as_Lscalaz_$bslash$div(e.fold__F1__F1__O($s_Lscalaz_DisjunctionFunctions$class__left__Lscalaz_DisjunctionFunctions__F1(this$1), $s_Lscalaz_DisjunctionFunctions$class__right__Lscalaz_DisjunctionFunctions__F1(this$1))).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11().init___Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10(this))
-});
-var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10 = new $TypeData().initClass({
-  Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10: 0
-}, false, "coursier.core.BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10", {
-  Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10: 1,
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$findVersioning$1", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1;
 /** @constructor */
-var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11 = (function() {
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16;
 /** @constructor */
-var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11 = (function() {
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype;
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div($as_Lcoursier_core_Xml$Node(v1))
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10 = (function($$outer) {
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype.apply__T__Lscalaz_$bslash$div = (function(str) {
+  var this$1 = $m_Lscalaz_$bslash$div$();
+  var e = $m_Lcoursier_core_compatibility_package$().xmlParse__T__s_util_Either(str);
+  return $as_Lscalaz_$bslash$div(e.fold__F1__F1__O($s_Lscalaz_DisjunctionFunctions$class__left__Lscalaz_DisjunctionFunctions__F1(this$1), $s_Lscalaz_DisjunctionFunctions$class__right__Lscalaz_DisjunctionFunctions__F1(this$1))).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17().init___Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16(this))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1 = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(xml) {
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16;
+/** @constructor */
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17;
+/** @constructor */
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(xml) {
   var this$1 = ((xml.label__T() === "project") ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : new $c_Lscalaz_$minus$bslash$div().init___O("Project definition not found"));
   if ($is_Lscalaz_$minus$bslash$div(this$1)) {
     var x2 = $as_Lscalaz_$minus$bslash$div(this$1);
@@ -25171,17 +25527,133 @@ $c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$1
     throw new $c_s_MatchError().init___O(this$1)
   }
 });
-var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11 = new $TypeData().initClass({
-  Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11: 0
-}, false, "coursier.core.BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11", {
-  Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11: 1,
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findNoInterval$1$$anonfun$apply$10$$anonfun$apply$11;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$findVersioning$1$$anonfun$apply$16$$anonfun$apply$17;
+/** @constructor */
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1;
+/** @constructor */
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div($as_Lscalaz_$bslash$div(v1))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype.apply__Lscalaz_$bslash$div__Lscalaz_$bslash$div = (function(eitherStr) {
+  return eitherStr.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10().init___Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1(this))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype.init___Lcoursier_core_BaseMavenRepository = (function($$outer) {
+  return this
+});
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$snapshotVersioning$1", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1;
+/** @constructor */
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10;
+/** @constructor */
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype.apply__T__Lscalaz_$bslash$div = (function(str) {
+  var this$1 = $m_Lscalaz_$bslash$div$();
+  var e = $m_Lcoursier_core_compatibility_package$().xmlParse__T__s_util_Either(str);
+  return $as_Lscalaz_$bslash$div(e.fold__F1__F1__O($s_Lscalaz_DisjunctionFunctions$class__left__Lscalaz_DisjunctionFunctions__F1(this$1), $s_Lscalaz_DisjunctionFunctions$class__right__Lscalaz_DisjunctionFunctions__F1(this$1))).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11().init___Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10(this))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1 = (function($$outer) {
+  return this
+});
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10;
+/** @constructor */
+var $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype.constructor = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11;
+/** @constructor */
+var $h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype = $c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype;
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype.init___Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype.apply__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div = (function(xml) {
+  var this$1 = ((xml.label__T() === "metadata") ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : new $c_Lscalaz_$minus$bslash$div().init___O("Metadata not found"));
+  if ($is_Lscalaz_$minus$bslash$div(this$1)) {
+    var x2 = $as_Lscalaz_$minus$bslash$div(this$1);
+    return x2
+  } else if ($is_Lscalaz_$bslash$div$minus(this$1)) {
+    var x4 = $as_Lscalaz_$bslash$div$minus(this$1);
+    var b = x4.b$2;
+    $asUnit(b);
+    var this$2 = $m_Lcoursier_core_Xml$().snapshotVersioning__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div(xml);
+    if ($is_Lscalaz_$bslash$div$minus(this$2)) {
+      var x2$1 = $as_Lscalaz_$bslash$div$minus(this$2);
+      var a = x2$1.b$2;
+      return new $c_Lscalaz_$bslash$div$minus().init___O($as_Lcoursier_core_SnapshotVersioning(a))
+    } else if ($is_Lscalaz_$minus$bslash$div(this$2)) {
+      var x3 = $as_Lscalaz_$minus$bslash$div(this$2);
+      return x3
+    } else {
+      throw new $c_s_MatchError().init___O(this$2)
+    }
+  } else {
+    throw new $c_s_MatchError().init___O(this$1)
+  }
+});
+var $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11 = new $TypeData().initClass({
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11: 0
+}, false, "coursier.core.BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11", {
+  Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11.prototype.$classData = $d_Lcoursier_core_BaseMavenRepository$$anonfun$snapshotVersioning$1$$anonfun$apply$10$$anonfun$apply$11;
 /** @constructor */
 var $c_Lcoursier_core_BaseMavenRepository$$anonfun$versions$1 = (function() {
   $c_sr_AbstractFunction1.call(this)
@@ -26458,7 +26930,8 @@ var $c_Lcoursier_core_Project = (function() {
   this.dependencyManagement$1 = null;
   this.properties$1 = null;
   this.profiles$1 = null;
-  this.versions$1 = null
+  this.versions$1 = null;
+  this.snapshotVersioning$1 = null
 });
 $c_Lcoursier_core_Project.prototype = new $h_O();
 $c_Lcoursier_core_Project.prototype.constructor = $c_Lcoursier_core_Project;
@@ -26471,7 +26944,7 @@ $c_Lcoursier_core_Project.prototype.productPrefix__T = (function() {
   return "Project"
 });
 $c_Lcoursier_core_Project.prototype.productArity__I = (function() {
-  return 8
+  return 9
 });
 $c_Lcoursier_core_Project.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
@@ -26483,42 +26956,49 @@ $c_Lcoursier_core_Project.prototype.equals__O__Z = (function(x$1) {
     if ((((x === null) ? (x$2 === null) : x.equals__O__Z(x$2)) && (this.version$1 === Project$1.version$1))) {
       var x$3 = this.dependencies$1;
       var x$4 = Project$1.dependencies$1;
-      var jsx$5 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      var jsx$6 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      var jsx$6 = false
+    };
+    if (jsx$6) {
+      var x$5 = this.parent$1;
+      var x$6 = Project$1.parent$1;
+      var jsx$5 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
     } else {
       var jsx$5 = false
     };
     if (jsx$5) {
-      var x$5 = this.parent$1;
-      var x$6 = Project$1.parent$1;
-      var jsx$4 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      var x$7 = this.dependencyManagement$1;
+      var x$8 = Project$1.dependencyManagement$1;
+      var jsx$4 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
     } else {
       var jsx$4 = false
     };
     if (jsx$4) {
-      var x$7 = this.dependencyManagement$1;
-      var x$8 = Project$1.dependencyManagement$1;
-      var jsx$3 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      var x$9 = this.properties$1;
+      var x$10 = Project$1.properties$1;
+      var jsx$3 = ((x$9 === null) ? (x$10 === null) : $s_sc_GenMapLike$class__equals__sc_GenMapLike__O__Z(x$9, x$10))
     } else {
       var jsx$3 = false
     };
     if (jsx$3) {
-      var x$9 = this.properties$1;
-      var x$10 = Project$1.properties$1;
-      var jsx$2 = ((x$9 === null) ? (x$10 === null) : $s_sc_GenMapLike$class__equals__sc_GenMapLike__O__Z(x$9, x$10))
+      var x$11 = this.profiles$1;
+      var x$12 = Project$1.profiles$1;
+      var jsx$2 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
     } else {
       var jsx$2 = false
     };
     if (jsx$2) {
-      var x$11 = this.profiles$1;
-      var x$12 = Project$1.profiles$1;
-      var jsx$1 = ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
+      var x$13 = this.versions$1;
+      var x$14 = Project$1.versions$1;
+      var jsx$1 = ((x$13 === null) ? (x$14 === null) : x$13.equals__O__Z(x$14))
     } else {
       var jsx$1 = false
     };
     if (jsx$1) {
-      var x$13 = this.versions$1;
-      var x$14 = Project$1.versions$1;
-      return ((x$13 === null) ? (x$14 === null) : x$13.equals__O__Z(x$14))
+      var x$15 = this.snapshotVersioning$1;
+      var x$16 = Project$1.snapshotVersioning$1;
+      return ((x$15 === null) ? (x$16 === null) : x$15.equals__O__Z(x$16))
     } else {
       return false
     }
@@ -26560,6 +27040,10 @@ $c_Lcoursier_core_Project.prototype.productElement__I__O = (function(x$1) {
       return this.versions$1;
       break
     }
+    case 8: {
+      return this.snapshotVersioning$1;
+      break
+    }
     default: {
       throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
     }
@@ -26568,7 +27052,7 @@ $c_Lcoursier_core_Project.prototype.productElement__I__O = (function(x$1) {
 $c_Lcoursier_core_Project.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lcoursier_core_Project.prototype.init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option = (function(module, version, dependencies, parent, dependencyManagement, properties, profiles, versions) {
+$c_Lcoursier_core_Project.prototype.init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option__s_Option = (function(module, version, dependencies, parent, dependencyManagement, properties, profiles, versions, snapshotVersioning) {
   this.module$1 = module;
   this.version$1 = version;
   this.dependencies$1 = dependencies;
@@ -26577,6 +27061,7 @@ $c_Lcoursier_core_Project.prototype.init___Lcoursier_core_Module__T__sc_Seq__s_O
   this.properties$1 = properties;
   this.profiles$1 = profiles;
   this.versions$1 = versions;
+  this.snapshotVersioning$1 = snapshotVersioning;
   return this
 });
 $c_Lcoursier_core_Project.prototype.hashCode__I = (function() {
@@ -26611,9 +27096,9 @@ var $d_Lcoursier_core_Project = new $TypeData().initClass({
 $c_Lcoursier_core_Project.prototype.$classData = $d_Lcoursier_core_Project;
 /** @constructor */
 var $c_Lcoursier_core_Project$ = (function() {
-  $c_sr_AbstractFunction8.call(this)
+  $c_sr_AbstractFunction9.call(this)
 });
-$c_Lcoursier_core_Project$.prototype = new $h_sr_AbstractFunction8();
+$c_Lcoursier_core_Project$.prototype = new $h_sr_AbstractFunction9();
 $c_Lcoursier_core_Project$.prototype.constructor = $c_Lcoursier_core_Project$;
 /** @constructor */
 var $h_Lcoursier_core_Project$ = (function() {
@@ -26627,9 +27112,9 @@ var $d_Lcoursier_core_Project$ = new $TypeData().initClass({
   Lcoursier_core_Project$: 0
 }, false, "coursier.core.Project$", {
   Lcoursier_core_Project$: 1,
-  sr_AbstractFunction8: 1,
+  sr_AbstractFunction9: 1,
   O: 1,
-  F8: 1,
+  F9: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
@@ -27233,7 +27718,8 @@ $c_Lcoursier_core_Resolution.prototype.withDependencyManagement__Lcoursier_core_
   var x$104 = project.parent$1;
   var x$105 = project.profiles$1;
   var x$106 = project.versions$1;
-  return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option(x$102, x$103, x$99, x$104, x$100, x$101, x$105, x$106)
+  var x$107 = project.snapshotVersioning$1;
+  return new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option__s_Option(x$102, x$103, x$99, x$104, x$100, x$101, x$105, x$106, x$107)
 });
 $c_Lcoursier_core_Resolution.prototype.productElement__I__O = (function(x$1) {
   switch (x$1) {
@@ -28281,6 +28767,259 @@ var $d_Lcoursier_core_Resolution$$anonfun$withProperties$1 = new $TypeData().ini
 });
 $c_Lcoursier_core_Resolution$$anonfun$withProperties$1.prototype.$classData = $d_Lcoursier_core_Resolution$$anonfun$withProperties$1;
 /** @constructor */
+var $c_Lcoursier_core_SnapshotVersion = (function() {
+  $c_O.call(this);
+  this.classifier$1 = null;
+  this.extension$1 = null;
+  this.value$1 = null;
+  this.updated$1 = null
+});
+$c_Lcoursier_core_SnapshotVersion.prototype = new $h_O();
+$c_Lcoursier_core_SnapshotVersion.prototype.constructor = $c_Lcoursier_core_SnapshotVersion;
+/** @constructor */
+var $h_Lcoursier_core_SnapshotVersion = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_SnapshotVersion.prototype = $c_Lcoursier_core_SnapshotVersion.prototype;
+$c_Lcoursier_core_SnapshotVersion.prototype.productPrefix__T = (function() {
+  return "SnapshotVersion"
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.productArity__I = (function() {
+  return 4
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lcoursier_core_SnapshotVersion(x$1)) {
+    var SnapshotVersion$1 = $as_Lcoursier_core_SnapshotVersion(x$1);
+    if ((((this.classifier$1 === SnapshotVersion$1.classifier$1) && (this.extension$1 === SnapshotVersion$1.extension$1)) && (this.value$1 === SnapshotVersion$1.value$1))) {
+      var x = this.updated$1;
+      var x$2 = SnapshotVersion$1.updated$1;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.classifier$1;
+      break
+    }
+    case 1: {
+      return this.extension$1;
+      break
+    }
+    case 2: {
+      return this.value$1;
+      break
+    }
+    case 3: {
+      return this.updated$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.init___T__T__T__s_Option = (function(classifier, extension, value, updated) {
+  this.classifier$1 = classifier;
+  this.extension$1 = extension;
+  this.value$1 = value;
+  this.updated$1 = updated;
+  return this
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+var $is_Lcoursier_core_SnapshotVersion = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcoursier_core_SnapshotVersion)))
+});
+var $as_Lcoursier_core_SnapshotVersion = (function(obj) {
+  return (($is_Lcoursier_core_SnapshotVersion(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "coursier.core.SnapshotVersion"))
+});
+var $isArrayOf_Lcoursier_core_SnapshotVersion = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcoursier_core_SnapshotVersion)))
+});
+var $asArrayOf_Lcoursier_core_SnapshotVersion = (function(obj, depth) {
+  return (($isArrayOf_Lcoursier_core_SnapshotVersion(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcoursier.core.SnapshotVersion;", depth))
+});
+var $d_Lcoursier_core_SnapshotVersion = new $TypeData().initClass({
+  Lcoursier_core_SnapshotVersion: 0
+}, false, "coursier.core.SnapshotVersion", {
+  Lcoursier_core_SnapshotVersion: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_SnapshotVersion.prototype.$classData = $d_Lcoursier_core_SnapshotVersion;
+/** @constructor */
+var $c_Lcoursier_core_SnapshotVersioning = (function() {
+  $c_O.call(this);
+  this.module$1 = null;
+  this.version$1 = null;
+  this.latest$1 = null;
+  this.release$1 = null;
+  this.timestamp$1 = null;
+  this.buildNumber$1 = null;
+  this.localCopy$1 = null;
+  this.lastUpdated$1 = null;
+  this.snapshotVersions$1 = null
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype = new $h_O();
+$c_Lcoursier_core_SnapshotVersioning.prototype.constructor = $c_Lcoursier_core_SnapshotVersioning;
+/** @constructor */
+var $h_Lcoursier_core_SnapshotVersioning = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_SnapshotVersioning.prototype = $c_Lcoursier_core_SnapshotVersioning.prototype;
+$c_Lcoursier_core_SnapshotVersioning.prototype.init___Lcoursier_core_Module__T__T__T__T__s_Option__s_Option__s_Option__sc_Seq = (function(module, version, latest, release, timestamp, buildNumber, localCopy, lastUpdated, snapshotVersions) {
+  this.module$1 = module;
+  this.version$1 = version;
+  this.latest$1 = latest;
+  this.release$1 = release;
+  this.timestamp$1 = timestamp;
+  this.buildNumber$1 = buildNumber;
+  this.localCopy$1 = localCopy;
+  this.lastUpdated$1 = lastUpdated;
+  this.snapshotVersions$1 = snapshotVersions;
+  return this
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.productPrefix__T = (function() {
+  return "SnapshotVersioning"
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.productArity__I = (function() {
+  return 9
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lcoursier_core_SnapshotVersioning(x$1)) {
+    var SnapshotVersioning$1 = $as_Lcoursier_core_SnapshotVersioning(x$1);
+    var x = this.module$1;
+    var x$2 = SnapshotVersioning$1.module$1;
+    if (((((((x === null) ? (x$2 === null) : x.equals__O__Z(x$2)) && (this.version$1 === SnapshotVersioning$1.version$1)) && (this.latest$1 === SnapshotVersioning$1.latest$1)) && (this.release$1 === SnapshotVersioning$1.release$1)) && (this.timestamp$1 === SnapshotVersioning$1.timestamp$1))) {
+      var x$3 = this.buildNumber$1;
+      var x$4 = SnapshotVersioning$1.buildNumber$1;
+      var jsx$3 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+    } else {
+      var jsx$3 = false
+    };
+    if (jsx$3) {
+      var x$5 = this.localCopy$1;
+      var x$6 = SnapshotVersioning$1.localCopy$1;
+      var jsx$2 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+    } else {
+      var jsx$2 = false
+    };
+    if (jsx$2) {
+      var x$7 = this.lastUpdated$1;
+      var x$8 = SnapshotVersioning$1.lastUpdated$1;
+      var jsx$1 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+    } else {
+      var jsx$1 = false
+    };
+    if (jsx$1) {
+      var x$9 = this.snapshotVersions$1;
+      var x$10 = SnapshotVersioning$1.snapshotVersions$1;
+      return ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+    } else {
+      return false
+    }
+  } else {
+    return false
+  }
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.module$1;
+      break
+    }
+    case 1: {
+      return this.version$1;
+      break
+    }
+    case 2: {
+      return this.latest$1;
+      break
+    }
+    case 3: {
+      return this.release$1;
+      break
+    }
+    case 4: {
+      return this.timestamp$1;
+      break
+    }
+    case 5: {
+      return this.buildNumber$1;
+      break
+    }
+    case 6: {
+      return this.localCopy$1;
+      break
+    }
+    case 7: {
+      return this.lastUpdated$1;
+      break
+    }
+    case 8: {
+      return this.snapshotVersions$1;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+var $is_Lcoursier_core_SnapshotVersioning = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lcoursier_core_SnapshotVersioning)))
+});
+var $as_Lcoursier_core_SnapshotVersioning = (function(obj) {
+  return (($is_Lcoursier_core_SnapshotVersioning(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "coursier.core.SnapshotVersioning"))
+});
+var $isArrayOf_Lcoursier_core_SnapshotVersioning = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcoursier_core_SnapshotVersioning)))
+});
+var $asArrayOf_Lcoursier_core_SnapshotVersioning = (function(obj, depth) {
+  return (($isArrayOf_Lcoursier_core_SnapshotVersioning(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcoursier.core.SnapshotVersioning;", depth))
+});
+var $d_Lcoursier_core_SnapshotVersioning = new $TypeData().initClass({
+  Lcoursier_core_SnapshotVersioning: 0
+}, false, "coursier.core.SnapshotVersioning", {
+  Lcoursier_core_SnapshotVersioning: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_SnapshotVersioning.prototype.$classData = $d_Lcoursier_core_SnapshotVersioning;
+/** @constructor */
 var $c_Lcoursier_core_VersionInterval = (function() {
   $c_O.call(this);
   this.from$1 = null;
@@ -28926,17 +29665,17 @@ var $d_Lcoursier_core_Versions$DateTime = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Versions$DateTime.prototype.$classData = $d_Lcoursier_core_Versions$DateTime;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$7 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$8 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$7.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$7.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$7;
+$c_Lcoursier_core_Xml$$anonfun$8.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$8.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$8;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$7 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$8 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$7.prototype = $c_Lcoursier_core_Xml$$anonfun$7.prototype;
-$c_Lcoursier_core_Xml$$anonfun$7.prototype.apply__Lcoursier_core_Xml$Node__sc_Iterable = (function(p) {
+$h_Lcoursier_core_Xml$$anonfun$8.prototype = $c_Lcoursier_core_Xml$$anonfun$8.prototype;
+$c_Lcoursier_core_Xml$$anonfun$8.prototype.apply__Lcoursier_core_Xml$Node__sc_Iterable = (function(p) {
   var this$1 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(p, "name", "").toOption__s_Option();
   if (this$1.isEmpty__Z()) {
     var this$2 = $m_s_None$()
@@ -28963,20 +29702,20 @@ $c_Lcoursier_core_Xml$$anonfun$7.prototype.apply__Lcoursier_core_Xml$Node__sc_It
   };
   return xo.toList__sci_List()
 });
-$c_Lcoursier_core_Xml$$anonfun$7.prototype.apply__O__O = (function(v1) {
+$c_Lcoursier_core_Xml$$anonfun$8.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Xml$Node__sc_Iterable($as_Lcoursier_core_Xml$Node(v1))
 });
-var $d_Lcoursier_core_Xml$$anonfun$7 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$7: 0
-}, false, "coursier.core.Xml$$anonfun$7", {
-  Lcoursier_core_Xml$$anonfun$7: 1,
+var $d_Lcoursier_core_Xml$$anonfun$8 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$8: 0
+}, false, "coursier.core.Xml$$anonfun$8", {
+  Lcoursier_core_Xml$$anonfun$8: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$7.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$7;
+$c_Lcoursier_core_Xml$$anonfun$8.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$8;
 /** @constructor */
 var $c_Lcoursier_core_Xml$$anonfun$coursier$core$Xml$$text$2 = (function() {
   $c_sr_AbstractFunction1.call(this)
@@ -29010,7 +29749,7 @@ $c_Lcoursier_core_Xml$$anonfun$coursier$core$Xml$$text$2.prototype.$classData = 
 /** @constructor */
 var $c_Lcoursier_core_Xml$$anonfun$profile$3 = (function() {
   $c_sr_AbstractFunction1.call(this);
-  this.node$4$f = null;
+  this.node$5$f = null;
   this.id$1$f = null;
   this.activeByDefault$1$f = null;
   this.activation$1$f = null
@@ -29025,8 +29764,8 @@ $h_Lcoursier_core_Xml$$anonfun$profile$3.prototype = $c_Lcoursier_core_Xml$$anon
 $c_Lcoursier_core_Xml$$anonfun$profile$3.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Lscalaz_$bslash$div($as_T2(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3.prototype.init___Lcoursier_core_Xml$Node__T__s_Option__Lcoursier_core_Activation = (function(node$4, id$1, activeByDefault$1, activation$1) {
-  this.node$4$f = node$4;
+$c_Lcoursier_core_Xml$$anonfun$profile$3.prototype.init___Lcoursier_core_Xml$Node__T__s_Option__Lcoursier_core_Activation = (function(node$5, id$1, activeByDefault$1, activation$1) {
+  this.node$5$f = node$5;
   this.id$1$f = id$1;
   this.activeByDefault$1$f = activeByDefault$1;
   this.activation$1$f = activation$1;
@@ -29050,7 +29789,7 @@ $c_Lcoursier_core_Xml$$anonfun$profile$3.prototype.apply__T2__Lscalaz_$bslash$di
     var G = new $c_Lscalaz_Unapply$und0$$anon$13().init___Lscalaz_Unapply$und0__O(this$3, TC0);
     var this$5 = this$4.F$1;
     var fa = this$4.self$1;
-    var this$6 = $as_Lscalaz_$bslash$div($s_Lscalaz_Traverse$class__traverseU__Lscalaz_Traverse__O__F1__Lscalaz_Unapply__O(this$5, fa, f, G)).map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20().init___Lcoursier_core_Xml$$anonfun$profile$3(this));
+    var this$6 = $as_Lscalaz_$bslash$div($s_Lscalaz_Traverse$class__traverseU__Lscalaz_Traverse__O__F1__Lscalaz_Unapply__O(this$5, fa, f, G)).map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21().init___Lcoursier_core_Xml$$anonfun$profile$3(this));
     if ($is_Lscalaz_$minus$bslash$div(this$6)) {
       var x2 = $as_Lscalaz_$minus$bslash$div(this$6);
       return x2
@@ -29113,26 +29852,26 @@ var $d_Lcoursier_core_Xml$$anonfun$profile$3 = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Xml$$anonfun$profile$3.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype;
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype.apply__O__O = (function(v1) {
   return this.apply__sci_List__T2($as_sci_List(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.apply__sci_List__T2 = (function(depMgmts) {
-  var this$1 = this.$$outer$2.node$4$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$21$2) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype.apply__sci_List__T2 = (function(depMgmts) {
+  var this$1 = this.$$outer$2.node$5$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$21$2) {
     var x$21 = $as_Lcoursier_core_Xml$Node(x$21$2);
     return (x$21.label__T() === "properties")
   })));
-  var f = new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20().init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20(this);
+  var f = new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21().init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21(this);
   if (this$1.isEmpty__Z()) {
     var this$2 = $m_s_None$()
   } else {
@@ -29150,7 +29889,7 @@ $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.apply__sci_
   var xmlProperties = $as_sc_Seq(jsx$1);
   return new $c_T2().init___O__O(depMgmts, xmlProperties)
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3 = (function($$outer) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3 = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -29158,51 +29897,51 @@ $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.init___Lcou
   };
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20: 0
-}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$20", {
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20: 1,
+var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21: 0
+}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$21", {
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype;
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20 = (function($$outer) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21 = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$22) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$22) {
   var jsx$2 = x$22.child__sc_Seq();
-  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2().init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20(this);
+  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2().init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21(this);
   var this$1 = $m_sc_Seq$();
   return $as_sc_Seq(jsx$2.collect__s_PartialFunction__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2))
 });
-var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20: 0
-}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20", {
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20: 1,
+var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21: 0
+}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21", {
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21;
 /** @constructor */
 var $c_Lcoursier_core_Xml$$anonfun$project$2 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -29286,7 +30025,7 @@ $c_Lcoursier_core_Xml$$anonfun$project$2.prototype.apply__T3__Lscalaz_$bslash$di
       var jsx$2;
       throw new $c_s_MatchError().init___O(this$3)
     };
-    return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29().init___Lcoursier_core_Xml$$anonfun$project$2__Lcoursier_core_Module__T(this, projModule, projVersion))
+    return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30().init___Lcoursier_core_Xml$$anonfun$project$2__Lcoursier_core_Module__T(this, projModule, projVersion))
   } else {
     throw new $c_s_MatchError().init___O(x$52)
   }
@@ -29307,23 +30046,23 @@ var $d_Lcoursier_core_Xml$$anonfun$project$2 = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Xml$$anonfun$project$2.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.projModule$1$f = null;
   this.projVersion$1$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype.apply__O__O = (function(v1) {
   return this.apply__T3__Lscalaz_$bslash$div($as_T3(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.apply__T3__Lscalaz_$bslash$div = (function(x$51) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype.apply__T3__Lscalaz_$bslash$div = (function(x$51) {
   if ((x$51 !== null)) {
     var parentModuleOpt = $as_s_Option(x$51.$$und1$1);
     var parentVersionOpt = $as_s_Option(x$51.$$und2$1);
@@ -29388,12 +30127,12 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.apply__T3__
       var jsx$1;
       throw new $c_s_MatchError().init___O(this$6)
     };
-    return jsx$1.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29__s_Option__s_Option(this, parentModuleOpt, parentVersionOpt))
+    return jsx$1.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30__s_Option__s_Option(this, parentModuleOpt, parentVersionOpt))
   } else {
     throw new $c_s_MatchError().init___O(x$51)
   }
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.init___Lcoursier_core_Xml$$anonfun$project$2__Lcoursier_core_Module__T = (function($$outer, projModule$1, projVersion$1) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype.init___Lcoursier_core_Xml$$anonfun$project$2__Lcoursier_core_Module__T = (function($$outer, projModule$1, projVersion$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -29403,35 +30142,35 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.init___Lcou
   this.projVersion$1$f = projVersion$1;
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.parentModuleOpt$1$f = null;
   this.parentVersionOpt$1$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Lscalaz_$bslash$div($as_T2(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29__s_Option__s_Option = (function($$outer, parentModuleOpt$1, parentVersionOpt$1) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30__s_Option__s_Option = (function($$outer, parentModuleOpt$1, parentVersionOpt$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -29441,7 +30180,7 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.pro
   this.parentVersionOpt$1$f = parentVersionOpt$1;
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype.apply__T2__Lscalaz_$bslash$div = (function(x$50) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype.apply__T2__Lscalaz_$bslash$div = (function(x$50) {
   if ((x$50 !== null)) {
     var deps = $as_sci_List(x$50.$$und1__O());
     var xmlDepMgmts = $as_sc_Seq(x$50.$$und2__O());
@@ -29459,48 +30198,39 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.pro
     var G = new $c_Lscalaz_Unapply$und0$$anon$13().init___Lscalaz_Unapply$und0__O(this$3, TC0);
     var this$5 = this$4.F$1;
     var fa = this$4.self$1;
-    return $as_Lscalaz_$bslash$div($s_Lscalaz_Traverse$class__traverseU__Lscalaz_Traverse__O__F1__Lscalaz_Unapply__O(this$5, fa, f, G)).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34__sci_List(this, deps))
+    return $as_Lscalaz_$bslash$div($s_Lscalaz_Traverse$class__traverseU__Lscalaz_Traverse__O__F1__Lscalaz_Unapply__O(this$5, fa, f, G)).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35__sci_List(this, deps))
   } else {
     throw new $c_s_MatchError().init___O(x$50)
   }
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.deps$2$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype.apply__O__O = (function(v1) {
   return this.apply__sci_List__Lscalaz_$bslash$div($as_sci_List(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34__sci_List = (function($$outer, deps$2) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.deps$2$f = deps$2;
-  return this
-});
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype.apply__sci_List__Lscalaz_$bslash$div = (function(depMgmts) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype.apply__sci_List__Lscalaz_$bslash$div = (function(depMgmts) {
   $m_Lscalaz_Scalaz$();
   var this$1 = new $c_s_Some().init___O(this.$$outer$2.$$outer$2.projModule$1$f.organization$1);
   var arg1 = this$1.x$2;
@@ -29552,36 +30282,54 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
       throw new $c_s_MatchError().init___O(oa)
     }
   };
-  return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36__sci_List(this, depMgmts))
+  return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37__sci_List(this, depMgmts))
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36: 1,
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35__sci_List = (function($$outer, deps$2) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.deps$2$f = deps$2;
+  return this
+});
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.depMgmts$2$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype.apply__O__O = (function(v1) {
   return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype.apply__T__Lscalaz_$bslash$div = (function(groupId) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37__sci_List = (function($$outer, depMgmts$2) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.depMgmts$2$f = depMgmts$2;
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype.apply__T__Lscalaz_$bslash$div = (function(groupId) {
   $m_Lscalaz_Scalaz$();
   var this$1 = new $c_s_Some().init___O(this.$$outer$2.$$outer$2.$$outer$2.projVersion$1$f);
   var arg1 = this$1.x$2;
@@ -29626,45 +30374,36 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
       throw new $c_s_MatchError().init___O(oa)
     }
   };
-  return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42__T(this, groupId))
+  return jsx$2.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43__T(this, groupId))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36__sci_List = (function($$outer, depMgmts$2) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  this.depMgmts$2$f = depMgmts$2;
-  return this
-});
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
   this.groupId$1$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype.apply__O__O = (function(v1) {
   return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype.apply__T__Lscalaz_$bslash$div = (function(version) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype.apply__T__Lscalaz_$bslash$div = (function(version) {
   var this$1 = this.$$outer$2.$$outer$2.$$outer$2.parentVersionOpt$1$f;
   if (this$1.isEmpty__Z()) {
     var this$3 = $m_s_None$()
@@ -29679,9 +30418,9 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
     };
     var this$3 = new $c_s_Some().init___O(((jsx$1 === "") ? new $c_Lscalaz_$minus$bslash$div().init___O("Parent version missing") : new $c_Lscalaz_$bslash$div$minus().init___O((void 0))))
   };
-  return $as_Lscalaz_$bslash$div((this$3.isEmpty__Z() ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : this$3.get__O())).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47__T(this, version))
+  return $as_Lscalaz_$bslash$div((this$3.isEmpty__Z() ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : this$3.get__O())).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48__T(this, version))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42__T = (function($$outer, groupId$1) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43__T = (function($$outer, groupId$1) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -29690,34 +30429,34 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
   this.groupId$1$f = groupId$1;
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null;
-  this.version$1$f = null
+  this.version$2$f = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype.apply__O__O = (function(v1) {
   return this.apply__sr_BoxedUnit__Lscalaz_$bslash$div($asUnit(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype.apply__sr_BoxedUnit__Lscalaz_$bslash$div = (function(_) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype.apply__sr_BoxedUnit__Lscalaz_$bslash$div = (function(_) {
   var this$1 = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.parentModuleOpt$1$f;
   if (this$1.isEmpty__Z()) {
     var this$3 = $m_s_None$()
@@ -29733,49 +30472,57 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
     };
     var this$3 = new $c_s_Some().init___O(((jsx$1 === "") ? new $c_Lscalaz_$minus$bslash$div().init___O("Parent organization missing") : new $c_Lscalaz_$bslash$div$minus().init___O((void 0))))
   };
-  return $as_Lscalaz_$bslash$div((this$3.isEmpty__Z() ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : this$3.get__O())).map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50(this)).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50(this))
+  return $as_Lscalaz_$bslash$div((this$3.isEmpty__Z() ? new $c_Lscalaz_$bslash$div$minus().init___O((void 0)) : this$3.get__O())).map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51(this)).flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51(this))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47__T = (function($$outer, version$1) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48__T = (function($$outer, version$2) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
     this.$$outer$2 = $$outer
   };
-  this.version$1$f = version$1;
+  this.version$2$f = version$2;
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype.apply__O__O = (function(v1) {
   return this.apply__sr_BoxedUnit__T2($asUnit(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype.apply__sr_BoxedUnit__T2 = (function(x$47) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51 = (function($$outer) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype.apply__sr_BoxedUnit__T2 = (function(x$47) {
   var this$1 = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.pom$1$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$41$2) {
     var x$41 = $as_Lcoursier_core_Xml$Node(x$41$2);
     return (x$41.label__T() === "properties")
   })));
-  var f = new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53(this);
+  var f = new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54(this);
   if (this$1.isEmpty__Z()) {
     var this$2 = $m_s_None$()
   } else {
@@ -29793,75 +30540,67 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
   var xmlProperties = $as_sc_Seq(jsx$1);
   return new $c_T2().init___O__O(x$47, xmlProperties)
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50 = (function($$outer) {
-  if (($$outer === null)) {
-    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
-  } else {
-    this.$$outer$2 = $$outer
-  };
-  return this
-});
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$42) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$42) {
   var jsx$2 = x$42.child__sc_Seq();
-  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32(this);
+  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3().init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33(this);
   var this$1 = $m_sc_Seq$();
   return $as_sc_Seq(jsx$2.collect__s_PartialFunction__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53 = (function($$outer) {
-  return this
-});
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype.apply__O__O = (function(v1) {
   return this.apply__T2__Lscalaz_$bslash$div($as_T2(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50 = (function($$outer) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51 = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -29869,7 +30608,7 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
   };
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype.apply__T2__Lscalaz_$bslash$div = (function(x$49) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype.apply__T2__Lscalaz_$bslash$div = (function(x$49) {
   if ((x$49 !== null)) {
     var xmlProperties = $as_sc_Seq(x$49.$$und2__O());
     $m_Lscalaz_Scalaz$();
@@ -29956,7 +30695,7 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
           var this$19 = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.projModule$1$f;
           var name = this$19.name$1;
           var jsx$6 = new $c_Lcoursier_core_Module().init___T__T(organization, name);
-          var jsx$5 = this.$$outer$2.version$1$f;
+          var jsx$5 = this.$$outer$2.version$2$f;
           var jsx$4 = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.deps$2$f;
           var this$21 = this.$$outer$2.$$outer$2.$$outer$2.$$outer$2.$$outer$2.parentModuleOpt$1$f;
           if (this$21.isEmpty__Z()) {
@@ -29969,7 +30708,7 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
           };
           var jsx$2 = this.$$outer$2.$$outer$2.$$outer$2.depMgmts$2$f;
           var ev = $m_s_Predef$().singleton$und$less$colon$less$2;
-          return new $c_Lscalaz_$bslash$div$minus().init___O(new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option(jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, $s_sc_TraversableOnce$class__toMap__sc_TraversableOnce__s_Predef$$less$colon$less__sci_Map(properties$1, ev), profiles, $m_s_None$()))
+          return new $c_Lscalaz_$bslash$div$minus().init___O(new $c_Lcoursier_core_Project().init___Lcoursier_core_Module__T__sc_Seq__s_Option__sc_Seq__sci_Map__sc_Seq__s_Option__s_Option(jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, $s_sc_TraversableOnce$class__toMap__sc_TraversableOnce__s_Predef$$less$colon$less__sci_Map(properties$1, ev), profiles, $m_s_None$(), $m_s_None$()))
         } else if ($is_Lscalaz_$minus$bslash$div(this$18)) {
           var x3$1 = $as_Lscalaz_$minus$bslash$div(this$18);
           return x3$1
@@ -29986,17 +30725,431 @@ $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$an
     throw new $c_s_MatchError().init___O(x$49)
   }
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$54;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$55;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1 = (function() {
+  $c_sr_AbstractFunction1.call(this);
+  this.node$2$f = null
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype.apply__O__O = (function(v1) {
+  return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype.apply__T__Lscalaz_$bslash$div = (function(organization) {
+  var this$1 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(this.node$2$f, "artifactId", "Name");
+  if ($is_Lscalaz_$bslash$div$minus(this$1)) {
+    var x2 = $as_Lscalaz_$bslash$div$minus(this$1);
+    var a = x2.b$2;
+    var name = $as_T(a);
+    var version = $m_Lcoursier_core_Xml$().coursier$core$Xml$$readVersion__Lcoursier_core_Xml$Node__T(this.node$2$f);
+    var jsx$1 = new $c_Lscalaz_$bslash$div$minus().init___O(new $c_T2().init___O__O(name, version))
+  } else if ($is_Lscalaz_$minus$bslash$div(this$1)) {
+    var x3 = $as_Lscalaz_$minus$bslash$div(this$1);
+    var jsx$1 = x3
+  } else {
+    var jsx$1;
+    throw new $c_s_MatchError().init___O(this$1)
+  };
+  return jsx$1.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1__T(this, organization))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype.init___Lcoursier_core_Xml$Node = (function(node$2) {
+  this.node$2$f = node$2;
+  return this
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74 = (function() {
+  $c_sr_AbstractFunction1.call(this);
+  this.$$outer$2 = null;
+  this.organization$2$f = null
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1__T = (function($$outer, organization$2) {
+  if (($$outer === null)) {
+    throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
+  } else {
+    this.$$outer$2 = $$outer
+  };
+  this.organization$2$f = organization$2;
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype.apply__O__O = (function(v1) {
+  return this.apply__T2__Lscalaz_$bslash$div($as_T2(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype.apply__T2__Lscalaz_$bslash$div = (function(x$76) {
+  if ((x$76 !== null)) {
+    var name = $as_T(x$76.$$und1__O());
+    var version = $as_T(x$76.$$und2__O());
+    $m_Lscalaz_Scalaz$();
+    var a = this.$$outer$2.node$2$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$61$2) {
+      var x$61 = $as_Lcoursier_core_Xml$Node(x$61$2);
+      return (x$61.label__T() === "versioning")
+    })));
+    var this$2 = new $c_Lscalaz_syntax_std_OptionOps().init___s_Option(a);
+    $m_Lscalaz_std_option$();
+    var oa = this$2.scalaz$syntax$std$OptionOps$$self$f;
+    if ($is_s_Some(oa)) {
+      var x2 = $as_s_Some(oa);
+      var a$1 = x2.x$2;
+      var jsx$1 = new $c_Lscalaz_$bslash$div$minus().init___O(a$1)
+    } else {
+      var x = $m_s_None$();
+      if ((x === oa)) {
+        var jsx$1 = new $c_Lscalaz_$minus$bslash$div().init___O("Versioning info not found in metadata")
+      } else {
+        var jsx$1;
+        throw new $c_s_MatchError().init___O(oa)
+      }
+    };
+    var this$4 = jsx$1.map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74(this));
+    if ($is_Lscalaz_$minus$bslash$div(this$4)) {
+      var x2$1 = $as_Lscalaz_$minus$bslash$div(this$4);
+      return x2$1
+    } else if ($is_Lscalaz_$bslash$div$minus(this$4)) {
+      var x4 = $as_Lscalaz_$bslash$div$minus(this$4);
+      var b = x4.b$2;
+      var x$75 = $as_T10(b);
+      if ((x$75 !== null)) {
+        var latest = $as_T(x$75.$$und2$1);
+        var release = $as_T(x$75.$$und3$1);
+        var lastUpdatedOpt = $as_s_Option(x$75.$$und5$1);
+        var timestamp = $as_T(x$75.$$und7$1);
+        var buildNumber = $as_s_Option(x$75.$$und8$1);
+        var localCopy = $as_s_Option(x$75.$$und9$1);
+        var xmlSnapshotVersions = $as_sc_Seq(x$75.$$und10$1);
+        $m_Lscalaz_Scalaz$();
+        var v = xmlSnapshotVersions.toList__sci_List();
+        var F0 = $m_Lscalaz_Scalaz$().listInstance$1;
+        var this$8 = new $c_Lscalaz_syntax_TraverseOps().init___O__Lscalaz_Traverse(v, F0);
+        var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(node$2) {
+          var node = $as_Lcoursier_core_Xml$Node(node$2);
+          return $m_Lcoursier_core_Xml$().snapshotVersion__Lcoursier_core_Xml$Node__Lscalaz_$bslash$div(node)
+        }));
+        var this$7 = $m_Lscalaz_Unapply$();
+        var this$6 = $m_Lscalaz_$bslash$div$();
+        var TC0 = new $c_Lscalaz_DisjunctionInstances1$$anon$1().init___Lscalaz_DisjunctionInstances1(this$6);
+        var G = new $c_Lscalaz_Unapply$und0$$anon$13().init___Lscalaz_Unapply$und0__O(this$7, TC0);
+        var this$9 = this$8.F$1;
+        var fa = this$8.self$1;
+        var this$10 = $as_Lscalaz_$bslash$div($s_Lscalaz_Traverse$class__traverseU__Lscalaz_Traverse__O__F1__Lscalaz_Unapply__O(this$9, fa, f, G));
+        if ($is_Lscalaz_$bslash$div$minus(this$10)) {
+          var x2$2 = $as_Lscalaz_$bslash$div$minus(this$10);
+          var a$2 = x2$2.b$2;
+          var snapshotVersions = $as_sci_List(a$2);
+          return new $c_Lscalaz_$bslash$div$minus().init___O(new $c_Lcoursier_core_SnapshotVersioning().init___Lcoursier_core_Module__T__T__T__T__s_Option__s_Option__s_Option__sc_Seq(new $c_Lcoursier_core_Module().init___T__T(this.organization$2$f, name), version, latest, release, timestamp, buildNumber, localCopy, lastUpdatedOpt, snapshotVersions))
+        } else if ($is_Lscalaz_$minus$bslash$div(this$10)) {
+          var x3 = $as_Lscalaz_$minus$bslash$div(this$10);
+          return x3
+        } else {
+          throw new $c_s_MatchError().init___O(this$10)
+        }
+      } else {
+        throw new $c_s_MatchError().init___O(x$75)
+      }
+    } else {
+      throw new $c_s_MatchError().init___O(this$4)
+    }
+  } else {
+    throw new $c_s_MatchError().init___O(x$76)
+  }
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__T10($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype.apply__Lcoursier_core_Xml$Node__T10 = (function(xmlVersioning) {
+  var this$1 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "latest", "Latest version");
+  if ($is_Lscalaz_$minus$bslash$div(this$1)) {
+    var jsx$1 = ""
+  } else if ($is_Lscalaz_$bslash$div$minus(this$1)) {
+    var x4 = $as_Lscalaz_$bslash$div$minus(this$1);
+    var b = x4.b$2;
+    var jsx$1 = b
+  } else {
+    var jsx$1;
+    throw new $c_s_MatchError().init___O(this$1)
+  };
+  var latest = $as_T(jsx$1);
+  var this$2 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "release", "Release version");
+  if ($is_Lscalaz_$minus$bslash$div(this$2)) {
+    var jsx$2 = ""
+  } else if ($is_Lscalaz_$bslash$div$minus(this$2)) {
+    var x4$1 = $as_Lscalaz_$bslash$div$minus(this$2);
+    var b$1 = x4$1.b$2;
+    var jsx$2 = b$1
+  } else {
+    var jsx$2;
+    throw new $c_s_MatchError().init___O(this$2)
+  };
+  var release = $as_T(jsx$2);
+  var this$3 = xmlVersioning.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$62$2) {
+    var x$62 = $as_Lcoursier_core_Xml$Node(x$62$2);
+    return (x$62.label__T() === "versions")
+  })));
+  var f = new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77(this);
+  if (this$3.isEmpty__Z()) {
+    var versionsOpt = $m_s_None$()
+  } else {
+    var v1 = this$3.get__O();
+    var versionsOpt = new $c_s_Some().init___O(f.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1)))
+  };
+  var this$4 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "lastUpdated", "Last update date and time").toOption__s_Option();
+  if (this$4.isEmpty__Z()) {
+    var lastUpdatedOpt = $m_s_None$()
+  } else {
+    var arg1 = this$4.get__O();
+    var s = $as_T(arg1);
+    var lastUpdatedOpt = $m_Lcoursier_core_Xml$().parseDateTime__T__s_Option(s)
+  };
+  var xmlSnapshotOpt = xmlVersioning.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$66$2) {
+    var x$66 = $as_Lcoursier_core_Xml$Node(x$66$2);
+    return (x$66.label__T() === "snapshot")
+  })));
+  if (xmlSnapshotOpt.isEmpty__Z()) {
+    var this$5 = $m_s_None$()
+  } else {
+    var arg1$1 = xmlSnapshotOpt.get__O();
+    var x$67 = $as_Lcoursier_core_Xml$Node(arg1$1);
+    var this$5 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(x$67, "timestamp", "Snapshot timestamp").toOption__s_Option()
+  };
+  var timestamp = $as_T((this$5.isEmpty__Z() ? "" : this$5.get__O()));
+  if (xmlSnapshotOpt.isEmpty__Z()) {
+    var this$6 = $m_s_None$()
+  } else {
+    var arg1$2 = xmlSnapshotOpt.get__O();
+    var x$68 = $as_Lcoursier_core_Xml$Node(arg1$2);
+    var this$6 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(x$68, "buildNumber", "Snapshot build number").toOption__s_Option()
+  };
+  if (this$6.isEmpty__Z()) {
+    var jsx$3 = true
+  } else {
+    var v1$1 = this$6.get__O();
+    var s$1 = $as_T(v1$1);
+    var this$8 = new $c_sci_StringOps().init___T(s$1);
+    if ($s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(this$8)) {
+      var this$10 = new $c_sci_StringOps().init___T(s$1);
+      var i = 0;
+      while (true) {
+        var jsx$5 = i;
+        var $$this = this$10.repr$1;
+        if ((jsx$5 < $uI($$this["length"]))) {
+          var arg1$3 = this$10.apply__I__O(i);
+          if ((arg1$3 === null)) {
+            var x$69 = 0
+          } else {
+            var this$14 = $as_jl_Character(arg1$3);
+            var x$69 = this$14.value$1
+          };
+          var jsx$4 = $m_jl_Character$().isDigit__C__Z(x$69)
+        } else {
+          var jsx$4 = false
+        };
+        if (jsx$4) {
+          i = ((1 + i) | 0)
+        } else {
+          break
+        }
+      };
+      var jsx$6 = i;
+      var $$this$1 = this$10.repr$1;
+      var jsx$3 = (jsx$6 === $uI($$this$1["length"]))
+    } else {
+      var jsx$3 = false
+    }
+  };
+  if (jsx$3) {
+    var this$19 = this$6
+  } else {
+    var this$19 = $m_s_None$()
+  };
+  if (this$19.isEmpty__Z()) {
+    var buildNumber = $m_s_None$()
+  } else {
+    var arg1$4 = this$19.get__O();
+    var x$70 = $as_T(arg1$4);
+    var this$21 = new $c_sci_StringOps().init___T(x$70);
+    var this$23 = $m_jl_Integer$();
+    var s$2 = this$21.repr$1;
+    var buildNumber = new $c_s_Some().init___O(this$23.parseInt__T__I__I(s$2, 10))
+  };
+  if (xmlSnapshotOpt.isEmpty__Z()) {
+    var this$24 = $m_s_None$()
+  } else {
+    var arg1$5 = xmlSnapshotOpt.get__O();
+    var x$71 = $as_Lcoursier_core_Xml$Node(arg1$5);
+    var this$24 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(x$71, "localCopy", "Snapshot local copy").toOption__s_Option()
+  };
+  var pf = new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77(this);
+  if ((!this$24.isEmpty__Z())) {
+    var this$25 = new $c_s_PartialFunction$Lifted().init___s_PartialFunction(pf);
+    var v1$2 = this$24.get__O();
+    var localCopy = this$25.apply__O__s_Option(v1$2)
+  } else {
+    var localCopy = $m_s_None$()
+  };
+  var this$26 = xmlVersioning.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$72$2) {
+    var x$72 = $as_Lcoursier_core_Xml$Node(x$72$2);
+    return (x$72.label__T() === "snapshotVersions")
+  })));
+  if (this$26.isEmpty__Z()) {
+    var this$27 = $m_s_None$()
+  } else {
+    var v1$3 = this$26.get__O();
+    var x$73 = $as_Lcoursier_core_Xml$Node(v1$3);
+    var this$27 = new $c_s_Some().init___O($as_sc_Seq(x$73.child__sc_Seq().filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$74$2) {
+      var x$74 = $as_Lcoursier_core_Xml$Node(x$74$2);
+      return (x$74.label__T() === "snapshotVersion")
+    })))))
+  };
+  if (this$27.isEmpty__Z()) {
+    $m_sc_Seq$();
+    $m_sci_Seq$();
+    var this$30 = new $c_scm_ListBuffer().init___();
+    var jsx$7 = this$30.toList__sci_List()
+  } else {
+    var jsx$7 = this$27.get__O()
+  };
+  var xmlSnapshotVersions = $as_sc_Seq(jsx$7);
+  return new $c_T10().init___O__O__O__O__O__O__O__O__O__O(xmlVersioning, latest, release, versionsOpt, lastUpdatedOpt, xmlSnapshotOpt, timestamp, buildNumber, localCopy, xmlSnapshotVersions)
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74 = (function($$outer) {
+  return this
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$63) {
+  var jsx$2 = $as_sc_TraversableLike(x$63.child__sc_Seq().filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$64$2) {
+    var x$64 = $as_Lcoursier_core_Xml$Node(x$64$2);
+    return (x$64.label__T() === "version")
+  }))));
+  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47(this);
+  var this$1 = $m_sc_Seq$();
+  return $as_sc_Seq(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2))
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79 = (function() {
+  $c_sr_AbstractFunction1.call(this)
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype.apply__Lcoursier_core_Xml$Node__sc_Iterable = (function(x$65) {
+  var this$1 = x$65.child__sc_Seq();
+  var pf = new $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5().init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79(this);
+  var xo = $s_sc_TraversableOnce$class__collectFirst__sc_TraversableOnce__s_PartialFunction__s_Option(this$1, pf);
+  return xo.toList__sci_List()
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__sc_Iterable($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47 = (function($$outer) {
+  return this
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79;
 /** @constructor */
 var $c_Lcoursier_core_Xml$$anonfun$versions$1 = (function() {
   $c_sr_AbstractFunction1.call(this);
@@ -30013,7 +31166,7 @@ $c_Lcoursier_core_Xml$$anonfun$versions$1.prototype.apply__O__O = (function(v1) 
   return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
 });
 $c_Lcoursier_core_Xml$$anonfun$versions$1.prototype.apply__T__Lscalaz_$bslash$div = (function(organization) {
-  return $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(this.node$1$f, "artifactId", "Name").flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63().init___Lcoursier_core_Xml$$anonfun$versions$1(this))
+  return $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(this.node$1$f, "artifactId", "Name").flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64().init___Lcoursier_core_Xml$$anonfun$versions$1(this))
 });
 $c_Lcoursier_core_Xml$$anonfun$versions$1.prototype.init___Lcoursier_core_Xml$Node = (function(node$1) {
   this.node$1$f = node$1;
@@ -30031,25 +31184,25 @@ var $d_Lcoursier_core_Xml$$anonfun$versions$1 = new $TypeData().initClass({
 });
 $c_Lcoursier_core_Xml$$anonfun$versions$1.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64 = (function() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype;
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype.apply__O__O = (function(v1) {
   return this.apply__T__Lscalaz_$bslash$div($as_T(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.apply__T__Lscalaz_$bslash$div = (function(name) {
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype.apply__T__Lscalaz_$bslash$div = (function(name) {
   $m_Lscalaz_Scalaz$();
-  var a = this.$$outer$2.node$1$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$53$2) {
-    var x$53 = $as_Lcoursier_core_Xml$Node(x$53$2);
-    return (x$53.label__T() === "versioning")
+  var a = this.$$outer$2.node$1$f.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$54$2) {
+    var x$54 = $as_Lcoursier_core_Xml$Node(x$54$2);
+    return (x$54.label__T() === "versioning")
   })));
   var this$2 = new $c_Lscalaz_syntax_std_OptionOps().init___s_Option(a);
   $m_Lscalaz_std_option$();
@@ -30057,55 +31210,47 @@ $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.apply__T__
   if ($is_s_Some(oa)) {
     var x2 = $as_s_Some(oa);
     var a$1 = x2.x$2;
-    var this$4 = new $c_Lscalaz_$bslash$div$minus().init___O(a$1)
+    var jsx$1 = new $c_Lscalaz_$bslash$div$minus().init___O(a$1)
   } else {
     var x = $m_s_None$();
     if ((x === oa)) {
-      var this$4 = new $c_Lscalaz_$minus$bslash$div().init___O("Versioning info not found in metadata")
+      var jsx$1 = new $c_Lscalaz_$minus$bslash$div().init___O("Versioning info not found in metadata")
     } else {
-      var this$4;
+      var jsx$1;
       throw new $c_s_MatchError().init___O(oa)
     }
   };
+  var this$4 = jsx$1.map__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64(this));
   if ($is_Lscalaz_$bslash$div$minus(this$4)) {
     var x2$1 = $as_Lscalaz_$bslash$div$minus(this$4);
     var a$2 = x2$1.b$2;
-    var xmlVersioning = $as_Lcoursier_core_Xml$Node(a$2);
-    var this$5 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "latest", "Latest version");
-    if ($is_Lscalaz_$minus$bslash$div(this$5)) {
-      var jsx$2 = ""
-    } else if ($is_Lscalaz_$bslash$div$minus(this$5)) {
-      var x4 = $as_Lscalaz_$bslash$div$minus(this$5);
-      var b = x4.b$2;
-      var jsx$2 = b
+    var x$60 = $as_T5(a$2);
+    if ((x$60 !== null)) {
+      var latest = $as_T(x$60.$$und2$1);
+      var release = $as_T(x$60.$$und3$1);
+      var versionsOpt = $as_s_Option(x$60.$$und4$1);
+      var lastUpdatedOpt = $as_s_Option(x$60.$$und5$1);
+      if (versionsOpt.isEmpty__Z()) {
+        var this$5 = $m_s_None$()
+      } else {
+        var arg1 = versionsOpt.get__O();
+        var x$59 = $as_sc_Seq(arg1);
+        var this$5 = new $c_s_Some().init___O(x$59.toList__sci_List())
+      };
+      var jsx$2 = new $c_Lcoursier_core_Versions().init___T__T__sci_List__s_Option(latest, release, $as_sci_List((this$5.isEmpty__Z() ? $m_sci_Nil$() : this$5.get__O())), lastUpdatedOpt)
     } else {
       var jsx$2;
-      throw new $c_s_MatchError().init___O(this$5)
+      throw new $c_s_MatchError().init___O(x$60)
     };
-    var latest = $as_T(jsx$2);
-    var this$6 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "release", "Release version");
-    if ($is_Lscalaz_$minus$bslash$div(this$6)) {
-      var jsx$3 = ""
-    } else if ($is_Lscalaz_$bslash$div$minus(this$6)) {
-      var x4$1 = $as_Lscalaz_$bslash$div$minus(this$6);
-      var b$1 = x4$1.b$2;
-      var jsx$3 = b$1
-    } else {
-      var jsx$3;
-      throw new $c_s_MatchError().init___O(this$6)
-    };
-    var release = $as_T(jsx$3);
-    var jsx$1 = new $c_Lscalaz_$bslash$div$minus().init___O(new $c_T3().init___O__O__O(xmlVersioning, latest, release))
+    return new $c_Lscalaz_$bslash$div$minus().init___O(jsx$2)
   } else if ($is_Lscalaz_$minus$bslash$div(this$4)) {
     var x3 = $as_Lscalaz_$minus$bslash$div(this$4);
-    var jsx$1 = x3
+    return x3
   } else {
-    var jsx$1;
     throw new $c_s_MatchError().init___O(this$4)
-  };
-  return jsx$1.flatMap__F1__Lscalaz_$bslash$div(new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63(this))
+  }
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1 = (function($$outer) {
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1 = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -30113,256 +31258,162 @@ $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.init___Lco
   };
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63: 0
-}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$63", {
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63: 1,
+var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64: 0
+}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$64", {
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype;
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype.apply__O__O = (function(v1) {
-  return this.apply__T3__Lscalaz_$bslash$div($as_T3(v1))
-});
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype.apply__T3__Lscalaz_$bslash$div = (function(x$60) {
-  if ((x$60 !== null)) {
-    var xmlVersioning = $as_Lcoursier_core_Xml$Node(x$60.$$und1$1);
-    var latest = $as_T(x$60.$$und2$1);
-    var release = $as_T(x$60.$$und3$1);
-    $m_Lscalaz_Scalaz$();
-    var this$1 = xmlVersioning.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$54$2) {
-      var x$54 = $as_Lcoursier_core_Xml$Node(x$54$2);
-      return (x$54.label__T() === "versions")
-    })));
-    var f = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67(this);
-    if (this$1.isEmpty__Z()) {
-      var a = $m_s_None$()
-    } else {
-      var v1 = this$1.get__O();
-      var a = new $c_s_Some().init___O(f.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1)))
-    };
-    var this$3 = new $c_Lscalaz_syntax_std_OptionOps().init___s_Option(a);
-    $m_Lscalaz_std_option$();
-    var oa = this$3.scalaz$syntax$std$OptionOps$$self$f;
-    if ($is_s_Some(oa)) {
-      var x2 = $as_s_Some(oa);
-      var a$1 = x2.x$2;
-      var this$5 = new $c_Lscalaz_$bslash$div$minus().init___O(a$1)
-    } else {
-      var x = $m_s_None$();
-      if ((x === oa)) {
-        var this$5 = new $c_Lscalaz_$minus$bslash$div().init___O("Version list not found in metadata")
-      } else {
-        var this$5;
-        throw new $c_s_MatchError().init___O(oa)
-      }
-    };
-    if ($is_Lscalaz_$bslash$div$minus(this$5)) {
-      var x2$1 = $as_Lscalaz_$bslash$div$minus(this$5);
-      var a$2 = x2$1.b$2;
-      var versions = $as_sc_Seq(a$2);
-      var this$6 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "lastUpdated", "Last update date and time").toOption__s_Option();
-      if (this$6.isEmpty__Z()) {
-        var jsx$1 = true
-      } else {
-        var v1$1 = this$6.get__O();
-        var s = $as_T(v1$1);
-        if (($uI(s["length"]) === 14)) {
-          var this$9 = new $c_sci_StringOps().init___T(s);
-          var i = 0;
-          while (true) {
-            var jsx$3 = i;
-            var $$this = this$9.repr$1;
-            if ((jsx$3 < $uI($$this["length"]))) {
-              var arg1 = this$9.apply__I__O(i);
-              if ((arg1 === null)) {
-                var x$58 = 0
-              } else {
-                var this$13 = $as_jl_Character(arg1);
-                var x$58 = this$13.value$1
-              };
-              var jsx$2 = $m_jl_Character$().isDigit__C__Z(x$58)
-            } else {
-              var jsx$2 = false
-            };
-            if (jsx$2) {
-              i = ((1 + i) | 0)
-            } else {
-              break
-            }
-          };
-          var jsx$4 = i;
-          var $$this$1 = this$9.repr$1;
-          var jsx$1 = (jsx$4 === $uI($$this$1["length"]))
-        } else {
-          var jsx$1 = false
-        }
-      };
-      if (jsx$1) {
-        var this$18 = this$6
-      } else {
-        var this$18 = $m_s_None$()
-      };
-      if (this$18.isEmpty__Z()) {
-        var lastUpdatedOpt = $m_s_None$()
-      } else {
-        var arg1$1 = this$18.get__O();
-        var s$1 = $as_T(arg1$1);
-        var this$22 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](0, 4)));
-        var this$24 = $m_jl_Integer$();
-        var s$2 = this$22.repr$1;
-        var jsx$9 = this$24.parseInt__T__I__I(s$2, 10);
-        var this$28 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](4, 6)));
-        var this$30 = $m_jl_Integer$();
-        var s$3 = this$28.repr$1;
-        var jsx$8 = this$30.parseInt__T__I__I(s$3, 10);
-        var this$34 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](6, 8)));
-        var this$36 = $m_jl_Integer$();
-        var s$4 = this$34.repr$1;
-        var jsx$7 = this$36.parseInt__T__I__I(s$4, 10);
-        var this$40 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](8, 10)));
-        var this$42 = $m_jl_Integer$();
-        var s$5 = this$40.repr$1;
-        var jsx$6 = this$42.parseInt__T__I__I(s$5, 10);
-        var this$46 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](10, 12)));
-        var this$48 = $m_jl_Integer$();
-        var s$6 = this$46.repr$1;
-        var jsx$5 = this$48.parseInt__T__I__I(s$6, 10);
-        var this$52 = new $c_sci_StringOps().init___T($as_T(s$1["substring"](12, 14)));
-        var this$54 = $m_jl_Integer$();
-        var s$7 = this$52.repr$1;
-        var lastUpdatedOpt = new $c_s_Some().init___O(new $c_Lcoursier_core_Versions$DateTime().init___I__I__I__I__I__I(jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, this$54.parseInt__T__I__I(s$7, 10)))
-      };
-      var this$55 = new $c_Lscalaz_$bslash$div$minus().init___O(new $c_T2().init___O__O(versions, lastUpdatedOpt))
-    } else if ($is_Lscalaz_$minus$bslash$div(this$5)) {
-      var x3 = $as_Lscalaz_$minus$bslash$div(this$5);
-      var this$55 = x3
-    } else {
-      var this$55;
-      throw new $c_s_MatchError().init___O(this$5)
-    };
-    if ($is_Lscalaz_$bslash$div$minus(this$55)) {
-      var x2$2 = $as_Lscalaz_$bslash$div$minus(this$55);
-      var a$3 = x2$2.b$2;
-      var x$59 = $as_T2(a$3);
-      if ((x$59 !== null)) {
-        var versions$1 = $as_sc_Seq(x$59.$$und1__O());
-        var lastUpdatedOpt$1 = $as_s_Option(x$59.$$und2__O());
-        var jsx$10 = new $c_Lcoursier_core_Versions().init___T__T__sci_List__s_Option(latest, release, versions$1.toList__sci_List(), lastUpdatedOpt$1)
-      } else {
-        var jsx$10;
-        throw new $c_s_MatchError().init___O(x$59)
-      };
-      return new $c_Lscalaz_$bslash$div$minus().init___O(jsx$10)
-    } else if ($is_Lscalaz_$minus$bslash$div(this$55)) {
-      var x3$1 = $as_Lscalaz_$minus$bslash$div(this$55);
-      return x3$1
-    } else {
-      throw new $c_s_MatchError().init___O(this$55)
-    }
-  } else {
-    throw new $c_s_MatchError().init___O(x$60)
-  }
-});
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63 = (function($$outer) {
+$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64 = (function($$outer) {
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67: 0
-}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67", {
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67: 1,
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lcoursier_core_Xml$Node__T5($as_Lcoursier_core_Xml$Node(v1))
+});
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype.apply__Lcoursier_core_Xml$Node__T5 = (function(xmlVersioning) {
+  var this$1 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "latest", "Latest version");
+  if ($is_Lscalaz_$minus$bslash$div(this$1)) {
+    var jsx$1 = ""
+  } else if ($is_Lscalaz_$bslash$div$minus(this$1)) {
+    var x4 = $as_Lscalaz_$bslash$div$minus(this$1);
+    var b = x4.b$2;
+    var jsx$1 = b
+  } else {
+    var jsx$1;
+    throw new $c_s_MatchError().init___O(this$1)
+  };
+  var latest = $as_T(jsx$1);
+  var this$2 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "release", "Release version");
+  if ($is_Lscalaz_$minus$bslash$div(this$2)) {
+    var jsx$2 = ""
+  } else if ($is_Lscalaz_$bslash$div$minus(this$2)) {
+    var x4$1 = $as_Lscalaz_$bslash$div$minus(this$2);
+    var b$1 = x4$1.b$2;
+    var jsx$2 = b$1
+  } else {
+    var jsx$2;
+    throw new $c_s_MatchError().init___O(this$2)
+  };
+  var release = $as_T(jsx$2);
+  var this$3 = xmlVersioning.child__sc_Seq().find__F1__s_Option(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$55$2) {
+    var x$55 = $as_Lcoursier_core_Xml$Node(x$55$2);
+    return (x$55.label__T() === "versions")
+  })));
+  var f = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67(this);
+  if (this$3.isEmpty__Z()) {
+    var versionsOpt = $m_s_None$()
+  } else {
+    var v1 = this$3.get__O();
+    var versionsOpt = new $c_s_Some().init___O(f.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1)))
+  };
+  var this$4 = $m_Lcoursier_core_Xml$().coursier$core$Xml$$text__Lcoursier_core_Xml$Node__T__T__Lscalaz_$bslash$div(xmlVersioning, "lastUpdated", "Last update date and time").toOption__s_Option();
+  if (this$4.isEmpty__Z()) {
+    var lastUpdatedOpt = $m_s_None$()
+  } else {
+    var arg1 = this$4.get__O();
+    var s = $as_T(arg1);
+    var lastUpdatedOpt = $m_Lcoursier_core_Xml$().parseDateTime__T__s_Option(s)
+  };
+  return new $c_T5().init___O__O__O__O__O(xmlVersioning, latest, release, versionsOpt, lastUpdatedOpt)
+});
+var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67: 0
+}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67", {
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype;
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype.apply__O__O = (function(v1) {
+$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Xml$Node__sc_Seq($as_Lcoursier_core_Xml$Node(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67 = (function($$outer) {
-  return this
-});
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$55) {
-  var jsx$2 = $as_sc_TraversableLike(x$55.child__sc_Seq().filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$56$2) {
-    var x$56 = $as_Lcoursier_core_Xml$Node(x$56$2);
-    return (x$56.label__T() === "version")
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype.apply__Lcoursier_core_Xml$Node__sc_Seq = (function(x$56) {
+  var jsx$2 = $as_sc_TraversableLike(x$56.child__sc_Seq().filter__F1__O(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(x$57$2) {
+    var x$57 = $as_Lcoursier_core_Xml$Node(x$57$2);
+    return (x$57.label__T() === "version")
   }))));
-  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69(this);
+  var jsx$1 = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41(this);
   var this$1 = $m_sc_Seq$();
   return $as_sc_Seq(jsx$2.flatMap__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2))
 });
-var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69: 0
-}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69", {
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69: 1,
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67 = (function($$outer) {
+  return this
+});
+var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41: 0
+}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41", {
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69 = (function() {
   $c_sr_AbstractFunction1.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype = new $h_sr_AbstractFunction1();
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype = new $h_sr_AbstractFunction1();
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype;
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype.apply__Lcoursier_core_Xml$Node__sc_Iterable = (function(x$57) {
-  var this$1 = x$57.child__sc_Seq();
-  var pf = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71(this);
+$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype.apply__Lcoursier_core_Xml$Node__sc_Iterable = (function(x$58) {
+  var this$1 = x$58.child__sc_Seq();
+  var pf = new $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4().init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69(this);
   var xo = $s_sc_TraversableOnce$class__collectFirst__sc_TraversableOnce__s_PartialFunction__s_Option(this$1, pf);
   return xo.toList__sci_List()
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype.apply__O__O = (function(v1) {
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype.apply__O__O = (function(v1) {
   return this.apply__Lcoursier_core_Xml$Node__sc_Iterable($as_Lcoursier_core_Xml$Node(v1))
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69 = (function($$outer) {
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41 = (function($$outer) {
   return this
 });
-var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71: 0
-}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71", {
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71: 1,
+var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69: 0
+}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69", {
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69;
 /** @constructor */
 var $c_Lcoursier_core_compatibility_package$$anonfun$1 = (function() {
   $c_sr_AbstractFunction1.call(this)
@@ -33869,6 +34920,15 @@ $c_Lscalaz_$bslash$div.prototype.traverse__F1__Lscalaz_Applicative__O = (functio
     var jsx$1 = g.apply__O__O(b);
     var this$3 = $m_Lscalaz_$bslash$div$();
     return evidence$2.map__O__F1__O(jsx$1, $s_Lscalaz_DisjunctionFunctions$class__right__Lscalaz_DisjunctionFunctions__F1(this$3))
+  } else {
+    throw new $c_s_MatchError().init___O(this)
+  }
+});
+$c_Lscalaz_$bslash$div.prototype.isLeft__Z = (function() {
+  if ($is_Lscalaz_$minus$bslash$div(this)) {
+    return true
+  } else if ($is_Lscalaz_$bslash$div$minus(this)) {
+    return false
   } else {
     throw new $c_s_MatchError().init___O(this)
   }
@@ -39559,35 +40619,35 @@ var $d_Lcoursier_core_Xml$$anonfun$coursier$core$Xml$$text$2$$anonfun$apply$1 = 
 });
 $c_Lcoursier_core_Xml$$anonfun$coursier$core$Xml$$text$2$$anonfun$apply$1.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$coursier$core$Xml$$text$2$$anonfun$apply$1;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2 = (function() {
   $c_sr_AbstractPartialFunction.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype = new $h_sr_AbstractPartialFunction();
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype;
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20 = (function($$outer) {
+$h_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype = $c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.init___Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21 = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.isDefinedAt__O__Z = (function(x) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.isDefinedAt__O__Z = (function(x) {
   return this.isDefinedAt__Lcoursier_core_Xml$Node__Z($as_Lcoursier_core_Xml$Node(x))
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
   return this.applyOrElse__Lcoursier_core_Xml$Node__F1__O($as_Lcoursier_core_Xml$Node(x), default$2)
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x2) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x2) {
   return x2.isElement__Z()
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x2, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x2, default$2) {
   return (x2.isElement__Z() ? x2 : default$2.apply__O__O(x2))
 });
-var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2: 0
-}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2", {
-  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2: 1,
+var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2: 0
+}, false, "coursier.core.Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2", {
+  Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
@@ -39595,37 +40655,37 @@ var $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anon
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$20$$anonfun$20$$anonfun$apply$2;
+$c_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$profile$3$$anonfun$apply$21$$anonfun$21$$anonfun$apply$2;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3 = (function() {
   $c_sr_AbstractPartialFunction.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype = new $h_sr_AbstractPartialFunction();
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype;
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32 = (function($$outer) {
+$h_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype = $c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.init___Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33 = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.isDefinedAt__O__Z = (function(x) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.isDefinedAt__O__Z = (function(x) {
   return this.isDefinedAt__Lcoursier_core_Xml$Node__Z($as_Lcoursier_core_Xml$Node(x))
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
   return this.applyOrElse__Lcoursier_core_Xml$Node__F1__O($as_Lcoursier_core_Xml$Node(x), default$2)
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x3) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x3) {
   return x3.isElement__Z()
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x3, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x3, default$2) {
   return (x3.isElement__Z() ? x3 : default$2.apply__O__O(x3))
 });
-var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3: 0
-}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3", {
-  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3: 1,
+var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3: 0
+}, false, "coursier.core.Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3", {
+  Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
@@ -39633,35 +40693,120 @@ var $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$29$$anonfun$apply$34$$anonfun$apply$36$$anonfun$apply$42$$anonfun$apply$47$$anonfun$apply$50$$anonfun$apply$53$$anonfun$32$$anonfun$apply$3;
+$c_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$project$2$$anonfun$apply$30$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$43$$anonfun$apply$48$$anonfun$apply$51$$anonfun$apply$54$$anonfun$33$$anonfun$apply$3;
 /** @constructor */
-var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4 = (function() {
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1 = (function() {
   $c_sr_AbstractPartialFunction.call(this)
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype = new $h_sr_AbstractPartialFunction();
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1;
 /** @constructor */
-var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4 = (function() {
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1 = (function() {
   /*<skip>*/
 });
-$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype;
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71 = (function($$outer) {
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77 = (function($$outer) {
   return this
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.isDefinedAt__O__Z = (function(x) {
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.isDefinedAt__T__Z = (function(x6) {
+  return ((x6 === "true") || (x6 === "false"))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.applyOrElse__T__F1__O = (function(x6, default$2) {
+  return ((x6 === "true") || ((x6 === "false") ? false : default$2.apply__O__O(x6)))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__T__Z($as_T(x))
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+  return this.applyOrElse__T__F1__O($as_T(x), default$2)
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$1;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5 = (function() {
+  $c_sr_AbstractPartialFunction.call(this)
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype = $c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype;
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.init___Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.isDefinedAt__O__Z = (function(x) {
   return this.isDefinedAt__Lcoursier_core_Xml$Node__Z($as_Lcoursier_core_Xml$Node(x))
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
   return this.applyOrElse__Lcoursier_core_Xml$Node__F1__O($as_Lcoursier_core_Xml$Node(x), default$2)
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x4) {
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x5) {
+  var o7 = $m_Lcoursier_core_Xml$Text$().unapply__Lcoursier_core_Xml$Node__s_Option(x5);
+  if ((!o7.isEmpty__Z())) {
+    return true
+  };
+  return false
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x5, default$2) {
+  var o7 = $m_Lcoursier_core_Xml$Text$().unapply__Lcoursier_core_Xml$Node__s_Option(x5);
+  if ((!o7.isEmpty__Z())) {
+    var t = $as_T(o7.get__O());
+    return t
+  };
+  return default$2.apply__O__O(x5)
+});
+var $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5: 0
+}, false, "coursier.core.Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5", {
+  Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5: 1,
+  sr_AbstractPartialFunction: 1,
+  O: 1,
+  F1: 1,
+  s_PartialFunction: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$snapshotVersioning$1$$anonfun$apply$74$$anonfun$apply$77$$anonfun$47$$anonfun$apply$79$$anonfun$apply$5;
+/** @constructor */
+var $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4 = (function() {
+  $c_sr_AbstractPartialFunction.call(this)
+});
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype = new $h_sr_AbstractPartialFunction();
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.constructor = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4;
+/** @constructor */
+var $h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4 = (function() {
+  /*<skip>*/
+});
+$h_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype = $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.init___Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69 = (function($$outer) {
+  return this
+});
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.isDefinedAt__O__Z = (function(x) {
+  return this.isDefinedAt__Lcoursier_core_Xml$Node__Z($as_Lcoursier_core_Xml$Node(x))
+});
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+  return this.applyOrElse__Lcoursier_core_Xml$Node__F1__O($as_Lcoursier_core_Xml$Node(x), default$2)
+});
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.isDefinedAt__Lcoursier_core_Xml$Node__Z = (function(x4) {
   var o7 = $m_Lcoursier_core_Xml$Text$().unapply__Lcoursier_core_Xml$Node__s_Option(x4);
   if ((!o7.isEmpty__Z())) {
     return true
   };
   return false
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x4, default$2) {
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.applyOrElse__Lcoursier_core_Xml$Node__F1__O = (function(x4, default$2) {
   var o7 = $m_Lcoursier_core_Xml$Text$().unapply__Lcoursier_core_Xml$Node__s_Option(x4);
   if ((!o7.isEmpty__Z())) {
     var t = $as_T(o7.get__O());
@@ -39669,10 +40814,10 @@ $c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$a
   };
   return default$2.apply__O__O(x4)
 });
-var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4 = new $TypeData().initClass({
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4: 0
-}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4", {
-  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4: 1,
+var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4 = new $TypeData().initClass({
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4: 0
+}, false, "coursier.core.Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4", {
+  Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
@@ -39680,7 +40825,7 @@ var $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$6
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$63$$anonfun$apply$67$$anonfun$apply$69$$anonfun$apply$71$$anonfun$apply$4;
+$c_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4.prototype.$classData = $d_Lcoursier_core_Xml$$anonfun$versions$1$$anonfun$apply$64$$anonfun$apply$67$$anonfun$41$$anonfun$apply$69$$anonfun$apply$4;
 /** @constructor */
 var $c_Ljapgolly_scalajs_react_vdom_HtmlStylesMisc$AutoStyle = (function() {
   $c_Ljapgolly_scalajs_react_vdom_Style.call(this)
@@ -41340,6 +42485,93 @@ var $d_Lscalaz_std_math_BigInts$$anon$2 = new $TypeData().initClass({
 });
 $c_Lscalaz_std_math_BigInts$$anon$2.prototype.$classData = $d_Lscalaz_std_math_BigInts$$anon$2;
 /** @constructor */
+var $c_T10 = (function() {
+  $c_O.call(this);
+  this.$$und1$1 = null;
+  this.$$und2$1 = null;
+  this.$$und3$1 = null;
+  this.$$und4$1 = null;
+  this.$$und5$1 = null;
+  this.$$und6$1 = null;
+  this.$$und7$1 = null;
+  this.$$und8$1 = null;
+  this.$$und9$1 = null;
+  this.$$und10$1 = null
+});
+$c_T10.prototype = new $h_O();
+$c_T10.prototype.constructor = $c_T10;
+/** @constructor */
+var $h_T10 = (function() {
+  /*<skip>*/
+});
+$h_T10.prototype = $c_T10.prototype;
+$c_T10.prototype.productPrefix__T = (function() {
+  return "Tuple10"
+});
+$c_T10.prototype.productArity__I = (function() {
+  return 10
+});
+$c_T10.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_T10(x$1)) {
+    var Tuple10$1 = $as_T10(x$1);
+    return ((((((((($m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und1$1, Tuple10$1.$$und1$1) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und2$1, Tuple10$1.$$und2$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und3$1, Tuple10$1.$$und3$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und4$1, Tuple10$1.$$und4$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und5$1, Tuple10$1.$$und5$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und6$1, Tuple10$1.$$und6$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und7$1, Tuple10$1.$$und7$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und8$1, Tuple10$1.$$und8$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und9$1, Tuple10$1.$$und9$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und10$1, Tuple10$1.$$und10$1))
+  } else {
+    return false
+  }
+});
+$c_T10.prototype.productElement__I__O = (function(n) {
+  return $s_s_Product10$class__productElement__s_Product10__I__O(this, n)
+});
+$c_T10.prototype.toString__T = (function() {
+  return (((((((((((((((((((("(" + this.$$und1$1) + ",") + this.$$und2$1) + ",") + this.$$und3$1) + ",") + this.$$und4$1) + ",") + this.$$und5$1) + ",") + this.$$und6$1) + ",") + this.$$und7$1) + ",") + this.$$und8$1) + ",") + this.$$und9$1) + ",") + this.$$und10$1) + ")")
+});
+$c_T10.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_T10.prototype.init___O__O__O__O__O__O__O__O__O__O = (function(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10) {
+  this.$$und1$1 = _1;
+  this.$$und2$1 = _2;
+  this.$$und3$1 = _3;
+  this.$$und4$1 = _4;
+  this.$$und5$1 = _5;
+  this.$$und6$1 = _6;
+  this.$$und7$1 = _7;
+  this.$$und8$1 = _8;
+  this.$$und9$1 = _9;
+  this.$$und10$1 = _10;
+  return this
+});
+$c_T10.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+var $is_T10 = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.T10)))
+});
+var $as_T10 = (function(obj) {
+  return (($is_T10(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Tuple10"))
+});
+var $isArrayOf_T10 = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.T10)))
+});
+var $asArrayOf_T10 = (function(obj, depth) {
+  return (($isArrayOf_T10(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Tuple10;", depth))
+});
+var $d_T10 = new $TypeData().initClass({
+  T10: 0
+}, false, "scala.Tuple10", {
+  T10: 1,
+  O: 1,
+  s_Product10: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_T10.prototype.$classData = $d_T10;
+/** @constructor */
 var $c_T2 = (function() {
   $c_O.call(this);
   this.$$und1$f = null;
@@ -41570,6 +42802,83 @@ var $d_T4 = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_T4.prototype.$classData = $d_T4;
+/** @constructor */
+var $c_T5 = (function() {
+  $c_O.call(this);
+  this.$$und1$1 = null;
+  this.$$und2$1 = null;
+  this.$$und3$1 = null;
+  this.$$und4$1 = null;
+  this.$$und5$1 = null
+});
+$c_T5.prototype = new $h_O();
+$c_T5.prototype.constructor = $c_T5;
+/** @constructor */
+var $h_T5 = (function() {
+  /*<skip>*/
+});
+$h_T5.prototype = $c_T5.prototype;
+$c_T5.prototype.productPrefix__T = (function() {
+  return "Tuple5"
+});
+$c_T5.prototype.productArity__I = (function() {
+  return 5
+});
+$c_T5.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_T5(x$1)) {
+    var Tuple5$1 = $as_T5(x$1);
+    return (((($m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und1$1, Tuple5$1.$$und1$1) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und2$1, Tuple5$1.$$und2$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und3$1, Tuple5$1.$$und3$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und4$1, Tuple5$1.$$und4$1)) && $m_sr_BoxesRunTime$().equals__O__O__Z(this.$$und5$1, Tuple5$1.$$und5$1))
+  } else {
+    return false
+  }
+});
+$c_T5.prototype.productElement__I__O = (function(n) {
+  return $s_s_Product5$class__productElement__s_Product5__I__O(this, n)
+});
+$c_T5.prototype.toString__T = (function() {
+  return (((((((((("(" + this.$$und1$1) + ",") + this.$$und2$1) + ",") + this.$$und3$1) + ",") + this.$$und4$1) + ",") + this.$$und5$1) + ")")
+});
+$c_T5.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_T5.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+$c_T5.prototype.init___O__O__O__O__O = (function(_1, _2, _3, _4, _5) {
+  this.$$und1$1 = _1;
+  this.$$und2$1 = _2;
+  this.$$und3$1 = _3;
+  this.$$und4$1 = _4;
+  this.$$und5$1 = _5;
+  return this
+});
+var $is_T5 = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.T5)))
+});
+var $as_T5 = (function(obj) {
+  return (($is_T5(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Tuple5"))
+});
+var $isArrayOf_T5 = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.T5)))
+});
+var $asArrayOf_T5 = (function(obj, depth) {
+  return (($isArrayOf_T5(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Tuple5;", depth))
+});
+var $d_T5 = new $TypeData().initClass({
+  T5: 0
+}, false, "scala.Tuple5", {
+  T5: 1,
+  O: 1,
+  s_Product5: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_T5.prototype.$classData = $d_T5;
 /** @constructor */
 var $c_T6 = (function() {
   $c_O.call(this);
@@ -51225,11 +52534,11 @@ $h_sc_AbstractMap.prototype = $c_sc_AbstractMap.prototype;
 $c_sc_AbstractMap.prototype.apply__O__O = (function(key) {
   return $s_sc_MapLike$class__apply__sc_MapLike__O__O(this, key)
 });
-$c_sc_AbstractMap.prototype.runWith__F1__F1 = (function(action) {
-  return $s_s_PartialFunction$class__runWith__s_PartialFunction__F1__F1(this, action)
-});
 $c_sc_AbstractMap.prototype.isEmpty__Z = (function() {
   return $s_sc_MapLike$class__isEmpty__sc_MapLike__Z(this)
+});
+$c_sc_AbstractMap.prototype.runWith__F1__F1 = (function(action) {
+  return $s_s_PartialFunction$class__runWith__s_PartialFunction__F1__F1(this, action)
 });
 $c_sc_AbstractMap.prototype.equals__O__Z = (function(that) {
   return $s_sc_GenMapLike$class__equals__sc_GenMapLike__O__Z(this, that)
@@ -51246,11 +52555,11 @@ $c_sc_AbstractMap.prototype.toBuffer__scm_Buffer = (function() {
 $c_sc_AbstractMap.prototype.valuesIterator__sc_Iterator = (function() {
   return new $c_sc_MapLike$$anon$2().init___sc_MapLike(this)
 });
-$c_sc_AbstractMap.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
-  return $s_sc_MapLike$class__addString__sc_MapLike__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
-});
 $c_sc_AbstractMap.prototype.contains__O__Z = (function(key) {
   return $s_sc_MapLike$class__contains__sc_MapLike__O__Z(this, key)
+});
+$c_sc_AbstractMap.prototype.addString__scm_StringBuilder__T__T__T__scm_StringBuilder = (function(b, start, sep, end) {
+  return $s_sc_MapLike$class__addString__sc_MapLike__scm_StringBuilder__T__T__T__scm_StringBuilder(this, b, start, sep, end)
 });
 $c_sc_AbstractMap.prototype.toSeq__sc_Seq = (function() {
   return $s_sc_MapLike$class__toBuffer__sc_MapLike__scm_Buffer(this)
@@ -51258,19 +52567,19 @@ $c_sc_AbstractMap.prototype.toSeq__sc_Seq = (function() {
 $c_sc_AbstractMap.prototype.isDefinedAt__O__Z = (function(key) {
   return this.contains__O__Z(key)
 });
+$c_sc_AbstractMap.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
+  return $s_s_PartialFunction$class__applyOrElse__s_PartialFunction__O__F1__O(this, x, default$2)
+});
 $c_sc_AbstractMap.prototype.hashCode__I = (function() {
   var this$1 = $m_s_util_hashing_MurmurHash3$();
   var xs = this.seq__sc_Map();
   return this$1.unorderedHash__sc_TraversableOnce__I__I(xs, this$1.mapSeed$2)
 });
-$c_sc_AbstractMap.prototype.applyOrElse__O__F1__O = (function(x, default$2) {
-  return $s_s_PartialFunction$class__applyOrElse__s_PartialFunction__O__F1__O(this, x, default$2)
+$c_sc_AbstractMap.prototype.newBuilder__scm_Builder = (function() {
+  return new $c_scm_MapBuilder().init___sc_GenMap(this.empty__sc_Map())
 });
 $c_sc_AbstractMap.prototype.stringPrefix__T = (function() {
   return "Map"
-});
-$c_sc_AbstractMap.prototype.newBuilder__scm_Builder = (function() {
-  return new $c_scm_MapBuilder().init___sc_GenMap(this.empty__sc_Map())
 });
 /** @constructor */
 var $c_sc_AbstractSet = (function() {
