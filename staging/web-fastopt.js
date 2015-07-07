@@ -18022,13 +18022,7 @@ $c_Lcoursier_core_Resolution$.prototype.defaultProfileActivation__T__Lcoursier_c
   return ((!activation.properties$1.isEmpty__Z()) && activation.properties$1.forall__F1__Z(new $c_Lcoursier_core_Resolution$$anonfun$defaultProfileActivation$1().init___sci_Map(props)))
 });
 $c_Lcoursier_core_Resolution$.prototype.defaultFilter__Lcoursier_core_Dependency__Z = (function(dep) {
-  if ((!dep.optional$1)) {
-    var x = dep.scope$1;
-    var x$2 = $m_Lcoursier_core_Scope$Compile$();
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
+  return (!dep.optional$1)
 });
 var $d_Lcoursier_core_Resolution$ = new $TypeData().initClass({
   Lcoursier_core_Resolution$: 0
