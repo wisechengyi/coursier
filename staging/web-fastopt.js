@@ -4054,12 +4054,10 @@ $c_Lcoursier_web_App$.prototype.init___ = (function() {
   var jsx$1 = $m_sc_Seq$();
   $m_Lcoursier_package$();
   $m_Lcoursier_package$();
-  var ivyLike = false;
-  $m_Lcoursier_package$();
   var changing = $m_s_None$();
   $m_Lcoursier_package$();
   var sbtAttrStub = false;
-  var y = new $c_Lcoursier_maven_MavenRepository().init___T__Z__s_Option__Z("https://repo1.maven.org/maven2/", ivyLike, changing, sbtAttrStub);
+  var y = new $c_Lcoursier_maven_MavenRepository().init___T__s_Option__Z("https://repo1.maven.org/maven2/", changing, sbtAttrStub);
   this.initialState$1 = new $c_Lcoursier_web_State().init___sc_Seq__sc_Seq__Lcoursier_web_ResolutionOptions__s_Option__I__I__Z__Z__sc_Seq(jsx$2, $as_sc_Seq(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("central", y)]))), new $c_Lcoursier_web_ResolutionOptions().init___Z(false), $m_s_None$(), (-1), (-1), false, false, $m_sci_Nil$());
   var c = new $c_Ljapgolly_scalajs_react_ReactComponentB$P().init___T("Coursier").initialState__F0__Ljapgolly_scalajs_react_ReactComponentB$PS(new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
     return $m_Lcoursier_web_App$().initialState$1
@@ -4563,12 +4561,10 @@ $c_Lcoursier_web_Backend.prototype.addRepo__Ljapgolly_scalajs_react_SyntheticEve
   var jsx$2 = state.repositories$1;
   $m_Lcoursier_package$();
   $m_Lcoursier_package$();
-  var ivyLike = false;
-  $m_Lcoursier_package$();
   var changing = $m_s_None$();
   $m_Lcoursier_package$();
   var sbtAttrStub = false;
-  var y = new $c_Lcoursier_maven_MavenRepository().init___T__Z__s_Option__Z("", ivyLike, changing, sbtAttrStub);
+  var y = new $c_Lcoursier_maven_MavenRepository().init___T__s_Option__Z("", changing, sbtAttrStub);
   var jsx$1 = new $c_T2().init___O__O("", y);
   var this$10 = $m_sc_Seq$();
   var repositories = $as_sc_Seq(jsx$2.$$colon$plus__O__scg_CanBuildFrom__O(jsx$1, this$10.ReusableCBFInstance$2));
@@ -18355,9 +18351,6 @@ $c_Lcoursier_maven_MavenRepository$.prototype.mavenVersioning__Lcoursier_core_Sn
   } else {
     return $m_s_None$()
   }
-});
-$c_Lcoursier_maven_MavenRepository$.prototype.ivyLikePath__T__T__T__T__T__T__T__sc_Seq = (function(org, dirName, name, version, subDir, baseSuffix, ext) {
-  return $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([org, dirName, version, subDir, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([name, baseSuffix, ext]))])))
 });
 $c_Lcoursier_maven_MavenRepository$.prototype.dirModuleName__Lcoursier_core_Module__Z__T = (function(module, sbtAttrStub) {
   if (sbtAttrStub) {
@@ -32219,43 +32212,41 @@ $c_Lcoursier_web_App$$anonfun$22.prototype.coursier$web$App$$anonfun$$depItem$1_
         var source = $as_Lcoursier_core_Artifact$Source(p3.$$und1__O());
         if ($is_Lcoursier_maven_MavenSource(source)) {
           var x4 = $as_Lcoursier_maven_MavenSource(source);
-          if ((!x4.ivyLike$1)) {
-            var version0 = $as_T((finalVersionOpt.isEmpty__Z() ? dep.version$1 : finalVersionOpt.get__O()));
-            var this$33 = new $c_sci_StringOps().init___T(dep.module$1.organization$1);
-            var xs$3 = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$33, 46);
-            var this$37 = new $c_scm_WrappedArray$ofRef().init___AO(xs$3);
-            var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.name$1, version0, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.name$1, version0]))]));
-            var this$36 = $m_sc_Seq$();
-            var bf$1 = this$36.ReusableCBFInstance$2;
-            var relPath = $as_sc_Seq($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$37, that, bf$1));
-            var root = x4.root$1;
-            var jsx$9 = $m_sc_Seq$();
-            var jsx$8 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
-            var this$41 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).href$1;
-            var v$3 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([root, relPath.mkString__T__T("/")]));
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-            var jsx$7 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$41, v$3, ev);
-            var jsx$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-            var jsx$5 = jsx$8.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("label label-info", av$1), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "POM")))]))]));
-            var jsx$4 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
-            var this$51 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).href$1;
-            var v$4 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".jar"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([root, relPath.mkString__T__T("/")]));
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-            var jsx$3 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$51, v$4, ev$1);
-            var jsx$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
-            $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
-            var av$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-            var jsx$1 = $as_sc_Seq(jsx$9.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, jsx$4.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, jsx$2.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("label label-info", av$2), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "JAR")))]))]))])));
-            break matchEnd6
-          }
+          var version0 = $as_T((finalVersionOpt.isEmpty__Z() ? dep.version$1 : finalVersionOpt.get__O()));
+          var this$33 = new $c_sci_StringOps().init___T(dep.module$1.organization$1);
+          var xs$3 = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$33, 46);
+          var this$37 = new $c_scm_WrappedArray$ofRef().init___AO(xs$3);
+          var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.name$1, version0, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([dep.module$1.name$1, version0]))]));
+          var this$36 = $m_sc_Seq$();
+          var bf$1 = this$36.ReusableCBFInstance$2;
+          var relPath = $as_sc_Seq($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$37, that, bf$1));
+          var root = x4.root$1;
+          var jsx$9 = $m_sc_Seq$();
+          var jsx$8 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+          var this$41 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).href$1;
+          var v$3 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([root, relPath.mkString__T__T("/")]));
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          var ev = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+          var jsx$7 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$41, v$3, ev);
+          var jsx$6 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          var av$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+          var jsx$5 = jsx$8.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, jsx$6.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("label label-info", av$1), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "POM")))]))]));
+          var jsx$4 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).a$1;
+          var this$51 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).href$1;
+          var v$4 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "", ".jar"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([root, relPath.mkString__T__T("/")]));
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          var ev$1 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+          var jsx$3 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$51, v$4, ev$1);
+          var jsx$2 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).span$1;
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
+          $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
+          var av$2 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
+          var jsx$1 = $as_sc_Seq(jsx$9.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5, jsx$4.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, jsx$2.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("label label-info", av$2), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "JAR")))]))]))])));
+          break matchEnd6
         }
       }
     };
@@ -33188,12 +33179,10 @@ $c_Lcoursier_web_App$$anonfun$27.prototype.apply__T3__Ljapgolly_scalajs_react_Re
     var jsx$7 = item$1.$$und1__O();
     $as_Lcoursier_maven_MavenRepository(item$1.$$und2__O());
     var this$105 = $as_Lcoursier_maven_MavenRepository(item$1.$$und2__O());
-    var ivyLike = this$105.ivyLike$1;
+    var changing = this$105.changing$1;
     var this$106 = $as_Lcoursier_maven_MavenRepository(item$1.$$und2__O());
-    var changing = this$106.changing$1;
-    var this$107 = $as_Lcoursier_maven_MavenRepository(item$1.$$und2__O());
-    var sbtAttrStub = this$107.sbtAttrStub$1;
-    return new $c_T2().init___O__O(jsx$7, new $c_Lcoursier_maven_MavenRepository().init___T__Z__s_Option__Z(value$1, ivyLike, changing, sbtAttrStub))
+    var sbtAttrStub = this$106.sbtAttrStub$1;
+    return new $c_T2().init___O__O(jsx$7, new $c_Lcoursier_maven_MavenRepository().init___T__s_Option__Z(value$1, changing, sbtAttrStub))
   }));
   var eventHandler$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(repoIdx$2$2, backend$4$1, eta$0$5$1) {
     return (function(e$2$1) {
@@ -33207,11 +33196,11 @@ $c_Lcoursier_web_App$$anonfun$27.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   })(eventHandler$1);
   var ev$16 = $m_Ljapgolly_scalajs_react_vdom_Implicits$().$$undreact$undattrJsFn$2;
   var jsx$8 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue($$this$1, v$1, ev$16);
-  var this$112 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).value$1;
+  var this$111 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).value$1;
   var v$2 = repo$2.root$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var ev$17 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$6 = jsx$16.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$15, jsx$13, jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$112, v$2, ev$17)]))]));
+  var jsx$6 = jsx$16.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$15, jsx$13, jsx$12.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$11, jsx$10, jsx$9, jsx$8, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$111, v$2, ev$17)]))]));
   var jsx$5 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).div$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
@@ -33219,19 +33208,19 @@ $c_Lcoursier_web_App$$anonfun$27.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   var av$11 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
   var jsx$4 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("modal-footer", av$11);
   var jsx$3 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Tags$()).button$1;
-  var this$120 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
+  var this$119 = ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), $m_Ljapgolly_scalajs_react_vdom_package$Attrs$()).type$1;
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var ev$18 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$120, "submit", ev$18);
+  var jsx$2 = new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$119, "submit", ev$18);
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   $m_Ljapgolly_scalajs_react_vdom_package$Attrs$();
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var av$12 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
   var jsx$1 = new $c_Ljapgolly_scalajs_react_vdom_ClassNameAttr$$anon$2().init___O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue("btn btn-primary", av$12);
-  var this$125 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-dismiss");
+  var this$124 = new $c_Ljapgolly_scalajs_react_vdom_Attr().init___T("data-dismiss");
   $m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$();
   var ev$19 = $m_Ljapgolly_scalajs_react_vdom_Scalatags$().stringAttrX$1;
-  var t = jsx$51.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$50, jsx$49, jsx$48, jsx$47, jsx$46.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$45, jsx$44.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$43, jsx$30, jsx$29.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$28, jsx$27.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$6, jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$125, "modal", ev$19), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Done")))]))]))]))]))]))]))]));
+  var t = jsx$51.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$50, jsx$49, jsx$48, jsx$47, jsx$46.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$45, jsx$44.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$43, jsx$30, jsx$29.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$28, jsx$27.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$17, jsx$6, jsx$5.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3.apply__sc_Seq__Ljapgolly_scalajs_react_vdom_ReactTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, jsx$1, new $c_Ljapgolly_scalajs_react_vdom_Scalatags$AttrPair().init___Ljapgolly_scalajs_react_vdom_Attr__O__Ljapgolly_scalajs_react_vdom_Scalatags$AttrValue(this$124, "modal", ev$19), ($m_Ljapgolly_scalajs_react_vdom_package$prefix$und$less$up$(), new $c_Ljapgolly_scalajs_react_vdom_Scalatags$ReactNodeFrag().init___Ljapgolly_scalajs_react_ReactNode(($m_Ljapgolly_scalajs_react_package$(), "Done")))]))]))]))]))]))]))]));
   return t.render__Ljapgolly_scalajs_react_ReactElement()
 });
 var $d_Lcoursier_web_App$$anonfun$27 = new $TypeData().initClass({
@@ -33512,12 +33501,10 @@ $c_Lcoursier_web_App$$anonfun$28.prototype.apply__T3__Ljapgolly_scalajs_react_Re
   if (this$51.isEmpty__Z()) {
     $m_Lcoursier_package$();
     $m_Lcoursier_package$();
-    var ivyLike = false;
-    $m_Lcoursier_package$();
     var changing = $m_s_None$();
     $m_Lcoursier_package$();
     var sbtAttrStub = false;
-    var y = new $c_Lcoursier_maven_MavenRepository().init___T__Z__s_Option__Z("", ivyLike, changing, sbtAttrStub);
+    var y = new $c_Lcoursier_maven_MavenRepository().init___T__s_Option__Z("", changing, sbtAttrStub);
     var jsx$1 = new $c_T2().init___O__O("", y)
   } else {
     var jsx$1 = this$51.get__O()
@@ -41322,7 +41309,6 @@ $c_Lcoursier_core_VersionConstraint$Preferred.prototype.$classData = $d_Lcoursie
 function $c_Lcoursier_maven_MavenRepository() {
   $c_O.call(this);
   this.root$1 = null;
-  this.ivyLike$1 = false;
   this.changing$1 = null;
   this.sbtAttrStub$1 = false;
   this.root0$1 = null;
@@ -41359,35 +41345,33 @@ $c_Lcoursier_maven_MavenRepository.prototype.versions__Lcoursier_core_Module__F1
   return new $c_Lscalaz_EitherT().init___O(jsx$1)
 });
 $c_Lcoursier_maven_MavenRepository.prototype.productArity__I = (function() {
-  return 4
+  return 3
 });
 $c_Lcoursier_maven_MavenRepository.prototype.snapshotVersioningArtifact__Lcoursier_core_Module__T__s_Option = (function(module, version) {
-  if (this.ivyLike$1) {
-    return $m_s_None$()
-  } else {
-    var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
-    var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
-    var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
-    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), version, "maven-metadata.xml"]));
-    var this$5 = $m_sc_Seq$();
-    var bf = this$5.ReusableCBFInstance$2;
-    var jsx$2 = $as_sc_TraversableLike($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
-    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
-      var s = $as_T(s$2);
-      return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
-    }));
-    var this$7 = $m_sc_Seq$();
-    var path = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2));
-    var artifact = $m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact($m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + this.root0$1) + path.mkString__T__T("/")), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""), true)));
-    return new $c_s_Some().init___O(artifact)
-  }
+  var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
+  var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
+  var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
+  var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), version, "maven-metadata.xml"]));
+  var this$5 = $m_sc_Seq$();
+  var bf = this$5.ReusableCBFInstance$2;
+  var path = $as_sc_Seq($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
+  var jsx$4 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$3 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$2 = this.root0$1;
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
+    var s = $as_T(s$2);
+    return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
+  }));
+  var this$7 = $m_sc_Seq$();
+  var artifact = jsx$4.withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(jsx$3.withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + jsx$2) + $as_sc_TraversableOnce(path.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2)).mkString__T__T("/")), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""), true)));
+  return new $c_s_Some().init___O(artifact)
 });
 $c_Lcoursier_maven_MavenRepository.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
   } else if ($is_Lcoursier_maven_MavenRepository(x$1)) {
     var MavenRepository$1 = $as_Lcoursier_maven_MavenRepository(x$1);
-    if (((this.root$1 === MavenRepository$1.root$1) && (this.ivyLike$1 === MavenRepository$1.ivyLike$1))) {
+    if ((this.root$1 === MavenRepository$1.root$1)) {
       var x = this.changing$1;
       var x$2 = MavenRepository$1.changing$1;
       var jsx$1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
@@ -41410,14 +41394,10 @@ $c_Lcoursier_maven_MavenRepository.prototype.productElement__I__O = (function(x$
       break
     }
     case 1: {
-      return this.ivyLike$1;
-      break
-    }
-    case 2: {
       return this.changing$1;
       break
     }
-    case 3: {
+    case 2: {
       return this.sbtAttrStub$1;
       break
     }
@@ -41426,26 +41406,32 @@ $c_Lcoursier_maven_MavenRepository.prototype.productElement__I__O = (function(x$
     }
   }
 });
+$c_Lcoursier_maven_MavenRepository.prototype.init___T__s_Option__Z = (function(root, changing, sbtAttrStub) {
+  this.root$1 = root;
+  this.changing$1 = changing;
+  this.sbtAttrStub$1 = sbtAttrStub;
+  this.root0$1 = ($m_sjsr_RuntimeString$().endsWith__T__T__Z(root, "/") ? root : (root + "/"));
+  this.source$1 = new $c_Lcoursier_maven_MavenSource().init___T__s_Option__Z(this.root0$1, changing, sbtAttrStub);
+  return this
+});
 $c_Lcoursier_maven_MavenRepository.prototype.versionsArtifact__Lcoursier_core_Module__s_Option = (function(module) {
-  if (this.ivyLike$1) {
-    return $m_s_None$()
-  } else {
-    var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
-    var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
-    var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
-    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), "maven-metadata.xml"]));
-    var this$5 = $m_sc_Seq$();
-    var bf = this$5.ReusableCBFInstance$2;
-    var jsx$2 = $as_sc_TraversableLike($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
-    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
-      var s = $as_T(s$2);
-      return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
-    }));
-    var this$7 = $m_sc_Seq$();
-    var path = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2));
-    var artifact = $m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact($m_Lcoursier_core_Repository$ArtifactExtensions$().withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + this.root0$1) + path.mkString__T__T("/")), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""), true)));
-    return new $c_s_Some().init___O(artifact)
-  }
+  var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
+  var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
+  var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
+  var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), "maven-metadata.xml"]));
+  var this$5 = $m_sc_Seq$();
+  var bf = this$5.ReusableCBFInstance$2;
+  var path = $as_sc_Seq($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
+  var jsx$4 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$3 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$2 = this.root0$1;
+  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
+    var s = $as_T(s$2);
+    return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
+  }));
+  var this$7 = $m_sc_Seq$();
+  var artifact = jsx$4.withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(jsx$3.withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + jsx$2) + $as_sc_TraversableOnce(path.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2)).mkString__T__T("/")), $m_sci_Map$EmptyMap$(), $m_sci_Map$EmptyMap$(), new $c_Lcoursier_core_Attributes().init___T__T("pom", ""), true)));
+  return new $c_s_Some().init___O(artifact)
 });
 $c_Lcoursier_maven_MavenRepository.prototype.findVersioning__Lcoursier_core_Module__T__s_Option__F1__Lscalaz_Monad__Lscalaz_EitherT = (function(module, version, versioningValue, fetch, F) {
   return $as_Lscalaz_EitherT(fetch.apply__O__O(this.projectArtifact__Lcoursier_core_Module__T__s_Option__Lcoursier_core_Artifact(module, version, versioningValue))).flatMap__F1__Lscalaz_Monad__Lscalaz_EitherT(new $c_Lcoursier_maven_MavenRepository$$anonfun$findVersioning$1().init___Lcoursier_maven_MavenRepository__Lcoursier_core_Module__Lscalaz_Monad(this, module, F), F)
@@ -41454,33 +41440,27 @@ $c_Lcoursier_maven_MavenRepository.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lcoursier_maven_MavenRepository.prototype.projectArtifact__Lcoursier_core_Module__T__s_Option__Lcoursier_core_Artifact = (function(module, version, versioningValue) {
-  if (this.ivyLike$1) {
-    var jsx$3 = $m_Lcoursier_maven_MavenRepository$().ivyLikePath__T__T__T__T__T__T__T__sc_Seq(module.organization$1, $m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), module.name$1, $as_T((versioningValue.isEmpty__Z() ? version : versioningValue.get__O())), "poms", "", "pom")
-  } else {
-    var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
-    var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
-    var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
-    var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), version, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, (versioningValue.isEmpty__Z() ? version : versioningValue.get__O())]))]));
-    var this$5 = $m_sc_Seq$();
-    var bf = this$5.ReusableCBFInstance$2;
-    var jsx$3 = $s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf)
-  };
-  var jsx$2 = $as_sc_TraversableLike(jsx$3);
-  var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
+  var this$2 = new $c_sci_StringOps().init___T(module.organization$1);
+  var xs = $s_sci_StringLike$class__split__sci_StringLike__C__AT(this$2, 46);
+  var this$6 = new $c_scm_WrappedArray$ofRef().init___AO(xs);
+  var that = $m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcoursier_maven_MavenRepository$().dirModuleName__Lcoursier_core_Module__Z__T(module, this.sbtAttrStub$1), version, new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", "-", ".pom"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([module.name$1, (versioningValue.isEmpty__Z() ? version : versioningValue.get__O())]))]));
+  var this$5 = $m_sc_Seq$();
+  var bf = this$5.ReusableCBFInstance$2;
+  var path = $as_sc_Seq($s_sc_TraversableLike$class__$$plus$plus__sc_TraversableLike__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
+  var jsx$8 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$7 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
+  var jsx$6 = this.root0$1;
+  var jsx$5 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(s$2) {
     var s = $as_T(s$2);
     return $m_Lcoursier_core_compatibility_package$().encodeURIComponent__T__T(s)
   }));
   var this$7 = $m_sc_Seq$();
-  var path = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$7.ReusableCBFInstance$2));
-  var jsx$10 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
-  var jsx$9 = $m_Lcoursier_core_Repository$ArtifactExtensions$();
-  var jsx$8 = this.root0$1;
-  var jsx$7 = path.mkString__T__T("/");
-  var jsx$6 = $m_sci_Map$EmptyMap$();
-  var jsx$5 = $m_sci_Map$EmptyMap$();
-  var jsx$4 = new $c_Lcoursier_core_Attributes().init___T__T("pom", "");
+  var jsx$4 = $as_sc_TraversableOnce(path.map__F1__scg_CanBuildFrom__O(jsx$5, this$7.ReusableCBFInstance$2)).mkString__T__T("/");
+  var jsx$3 = $m_sci_Map$EmptyMap$();
+  var jsx$2 = $m_sci_Map$EmptyMap$();
+  var jsx$1 = new $c_Lcoursier_core_Attributes().init___T__T("pom", "");
   var this$10 = this.changing$1;
-  return jsx$10.withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(jsx$9.withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + jsx$8) + jsx$7), jsx$6, jsx$5, jsx$4, $uZ((this$10.isEmpty__Z() ? ($uI(version["indexOf"]("-SNAPSHOT")) !== (-1)) : this$10.get__O())))))
+  return jsx$8.withDefaultSignature$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(jsx$7.withDefaultChecksums$extension__Lcoursier_core_Artifact__Lcoursier_core_Artifact(new $c_Lcoursier_core_Artifact().init___T__sci_Map__sci_Map__Lcoursier_core_Attributes__Z((("" + jsx$6) + jsx$4), jsx$3, jsx$2, jsx$1, $uZ((this$10.isEmpty__Z() ? ($uI(version["indexOf"]("-SNAPSHOT")) !== (-1)) : this$10.get__O())))))
 });
 $c_Lcoursier_maven_MavenRepository.prototype.find__Lcoursier_core_Module__T__F1__Lscalaz_Monad__Lscalaz_EitherT = (function(module, version, fetch, F) {
   var this$1 = $m_Lcoursier_core_Parse$().versionInterval__T__s_Option(version);
@@ -41535,19 +41515,9 @@ $c_Lcoursier_maven_MavenRepository.prototype.findNoInterval__Lcoursier_core_Modu
 $c_Lcoursier_maven_MavenRepository.prototype.hashCode__I = (function() {
   var acc = (-889275714);
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.root$1));
-  acc = $m_sr_Statics$().mix__I__I__I(acc, (this.ivyLike$1 ? 1231 : 1237));
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.changing$1));
   acc = $m_sr_Statics$().mix__I__I__I(acc, (this.sbtAttrStub$1 ? 1231 : 1237));
-  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 4)
-});
-$c_Lcoursier_maven_MavenRepository.prototype.init___T__Z__s_Option__Z = (function(root, ivyLike, changing, sbtAttrStub) {
-  this.root$1 = root;
-  this.ivyLike$1 = ivyLike;
-  this.changing$1 = changing;
-  this.sbtAttrStub$1 = sbtAttrStub;
-  this.root0$1 = ($m_sjsr_RuntimeString$().endsWith__T__T__Z(root, "/") ? root : (root + "/"));
-  this.source$1 = new $c_Lcoursier_maven_MavenSource().init___T__Z__s_Option__Z(this.root0$1, ivyLike, changing, sbtAttrStub);
-  return this
+  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 3)
 });
 $c_Lcoursier_maven_MavenRepository.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
@@ -41580,7 +41550,6 @@ $c_Lcoursier_maven_MavenRepository.prototype.$classData = $d_Lcoursier_maven_Mav
 function $c_Lcoursier_maven_MavenSource() {
   $c_O.call(this);
   this.root$1 = null;
-  this.ivyLike$1 = false;
   this.changing$1 = null;
   this.sbtAttrStub$1 = false
 }
@@ -41595,14 +41564,14 @@ $c_Lcoursier_maven_MavenSource.prototype.productPrefix__T = (function() {
   return "MavenSource"
 });
 $c_Lcoursier_maven_MavenSource.prototype.productArity__I = (function() {
-  return 4
+  return 3
 });
 $c_Lcoursier_maven_MavenSource.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
   } else if ($is_Lcoursier_maven_MavenSource(x$1)) {
     var MavenSource$1 = $as_Lcoursier_maven_MavenSource(x$1);
-    if (((this.root$1 === MavenSource$1.root$1) && (this.ivyLike$1 === MavenSource$1.ivyLike$1))) {
+    if ((this.root$1 === MavenSource$1.root$1)) {
       var x = this.changing$1;
       var x$2 = MavenSource$1.changing$1;
       var jsx$1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
@@ -41618,6 +41587,12 @@ $c_Lcoursier_maven_MavenSource.prototype.equals__O__Z = (function(x$1) {
     return false
   }
 });
+$c_Lcoursier_maven_MavenSource.prototype.init___T__s_Option__Z = (function(root, changing, sbtAttrStub) {
+  this.root$1 = root;
+  this.changing$1 = changing;
+  this.sbtAttrStub$1 = sbtAttrStub;
+  return this
+});
 $c_Lcoursier_maven_MavenSource.prototype.productElement__I__O = (function(x$1) {
   switch (x$1) {
     case 0: {
@@ -41625,14 +41600,10 @@ $c_Lcoursier_maven_MavenSource.prototype.productElement__I__O = (function(x$1) {
       break
     }
     case 1: {
-      return this.ivyLike$1;
-      break
-    }
-    case 2: {
       return this.changing$1;
       break
     }
-    case 3: {
+    case 2: {
       return this.sbtAttrStub$1;
       break
     }
@@ -41647,17 +41618,9 @@ $c_Lcoursier_maven_MavenSource.prototype.toString__T = (function() {
 $c_Lcoursier_maven_MavenSource.prototype.hashCode__I = (function() {
   var acc = (-889275714);
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.root$1));
-  acc = $m_sr_Statics$().mix__I__I__I(acc, (this.ivyLike$1 ? 1231 : 1237));
   acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.changing$1));
   acc = $m_sr_Statics$().mix__I__I__I(acc, (this.sbtAttrStub$1 ? 1231 : 1237));
-  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 4)
-});
-$c_Lcoursier_maven_MavenSource.prototype.init___T__Z__s_Option__Z = (function(root, ivyLike, changing, sbtAttrStub) {
-  this.root$1 = root;
-  this.ivyLike$1 = ivyLike;
-  this.changing$1 = changing;
-  this.sbtAttrStub$1 = sbtAttrStub;
-  return this
+  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 3)
 });
 $c_Lcoursier_maven_MavenSource.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
