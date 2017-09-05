@@ -142,12 +142,11 @@ lazy val extra = project
   )
 
 lazy val cli = project
+  .enablePlugins(PackPlugin, SbtProguard)
   .dependsOn(coreJvm, cache, extra)
   .settings(
     shared,
     dontPublishIn("2.10", "2.12"),
-    generatePack,
-    proguard,
     coursierPrefix,
     libs ++= {
       if (scalaBinaryVersion.value == "2.11")
@@ -219,6 +218,7 @@ lazy val doc = project
 
 lazy val `sbt-coursier` = project
   .dependsOn(coreJvm, cache, extra)
+  .enablePlugins(ScriptedPlugin)
   .settings(
     plugin,
     utest
@@ -226,6 +226,7 @@ lazy val `sbt-coursier` = project
 
 lazy val `sbt-pgp-coursier` = project
   .dependsOn(`sbt-coursier`)
+  .enablePlugins(ScriptedPlugin)
   .settings(
     plugin,
     libs ++= {
@@ -238,7 +239,7 @@ lazy val `sbt-pgp-coursier` = project
   )
 
 lazy val `sbt-shading` = project
-  .enablePlugins(ShadingPlugin)
+  .enablePlugins(ScriptedPlugin, ShadingPlugin)
   .dependsOn(`sbt-coursier`)
   .settings(
     plugin,
@@ -250,10 +251,10 @@ lazy val `sbt-shading` = project
   )
 
 lazy val `sbt-launcher` = project
+  .enablePlugins(PackPlugin)
   .dependsOn(cache)
   .settings(
     shared,
-    generatePack,
     dontPublishIn("2.10", "2.12"),
     libs ++= {
       if (scalaBinaryVersion.value == "2.11")
@@ -268,9 +269,9 @@ lazy val `sbt-launcher` = project
   )
 
 lazy val `http-server` = project
+  .enablePlugins(PackPlugin)
   .settings(
     shared,
-    generatePack,
     dontPublishIn("2.10", "2.11"),
     libs ++= {
       if (scalaBinaryVersion.value == "2.12")
@@ -406,7 +407,7 @@ lazy val addBootstrapInProguardedJar = {
   import java.nio.charset.StandardCharsets
   import java.nio.file.Files
 
-  ProguardKeys.proguard.in(Proguard) := {
+  proguard.in(Proguard) := {
     val bootstrapJar = packageBin.in(bootstrap).in(Compile).value
     val source = proguardedJar.value
 
@@ -438,16 +439,16 @@ lazy val addBootstrapInProguardedJar = {
   }
 }
 
-lazy val proguardedCli = Seq(
-  ProguardKeys.proguardVersion.in(Proguard) := SharedVersions.proguard,
-  ProguardKeys.options.in(Proguard) ++= Seq(
+lazy val proguardedCli = Seq[Setting[_]](
+  proguardVersion.in(Proguard) := SharedVersions.proguard,
+  proguardOptions.in(Proguard) ++= Seq(
     "-dontwarn",
     "-keep class coursier.cli.Coursier {\n  public static void main(java.lang.String[]);\n}",
     "-keep class coursier.cli.IsolatedClassLoader {\n  public java.lang.String[] getIsolationTargets();\n}",
     "-adaptresourcefilenames **.properties"
   ),
-  javaOptions.in(Proguard, ProguardKeys.proguard) := Seq("-Xmx3172M"),
-  artifactPath.in(Proguard) := ProguardKeys.proguardDirectory.in(Proguard).value / "coursier-standalone.jar",
+  javaOptions.in(Proguard, proguard) := Seq("-Xmx3172M"),
+  artifactPath.in(Proguard) := proguardDirectory.in(Proguard).value / "coursier-standalone.jar",
   artifacts ++= {
     if (scalaBinaryVersion.value == "2.11")
       Seq(proguardedArtifact.value)
@@ -455,12 +456,7 @@ lazy val proguardedCli = Seq(
       Nil
   },
   addBootstrapInProguardedJar,
-  packagedArtifacts ++= {
-    if (scalaBinaryVersion.value == "2.11")
-      Map(proguardedArtifact.value -> proguardedJar.value)
-    else
-      Map()
-  }
+  addProguardedJar
 )
 
 lazy val sharedTestResources = {

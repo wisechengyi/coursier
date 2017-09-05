@@ -77,7 +77,7 @@ object CoursierPlugin extends AutoPlugin {
       IvyXml.writeFiles(currentProject, shadedConfigOpt, ivySbt.value, streams.value.log)
     }).value
 
-  private val pluginIvySnapshotsBase = Resolver.SbtPluginRepositoryRoot.stripSuffix("/") + "/ivy-snapshots"
+  private val pluginIvySnapshotsBase = Resolver.SbtRepositoryRoot.stripSuffix("/") + "/ivy-snapshots"
 
   // allows to get the actual repo list when sbt starts up
   private val hackHack = Seq(

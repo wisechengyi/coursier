@@ -5,19 +5,23 @@ import sbt.Keys._
 object Publish {
 
   lazy val dontPublish = Seq(
-    publish := (),
-    publishLocal := (),
+    publish := {},
+    publishLocal := {},
     publishArtifact := false
   )
 
   def dontPublishIn(sbv: String*) = Seq(
-    publish := {
-      if (!sbv.contains(scalaBinaryVersion.value))
-        publish.value
+    publish := Def.taskDyn {
+      if (sbv.contains(scalaBinaryVersion.value))
+        Def.task(())
+      else
+        publish
     },
-    publishLocal := {
-      if (!sbv.contains(scalaBinaryVersion.value))
-        publishLocal.value
+    publishLocal := Def.taskDyn {
+      if (sbv.contains(scalaBinaryVersion.value))
+        Def.task(())
+      else
+        publishLocal
     },
     publishArtifact := {
       !sbv.contains(scalaBinaryVersion.value) && publishArtifact.value

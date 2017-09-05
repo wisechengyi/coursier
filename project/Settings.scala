@@ -1,13 +1,11 @@
 
 import sbt._
 import sbt.Keys._
-import sbt.ScriptedPlugin._
+import sbt.ScriptedPlugin.autoImport.{sbtLauncher, scriptedBufferLog, ScriptedLaunchConf, scriptedLaunchOpts}
 
 import com.typesafe.sbt.pgp._
-import com.typesafe.sbt.SbtProguard._
+import com.lightbend.sbt.SbtProguard.autoImport.{proguard, Proguard}
 import coursier.ShadingPlugin.autoImport._
-
-import xerial.sbt.Pack.{packAutoSettings, packExcludeArtifactTypes}
 
 import Aliases._
 
@@ -50,7 +48,7 @@ object Settings {
           Seq()
       }
     },
-    javacOptions in Keys.doc := Seq()
+    javacOptions.in(Keys.doc) := Seq()
   )
 
   lazy val shared = javaScalaPluginShared ++ Seq(
@@ -115,8 +113,8 @@ object Settings {
   )
 
   lazy val noTests = Seq(
-    test in Test := (),
-    testOnly in Test := ()
+    test.in(Test) := {},
+    testOnly.in(Test) := {}
   )
 
   lazy val utest = Seq(
@@ -159,18 +157,24 @@ object Settings {
 
     Seq(
       baseDirectory := {
+        val baseDir = baseDirectory.value
+
         if (sbtScalaVersionMatch.value)
-          baseDirectory.value
+          baseDir
         else
-          baseDirectory.value / "target" / "dummy"
+          baseDir / "target" / "dummy"
       },
-      publish := {
+      publish := Def.taskDyn {
         if (sbtScalaVersionMatch.value)
-          publish.value
+          publish
+        else
+          Def.task(())
       },
-      publishLocal := {
+      publishLocal := Def.taskDyn {
         if (sbtScalaVersionMatch.value)
-          publishLocal.value
+          publishLocal
+        else
+          Def.task(())
       },
       publishArtifact := {
         sbtScalaVersionMatch.value && publishArtifact.value
@@ -181,14 +185,13 @@ object Settings {
   lazy val plugin =
     javaScalaPluginShared ++
     divertThingsPlugin ++
-    withScriptedTests ++
     Seq(
       sbtLauncher := {
 
         val rep = update
           .value
-          .configuration(ScriptedPlugin.scriptedLaunchConf.name)
-          .getOrElse(sys.error(s"Configuration ${ScriptedPlugin.scriptedLaunchConf.name} not found"))
+          .configuration(ScriptedLaunchConf)
+          .getOrElse(sys.error(s"Configuration ${ScriptedLaunchConf.name} not found"))
 
         val org = "org.scala-sbt"
         val name = "sbt-launch"
@@ -199,12 +202,12 @@ object Settings {
             modRep.module.organization == org && modRep.module.name == name
           }
           .getOrElse {
-            sys.error(s"Module $org:$name not found in configuration ${ScriptedPlugin.scriptedLaunchConf.name}")
+            sys.error(s"Module $org:$name not found in configuration ${ScriptedLaunchConf.name}")
           }
           .artifacts
           .headOption
           .getOrElse {
-            sys.error(s"No artifacts found for module $org:$name in configuration ${ScriptedPlugin.scriptedLaunchConf.name}")
+            sys.error(s"No artifacts found for module $org:$name in configuration ${ScriptedLaunchConf.name}")
           }
 
         jar
@@ -225,7 +228,7 @@ object Settings {
       sbtVersion := {
         scalaBinaryVersion.value match {
           case "2.10" => "0.13.8"
-          case "2.12" => "1.0.0-RC3"
+          case "2.12" => "1.0.1"
           case _ => sbtVersion.value
         }
       },
@@ -241,7 +244,7 @@ object Settings {
   lazy val shading =
     inConfig(_root_.coursier.ShadingPlugin.Shading)(PgpSettings.projectSettings) ++
        // ytf does this have to be repeated here?
-       // Can't figure out why configuration get lost without this in particular...
+       // Can't figure out why configuration gets lost without this in particular...
       _root_.coursier.ShadingPlugin.projectSettings ++
       Seq(
         shadingNamespace := "coursier.shaded",
@@ -251,10 +254,6 @@ object Settings {
         PgpKeys.publishLocalSigned := PgpKeys.publishLocalSigned.in(Shading).value
       )
   
-  lazy val generatePack = packAutoSettings :+ {
-    packExcludeArtifactTypes += "pom"
-  }
-
   lazy val proguardedArtifact = Def.setting {
     Artifact(
       moduleName.value,
@@ -266,7 +265,7 @@ object Settings {
 
   lazy val proguardedJar = Def.task {
 
-    val results = ProguardKeys.proguard.in(Proguard).value
+    val results = proguard.in(Proguard).value
 
     results match {
       case Seq(f) => f
@@ -275,6 +274,15 @@ object Settings {
       case _ =>
         throw new Exception("Found several proguarded files. Don't know how to publish all of them.")
     }
+  }
+
+  lazy val addProguardedJar = {
+    packagedArtifacts := Def.taskDyn {
+      if (scalaBinaryVersion.value == "2.11")
+        Def.task(packagedArtifacts.value ++ Map(proguardedArtifact.value -> proguardedJar.value))
+      else
+        packagedArtifacts
+    }.value
   }
 
   lazy val Integration = config("it").extend(Test)

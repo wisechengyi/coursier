@@ -132,7 +132,7 @@ object Release {
     val vcs = state.vcs
 
     for ((f, output) <- scriptFiles) {
-      sbt.Process(Seq(f.getAbsolutePath, "-f")).!!(state.log)
+      sys.process.Process(Seq(f.getAbsolutePath, "-f")).!!(state.log)
       vcs.add(output.getAbsolutePath).!!(state.log)
     }
 
@@ -145,7 +145,7 @@ object Release {
 
     val tag = scala.sys.process.Process(cmd)
       .!!
-      .linesIterator
+      .lines
       .toVector
       .lastOption
       .getOrElse {
