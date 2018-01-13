@@ -4,6 +4,7 @@ package cli
 import java.io.File
 
 import caseapp._
+import coursier.cli.options.FetchOptions
 
 import scala.language.reflectiveCalls
 

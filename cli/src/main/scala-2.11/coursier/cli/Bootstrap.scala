@@ -8,6 +8,7 @@ import java.util.Properties
 import java.util.zip.{ZipEntry, ZipInputStream, ZipOutputStream}
 
 import caseapp._
+import coursier.cli.options.{ArtifactOptions, BootstrapOptions}
 import coursier.cli.util.Zip
 import coursier.internal.FileUtil
 
