@@ -3,7 +3,9 @@ package coursier.cli
 import java.io.{File, FileWriter}
 
 import coursier.cli.util.ReportNode
-import argonaut._, Argonaut._
+import argonaut._
+import Argonaut._
+import coursier.cli.options.{CommonOptions, FetchOptions}
 import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner

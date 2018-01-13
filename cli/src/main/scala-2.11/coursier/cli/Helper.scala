@@ -6,6 +6,7 @@ import java.net.{URL, URLClassLoader}
 import java.util.concurrent.Executors
 import java.util.jar.{Manifest => JManifest}
 
+import coursier.cli.options.{CommonOptions, IsolatedLoaderOptions}
 import coursier.cli.scaladex.Scaladex
 import coursier.cli.util.{JsonElem, JsonPrintRequirement, JsonReport}
 import coursier.extra.Typelevel

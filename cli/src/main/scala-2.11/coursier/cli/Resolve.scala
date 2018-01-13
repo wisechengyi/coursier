@@ -2,6 +2,7 @@ package coursier
 package cli
 
 import caseapp._
+import coursier.cli.options.CommonOptions
 
 final case class Resolve(
   @Recurse
