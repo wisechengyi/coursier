@@ -2,10 +2,10 @@ package coursier
 package cli
 
 import caseapp._
-import caseapp.core.{ ArgsApp, CommandMessages, CommandsMessages }
+import caseapp.core.{ArgsApp, CommandMessages, CommandsMessages}
 import caseapp.core.util.pascalCaseSplit
 import caseapp.util.AnnotationOption
-
+import coursier.cli.spark.SparkSubmit
 import shapeless._
 import shapeless.labelled.FieldType
 import shapeless.union.Union

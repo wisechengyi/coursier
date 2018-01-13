@@ -1,14 +1,13 @@
-package coursier.cli
+package coursier.cli.spark
 
 import java.io.{BufferedReader, File, InputStream, InputStreamReader, PipedInputStream, PipedOutputStream, PrintStream}
 import java.net.URLClassLoader
 
 import caseapp._
+import coursier.Dependency
+import coursier.cli._
 import coursier.cli.options.SparkSubmitOptions
-import coursier.{Attributes, Dependency}
-import coursier.cli.spark.{Assembly, Submit}
 import coursier.internal.FileUtil
-import coursier.util.Parse
 
 import scala.util.control.NonFatal
 
