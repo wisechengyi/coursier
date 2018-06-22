@@ -22,10 +22,13 @@ object CacheParse {
           m.root
         case i: IvyRepository =>
           // FIXME We're not handling metadataPattern here
-          i.pattern.chunks.takeWhile {
-            case _: coursier.ivy.Pattern.Chunk.Const => true
-            case _ => false
-          }.map(_.string).mkString
+          i.pattern.chunks
+            .takeWhile {
+              case _: coursier.ivy.Pattern.Chunk.Const => true
+              case _ => false
+            }
+            .map(_.string)
+            .mkString
         case r =>
           sys.error(s"Unrecognized repository: $r")
       }
@@ -84,8 +87,7 @@ object CacheParse {
     }
 
   def cachePolicies(s: String): ValidationNel[String, Seq[CachePolicy]] =
-    s
-      .split(',')
+    s.split(',')
       .toVector
       .validationNelTraverse[String, Seq[CachePolicy]] {
         case "offline" =>

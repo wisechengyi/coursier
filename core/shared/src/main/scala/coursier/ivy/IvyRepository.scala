@@ -51,10 +51,9 @@ final case class IvyRepository(
       "artifact" -> artifact,
       "ext" -> ext
     ) ++
-    module.attributes ++
-    classifierOpt.map("classifier" -> _).toSeq ++
-    versionOpt.map("revision" -> _).toSeq
-
+      module.attributes ++
+      classifierOpt.map("classifier" -> _).toSeq ++
+      versionOpt.map("revision" -> _).toSeq
 
   val source: Artifact.Source =
     if (withArtifacts)
@@ -68,7 +67,6 @@ final case class IvyRepository(
           val retained =
             overrideClassifiers match {
               case None =>
-
                 // FIXME Some duplication with what's done in MavenSource
 
                 if (dependency.attributes.classifier.nonEmpty)
@@ -76,22 +74,23 @@ final case class IvyRepository(
                   project.publications.collect {
                     case (_, p) if p.classifier == dependency.attributes.classifier =>
                       p
-                  }
-                else if (dependency.attributes.`type`.nonEmpty)
+                  } else if (dependency.attributes.`type`.nonEmpty)
                   project.publications.collect {
                     case (_, p)
-                      if p.classifier.isEmpty && (
-                        p.`type` == dependency.attributes.`type` ||
-                          (p.ext == dependency.attributes.`type` && project.packagingOpt.toSeq.contains(p.`type`)) // wow
+                        if p.classifier.isEmpty && (
+                          p.`type` == dependency.attributes.`type` ||
+                            (p.ext == dependency.attributes.`type` && project.packagingOpt.toSeq
+                              .contains(p.`type`)) // wow
                         ) =>
                       p
-                  }
-                else
+                  } else
                   project.publications.collect {
                     case (conf, p)
-                      if conf == "*" ||
-                         conf == dependency.configuration ||
-                         project.allConfigurations.getOrElse(dependency.configuration, Set.empty).contains(conf) =>
+                        if conf == "*" ||
+                          conf == dependency.configuration ||
+                          project.allConfigurations
+                            .getOrElse(dependency.configuration, Set.empty)
+                            .contains(conf) =>
                       p
                   }
               case Some(classifiers) =>
@@ -103,44 +102,51 @@ final case class IvyRepository(
             }
 
           val retainedWithUrl = retained.distinct.flatMap { p =>
-            pattern.substituteVariables(variables(
-              dependency.module,
-              Some(project.actualVersion),
-              p.`type`,
-              p.name,
-              p.ext,
-              Some(p.classifier).filter(_.nonEmpty)
-            )).right.toSeq.toList.map(p -> _) // FIXME Validation errors are ignored
+            pattern
+              .substituteVariables(
+                variables(
+                  dependency.module,
+                  Some(project.actualVersion),
+                  p.`type`,
+                  p.name,
+                  p.ext,
+                  Some(p.classifier).filter(_.nonEmpty)
+                )
+              )
+              .right
+              .toSeq
+              .toList
+              .map(p -> _) // FIXME Validation errors are ignored
           }
 
-          retainedWithUrl.map { case (p, url) =>
-            var artifact = Artifact(
-              url,
-              Map.empty,
-              Map.empty,
-              p.attributes,
-              changing = changing.getOrElse(project.version.contains("-SNAPSHOT")), // could be more reliable
-              authentication = authentication
-            )
+          retainedWithUrl.map {
+            case (p, url) =>
+              var artifact = Artifact(
+                url,
+                Map.empty,
+                Map.empty,
+                p.attributes,
+                changing = changing.getOrElse(project.version.contains("-SNAPSHOT")), // could be more reliable
+                authentication = authentication
+              )
 
-            if (withChecksums)
-              artifact = artifact.withDefaultChecksums
-            if (withSignatures)
-              artifact = artifact.withDefaultSignature
+              if (withChecksums)
+                artifact = artifact.withDefaultChecksums
+              if (withSignatures)
+                artifact = artifact.withDefaultSignature
 
-            artifact
+              artifact
           }
         }
-      }
-    else
+      } else
       Artifact.Source.empty
-
 
   def find[F[_]](
     module: Module,
     version: String,
     fetch: Fetch.Content[F]
-  )(implicit
+  )(
+    implicit
     F: Monad[F]
   ): EitherT[F, String, (Artifact.Source, Project)] = {
 
@@ -148,7 +154,8 @@ final case class IvyRepository(
       case None =>
         findNoInverval(module, version, fetch)
       case Some(revisionListingPattern) =>
-        Parse.versionInterval(version)
+        Parse
+          .versionInterval(version)
           .orElse(Parse.multiVersionInterval(version))
           .orElse(Parse.ivyLatestSubRevisionInterval(version))
           .filter(_.isValid) match {
@@ -173,7 +180,9 @@ final case class IvyRepository(
 
               if (versionsInItv.isEmpty)
                 EitherT(
-                  F.point[Either[String, (Artifact.Source, Project)]](Left(s"No version found for $version"))
+                  F.point[Either[String, (Artifact.Source, Project)]](
+                    Left(s"No version found for $version")
+                  )
                 )
               else {
                 val version0 = versionsInItv.max
@@ -204,15 +213,18 @@ final case class IvyRepository(
     module: Module,
     version: String,
     fetch: Fetch.Content[F]
-  )(implicit
+  )(
+    implicit
     F: Monad[F]
   ): EitherT[F, String, (Artifact.Source, Project)] = {
 
     val eitherArtifact: Either[String, Artifact] =
       for {
-        url <- metadataPattern.substituteVariables(
-          variables(module, Some(version), "ivy", "ivy", "xml", None)
-        ).right
+        url <- metadataPattern
+          .substituteVariables(
+            variables(module, Some(version), "ivy", "ivy", "xml", None)
+          )
+          .right
       } yield {
         var artifact = Artifact(
           url,
@@ -236,12 +248,13 @@ final case class IvyRepository(
       ivy <- fetch(artifact)
       proj0 <- EitherT(
         F.point {
-          for {
-            xml <- compatibility.xmlParse(ivy).right
-            _ <- (if (xml.label == "ivy-module") Right(()) else Left("Module definition not found")).right
-            proj <- IvyXml.project(xml).right
-          } yield proj
-        }
+            for {
+              xml <- compatibility.xmlParse(ivy).right
+              _ <- (if (xml.label == "ivy-module") Right(())
+                    else Left("Module definition not found")).right
+              proj <- IvyXml.project(xml).right
+            } yield proj
+          }
       )
     } yield {
       val proj =
@@ -289,16 +302,19 @@ object IvyRepository {
     dropInfoAttributes: Boolean = false,
     authentication: Option[Authentication] = None
   ): Either[String, IvyRepository] =
-
     for {
       propertiesPattern <- PropertiesPattern.parse(pattern).right
       metadataPropertiesPatternOpt <- metadataPatternOpt
-        .fold[Either[String, Option[PropertiesPattern]]](Right(None))(PropertiesPattern.parse(_).right.map(Some(_)))
+        .fold[Either[String, Option[PropertiesPattern]]](Right(None))(
+          PropertiesPattern.parse(_).right.map(Some(_))
+        )
         .right
 
       pattern <- propertiesPattern.substituteProperties(properties).right
       metadataPatternOpt <- metadataPropertiesPatternOpt
-        .fold[Either[String, Option[Pattern]]](Right(None))(_.substituteProperties(properties).right.map(Some(_)))
+        .fold[Either[String, Option[Pattern]]](Right(None))(
+          _.substituteProperties(properties).right.map(Some(_))
+        )
         .right
 
     } yield

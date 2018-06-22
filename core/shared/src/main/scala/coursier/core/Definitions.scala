@@ -20,10 +20,11 @@ final case class Module(
     name = name.trim
   )
 
-  private def attributesStr = attributes.toSeq
-    .sortBy { case (k, _) => k }
-    .map { case (k, v) => s"$k=$v" }
-    .mkString(";")
+  private def attributesStr =
+    attributes.toSeq
+      .sortBy { case (k, _) => k }
+      .map { case (k, v) => s"$k=$v" }
+      .mkString(";")
 
   def nameWithAttributes: String =
     name + (if (attributes.nonEmpty) s";$attributesStr" else "")
@@ -48,11 +49,9 @@ final case class Dependency(
   version: String,
   configuration: String,
   exclusions: Set[(String, String)],
-
   // Maven-specific
   attributes: Attributes,
   optional: Boolean,
-
   transitive: Boolean
 ) {
   lazy val moduleVersion = (module, version)
@@ -73,12 +72,14 @@ final case class Attributes(
   `type`: String,
   classifier: String
 ) {
-  def packaging: String = if (`type`.isEmpty)
+  def packaging: String =
+    if (`type`.isEmpty)
       "jar"
     else
       `type`
 
-  def packagingAndClassifier: String = if (isEmpty) {
+  def packagingAndClassifier: String =
+    if (isEmpty) {
       ""
     } else if (classifier.isEmpty) {
       packaging
@@ -100,7 +101,6 @@ final case class Project(
   dependencies: Seq[(String, Dependency)],
   // For Maven, this is the standard scopes as an Ivy configuration
   configurations: Map[String, Seq[String]],
-
   // Maven-specific
   parent: Option[(Module, String)],
   dependencyManagement: Seq[(String, Dependency)],
@@ -109,16 +109,13 @@ final case class Project(
   versions: Option[Versions],
   snapshotVersioning: Option[SnapshotVersioning],
   packagingOpt: Option[String],
-
   /**
-    * Optional exact version used to get this project metadata.
-    * May not match `version` for projects having a wrong version in their metadata.
-    */
+   * Optional exact version used to get this project metadata.
+   * May not match `version` for projects having a wrong version in their metadata.
+   */
   actualVersionOpt: Option[String],
-
   // First String is configuration
   publications: Seq[(String, Publication)],
-
   // Extra infos, not used during resolution
   info: Info
 ) {
@@ -129,10 +126,10 @@ final case class Project(
     Orders.allConfigurations(configurations)
 
   /**
-    * Version used to get this project metadata if available, else the version from metadata.
-    * May not match `version` for projects having a wrong version in their metadata, if the actual version was kept
-    * around.
-    */
+   * Version used to get this project metadata if available, else the version from metadata.
+   * May not match `version` for projects having a wrong version in their metadata, if the actual version was kept
+   * around.
+   */
   def actualVersion: String = actualVersionOpt.getOrElse(version)
 }
 

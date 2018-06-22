@@ -1,6 +1,6 @@
 package coursier.cli.options
 
-import caseapp.{ HelpMessage => Help, ValueDescription => Value, ExtraName => Short, _ }
+import caseapp.{HelpMessage => Help, ValueDescription => Value, ExtraName => Short, _}
 
 object ArtifactOptions {
   def defaultArtifactTypes = Set("jar", "bundle", "test-jar")
@@ -10,12 +10,14 @@ object ArtifactOptions {
 }
 
 final case class ArtifactOptions(
-  @Help("Artifact types that should be retained (e.g. jar, src, doc, etc.) - defaults to jar,bundle")
+  @Help(
+    "Artifact types that should be retained (e.g. jar, src, doc, etc.) - defaults to jar,bundle"
+  )
   @Value("type1,type2,...")
   @Short("A")
-    artifactType: List[String] = Nil,
+  artifactType: List[String] = Nil,
   @Help("Fetch artifacts even if the resolution is errored")
-    force: Boolean = false
+  force: Boolean = false
 ) {
   def artifactTypes(sources: Boolean, javadoc: Boolean) = {
     val types0 = artifactType

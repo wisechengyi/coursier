@@ -8,22 +8,22 @@ import coursier.Dependency
 import coursier.cli.options.SparkSubmitOptions
 import coursier.cli.spark.{SparkAssembly, Submit}
 
-
 /**
-  * Submits spark applications.
-  *
-  * Can be run with no spark distributions around.
-  *
-  * @author Alexandre Archambault
-  * @author Han Ju
-  */
+ * Submits spark applications.
+ *
+ * Can be run with no spark distributions around.
+ *
+ * @author Alexandre Archambault
+ * @author Han Ju
+ */
 object SparkSubmit extends CaseApp[SparkSubmitOptions] {
 
   def scalaSparkVersions(dependencies: Iterable[Dependency]): Either[String, (String, String)] = {
 
     val sparkCoreMods = dependencies.collect {
-      case dep if dep.module.organization == "org.apache.spark" &&
-        (dep.module.name == "spark-core_2.10" || dep.module.name == "spark-core_2.11") =>
+      case dep
+          if dep.module.organization == "org.apache.spark" &&
+            (dep.module.name == "spark-core_2.10" || dep.module.name == "spark-core_2.11") =>
         (dep.module, dep.version)
     }
 
@@ -43,7 +43,6 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
       Left(s"Found several spark code modules among dependencies (${sparkCoreMods.mkString(", ")})")
 
   }
-
 
   def run(options: SparkSubmitOptions, args: RemainingArgs): Unit = {
 
@@ -78,8 +77,7 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
             )
             sys.exit(1)
           case Right(versions) => versions
-        }
-      else
+        } else
         (options.common.scalaVersion, options.sparkVersion)
 
     val (sparkYarnExtraConf, sparkBaseJars) =
@@ -91,7 +89,10 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
           options.yarnVersion,
           options.defaultAssemblyDependencies.getOrElse(options.autoAssembly),
           options.assemblyDependencies.flatMap(_.split(",")).filter(_.nonEmpty) ++
-            options.sparkAssemblyDependencies.flatMap(_.split(",")).filter(_.nonEmpty).map(_ + s":$sparkVersion"),
+            options.sparkAssemblyDependencies
+              .flatMap(_.split(","))
+              .filter(_.nonEmpty)
+              .map(_ + s":$sparkVersion"),
           options.common,
           options.artifactOptions.artifactTypes(sources = false, javadoc = false)
         )
@@ -113,7 +114,10 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
           options.yarnVersion,
           options.defaultAssemblyDependencies.getOrElse(true),
           options.assemblyDependencies.flatMap(_.split(",")).filter(_.nonEmpty) ++
-            options.sparkAssemblyDependencies.flatMap(_.split(",")).filter(_.nonEmpty).map(_ + s":$sparkVersion"),
+            options.sparkAssemblyDependencies
+              .flatMap(_.split(","))
+              .filter(_.nonEmpty)
+              .map(_ + s":$sparkVersion"),
           options.common,
           options.artifactOptions.artifactTypes(sources = false, javadoc = false)
         )
@@ -131,7 +135,6 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
 
         (extraConf, assemblyJars)
       }
-
 
     val idx = {
       val idx0 = args.unparsed.indexOf("--")
@@ -152,13 +155,12 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
       else
         options.mainClass
 
-    val mainJar = helper
-      .loader
+    val mainJar = helper.loader
       .loadClass(mainClass) // FIXME Check for errors, provide a nicer error message in that case
       .getProtectionDomain
       .getCodeSource
       .getLocation
-      .getPath              // TODO Safety check: protocol must be file
+      .getPath // TODO Safety check: protocol must be file
 
     val (check, extraJars0) = jars.partition(_.getAbsolutePath == mainJar)
 
@@ -170,9 +172,11 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
       )
 
     val extraSparkOpts = sparkYarnExtraConf.flatMap {
-      case (k, v) => Seq(
-        "--conf", s"$k=$v"
-      )
+      case (k, v) =>
+        Seq(
+          "--conf",
+          s"$k=$v"
+        )
     }
 
     val extraJarsOptions =
@@ -204,8 +208,7 @@ object SparkSubmit extends CaseApp[SparkSubmitOptions] {
       submitLoader,
       Submit.mainClassName,
       sparkSubmitOptions,
-      options.common.verbosityLevel,
-      {
+      options.common.verbosityLevel, {
         if (options.common.verbosityLevel >= 1)
           Console.err.println(
             s"Launching spark-submit with arguments:\n" +

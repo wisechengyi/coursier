@@ -1,6 +1,6 @@
 package coursier.maven
 
-import coursier.core.{ Dependency, Project }
+import coursier.core.{Dependency, Project}
 
 object WritePom {
 

@@ -1,6 +1,6 @@
 package coursier.util
 
-import coursier.core.{ Dependency, Resolution }
+import coursier.core.{Dependency, Resolution}
 
 object Config {
 

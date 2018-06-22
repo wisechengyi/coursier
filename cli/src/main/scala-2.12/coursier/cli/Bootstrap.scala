@@ -1,7 +1,14 @@
 package coursier
 package cli
 
-import java.io.{ByteArrayInputStream, ByteArrayOutputStream, File, FileInputStream, FileOutputStream, IOException}
+import java.io.{
+  ByteArrayInputStream,
+  ByteArrayOutputStream,
+  File,
+  FileInputStream,
+  FileOutputStream,
+  IOException
+}
 import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.file.Files
 import java.nio.file.attribute.PosixFilePermission
@@ -53,7 +60,12 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
     }
   }
 
-  private def createJarBootstrap(javaOpts: Seq[String], output: File, content: Array[Byte], withPreamble: Boolean): Unit =
+  private def createJarBootstrap(
+    javaOpts: Seq[String],
+    output: File,
+    content: Array[Byte],
+    withPreamble: Boolean
+  ): Unit =
     if (withPreamble)
       createJarBootstrapWithPreamble(javaOpts, output, content)
     else
@@ -61,12 +73,19 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
 
   private def createSimpleJarBootstrap(output: File, content: Array[Byte]): Unit =
     try Files.write(output.toPath, content)
-    catch { case e: IOException =>
-      Console.err.println(s"Error while writing $output${Option(e.getMessage).fold("")(" (" + _ + ")")}")
-      sys.exit(1)
+    catch {
+      case e: IOException =>
+        Console.err.println(
+          s"Error while writing $output${Option(e.getMessage).fold("")(" (" + _ + ")")}"
+        )
+        sys.exit(1)
     }
 
-  private def createJarBootstrapWithPreamble(javaOpts: Seq[String], output: File, content: Array[Byte]): Unit = {
+  private def createJarBootstrapWithPreamble(
+    javaOpts: Seq[String],
+    output: File,
+    content: Array[Byte]
+  ): Unit = {
 
     val argsPartitioner =
       """|sys_args=""
@@ -87,7 +106,7 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
 
     val javaCmd = Seq("java") ++
       javaOpts
-        // escaping possibly a bit loose :-|
+      // escaping possibly a bit loose :-|
         .map(s => "'" + s.replace("'", "\\'") + "'") ++
       Seq(
         "$sys_args",
@@ -103,9 +122,12 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
     ).mkString("", "\n", "\n")
 
     try Files.write(output.toPath, shellPreamble.getBytes(UTF_8) ++ content)
-    catch { case e: IOException =>
-      Console.err.println(s"Error while writing $output${Option(e.getMessage).fold("")(" (" + _ + ")")}")
-      sys.exit(1)
+    catch {
+      case e: IOException =>
+        Console.err.println(
+          s"Error while writing $output${Option(e.getMessage).fold("")(" (" + _ + ")")}"
+        )
+        sys.exit(1)
     }
 
     try {
@@ -157,31 +179,32 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
     val isolatedDeps = options.options.isolated.isolatedDeps(options.options.common.scalaVersion)
 
     val (_, isolatedArtifactFiles) =
-      options.options.isolated.targets.foldLeft((Vector.empty[String], Map.empty[String, (Seq[String], Seq[File])])) {
-        case ((done, acc), target) =>
+      options.options.isolated.targets
+        .foldLeft((Vector.empty[String], Map.empty[String, (Seq[String], Seq[File])])) {
+          case ((done, acc), target) =>
+            // TODO Add non regression test checking that optional artifacts indeed land in the isolated loader URLs
 
-          // TODO Add non regression test checking that optional artifacts indeed land in the isolated loader URLs
+            val m = helper.fetchMap(
+              sources = false,
+              javadoc = false,
+              artifactTypes =
+                options.artifactOptions.artifactTypes(sources = false, javadoc = false),
+              subset = isolatedDeps.getOrElse(target, Seq.empty).toSet
+            )
 
-          val m = helper.fetchMap(
-            sources = false,
-            javadoc = false,
-            artifactTypes = options.artifactOptions.artifactTypes(sources = false, javadoc = false),
-            subset = isolatedDeps.getOrElse(target, Seq.empty).toSet
-          )
+            val (done0, subUrls, subFiles) =
+              if (options.options.standalone) {
+                val subFiles0 = m.values.toSeq
+                (done, Nil, subFiles0)
+              } else {
+                val filteredSubArtifacts = m.keys.toSeq.diff(done)
+                (done ++ filteredSubArtifacts, filteredSubArtifacts, Nil)
+              }
 
-          val (done0, subUrls, subFiles) =
-            if (options.options.standalone) {
-              val subFiles0 = m.values.toSeq
-              (done, Nil, subFiles0)
-            } else {
-              val filteredSubArtifacts = m.keys.toSeq.diff(done)
-              (done ++ filteredSubArtifacts, filteredSubArtifacts, Nil)
-            }
+            val updatedAcc = acc + (target -> (subUrls, subFiles))
 
-          val updatedAcc = acc + (target -> (subUrls, subFiles))
-
-          (done0, updatedAcc)
-      }
+            (done0, updatedAcc)
+        }
 
     val isolatedUrls = isolatedArtifactFiles.map { case (k, (v, _)) => k -> v }
     val isolatedFiles = isolatedArtifactFiles.map { case (k, (_, v)) => k -> v }
@@ -196,7 +219,6 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
       outputZip.write(data)
       outputZip.closeEntry()
     }
-
 
     val time = System.currentTimeMillis()
 
@@ -227,7 +249,10 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
         val urls = isolatedUrls.getOrElse(target, Nil)
         val files = isolatedFiles.getOrElse(target, Nil)
         putStringEntry(s"bootstrap-isolation-$target-jar-urls", urls.mkString("\n"))
-        putStringEntry(s"bootstrap-isolation-$target-jar-resources", files.map(pathFor).mkString("\n"))
+        putStringEntry(
+          s"bootstrap-isolation-$target-jar-resources",
+          files.map(pathFor).mkString("\n")
+        )
       }
     }
 
@@ -316,7 +341,9 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
 
     val output0 = new File(options.options.output)
     if (!options.options.force && output0.exists()) {
-      Console.err.println(s"Error: ${options.options.output} already exists, use -f option to force erasing it.")
+      Console.err.println(
+        s"Error: ${options.options.output} already exists, use -f option to force erasing it."
+      )
       sys.exit(1)
     }
 
@@ -347,16 +374,19 @@ object Bootstrap extends CaseApp[BootstrapOptions] {
         properties0.map { case (k, v) => s"-D$k=$v" }
 
       val (urls, files) =
-        helper.fetchMap(
-          sources = false,
-          javadoc = false,
-          artifactTypes = options.artifactOptions.artifactTypes(sources = false, javadoc = false)
-        ).toList.foldLeft((List.empty[String], List.empty[File])){
-          case ((urls, files), (url, file)) =>
-            if (options.options.assembly || options.options.standalone) (urls, file :: files)
-            else if (url.startsWith("file:/")) (urls, file :: files)
-            else (url :: urls, files)
-        }
+        helper
+          .fetchMap(
+            sources = false,
+            javadoc = false,
+            artifactTypes = options.artifactOptions.artifactTypes(sources = false, javadoc = false)
+          )
+          .toList
+          .foldLeft((List.empty[String], List.empty[File])) {
+            case ((urls, files), (url, file)) =>
+              if (options.options.assembly || options.options.standalone) (urls, file :: files)
+              else if (url.startsWith("file:/")) (urls, file :: files)
+              else (url :: urls, files)
+          }
 
       if (options.options.assembly)
         createAssemblyJar(options, files, javaOpts, mainClass, output0)

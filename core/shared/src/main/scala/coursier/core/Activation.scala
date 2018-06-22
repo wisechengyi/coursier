@@ -105,10 +105,12 @@ object Activation {
       if (name.indexOf("nonstop_kernel") >= 0)
         families += "tandem"
 
-      if (pathSep == ":" && name.indexOf("openvms") < 0 && (name.indexOf("mac") < 0 || name.endsWith("x")))
+      if (pathSep == ":" && name.indexOf("openvms") < 0 && (name.indexOf("mac") < 0 || name
+          .endsWith("x")))
         families += "unix"
 
-      if (name.indexOf("windows") >= 0 && (name.indexOf("95") >= 0 || name.indexOf("98") >= 0 || name.indexOf("me") >= 0 || name.indexOf("ce") >= 0))
+      if (name.indexOf("windows") >= 0 && (name.indexOf("95") >= 0 || name.indexOf("98") >= 0 || name
+          .indexOf("me") >= 0 || name.indexOf("ce") >= 0))
         families += "win9x"
 
       if (name.indexOf("z/os") >= 0 || name.indexOf("os/390") >= 0)

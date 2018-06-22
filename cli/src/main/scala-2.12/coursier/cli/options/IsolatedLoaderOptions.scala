@@ -4,14 +4,13 @@ import caseapp.{ExtraName => Short, HelpMessage => Help, ValueDescription => Val
 import coursier.{Attributes, Dependency}
 import coursier.util.Parse
 
-
 final case class IsolatedLoaderOptions(
   @Value("target:dependency")
   @Short("I")
-    isolated: List[String] = Nil,
+  isolated: List[String] = Nil,
   @Help("Comma-separated isolation targets")
   @Short("i")
-    isolateTarget: List[String] = Nil
+  isolateTarget: List[String] = Nil
 ) {
 
   def anyIsolatedDep = isolateTarget.nonEmpty || isolated.nonEmpty
@@ -31,7 +30,8 @@ final case class IsolatedLoaderOptions(
       valid.toArray
   }
 
-  lazy val (validIsolated, unrecognizedIsolated) = isolated.partition(s => targets.exists(t => s.startsWith(t + ":")))
+  lazy val (validIsolated, unrecognizedIsolated) =
+    isolated.partition(s => targets.exists(t => s.startsWith(t + ":")))
 
   def check() = {
     if (unrecognizedIsolated.nonEmpty) {
@@ -47,17 +47,19 @@ final case class IsolatedLoaderOptions(
     target -> dep
   }
 
-  def isolatedModuleVersions(defaultScalaVersion: String) = rawIsolated.groupBy { case (t, _) => t }.map {
-    case (t, l) =>
-      val (errors, modVers) = Parse.moduleVersions(l.map { case (_, d) => d }, defaultScalaVersion)
+  def isolatedModuleVersions(defaultScalaVersion: String) =
+    rawIsolated.groupBy { case (t, _) => t }.map {
+      case (t, l) =>
+        val (errors, modVers) =
+          Parse.moduleVersions(l.map { case (_, d) => d }, defaultScalaVersion)
 
-      if (errors.nonEmpty) {
-        errors.foreach(Console.err.println)
-        sys.exit(255)
-      }
+        if (errors.nonEmpty) {
+          errors.foreach(Console.err.println)
+          sys.exit(255)
+        }
 
-      t -> modVers
-  }
+        t -> modVers
+    }
 
   def isolatedDeps(defaultScalaVersion: String) =
     isolatedModuleVersions(defaultScalaVersion).map {

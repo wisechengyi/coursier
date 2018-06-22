@@ -24,8 +24,9 @@ object IvyXml {
       .flatMap { node =>
         node.attribute("name").right.toOption.toSeq.map(_ -> node)
       }
-      .map { case (name, node) =>
-        name -> node.attribute("extends").right.toSeq.flatMap(_.split(','))
+      .map {
+        case (name, node) =>
+          name -> node.attribute("extends").right.toSeq.flatMap(_.split(','))
       }
 
   // FIXME "default(compile)" likely not to be always the default
@@ -53,10 +54,14 @@ object IvyXml {
           .filter(_.label == "exclude")
           .flatMap { node0 =>
             val org = node0.attribute("org").right.getOrElse("*")
-            val name = node0.attribute("module").right.toOption
+            val name = node0
+              .attribute("module")
+              .right
+              .toOption
               .orElse(node0.attribute("name").right.toOption)
               .getOrElse("*")
-            val confs = node0.attribute("conf").right.toOption.filter(_.nonEmpty).fold(Seq("*"))(_.split(','))
+            val confs =
+              node0.attribute("conf").right.toOption.filter(_.nonEmpty).fold(Seq("*"))(_.split(','))
             confs.map(_ -> (org, name))
           }
           .groupBy { case (conf, _) => conf }
@@ -145,7 +150,8 @@ object IvyXml {
           }
         }
 
-      val publicationDate = infoNode.attribute("publication")
+      val publicationDate = infoNode
+        .attribute("publication")
         .right
         .toOption
         .flatMap(parseDateTime)
@@ -170,8 +176,9 @@ object IvyXml {
           // publications node is there -> only its content (if it is empty, no artifacts,
           // as per the Ivy manual)
           val inAllConfs = publicationsOpt.flatMap(_.get("*")).getOrElse(Nil)
-          configurations0.flatMap { case (conf, _) =>
-            (publicationsOpt.flatMap(_.get(conf)).getOrElse(Nil) ++ inAllConfs).map(conf -> _)
+          configurations0.flatMap {
+            case (conf, _) =>
+              (publicationsOpt.flatMap(_.get(conf)).getOrElse(Nil) ++ inAllConfs).map(conf -> _)
           }
         },
         Info(

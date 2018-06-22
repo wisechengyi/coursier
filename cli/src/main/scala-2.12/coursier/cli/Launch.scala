@@ -18,15 +18,17 @@ object Launch extends CaseApp[LaunchOptions] {
 
     val cls =
       try loader.loadClass(mainClass)
-      catch { case e: ClassNotFoundException =>
-        Helper.errPrintln(s"Error: class $mainClass not found")
-        sys.exit(255)
+      catch {
+        case e: ClassNotFoundException =>
+          Helper.errPrintln(s"Error: class $mainClass not found")
+          sys.exit(255)
       }
     val method =
       try cls.getMethod("main", classOf[Array[String]])
-      catch { case e: NoSuchMethodException =>
-        Helper.errPrintln(s"Error: method main not found in $mainClass")
-        sys.exit(255)
+      catch {
+        case e: NoSuchMethodException =>
+          Helper.errPrintln(s"Error: method main not found in $mainClass")
+          sys.exit(255)
       }
     method.setAccessible(true)
 
@@ -44,7 +46,6 @@ object Launch extends CaseApp[LaunchOptions] {
         throw Option(e.getCause).getOrElse(e)
     }
   }
-
 
   def run(options: LaunchOptions, args: RemainingArgs): Unit = {
 

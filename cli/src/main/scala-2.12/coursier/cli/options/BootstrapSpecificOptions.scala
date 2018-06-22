@@ -1,49 +1,51 @@
 package coursier.cli.options
 
-import caseapp.{ HelpMessage => Help, ValueDescription => Value, ExtraName => Short, _ }
+import caseapp.{HelpMessage => Help, ValueDescription => Value, ExtraName => Short, _}
 
 final case class BootstrapSpecificOptions(
   @Short("M")
   @Short("main")
-    mainClass: String = "",
+  mainClass: String = "",
   @Short("o")
-    output: String = "bootstrap",
+  output: String = "bootstrap",
   @Short("f")
-    force: Boolean = false,
-  @Help("Generate a standalone launcher, with all JARs included, instead of one downloading its dependencies on startup.")
+  force: Boolean = false,
+  @Help(
+    "Generate a standalone launcher, with all JARs included, instead of one downloading its dependencies on startup."
+  )
   @Short("s")
-    standalone: Boolean = false,
+  standalone: Boolean = false,
   @Help("Set Java properties in the generated launcher.")
   @Value("key=value")
   @Short("D")
-    property: List[String] = Nil,
+  property: List[String] = Nil,
   @Help("Set Java command-line options in the generated launcher.")
   @Value("option")
   @Short("J")
-    javaOpt: List[String] = Nil,
+  javaOpt: List[String] = Nil,
   @Help("Generate native launcher")
   @Short("S")
-    native: Boolean = false,
+  native: Boolean = false,
   @Help("Native compilation target directory")
   @Short("d")
-    target: String = "native-target",
+  target: String = "native-target",
   @Help("Don't wipe native compilation target directory (for debug purposes)")
-    keepTarget: Boolean = false,
+  keepTarget: Boolean = false,
   @Help("Generate an assembly rather than a bootstrap jar")
   @Short("a")
-    assembly: Boolean = false,
+  assembly: Boolean = false,
   @Help("Add assembly rule")
   @Value("append:$path|append-pattern:$pattern|exclude:$path|exclude-pattern:$pattern")
   @Short("R")
-    rule: List[String] = Nil,
+  rule: List[String] = Nil,
   @Help("Add default rules to assembly rule list")
-    defaultRules: Boolean = true,
+  defaultRules: Boolean = true,
   @Help("Add preamble")
-    preamble: Boolean = true,
+  preamble: Boolean = true,
   @Recurse
-    isolated: IsolatedLoaderOptions = IsolatedLoaderOptions(),
+  isolated: IsolatedLoaderOptions = IsolatedLoaderOptions(),
   @Recurse
-    common: CommonOptions = CommonOptions()
+  common: CommonOptions = CommonOptions()
 )
 
 object BootstrapSpecificOptions {

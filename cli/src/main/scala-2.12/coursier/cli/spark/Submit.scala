@@ -22,7 +22,9 @@ object Submit {
       val f = new File(yarnConf)
 
       if (!f.isDirectory) {
-        Console.err.println(s"Error: YARN conf path ($yarnConf) is not a directory or doesn't exist.")
+        Console.err.println(
+          s"Error: YARN conf path ($yarnConf) is not a directory or doesn't exist."
+        )
         sys.exit(1)
       }
 

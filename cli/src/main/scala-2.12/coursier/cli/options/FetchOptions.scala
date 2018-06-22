@@ -1,21 +1,21 @@
 package coursier.cli.options
 
-import caseapp.{ HelpMessage => Help, ExtraName => Short, _ }
+import caseapp.{HelpMessage => Help, ExtraName => Short, _}
 
 final case class FetchOptions(
   @Help("Fetch source artifacts")
   @Short("S")
-    sources: Boolean = false,
+  sources: Boolean = false,
   @Help("Fetch javadoc artifacts")
   @Short("D")
-    javadoc: Boolean = false,
+  javadoc: Boolean = false,
   @Help("Print java -cp compatible output")
   @Short("p")
-    classpath: Boolean = false,
+  classpath: Boolean = false,
   @Recurse
-    artifactOptions: ArtifactOptions = ArtifactOptions(),
+  artifactOptions: ArtifactOptions = ArtifactOptions(),
   @Recurse
-    common: CommonOptions = CommonOptions()
+  common: CommonOptions = CommonOptions()
 )
 
 object FetchOptions {

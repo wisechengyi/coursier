@@ -35,7 +35,12 @@ object Assembly {
     }
   }
 
-  def make(jars: Seq[File], output: OutputStream, attributes: Seq[(Attributes.Name, String)], rules: Seq[Rule]): Unit = {
+  def make(
+    jars: Seq[File],
+    output: OutputStream,
+    attributes: Seq[(Attributes.Name, String)],
+    rules: Seq[Rule]
+  ): Unit = {
 
     val rulesMap = rules.collect { case r: Rule.PathRule => r.path -> r }.toMap
     val excludePatterns = rules.collect { case Rule.ExcludePattern(p) => p }
@@ -66,7 +71,10 @@ object Assembly {
           for ((ent, content) <- Zip.zipEntries(zis)) {
 
             def append() =
-              concatenedEntries += ent.getName -> ::((ent, content), concatenedEntries.getOrElse(ent.getName, Nil))
+              concatenedEntries += ent.getName -> ::(
+                (ent, content),
+                concatenedEntries.getOrElse(ent.getName, Nil)
+              )
 
             rulesMap.get(ent.getName) match {
               case Some(Rule.Exclude(_)) =>

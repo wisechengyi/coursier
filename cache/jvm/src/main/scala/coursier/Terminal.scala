@@ -27,25 +27,27 @@ object Terminal {
     private def control(n: Int, c: Char) = output.write(s"\033[" + n + c)
 
     /**
-      * Move up `n` squares
-      */
+     * Move up `n` squares
+     */
     def up(n: Int): Unit = if (n > 0) control(n, 'A')
+
     /**
-      * Move down `n` squares
-      */
+     * Move down `n` squares
+     */
     def down(n: Int): Unit = if (n > 0) control(n, 'B')
+
     /**
-      * Move left `n` squares
-      */
+     * Move left `n` squares
+     */
     def left(n: Int): Unit = if (n > 0) control(n, 'D')
 
     /**
-      * Clear the current line
-      *
-      * n=0: clear from cursor to end of line
-      * n=1: clear from cursor to start of line
-      * n=2: clear entire line
-      */
+     * Clear the current line
+     *
+     * n=0: clear from cursor to end of line
+     * n=1: clear from cursor to start of line
+     * n=2: clear entire line
+     */
     def clearLine(n: Int): Unit = control(n, 'K')
   }
 

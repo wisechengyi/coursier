@@ -58,7 +58,11 @@ object Resolution {
     type Key = (String, String, String)
 
     def key(dep: Dependency): Key =
-      (dep.module.organization, dep.module.name, if (dep.attributes.`type`.isEmpty) "jar" else dep.attributes.`type`)
+      (
+        dep.module.organization,
+        dep.module.name,
+        if (dep.attributes.`type`.isEmpty) "jar" else dep.attributes.`type`
+      )
 
     def add(
       dict: Map[Key, (String, Dependency)],
@@ -85,9 +89,9 @@ object Resolution {
       (deps :\ (Set.empty[DepMgmt.Key], Seq.empty[(String, Dependency)])) {
         case (deps0, (set, acc)) =>
           val deps = deps0
-            .filter{case (_, dep) => !set(DepMgmt.key(dep))}
+            .filter { case (_, dep) => !set(DepMgmt.key(dep)) }
 
-          (set ++ deps.map{case (_, dep) => DepMgmt.key(dep)}, acc ++ deps)
+          (set ++ deps.map { case (_, dep) => DepMgmt.key(dep) }, acc ++ deps)
       }
 
     res._2
@@ -128,25 +132,27 @@ object Resolution {
       substituteProps(s, properties)
 
     dependencies
-      .map {case (config, dep) =>
-        substituteProps0(config) -> dep.copy(
-          module = dep.module.copy(
-            organization = substituteProps0(dep.module.organization),
-            name = substituteProps0(dep.module.name)
-          ),
-          version = substituteProps0(dep.version),
-          attributes = dep.attributes.copy(
-            `type` = substituteProps0(dep.attributes.`type`),
-            classifier = substituteProps0(dep.attributes.classifier)
-          ),
-          configuration = substituteProps0(dep.configuration),
-          exclusions = dep.exclusions
-            .map{case (org, name) =>
-              (substituteProps0(org), substituteProps0(name))
-            }
-          // FIXME The content of the optional tag may also be a property in
-          // the original POM. Maybe not parse it that earlier?
-        )
+      .map {
+        case (config, dep) =>
+          substituteProps0(config) -> dep.copy(
+            module = dep.module.copy(
+              organization = substituteProps0(dep.module.organization),
+              name = substituteProps0(dep.module.name)
+            ),
+            version = substituteProps0(dep.version),
+            attributes = dep.attributes.copy(
+              `type` = substituteProps0(dep.attributes.`type`),
+              classifier = substituteProps0(dep.attributes.classifier)
+            ),
+            configuration = substituteProps0(dep.configuration),
+            exclusions = dep.exclusions
+              .map {
+                case (org, name) =>
+                  (substituteProps0(org), substituteProps0(name))
+              }
+            // FIXME The content of the optional tag may also be a property in
+            // the original POM. Maybe not parse it that earlier?
+          )
       }
   }
 
@@ -189,47 +195,42 @@ object Resolution {
     forceVersions: Map[Module, String]
   ): (Seq[Dependency], Seq[Dependency], Map[Module, String]) = {
 
-    val mergedByModVer = dependencies
-      .toVector
+    val mergedByModVer = dependencies.toVector
       .groupBy(dep => dep.module)
-      .map { case (module, deps) =>
-        module -> {
-          val (versionOpt, updatedDeps) = forceVersions.get(module) match {
-            case None =>
-              if (deps.lengthCompare(1) == 0) (Some(deps.head.version), Right(deps))
-              else {
-                val versions = deps
-                  .map(_.version)
-                  .distinct
-                val versionOpt = mergeVersions(versions)
+      .map {
+        case (module, deps) =>
+          module -> {
+            val (versionOpt, updatedDeps) = forceVersions.get(module) match {
+              case None =>
+                if (deps.lengthCompare(1) == 0) (Some(deps.head.version), Right(deps))
+                else {
+                  val versions = deps
+                    .map(_.version)
+                    .distinct
+                  val versionOpt = mergeVersions(versions)
 
-                (versionOpt, versionOpt match {
-                  case Some(version) =>
-                    Right(deps.map(dep => dep.copy(version = version)))
-                  case None =>
-                    Left(deps)
-                })
-              }
+                  (versionOpt, versionOpt match {
+                    case Some(version) =>
+                      Right(deps.map(dep => dep.copy(version = version)))
+                    case None =>
+                      Left(deps)
+                  })
+                }
 
-            case Some(forcedVersion) =>
-              (Some(forcedVersion), Right(deps.map(dep => dep.copy(version = forcedVersion))))
+              case Some(forcedVersion) =>
+                (Some(forcedVersion), Right(deps.map(dep => dep.copy(version = forcedVersion))))
+            }
+
+            (updatedDeps, versionOpt)
           }
-
-          (updatedDeps, versionOpt)
-        }
       }
 
-    val merged = mergedByModVer
-      .values
+    val merged = mergedByModVer.values
       .toVector
 
     (
-      merged
-        .collect { case (Left(dep), _) => dep }
-        .flatten,
-      merged
-        .collect { case (Right(dep), _) => dep }
-        .flatten,
+      merged.collect { case (Left(dep), _) => dep }.flatten,
+      merged.collect { case (Right(dep), _) => dep }.flatten,
       mergedByModVer
         .collect { case (mod, (_, Some(ver))) => mod -> ver }
     )
@@ -251,34 +252,34 @@ object Resolution {
     lazy val dict = DepMgmt.addSeq(Map.empty, dependencyManagement)
 
     dependencies
-      .map {case (config0, dep0) =>
-        var config = config0
-        var dep = dep0
+      .map {
+        case (config0, dep0) =>
+          var config = config0
+          var dep = dep0
 
-        for ((mgmtConfig, mgmtDep) <- dict.get(DepMgmt.key(dep0))) {
+          for ((mgmtConfig, mgmtDep) <- dict.get(DepMgmt.key(dep0))) {
 
-          if (mgmtDep.version.nonEmpty)
-            dep = dep.copy(version = mgmtDep.version)
+            if (mgmtDep.version.nonEmpty)
+              dep = dep.copy(version = mgmtDep.version)
 
-          if (config.isEmpty)
-            config = mgmtConfig
+            if (config.isEmpty)
+              config = mgmtConfig
 
-          // FIXME The version and scope/config from dependency management, if any, are substituted
-          // no matter what. The same is not done for the exclusions and optionality, for a lack of
-          // way of distinguishing empty exclusions from no exclusion section and optional set to
-          // false from no optional section in the dependency management for now.
+            // FIXME The version and scope/config from dependency management, if any, are substituted
+            // no matter what. The same is not done for the exclusions and optionality, for a lack of
+            // way of distinguishing empty exclusions from no exclusion section and optional set to
+            // false from no optional section in the dependency management for now.
 
-          if (dep.exclusions.isEmpty)
-            dep = dep.copy(exclusions = mgmtDep.exclusions)
+            if (dep.exclusions.isEmpty)
+              dep = dep.copy(exclusions = mgmtDep.exclusions)
 
-          if (mgmtDep.optional)
-            dep = dep.copy(optional = mgmtDep.optional)
-        }
+            if (mgmtDep.optional)
+              dep = dep.copy(optional = mgmtDep.optional)
+          }
 
-        (config, dep)
+          (config, dep)
       }
   }
-
 
   val defaultConfiguration = "compile"
 
@@ -299,15 +300,19 @@ object Resolution {
     val filter = Exclusions(exclusions)
 
     dependencies
-      .filter{case (_, dep) => filter(dep.module.organization, dep.module.name) }
-      .map{case (config, dep) =>
-        config -> dep.copy(
-          exclusions = Exclusions.minimize(dep.exclusions ++ exclusions)
-        )
+      .filter { case (_, dep) => filter(dep.module.organization, dep.module.name) }
+      .map {
+        case (config, dep) =>
+          config -> dep.copy(
+            exclusions = Exclusions.minimize(dep.exclusions ++ exclusions)
+          )
       }
   }
 
-  def withParentConfigurations(config: String, configurations: Map[String, Seq[String]]): (String, Set[String]) = {
+  def withParentConfigurations(
+    config: String,
+    configurations: Map[String, Seq[String]]
+  ): (String, Set[String]) = {
     @tailrec
     def helper(configs: Set[String], acc: Set[String]): Set[String] =
       if (configs.isEmpty)
@@ -362,24 +367,24 @@ object Resolution {
     val properties0 = project.properties ++ Seq(
       // some artifacts seem to require these (e.g. org.jmock:jmock-legacy:2.5.1)
       // although I can find no mention of them in any manual / spec
-      "pom.groupId"         -> project.module.organization,
-      "pom.artifactId"      -> project.module.name,
-      "pom.version"         -> project.actualVersion,
+      "pom.groupId" -> project.module.organization,
+      "pom.artifactId" -> project.module.name,
+      "pom.version" -> project.actualVersion,
       // Required by some dependencies too (org.apache.directory.shared:shared-ldap:0.9.19 in particular)
-      "groupId"             -> project.module.organization,
-      "artifactId"          -> project.module.name,
-      "version"             -> project.actualVersion,
-      "project.groupId"     -> project.module.organization,
-      "project.artifactId"  -> project.module.name,
-      "project.version"     -> project.actualVersion
+      "groupId" -> project.module.organization,
+      "artifactId" -> project.module.name,
+      "version" -> project.actualVersion,
+      "project.groupId" -> project.module.organization,
+      "project.artifactId" -> project.module.name,
+      "project.version" -> project.actualVersion
     ) ++ packagingOpt.toSeq.map { packaging =>
-      "project.packaging"   -> packaging
+      "project.packaging" -> packaging
     } ++ project.parent.toSeq.flatMap {
       case (parModule, parVersion) =>
         Seq(
-          "project.parent.groupId"     -> parModule.organization,
-          "project.parent.artifactId"  -> parModule.name,
-          "project.parent.version"     -> parVersion
+          "project.parent.groupId" -> parModule.organization,
+          "project.parent.artifactId" -> parModule.name,
+          "project.parent.version" -> parVersion
         )
     }
 
@@ -391,12 +396,10 @@ object Resolution {
 
   private def substitute(properties0: Seq[(String, String)]): Seq[(String, String)] = {
 
-    val done = properties0
-      .collect {
-        case kv @ (_, value) if propRegex.findFirstIn(value).isEmpty =>
-          kv
-      }
-      .toMap
+    val done = properties0.collect {
+      case kv @ (_, value) if propRegex.findFirstIn(value).isEmpty =>
+        kv
+    }.toMap
 
     var didSubstitutions = false
 
@@ -430,7 +433,8 @@ object Resolution {
 
     val properties = project.properties.toMap
 
-    val (actualConfig, configurations) = withParentConfigurations(from.configuration, project.configurations)
+    val (actualConfig, configurations) =
+      withParentConfigurations(from.configuration, project.configurations)
 
     // Vague attempt at making the Maven scope model fit into the Ivy configuration one
 
@@ -445,44 +449,43 @@ object Resolution {
         withProperties(project.dependencyManagement, properties)
       ),
       from.exclusions
-    )
-    .flatMap {
-      case (config0, dep0) =>
-        // Dependencies from Maven verify
-        //   dep.configuration.isEmpty
-        // and expect dep.configuration to be filled here
+    ).flatMap {
+        case (config0, dep0) =>
+          // Dependencies from Maven verify
+          //   dep.configuration.isEmpty
+          // and expect dep.configuration to be filled here
 
-        val dep =
-          if (from.optional)
-            dep0.copy(optional = true)
-          else
-            dep0
+          val dep =
+            if (from.optional)
+              dep0.copy(optional = true)
+            else
+              dep0
 
-        val config = if (config0.isEmpty) defaultConfiguration else config0
+          val config = if (config0.isEmpty) defaultConfiguration else config0
 
-        def default =
-          if (configurations(config))
-            Seq(dep)
-          else
-            Nil
-
-        if (dep.configuration.nonEmpty)
-          default
-        else
-          keepOpt.fold(default) { keep =>
-            if (keep(config)) {
-              val depConfig =
-                if (actualConfig == "optional")
-                  defaultConfiguration
-                else
-                  // really keeping the  from.configuration, with its fallback config part
-                  from.configuration
-
-              Seq(dep.copy(configuration = depConfig))
-            } else
+          def default =
+            if (configurations(config))
+              Seq(dep)
+            else
               Nil
-          }
-    }
+
+          if (dep.configuration.nonEmpty)
+            default
+          else
+            keepOpt.fold(default) { keep =>
+              if (keep(config)) {
+                val depConfig =
+                  if (actualConfig == "optional")
+                    defaultConfiguration
+                  else
+                    // really keeping the  from.configuration, with its fallback config part
+                    from.configuration
+
+                Seq(dep.copy(configuration = depConfig))
+              } else
+                Nil
+            }
+      }
   }
 
   /**
@@ -528,7 +531,6 @@ object Resolution {
     !dep.optional
 
 }
-
 
 /**
  * State of a dependency resolution.
@@ -598,8 +600,7 @@ final case class Resolution(
             finalDependenciesCache0.put(dep, res)
             res
           case None => Nil
-        }
-      else
+        } else
         deps
     } else
       Nil
@@ -610,8 +611,7 @@ final case class Resolution(
         trDep.copy(
           version = reconciledVersions.getOrElse(trDep.module, trDep.version)
         )
-      }
-    else
+      } else
       finalDependencies0(dep)
 
   /**
@@ -621,8 +621,7 @@ final case class Resolution(
    * No attempt is made to solve version conflicts here.
    */
   lazy val transitiveDependencies: Seq[Dependency] =
-    (dependencies -- conflicts)
-      .toVector
+    (dependencies -- conflicts).toVector
       .flatMap(finalDependencies0)
 
   /**
@@ -659,7 +658,6 @@ final case class Resolution(
       .filterNot(mod => projectCache.contains(mod) || errorCache.contains(mod))
   }
 
-
   /**
    * Whether the resolution is done.
    */
@@ -668,7 +666,7 @@ final case class Resolution(
       val (nextConflicts, _, _) = nextDependenciesAndConflicts
 
       dependencies == (newDependencies ++ nextConflicts) &&
-        conflicts == nextConflicts.toSet
+      conflicts == nextConflicts.toSet
     }
 
     missingFromCache.isEmpty && isFixPoint
@@ -700,7 +698,8 @@ final case class Resolution(
       .groupBy(_._1)
       .mapValues(_.map(_._2).toVector)
       .filterKeys(knownDeps)
-      .toVector.toMap // Eagerly evaluate filterKeys/mapValues
+      .toVector
+      .toMap // Eagerly evaluate filterKeys/mapValues
   }
 
   /**
@@ -727,9 +726,10 @@ final case class Resolution(
       else
         helper(
           remaining
-            .mapValues(broughtBy =>
-              broughtBy
-                .filter(x => remaining.contains(x) || rootDependencies0(x))
+            .mapValues(
+              broughtBy =>
+                broughtBy
+                  .filter(x => remaining.contains(x) || rootDependencies0(x))
             )
             .toVector
             .toMap
@@ -797,8 +797,7 @@ final case class Resolution(
       project.parent.toSet
     else {
 
-      val parentProperties0 = project
-        .parent
+      val parentProperties0 = project.parent
         .flatMap(projectCache.get)
         .map(_._2.properties.toMap)
         .getOrElse(Map())
@@ -914,8 +913,7 @@ final case class Resolution(
 
     // A bit fragile, but seems to work
 
-    val parentProperties0 = project
-      .parent
+    val parentProperties0 = project.parent
       .flatMap(projectCache.get)
       .map(_._2.properties)
       .getOrElse(Seq())
@@ -936,29 +934,34 @@ final case class Resolution(
     // 1.3 & 1.4 (if only vaguely so)
     val project0 = withFinalProperties(
       project.copy(
-        properties = parentProperties0 ++ project.properties ++ profiles0.flatMap(_.properties) // belongs to 1.5 & 1.6
+        properties = parentProperties0 ++ project.properties ++ profiles0
+          .flatMap(_.properties) // belongs to 1.5 & 1.6
       )
     )
 
     val propertiesMap0 = project0.properties.toMap
 
     val dependencies0 = addDependencies(
-      (project0.dependencies +: profiles0.map(_.dependencies)).map(withProperties(_, propertiesMap0))
+      (project0.dependencies +: profiles0.map(_.dependencies))
+        .map(withProperties(_, propertiesMap0))
     )
     val dependenciesMgmt0 = addDependencies(
-      (project0.dependencyManagement +: profiles0.map(_.dependencyManagement)).map(withProperties(_, propertiesMap0))
+      (project0.dependencyManagement +: profiles0.map(_.dependencyManagement))
+        .map(withProperties(_, propertiesMap0))
     )
 
     val deps0 =
       dependencies0
-        .collect { case ("import", dep) =>
-          dep.moduleVersion
+        .collect {
+          case ("import", dep) =>
+            dep.moduleVersion
         } ++
-      dependenciesMgmt0
-        .collect { case ("import", dep) =>
-          dep.moduleVersion
-        } ++
-      project0.parent // belongs to 1.5 & 1.6
+        dependenciesMgmt0
+          .collect {
+            case ("import", dep) =>
+              dep.moduleVersion
+          } ++
+        project0.parent // belongs to 1.5 & 1.6
 
     val deps = deps0.filter(projectCache.contains)
 
@@ -968,10 +971,9 @@ final case class Resolution(
     val depMgmt = (
       project0.dependencyManagement +: (
         profiles0.map(_.dependencyManagement) ++
-        projs.map(_.dependencyManagement)
+          projs.map(_.dependencyManagement)
       )
-    )
-      .map(withProperties(_, propertiesMap0))
+    ).map(withProperties(_, propertiesMap0))
       .foldLeft(Map.empty[DepMgmt.Key, (String, Dependency)])(DepMgmt.addSeq)
 
     val depsSet = deps.toSet
@@ -980,37 +982,39 @@ final case class Resolution(
       version = substituteProps(project0.version, propertiesMap0),
       dependencies =
         dependencies0
-          .filterNot{case (config, dep) =>
-            config == "import" && depsSet(dep.moduleVersion)
+          .filterNot {
+            case (config, dep) =>
+              config == "import" && depsSet(dep.moduleVersion)
           } ++
-        project0.parent  // belongs to 1.5 & 1.6
-          .filter(projectCache.contains)
-          .toSeq
-          .flatMap(projectCache(_)._2.dependencies),
+          project0.parent // belongs to 1.5 & 1.6
+            .filter(projectCache.contains)
+            .toSeq
+            .flatMap(projectCache(_)._2.dependencies),
       dependencyManagement = depMgmt.values.toSeq
-        .filterNot{case (config, dep) =>
-          config == "import" && depsSet(dep.moduleVersion)
+        .filterNot {
+          case (config, dep) =>
+            config == "import" && depsSet(dep.moduleVersion)
         }
     )
   }
 
   /**
-    * Minimized dependency set. Returns `dependencies` with no redundancy.
-    *
-    * E.g. `dependencies` may contains several dependencies towards module org:name:version,
-    * a first one excluding A and B, and a second one excluding A and C. In practice, B and C will
-    * be brought anyway, because the first dependency doesn't exclude C, and the second one doesn't
-    * exclude B. So having both dependencies is equivalent to having only one dependency towards
-    * org:name:version, excluding just A.
-    *
-    * The same kind of substitution / filtering out can be applied with configurations. If
-    * `dependencies` contains several dependencies towards org:name:version, a first one bringing
-    * its configuration "runtime", a second one "compile", and the configuration mapping of
-    * org:name:version says that "runtime" extends "compile", then all the dependencies brought
-    * by the latter will be brought anyway by the former, so that the latter can be removed.
-    *
-    * @return A minimized `dependencies`, applying this kind of substitutions.
-    */
+   * Minimized dependency set. Returns `dependencies` with no redundancy.
+   *
+   * E.g. `dependencies` may contains several dependencies towards module org:name:version,
+   * a first one excluding A and B, and a second one excluding A and C. In practice, B and C will
+   * be brought anyway, because the first dependency doesn't exclude C, and the second one doesn't
+   * exclude B. So having both dependencies is equivalent to having only one dependency towards
+   * org:name:version, excluding just A.
+   *
+   * The same kind of substitution / filtering out can be applied with configurations. If
+   * `dependencies` contains several dependencies towards org:name:version, a first one bringing
+   * its configuration "runtime", a second one "compile", and the configuration mapping of
+   * org:name:version says that "runtime" extends "compile", then all the dependencies brought
+   * by the latter will be brought anyway by the former, so that the latter can be removed.
+   *
+   * @return A minimized `dependencies`, applying this kind of substitutions.
+   */
   def minDependencies: Set[Dependency] =
     Orders.minDependencies(
       dependencies,
@@ -1055,11 +1059,12 @@ final case class Resolution(
 
       classifiers = {
         if (!dep.attributes.classifier.isEmpty) {
-          val stringSeq: Seq[String] = overrideClassifiers.getOrElse(Seq()) ++ Seq(dep.attributes.classifier)
+          val stringSeq: Seq[String] = overrideClassifiers.getOrElse(Seq()) ++ Seq(
+            dep.attributes.classifier
+          )
           if (stringSeq.isEmpty) {
             Option.empty
-          }
-          else {
+          } else {
             Some(stringSeq)
           }
         } else {
@@ -1082,23 +1087,23 @@ final case class Resolution(
     dependencyArtifacts0(Some(classifiers), optional = true)
 
   /**
-    * Returns errors on dependencies
-    * @return errors
-    */
+   * Returns errors on dependencies
+   * @return errors
+   */
   def errors: Seq[(ModuleVersion, Seq[String])] = errorCache.toSeq
 
   @deprecated("Use errors instead", "1.1.0")
   def metadataErrors: Seq[(ModuleVersion, Seq[String])] = errors
 
   /**
-    * Removes from this `Resolution` dependencies that are not in `dependencies` neither brought
-    * transitively by them.
-    *
-    * This keeps the versions calculated by this `Resolution`. The common dependencies of different
-    * subsets will thus be guaranteed to have the same versions.
-    *
-    * @param dependencies: the dependencies to keep from this `Resolution`
-    */
+   * Removes from this `Resolution` dependencies that are not in `dependencies` neither brought
+   * transitively by them.
+   *
+   * This keeps the versions calculated by this `Resolution`. The common dependencies of different
+   * subsets will thus be guaranteed to have the same versions.
+   *
+   * @param dependencies: the dependencies to keep from this `Resolution`
+   */
   def subset(dependencies: Set[Dependency]): Resolution = {
 
     def updateVersion(dep: Dependency): Dependency =

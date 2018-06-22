@@ -35,13 +35,11 @@ object Fetch extends CaseApp[FetchOptions] {
 
     val out =
       if (options.classpath)
-        fetch
-          .files0
+        fetch.files0
           .map(_.toString)
           .mkString(File.pathSeparator)
       else
-        fetch
-          .files0
+        fetch.files0
           .map(_.toString)
           .mkString("\n")
 

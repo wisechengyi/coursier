@@ -139,7 +139,7 @@ object Version {
           if (sep == None) {
             def other(b: StringBuilder, s: Stream[Char]): (String, Stream[Char]) =
               if (s.isEmpty || s.head.isLetterOrDigit || parseSeparator(s)._1 != None)
-                (b.result().toLowerCase, s)  // not specifying a Locale (error with scala js)
+                (b.result().toLowerCase, s) // not specifying a Locale (error with scala js)
               else
                 other(b + s.head, s.tail)
 
@@ -182,13 +182,24 @@ object Version {
     }
   }
 
-  def postProcess(prevIsNumeric: Option[Boolean], item: Item, tokens0: Stream[(Tokenizer.Separator, Item)]): Stream[Item] = {
+  def postProcess(
+    prevIsNumeric: Option[Boolean],
+    item: Item,
+    tokens0: Stream[(Tokenizer.Separator, Item)]
+  ): Stream[Item] = {
     val tokens = {
       var _tokens = tokens0
 
       if (isNumeric(item)) {
-        val nextNonDotZero = _tokens.dropWhile{case (Tokenizer.Dot, n: Numeric) => n.isEmpty; case _ => false }
-        if (nextNonDotZero.forall(t => t._1 == Tokenizer.Hyphen || ((t._1 == Tokenizer.Dot || t._1 == Tokenizer.None) && !isNumeric(t._2)))) { // Dot && isNumeric(t._2)
+        val nextNonDotZero = _tokens.dropWhile {
+          case (Tokenizer.Dot, n: Numeric) => n.isEmpty; case _ => false
+        }
+        if (nextNonDotZero.forall(
+            t =>
+              t._1 == Tokenizer.Hyphen || ((t._1 == Tokenizer.Dot || t._1 == Tokenizer.None) && !isNumeric(
+                t._2
+              ))
+          )) { // Dot && isNumeric(t._2)
           _tokens = nextNonDotZero
         }
       }
@@ -198,7 +209,7 @@ object Version {
 
     def ifFollowedByNumberElse(ifFollowedByNumber: Item, default: Item) = {
       val followedByNumber = tokens.headOption
-        .exists{ case (Tokenizer.None, num: Numeric) if !num.isEmpty => true; case _ => false }
+        .exists { case (Tokenizer.None, num: Numeric) if !num.isEmpty => true; case _ => false }
 
       if (followedByNumber) ifFollowedByNumber
       else default

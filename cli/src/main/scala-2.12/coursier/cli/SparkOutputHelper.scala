@@ -1,6 +1,14 @@
 package coursier.cli
 
-import java.io.{BufferedReader, File, InputStream, InputStreamReader, PipedInputStream, PipedOutputStream, PrintStream}
+import java.io.{
+  BufferedReader,
+  File,
+  InputStream,
+  InputStreamReader,
+  PipedInputStream,
+  PipedOutputStream,
+  PrintStream
+}
 import java.nio.charset.StandardCharsets.UTF_8
 import java.nio.file.Files
 
@@ -34,7 +42,6 @@ object SparkOutputHelper {
 
     t
   }
-
 
   def handleOutput(yarnAppFileOpt: Option[File], maxIdleTimeOpt: Option[Int]): Unit = {
 
@@ -87,7 +94,9 @@ object SparkOutputHelper {
               lastMessageTs = -1L
               Thread.sleep(maxIdleTime * 1000L)
               if (lastMessageTs < 0) {
-                Console.err.println(s"No output from spark-submit for more than $maxIdleTime s, exiting")
+                Console.err.println(
+                  s"No output from spark-submit for more than $maxIdleTime s, exiting"
+                )
                 sys.exit(1)
               }
             }
@@ -111,7 +120,7 @@ object SparkOutputHelper {
     }
 
     def createThread(name: String, replaces: PrintStream, install: PrintStream => Unit): Thread = {
-      val in  = new PipedInputStream
+      val in = new PipedInputStream
       val out = new PipedOutputStream(in)
       install(new PrintStream(out))
       outputInspectThread(name, in, replaces, handlers)

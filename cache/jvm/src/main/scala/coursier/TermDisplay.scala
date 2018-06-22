@@ -1,6 +1,6 @@
 package coursier
 
-import java.io.{ File, Writer }
+import java.io.{File, Writer}
 import java.sql.Timestamp
 import java.util.concurrent._
 import java.util.concurrent.atomic.AtomicBoolean
@@ -11,7 +11,7 @@ object TermDisplay {
 
   def defaultFallbackMode: Boolean = {
     val env0 = sys.env.get("COURSIER_PROGRESS").map(_.toLowerCase).collect {
-      case "true"  | "enable"  | "1" => true
+      case "true" | "enable" | "1" => true
       case "false" | "disable" | "0" => false
     }
     def compatibilityEnv = sys.env.get("COURSIER_NO_TERM").nonEmpty
@@ -25,7 +25,6 @@ object TermDisplay {
 
     env || nonInteractive || insideEmacs || ci
   }
-
 
   private sealed abstract class Info extends Product with Serializable {
     def fraction: Option[Double]
@@ -41,13 +40,18 @@ object TermDisplay {
     updateCheck: Boolean,
     watching: Boolean
   ) extends Info {
+
     /** 0.0 to 1.0 */
     def fraction: Option[Double] = length.map(downloaded.toDouble / _)
+
     /** Byte / s */
     def rate(): Option[Double] = {
       val currentTime = System.currentTimeMillis()
       if (currentTime > startTime)
-        Some((downloaded - previouslyDownloaded).toDouble / (System.currentTimeMillis() - startTime) * 1000.0)
+        Some(
+          (downloaded - previouslyDownloaded).toDouble / (System
+            .currentTimeMillis() - startTime) * 1000.0
+        )
       else
         None
     }
@@ -121,8 +125,7 @@ object TermDisplay {
             s"Last update: ${formatTimestamp(remote)}"
           case (None, None) =>
             "" // ???
-        }
-      else
+        } else
         currentTimeOpt match {
           case Some(current) =>
             s"Checking for updates since ${formatTimestamp(current)}"
@@ -226,7 +229,7 @@ object TermDisplay {
       val total = url.length + 1 + extra.length
       val (url0, extra0) =
         if (total >= width) { // or > ? If equal, does it go down 2 lines?
-        val overflow = total - width + 1
+          val overflow = total - width + 1
 
           val extra0 =
             if (extra.length > baseExtraWidth)
@@ -263,25 +266,28 @@ object TermDisplay {
     private def updateDisplay(): Unit =
       if (!stopped && needsUpdate.getAndSet(false)) {
         val (done0, downloads0) = downloads.synchronized {
-          val q = doneQueue
-            .toVector
+          val q = doneQueue.toVector
             .filter {
               case (url, _) =>
-                !url.endsWith(".sha1") && !url.endsWith(".sha256") && !url.endsWith(".md5") && !url.endsWith("/")
+                !url.endsWith(".sha1") && !url.endsWith(".sha256") && !url.endsWith(".md5") && !url
+                  .endsWith("/")
             }
             .sortBy { case (url, _) => url }
 
           doneQueue.clear()
 
-          val dw = downloads
-            .toVector
-            .map { url => url -> infos.get(url) }
-            .sortBy { case (_, info) => - info.fraction.sum }
+          val dw = downloads.toVector
+            .map { url =>
+              url -> infos.get(url)
+            }
+            .sortBy { case (_, info) => -info.fraction.sum }
 
           (q, dw)
         }
 
-        for (((url, info), isDone) <- done0.iterator.map((_, true)) ++ downloads0.iterator.map((_, false))) {
+        for (((url, info), isDone) <- done0.iterator.map((_, true)) ++ downloads0.iterator.map(
+            (_, false)
+          )) {
           assert(info != null, s"Incoherent state ($url)")
 
           if (!printedAnything0) {
@@ -334,10 +340,11 @@ object TermDisplay {
     private def fallbackDisplay(): Unit = {
 
       val downloads0 = downloads.synchronized {
-        downloads
-          .toVector
-          .map { url => url -> infos.get(url) }
-          .sortBy { case (_, info) => - info.fraction.sum }
+        downloads.toVector
+          .map { url =>
+            url -> infos.get(url)
+          }
+          .sortBy { case (_, info) => -info.fraction.sum }
       }
 
       var displayedSomething = false
@@ -411,11 +418,11 @@ class TermDisplay(
       1000L / 60
 
   /***
-    *
-    * @param beforeOutput: called before any output is printed, iff something else is outputed.
-    *                      (That is, if that `TermDisplay` doesn't print any progress,
-    *                      `initialMessage` won't be printed either.)
-    */
+   *
+   * @param beforeOutput: called before any output is printed, iff something else is outputed.
+   *                      (That is, if that `TermDisplay` doesn't print any progress,
+   *                      `initialMessage` won't be printed either.)
+   */
   def init(beforeOutput: => Unit): Unit = {
     updateRunnableOpt = Some(new UpdateDisplayRunnable(beforeOutput, out, width, fallbackMode0))
 
@@ -427,9 +434,9 @@ class TermDisplay(
     init(())
 
   /**
-    *
-    * @return whether any message was printed by this `TermDisplay`
-    */
+   *
+   * @return whether any message was printed by this `TermDisplay`
+   */
   def stopDidPrintSomething(): Boolean = {
     scheduler.shutdown()
     scheduler.awaitTermination(2 * refreshInterval, TimeUnit.MILLISECONDS)
@@ -447,7 +454,12 @@ class TermDisplay(
       s"Downloading $url\n"
     )
 
-  override def downloadLength(url: String, totalLength: Long, alreadyDownloaded: Long, watching: Boolean): Unit = {
+  override def downloadLength(
+    url: String,
+    totalLength: Long,
+    alreadyDownloaded: Long,
+    watching: Boolean
+  ): Unit = {
     val info = updateRunnable.infos.get(url)
     assert(info != null)
     val newInfo = info match {

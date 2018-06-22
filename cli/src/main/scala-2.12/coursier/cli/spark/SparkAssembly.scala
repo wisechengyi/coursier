@@ -65,7 +65,8 @@ object SparkAssembly {
     options: CommonOptions
   ): Helper = {
 
-    val base = if (default) sparkBaseDependencies(scalaVersion, sparkVersion, yarnVersion) else Seq()
+    val base =
+      if (default) sparkBaseDependencies(scalaVersion, sparkVersion, yarnVersion) else Seq()
     new Helper(options, extraDependencies ++ base)
   }
 
@@ -79,7 +80,8 @@ object SparkAssembly {
     artifactTypes: Set[String]
   ): Seq[File] = {
 
-    val helper = sparkJarsHelper(scalaVersion, sparkVersion, yarnVersion, default, extraDependencies, options)
+    val helper =
+      sparkJarsHelper(scalaVersion, sparkVersion, yarnVersion, default, extraDependencies, options)
 
     helper.fetch(sources = false, javadoc = false, artifactTypes = artifactTypes)
   }
@@ -96,15 +98,22 @@ object SparkAssembly {
     localArtifactsShouldBeCached: Boolean = false
   ): Either[String, (File, Seq[File])] = {
 
-    val helper = sparkJarsHelper(scalaVersion, sparkVersion, yarnVersion, default, extraDependencies, options)
+    val helper =
+      sparkJarsHelper(scalaVersion, sparkVersion, yarnVersion, default, extraDependencies, options)
 
-    val artifacts = helper.artifacts(sources = false, javadoc = false, artifactTypes = artifactTypes)
+    val artifacts =
+      helper.artifacts(sources = false, javadoc = false, artifactTypes = artifactTypes)
     val jars = helper.fetch(sources = false, javadoc = false, artifactTypes = artifactTypes)
 
     val checksums = artifacts.map { a =>
       val f = a.checksumUrls.get("SHA-1") match {
         case Some(url) =>
-          Cache.localFile(url, helper.cache, a.authentication.map(_.user), localArtifactsShouldBeCached)
+          Cache.localFile(
+            url,
+            helper.cache,
+            a.authentication.map(_.user),
+            localArtifactsShouldBeCached
+          )
         case None =>
           throw new Exception(s"SHA-1 file not found for ${a.url}")
       }
@@ -119,7 +128,6 @@ object SparkAssembly {
           throw new Exception(s"Cannot read SHA-1 sum from $f")
       }
     }
-
 
     val md = MessageDigest.getInstance("SHA-1")
 
@@ -152,21 +160,24 @@ object SparkAssembly {
     if (dest.exists())
       success
     else
-      Cache.withLockFor(helper.cache, dest) {
-        dest.getParentFile.mkdirs()
-        val tmpDest = new File(dest.getParentFile, s".${dest.getName}.part")
-        // FIXME Acquire lock on tmpDest
-        var fos: FileOutputStream = null
-        try {
-          fos = new FileOutputStream(tmpDest)
-          Assembly.make(jars, fos, Nil, assemblyRules)
-        } finally {
-          if (fos != null)
-            fos.close()
+      Cache
+        .withLockFor(helper.cache, dest) {
+          dest.getParentFile.mkdirs()
+          val tmpDest = new File(dest.getParentFile, s".${dest.getName}.part")
+          // FIXME Acquire lock on tmpDest
+          var fos: FileOutputStream = null
+          try {
+            fos = new FileOutputStream(tmpDest)
+            Assembly.make(jars, fos, Nil, assemblyRules)
+          } finally {
+            if (fos != null)
+              fos.close()
+          }
+          Files.move(tmpDest.toPath, dest.toPath, StandardCopyOption.ATOMIC_MOVE)
+          Right((dest, jars))
         }
-        Files.move(tmpDest.toPath, dest.toPath, StandardCopyOption.ATOMIC_MOVE)
-        Right((dest, jars))
-      }.left.map(_.describe)
+        .left
+        .map(_.describe)
   }
 
 }

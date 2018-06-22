@@ -11,7 +11,8 @@ abstract class PlatformTask { self =>
 
     val ec0 = pool match {
       case eces: ExecutionContextExecutorService => eces
-      case _ => ExecutionContext.fromExecutorService(pool) // FIXME Is this instantiation costly? Cache it?
+      case _ =>
+        ExecutionContext.fromExecutorService(pool) // FIXME Is this instantiation costly? Cache it?
     }
 
     Task(_ => Future(f)(ec0))

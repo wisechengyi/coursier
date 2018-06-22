@@ -5,7 +5,7 @@ import coursier.util.Xml
 import java.util.regex.Pattern.quote
 
 import scala.collection.JavaConverters._
-import scala.xml.{ Attribute, MetaData, Null }
+import scala.xml.{Attribute, MetaData, Null}
 
 import org.jsoup.Jsoup
 
@@ -33,7 +33,9 @@ package object compatibility {
 
     def parse =
       try Right(scala.xml.XML.loadString(content.stripPrefix(utf8Bom)))
-      catch { case e: Exception => Left(e.toString + Option(e.getMessage).fold("")(" (" + _ + ")")) }
+      catch {
+        case e: Exception => Left(e.toString + Option(e.getMessage).fold("")(" (" + _ + ")"))
+      }
 
     def fromNode(node: scala.xml.Node): Xml.Node =
       new Xml.Node {
@@ -47,9 +49,11 @@ package object compatibility {
                   case _ => ""
                 }
 
-                val value = attr.value.collect {
-                  case scala.xml.Text(t) => t
-                }.mkString("")
+                val value = attr.value
+                  .collect {
+                    case scala.xml.Text(t) => t
+                  }
+                  .mkString("")
 
                 (pre, attr.key, value) #:: helper(m.next)
             }
@@ -70,10 +74,11 @@ package object compatibility {
   }
 
   def encodeURIComponent(s: String): String =
-    new java.net.URI(null, null, null, -1, s, null, null) .toASCIIString
+    new java.net.URI(null, null, null, -1, s, null, null).toASCIIString
 
   def listWebPageRawElements(page: String): Seq[String] =
-    Jsoup.parse(page)
+    Jsoup
+      .parse(page)
       .select("a")
       .asScala
       .toVector

@@ -8,7 +8,9 @@ object Parse {
 
   def version(s: String): Option[Version] = {
     val trimmed = s.trim
-    if (trimmed.isEmpty || trimmed.exists(c => c != '.' && c != '-' && c != '_' && !c.letterOrDigit)) None
+    if (trimmed.isEmpty || trimmed.exists(
+        c => c != '.' && c != '-' && c != '_' && !c.letterOrDigit
+      )) None
     else Some(Version(trimmed))
   }
 
@@ -48,7 +50,13 @@ object Parse {
         for {
           from <- if (strFrom.isEmpty) Some(None) else version(strFrom).map(Some(_))
           to <- if (strTo.isEmpty) Some(None) else version(strTo).map(Some(_))
-        } yield VersionInterval(from.filterNot(_.isEmpty), to.filterNot(_.isEmpty), fromIncluded, toIncluded)
+        } yield
+          VersionInterval(
+            from.filterNot(_.isEmpty),
+            to.filterNot(_.isEmpty),
+            fromIncluded,
+            toIncluded
+          )
       } else if (s.nonEmpty && fromIncluded && toIncluded)
         for (v <- version(s) if !v.isEmpty)
           yield VersionInterval(Some(v), Some(v), fromIncluded, toIncluded)
@@ -57,14 +65,17 @@ object Parse {
     }
 
     for {
-      fromIncluded <- if (s.startsWith("[")) Some(true) else if (s.startsWith("(")) Some(false) else None
+      fromIncluded <- if (s.startsWith("[")) Some(true)
+      else if (s.startsWith("(")) Some(false)
+      else None
       toIncluded <- if (s.endsWith("]")) Some(true) else if (s.endsWith(")")) Some(false) else None
       s0 = s.drop(1).dropRight(1)
       itv <- parseBounds(fromIncluded, toIncluded, s0)
     } yield itv
   }
 
-  private val multiVersionIntervalSplit = ("(?" + regexLookbehind + "[" + quote("])") + "]),(?=[" + quote("([") + "])").r
+  private val multiVersionIntervalSplit =
+    ("(?" + regexLookbehind + "[" + quote("])") + "]),(?=[" + quote("([") + "])").r
 
   def multiVersionInterval(s: String): Option[VersionInterval] = {
 

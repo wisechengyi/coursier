@@ -5,7 +5,7 @@ import coursier.Cache
 
 final case class CacheOptions(
   @Help("Cache directory (defaults to environment variable COURSIER_CACHE or ~/.coursier/cache/v1)")
-    cache: String = Cache.default.toString
+  cache: String = Cache.default.toString
 )
 
 object CacheOptions {

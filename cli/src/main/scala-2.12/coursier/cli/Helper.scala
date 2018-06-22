@@ -19,7 +19,6 @@ import scala.annotation.tailrec
 import scala.concurrent.duration.Duration
 import scalaz.concurrent.{Strategy, Task}
 
-
 object Helper {
   def fileRepr(f: File) = f.toString
 
@@ -85,7 +84,7 @@ class Helper(
         case Right(cp) => cp
         case Left(errors) =>
           prematureExit(
-            s"Error parsing modes:\n${errors.map("  "+_).mkString("\n")}"
+            s"Error parsing modes:\n${errors.map("  " + _).mkString("\n")}"
           )
       }
 
@@ -99,7 +98,6 @@ class Helper(
   )
 
   val repositoriesValidation = CacheParse.repositories(common.repository).map { repos0 =>
-
     var repos = (if (common.noDefault) Nil else defaultRepositories) ++ repos0
 
     repos = repos.map {
@@ -121,7 +119,7 @@ class Helper(
       repos
     case Left(errors) =>
       prematureExit(
-        s"Error with repositories:\n${errors.map("  "+_).mkString("\n")}"
+        s"Error with repositories:\n${errors.map("  " + _).mkString("\n")}"
       )
   }
 
@@ -137,48 +135,54 @@ class Helper(
     else {
       val logger =
         if (verbosityLevel >= 0)
-          Some(new TermDisplay(
-            new OutputStreamWriter(System.err),
-            fallbackMode = loggerFallbackMode
-          ))
+          Some(
+            new TermDisplay(
+              new OutputStreamWriter(System.err),
+              fallbackMode = loggerFallbackMode
+            )
+          )
         else
           None
 
-      val fetchs = cachePolicies.map(p =>
-        Cache.fetch[Task](cache, p, checksums = Nil, logger = logger, pool = pool, ttl = ttl0)
+      val fetchs = cachePolicies.map(
+        p => Cache.fetch[Task](cache, p, checksums = Nil, logger = logger, pool = pool, ttl = ttl0)
       )
 
       logger.foreach(_.init())
 
       val scaladex = Scaladex.cached(fetchs: _*)
 
-      val res = Gather[Task].gather(scaladexRawDependencies.map { s =>
-        val deps = scaladex.dependencies(
-          s,
-          scalaVersion,
-          if (verbosityLevel >= 2) Console.err.println(_) else _ => ()
-        )
+      val res = Gather[Task]
+        .gather(scaladexRawDependencies.map { s =>
+          val deps = scaladex.dependencies(
+            s,
+            scalaVersion,
+            if (verbosityLevel >= 2) Console.err.println(_) else _ => ()
+          )
 
-        deps.map { modVers =>
-          val m = modVers.groupBy(_._2)
-          if (m.size > 1) {
-            val (keptVer, modVers0) = m.map {
-              case (v, l) =>
-                val ver = coursier.core.Parse.version(v)
-                  .getOrElse(???) // FIXME
+          deps.map { modVers =>
+            val m = modVers.groupBy(_._2)
+            if (m.size > 1) {
+              val (keptVer, modVers0) = m
+                .map {
+                  case (v, l) =>
+                    val ver = coursier.core.Parse
+                      .version(v)
+                      .getOrElse(???) // FIXME
 
-              ver -> l
-            }
-            .maxBy(_._1)
+                    ver -> l
+                }
+                .maxBy(_._1)
 
-            if (verbosityLevel >= 1)
-              Console.err.println(s"Keeping version ${keptVer.repr}")
+              if (verbosityLevel >= 1)
+                Console.err.println(s"Keeping version ${keptVer.repr}")
 
-            modVers0
-          } else
-            modVers
-        }.run
-      }).unsafePerformSync
+              modVers0
+            } else
+              modVers
+          }.run
+        })
+        .unsafePerformSync
 
       logger.foreach(_.stop())
 
@@ -198,7 +202,7 @@ class Helper(
   val (forceVersionErrors, forceVersions0) = Parse.moduleVersions(forceVersion, scalaVersion)
 
   prematureExitIf(forceVersionErrors.nonEmpty) {
-    s"Cannot parse forced versions:\n" + forceVersionErrors.map("  "+_).mkString("\n")
+    s"Cannot parse forced versions:\n" + forceVersionErrors.map("  " + _).mkString("\n")
   }
 
   val forceVersions = {
@@ -207,7 +211,9 @@ class Helper(
       .map { case (mod, l) => mod -> l.map { case (_, version) => version } }
 
     for ((mod, forcedVersions) <- grouped if forcedVersions.distinct.lengthCompare(1) > 0)
-      errPrintln(s"Warning: version of $mod forced several times, using only the last one (${forcedVersions.last})")
+      errPrintln(
+        s"Warning: version of $mod forced several times, using only the last one (${forcedVersions.last})"
+      )
 
     grouped.map { case (mod, versions) => mod -> versions.last }
   }
@@ -216,9 +222,9 @@ class Helper(
 
   prematureExitIf(excludeErrors.nonEmpty) {
     s"Cannot parse excluded modules:\n" +
-    excludeErrors
-      .map("  " + _)
-      .mkString("\n")
+      excludeErrors
+        .map("  " + _)
+        .mkString("\n")
   }
 
   val (excludesNoAttr, excludesWithAttr) = excludes0.partition(_.attributes.isEmpty)
@@ -239,42 +245,53 @@ class Helper(
       Map()
     } else {
       val source = scala.io.Source.fromFile(localExcludeFile)
-      val lines = try source.mkString.split("\n") finally source.close()
+      val lines = try source.mkString.split("\n")
+      finally source.close()
 
-      lines.map({ str =>
-        val parent_and_child = str.split("--")
-        if (parent_and_child.length != 2) {
-          throw new SoftExcludeParsingException(s"Failed to parse $str")
-        }
+      lines
+        .map({ str =>
+          val parent_and_child = str.split("--")
+          if (parent_and_child.length != 2) {
+            throw new SoftExcludeParsingException(s"Failed to parse $str")
+          }
 
-        val child_org_name = parent_and_child(1).split(":")
-        if (child_org_name.length != 2) {
-          throw new SoftExcludeParsingException(s"Failed to parse $child_org_name")
-        }
+          val child_org_name = parent_and_child(1).split(":")
+          if (child_org_name.length != 2) {
+            throw new SoftExcludeParsingException(s"Failed to parse $child_org_name")
+          }
 
-        (parent_and_child(0), (child_org_name(0), child_org_name(1)))
-      }).groupBy(_._1).mapValues(_.map(_._2).toSet).toMap
+          (parent_and_child(0), (child_org_name(0), child_org_name(1)))
+        })
+        .groupBy(_._1)
+        .mapValues(_.map(_._2).toSet)
+        .toMap
     }
 
   val moduleReq = ModuleRequirements(globalExcludes, localExcludeMap, defaultConfiguration)
 
-  val (modVerCfgErrors: Seq[String], normalDepsWithExtraParams: Seq[(Dependency, Map[String, String])]) =
-    Parse.moduleVersionConfigs(otherRawDependencies, moduleReq, transitive=true, scalaVersion)
+  val (
+    modVerCfgErrors: Seq[String],
+    normalDepsWithExtraParams: Seq[(Dependency, Map[String, String])]
+  ) =
+    Parse.moduleVersionConfigs(otherRawDependencies, moduleReq, transitive = true, scalaVersion)
 
-  val (intransitiveModVerCfgErrors: Seq[String], intransitiveDepsWithExtraParams: Seq[(Dependency, Map[String, String])]) =
-    Parse.moduleVersionConfigs(intransitive, moduleReq, transitive=false, scalaVersion)
+  val (
+    intransitiveModVerCfgErrors: Seq[String],
+    intransitiveDepsWithExtraParams: Seq[(Dependency, Map[String, String])]
+  ) =
+    Parse.moduleVersionConfigs(intransitive, moduleReq, transitive = false, scalaVersion)
 
   prematureExitIf(modVerCfgErrors.nonEmpty) {
-    s"Cannot parse dependencies:\n" + modVerCfgErrors.map("  "+_).mkString("\n")
+    s"Cannot parse dependencies:\n" + modVerCfgErrors.map("  " + _).mkString("\n")
   }
 
   prematureExitIf(intransitiveModVerCfgErrors.nonEmpty) {
     s"Cannot parse intransitive dependencies:\n" +
-      intransitiveModVerCfgErrors.map("  "+_).mkString("\n")
+      intransitiveModVerCfgErrors.map("  " + _).mkString("\n")
   }
 
   val transitiveDepsWithExtraParams: Seq[(Dependency, Map[String, String])] =
-  // FIXME Order of the dependencies is not respected here (scaladex ones go first)
+    // FIXME Order of the dependencies is not respected here (scaladex ones go first)
     scaladexDepsWithExtraParams ++ normalDepsWithExtraParams
 
   val transitiveDeps: Seq[Dependency] = transitiveDepsWithExtraParams.map(dep => dep._1)
@@ -287,23 +304,25 @@ class Helper(
   // Any dependencies with URIs should not be resolved with a pom so this is a
   // hack to add all the deps with URIs to the FallbackDependenciesRepository
   // which will be used during the resolve
-  val depsWithUrls: Map[(Module, String), (URL, Boolean)] = allDependenciesWithExtraParams
-    .flatMap {
-      case (dep, extraParams) =>
-        extraParams.get("url").map { url =>
-          dep.moduleVersion -> (new URL(URLDecoder.decode(url, "UTF-8")), true)
-        }
-    }.toMap
+  val depsWithUrls: Map[(Module, String), (URL, Boolean)] = allDependenciesWithExtraParams.flatMap {
+    case (dep, extraParams) =>
+      extraParams.get("url").map { url =>
+        dep.moduleVersion -> (new URL(URLDecoder.decode(url, "UTF-8")), true)
+      }
+  }.toMap
 
-  val depsWithUrlRepo: FallbackDependenciesRepository = FallbackDependenciesRepository(depsWithUrls, cacheFileArtifacts)
+  val depsWithUrlRepo: FallbackDependenciesRepository =
+    FallbackDependenciesRepository(depsWithUrls, cacheFileArtifacts)
 
   // Prepend FallbackDependenciesRepository to the repository list
   // so that dependencies with URIs are resolved against this repo
   val repositories: Seq[Repository] = Seq(depsWithUrlRepo) ++ standardRepositories
 
   for (((mod, version), _) <- depsWithUrls if forceVersions.get(mod).exists(_ != version))
-    throw new Exception(s"Cannot force a version that is different from the one specified " +
-      s"for the module ${mod}:${version} with url")
+    throw new Exception(
+      s"Cannot force a version that is different from the one specified " +
+        s"for the module ${mod}:${version} with url"
+    )
 
   val checksums = {
     val splitChecksumArgs = checksum.flatMap(_.split(',')).filter(_.nonEmpty)
@@ -324,21 +343,28 @@ class Helper(
     filter = Some(dep => keepOptional || !dep.optional),
     userActivations =
       if (userEnabledProfiles.isEmpty) None
-      else Some(userEnabledProfiles.iterator.map(p => if (p.startsWith("!")) p.drop(1) -> false else p -> true).toMap),
+      else
+        Some(
+          userEnabledProfiles.iterator
+            .map(p => if (p.startsWith("!")) p.drop(1) -> false else p -> true)
+            .toMap
+        ),
     mapDependencies = if (typelevel) Some(Typelevel.swap(_)) else None
   )
 
   val logger =
     if (verbosityLevel >= 0)
-      Some(new TermDisplay(
-        new OutputStreamWriter(System.err),
-        fallbackMode = loggerFallbackMode
-      ))
+      Some(
+        new TermDisplay(
+          new OutputStreamWriter(System.err),
+          fallbackMode = loggerFallbackMode
+        )
+      )
     else
       None
 
-  val fetchs = cachePolicies.map(p =>
-    Cache.fetch(cache, p, checksums = checksums, logger = logger, pool = pool, ttl = ttl0)
+  val fetchs = cachePolicies.map(
+    p => Cache.fetch(cache, p, checksums = checksums, logger = logger, pool = pool, ttl = ttl0)
   )
   val fetchQuiet = coursier.Fetch.from(
     repositories,
@@ -346,13 +372,12 @@ class Helper(
     fetchs.tail: _*
   )
   val fetch0 =
-    if (verbosityLevel >= 2) {
-      modVers: Seq[(Module, String)] =>
-        val print = Task {
-          errPrintln(s"Getting ${modVers.length} project definition(s)")
-        }
+    if (verbosityLevel >= 2) { modVers: Seq[(Module, String)] =>
+      val print = Task {
+        errPrintln(s"Getting ${modVers.length} project definition(s)")
+      }
 
-        print.flatMap(_ => fetchQuiet(modVers))
+      print.flatMap(_ => fetchQuiet(modVers))
     } else
       fetchQuiet
 
@@ -402,7 +427,7 @@ class Helper(
               Task.now(proc.current)
             case _ =>
               val iterationType = proc match {
-                case _: core.Missing  => "IO"
+                case _: core.Missing => "IO"
                 case _: core.Continue => "calculations"
                 case _ => ???
               }
@@ -410,8 +435,8 @@ class Helper(
               timed(
                 s"Iteration ${iteration + 1} ($iterationType)",
                 counter,
-                proc.next(fetch0, fastForward = false)).flatMap(helper(_, counter, iteration + 1)
-              )
+                proc.next(fetch0, fastForward = false)
+              ).flatMap(helper(_, counter, iteration + 1))
           }
 
       def res = {
@@ -449,8 +474,7 @@ class Helper(
 
       def res(index: Int) = {
         val start = System.currentTimeMillis()
-        val res0 = startRes
-          .process
+        val res0 = startRes.process
           .run(fetch0, maxIterations)
           .unsafePerformSync
         val end = System.currentTimeMillis()
@@ -473,8 +497,7 @@ class Helper(
 
       result(0)
     } else
-      startRes
-        .process
+      startRes.process
         .run(fetch0, maxIterations)
         .unsafePerformSync
 
@@ -520,10 +543,12 @@ class Helper(
     anyError = true
     errPrintln(
       "\nError:\n" +
-      res.errors.map {
-        case ((module, version), errors) =>
-          s"  $module:$version\n${errors.map("    " + _.replace("\n", "    \n")).mkString("\n")}"
-      }.mkString("\n")
+        res.errors
+          .map {
+            case ((module, version), errors) =>
+              s"  $module:$version\n${errors.map("    " + _.replace("\n", "    \n")).mkString("\n")}"
+          }
+          .mkString("\n")
     )
   }
 
@@ -531,11 +556,11 @@ class Helper(
     anyError = true
     errPrintln(
       s"\nConflict:\n" +
-      Print.dependenciesUnknownConfigs(
-        res.conflicts.toVector,
-        projCache,
-        printExclusions = verbosityLevel >= 1
-      )
+        Print.dependenciesUnknownConfigs(
+          res.conflicts.toVector,
+          projCache,
+          printExclusions = verbosityLevel >= 1
+        )
     )
   }
 
@@ -572,7 +597,8 @@ class Helper(
 
     val res0 = Option(subset).fold(res)(res.subset)
 
-    val depArtTuples: Seq[(Dependency, Artifact)] = getDepArtifactsForClassifier(sources, javadoc, res0)
+    val depArtTuples: Seq[(Dependency, Artifact)] =
+      getDepArtifactsForClassifier(sources, javadoc, res0)
 
     val artifacts0 = depArtTuples.map(_._2)
 
@@ -584,7 +610,11 @@ class Helper(
       }
   }
 
-  private def getDepArtifactsForClassifier(sources: Boolean, javadoc: Boolean, res0: Resolution): Seq[(Dependency, Artifact)] = {
+  private def getDepArtifactsForClassifier(
+    sources: Boolean,
+    javadoc: Boolean,
+    res0: Resolution
+  ): Seq[(Dependency, Artifact)] = {
     val raw: Seq[(Dependency, Artifact)] = if (hasOverrideClassifiers(sources, javadoc)) {
       //TODO: this function somehow gives duplicated things
       res0.dependencyClassifiersArtifacts(overrideClassifiers(sources, javadoc).toVector.sorted)
@@ -592,16 +622,16 @@ class Helper(
       res0.dependencyArtifacts(withOptional = true)
     }
 
-    raw.map({ case (dep, artifact) =>
+    raw.map({
+      case (dep, artifact) =>
         (
-          dep.copy(
-            attributes = dep.attributes.copy(classifier = artifact.classifier)),
+          dep.copy(attributes = dep.attributes.copy(classifier = artifact.classifier)),
           artifact
         )
     })
   }
 
-  private def overrideClassifiers(sources: Boolean, javadoc:Boolean): Set[String] = {
+  private def overrideClassifiers(sources: Boolean, javadoc: Boolean): Set[String] = {
     var classifiers = classifier0
     if (sources)
       classifiers = classifiers + "sources"
@@ -627,10 +657,12 @@ class Helper(
 
     val logger =
       if (verbosityLevel >= 0)
-        Some(new TermDisplay(
-          new OutputStreamWriter(System.err),
-          fallbackMode = loggerFallbackMode
-        ))
+        Some(
+          new TermDisplay(
+            new OutputStreamWriter(System.err),
+            fallbackMode = loggerFallbackMode
+          )
+        )
       else
         None
 
@@ -650,8 +682,7 @@ class Helper(
         cacheFileArtifacts
       )
 
-      (file(cachePolicies.head) /: cachePolicies.tail)(_ orElse file(_))
-        .run
+      (file(cachePolicies.head) /: cachePolicies.tail)(_ orElse file(_)).run
         .map(artifact.->)
     }
 
@@ -685,49 +716,66 @@ class Helper(
     if (verbosityLevel >= 2)
       errPrintln(
         "  Ignoring error(s):\n" +
-        ignoredErrors
+          ignoredErrors
+            .map {
+              case (artifact, error) =>
+                s"${artifact.url}: $error"
+            }
+            .mkString("\n")
+      )
+
+    exitIf(errors.nonEmpty) {
+      s"  Error:\n" +
+        errors
           .map {
             case (artifact, error) =>
               s"${artifact.url}: $error"
           }
           .mkString("\n")
-      )
-
-    exitIf(errors.nonEmpty) {
-      s"  Error:\n" +
-      errors
-        .map {
-          case (artifact, error) =>
-            s"${artifact.url}: $error"
-        }
-        .mkString("\n")
     }
 
     val depToArtifacts: Map[Dependency, Vector[Artifact]] =
-      getDepArtifactsForClassifier(sources, javadoc, res).groupBy(_._1).mapValues(_.map(_._2).toVector)
-
+      getDepArtifactsForClassifier(sources, javadoc, res)
+        .groupBy(_._1)
+        .mapValues(_.map(_._2).toVector)
 
     if (!jsonOutputFile.isEmpty) {
       // TODO(wisechengyi): This is not exactly the root dependencies we are asking for on the command line, but it should be
       // a strict super set.
-      val deps: Seq[Dependency] = Set(getDepArtifactsForClassifier(sources, javadoc, res).map(_._1): _*).toSeq
+      val deps: Seq[Dependency] = Set(
+        getDepArtifactsForClassifier(sources, javadoc, res).map(_._1): _*
+      ).toSeq
 
       // A map from requested org:name:version to reconciled org:name:version
-      val conflictResolutionForRoots: Map[String, String] = allDependencies.map({ dep =>
-        val reconciledVersion: String = res.reconciledVersions
-          .getOrElse(dep.module, dep.version)
-        if (reconciledVersion != dep.version) {
-          Option((s"${dep.module}:${dep.version}", s"${dep.module}:$reconciledVersion"))
-        }
-        else {
-          Option.empty
-        }
-      }).filter(_.isDefined).map(_.get).toMap
+      val conflictResolutionForRoots: Map[String, String] = allDependencies
+        .map({ dep =>
+          val reconciledVersion: String = res.reconciledVersions
+            .getOrElse(dep.module, dep.version)
+          if (reconciledVersion != dep.version) {
+            Option((s"${dep.module}:${dep.version}", s"${dep.module}:$reconciledVersion"))
+          } else {
+            Option.empty
+          }
+        })
+        .filter(_.isDefined)
+        .map(_.get)
+        .toMap
 
       val artifacts: Seq[(Dependency, Artifact)] = res.dependencyArtifacts
 
       val jsonReq = JsonPrintRequirement(artifactToFile, depToArtifacts)
-      val roots = deps.toVector.map(JsonElem(_, artifacts, Option(jsonReq), res, printExclusions = verbosityLevel >= 1, excluded = false, colors = false, overrideClassifiers = overrideClassifiers(sources, javadoc)))
+      val roots = deps.toVector.map(
+        JsonElem(
+          _,
+          artifacts,
+          Option(jsonReq),
+          res,
+          printExclusions = verbosityLevel >= 1,
+          excluded = false,
+          colors = false,
+          overrideClassifiers = overrideClassifiers(sources, javadoc)
+        )
+      )
       val jsonStr = JsonReport(
         roots,
         conflictResolutionForRoots,
@@ -751,7 +799,7 @@ class Helper(
     artifactTypes: Set[String],
     subset: Set[Dependency] = null
   ): Seq[File] = {
-    fetchMap(sources,javadoc,artifactTypes,subset).values.toSeq
+    fetchMap(sources, javadoc, artifactTypes, subset).values.toSeq
   }
 
   def contextLoader = Thread.currentThread().getContextClassLoader
@@ -788,7 +836,6 @@ class Helper(
 
       val (isolatedLoader, filteredFiles0) = isolated.targets.foldLeft((baseLoader, files0)) {
         case ((parent, files0), target) =>
-
           // FIXME These were already fetched above
           val isolatedFiles = fetch(
             sources = false,
@@ -829,7 +876,6 @@ class Helper(
     parentLoader
   )
 
-
   lazy val retainedMainClass = {
 
     val mainClasses = Helper.mainClasses(loader)
@@ -856,24 +902,24 @@ class Helper(
           module = dep.module
           mainClass <- mainClasses.collectFirst {
             case ((org, name), mainClass)
-              if org == module.organization && (
-                module.name == name ||
-                  module.name.startsWith(name + "_") // Ignore cross version suffix
+                if org == module.organization && (
+                  module.name == name ||
+                    module.name.startsWith(name + "_") // Ignore cross version suffix
                 ) =>
               mainClass
           }
         } yield mainClass
 
-        def sameOrgOnlyMainClassOpt = for {
-          dep: Dependency <- transitiveDeps.headOption
-          module = dep.module
-          orgMainClasses = mainClasses.collect {
-            case ((org, name), mainClass)
-              if org == module.organization =>
-              mainClass
-          }.toSet
-          if orgMainClasses.size == 1
-        } yield orgMainClasses.head
+        def sameOrgOnlyMainClassOpt =
+          for {
+            dep: Dependency <- transitiveDeps.headOption
+            module = dep.module
+            orgMainClasses = mainClasses.collect {
+              case ((org, name), mainClass) if org == module.organization =>
+                mainClass
+            }.toSet
+            if orgMainClasses.size == 1
+          } yield orgMainClasses.head
 
         mainClassOpt.orElse(sameOrgOnlyMainClassOpt).getOrElse {
           Helper.errPrintln(s"Cannot find default main class. Specify one with -M or --main.")

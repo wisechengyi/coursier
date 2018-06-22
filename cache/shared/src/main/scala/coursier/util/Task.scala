@@ -43,4 +43,3 @@ object Task extends PlatformTask {
       loop(a)
     }
 }
-

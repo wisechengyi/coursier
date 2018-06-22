@@ -50,7 +50,11 @@ package object coursier {
 
   type Module = core.Module
   object Module extends Serializable {
-    def apply(organization: String, name: String, attributes: Map[String, String] = Map.empty): Module =
+    def apply(
+      organization: String,
+      name: String,
+      attributes: Map[String, String] = Map.empty
+    ): Module =
       core.Module(organization, name, attributes)
   }
 

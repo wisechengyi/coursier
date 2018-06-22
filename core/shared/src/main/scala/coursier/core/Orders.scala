@@ -27,18 +27,16 @@ object Orders {
       helper(Set(config), Set.empty)
     }
 
-    configurations
-      .keys
-      .toList
+    configurations.keys.toList
       .map(config => config -> (allParents(config) - config))
       .toMap
   }
 
   /**
-    * Configurations partial order based on configuration mapping `configurations`.
-    *
-    * @param configurations: for each configuration, the configurations it directly extends.
-    */
+   * Configurations partial order based on configuration mapping `configurations`.
+   *
+   * @param configurations: for each configuration, the configurations it directly extends.
+   */
   def configurationPartialOrder(configurations: Map[String, Seq[String]]): PartialOrdering[String] =
     new PartialOrdering[String] {
       val allParentsMap = allConfigurations(configurations)
@@ -89,9 +87,10 @@ object Orders {
 
         boolCmp(xAll, yAll).orElse {
           def filtered(e: Set[(String, String)]) =
-            e.filter{case (org, name) =>
-              !xExcludeByOrg1(org) && !yExcludeByOrg1(org) &&
-                !xExcludeByName1(name) && !yExcludeByName1(name)
+            e.filter {
+              case (org, name) =>
+                !xExcludeByOrg1(org) && !yExcludeByOrg1(org) &&
+                  !xExcludeByName1(name) && !yExcludeByName1(name)
             }
 
           def removeIntersection[T](a: Set[T], b: Set[T]) =
@@ -149,7 +148,13 @@ object Orders {
     val groupedDependencies = dependencies
       .map(fallbackConfigIfNecessary(_, availableConfigs))
       .groupBy(dep => (dep.optional, dep.configuration))
-      .mapValues(deps => deps.head.copy(exclusions = deps.foldLeft(Exclusions.one)((acc, dep) => Exclusions.meet(acc, dep.exclusions))))
+      .mapValues(
+        deps =>
+          deps.head.copy(
+            exclusions =
+              deps.foldLeft(Exclusions.one)((acc, dep) => Exclusions.meet(acc, dep.exclusions))
+        )
+      )
       .toList
 
     val remove =
@@ -157,10 +162,10 @@ object Orders {
         List(((xOpt, xScope), xDep), ((yOpt, yScope), yDep)) <- groupedDependencies.combinations(2)
         optCmp <- optionalPartialOrder.tryCompare(xOpt, yOpt).iterator
         scopeCmp <- configurationPartialOrder(configs).tryCompare(xScope, yScope).iterator
-        if optCmp*scopeCmp >= 0
+        if optCmp * scopeCmp >= 0
         exclCmp <- exclusionsPartialOrder.tryCompare(xDep.exclusions, yDep.exclusions).iterator
-        if optCmp*exclCmp >= 0
-        if scopeCmp*exclCmp >= 0
+        if optCmp * exclCmp >= 0
+        if scopeCmp * exclCmp >= 0
         xIsMin = optCmp < 0 || scopeCmp < 0 || exclCmp < 0
         yIsMin = optCmp > 0 || scopeCmp > 0 || exclCmp > 0
         if xIsMin || yIsMin // should be always true, unless xDep == yDep, which shouldn't happen

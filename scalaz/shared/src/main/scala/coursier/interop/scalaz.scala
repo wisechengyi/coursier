@@ -14,7 +14,9 @@ object scalaz extends LowPriorityScalazImplicits {
 
 abstract class LowPriorityScalazImplicits extends PlatformScalazImplicits {
 
-  implicit def coursierGatherFromScalaz[F[_]](implicit N: _root_.scalaz.Nondeterminism[F]): Gather[F] =
+  implicit def coursierGatherFromScalaz[F[_]](
+    implicit N: _root_.scalaz.Nondeterminism[F]
+  ): Gather[F] =
     new Gather[F] {
       def point[A](a: A) = N.pure(a)
       def bind[A, B](elem: F[A])(f: A => F[B]) = N.bind(elem)(f)
